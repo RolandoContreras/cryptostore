@@ -106,7 +106,7 @@
                                     <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a href="#"><?php echo $obj_last_comment->email;?></a></p>
                                         <p><a href="#" class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?></p>
                                         <p>
-                                                <a class="btn btn-mini btn-primary" href="#">Reply</a> <a class="btn btn-mini btn-danger" href="#">Delete</a> <a class="btn btn-mini btn-warning" href="#">Mark as Spam</a> 
+                                                <a class="btn btn-mini btn-primary" href="#">Marcar Contestado</a> <a class="btn btn-mini btn-danger" href="#">Marcar No Contestado</a>
                                         </p>
                                 </div>
                             </div>
