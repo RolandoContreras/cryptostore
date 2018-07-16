@@ -26,6 +26,7 @@
                                 <th>CODIGO</th>
                                 <th>USUARIO</th>
                                 <th>ASOCIADO</th>
+                                <th>DNI</th>
                                 <th>E-MAIL</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
@@ -37,6 +38,7 @@
                                 <td align="center"><b><?php echo $value->customer_id;?></b></td>
                                 <td align="center" style="color:#fff;" class="label-success"><?php echo $value->username;?></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center" style="color:#fff;" class="label-info"><?php echo $value->dni;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
                                 <td align="center">
                                     <?php if ($value->active == 0) {
