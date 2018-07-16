@@ -106,86 +106,36 @@
 </div>
 </section>
 <!-- features END-->
-<
-<!-- announcement -->
-<section class="distribution distribution2" >
-<div class="container">
-<h2>Pasos para comprar</h2>
-</div>
+<!--START CONTACT-->
+<section class="" id="contact">
+    <div class="container">
+        <div class="future-adversing__text_block">
+            <h3>Contacto</h3>
+            <p class="under_header_p">Mantente en contacto con nosotros llenando el formulario de contacto <br/>Realiza todas las pregumtas que tengas y responderemos a la brevedad.</p>
+        </div>
+        <div class="lrf-block__form">
+                <form>
+                    <input class="lrf-block__form-input" name="name" placeholder="Nombre">
+                    <input class="lrf-block__form-input" name="email" placeholder="Email">
+                    <label class="lrf-block__form-label">
+                        <input class="lrf-block__form-input" name="telefono" placeholder="Teléfono">
+                        <input class="lrf-block__form-input" name="subjet" placeholder="Asunto">
+                    </label>
+                    <label class="lrf-block__form-label">
+                    <textarea class="lrf-block__form-area" placeholder="Mensaje" name="messages" rows="5"></textarea>
+                    </label>
+                    <button class="lrf-block__form-submit" type="submit">Enviar</button>
+                </form>
+            </div>
+    </div>
 </section>
-<section class="black_block announcement">
-<div class="container">
-<div class="announcement__wrap">
-<div class="announcement__item announcement__item1 done">
-<div class="announcement__ico ico1">
-<p class="announcement__num"><i class="fa fa-wallet fa-lg"></i>1</p>
-<p class="announcement__month">Paso</p>
-</div>
-<p class="announcement__name">Ingresar tus<br/> datos</p>
-</div>
-<div class="announcement__item announcement__item2 done">
-<div class="announcement__ico ico1">
-<p class="announcement__num">2</p>
-<p class="announcement__month">Paso</p>
-</div>
-<p class="announcement__name">Verificar<br> tu wallet</p>
-</div>
-<div class="announcement__item announcement__item2 done">
-<div class="announcement__ico ico1">
-<p class="announcement__num">3</p>
-<p class="announcement__month">Paso</p>
-</div>
-<p class="announcement__name">Ingrese la <br>cantidad de btc</p>
-</div>
-<div class="announcement__item announcement__item2 done">
-<div class="announcement__ico ico1">
-<p class="announcement__num">4</p>
-<p class="announcement__month">Paso</p>
-</div>
-<p class="announcement__name">Verifica<br>de tu tarjeta</p>
-</div>
-<div class="announcement__item announcement__item2 done">
-<div class="announcement__ico ico1">
-<p class="announcement__num">5</p>
-<p class="announcement__month">Paso</p>
-</div>
-<p class="announcement__name">Confirma <br>el pago</p>
-</div>
-<div class="announcement__item announcement__item2 done">
-<div class="announcement__ico ico1">
-<p class="announcement__num">6</p>
-<p class="announcement__month">Paso>
-</div>
-<p class="announcement__name">Verificar<br> tus bitcoins</p>
-</div>
-</div>
-</div>
-<div class="work-schema__cursor"></div>
-</section>
-<!-- TimeLine END -->
-<section class="sign-up blue-bg">
-<div class="container">
-<a href="/"><img src="/images/logo_w.png" class="sign-up__logo" alt=""></a>
-<div class="sign-up__heading">Ingresa tus datos</div>
-<div id="mlb2-8236514" class="ml-subscribe-form ml-subscribe-form-8236514 sign-up__form">
-<form class="ml-block-form" action="https://app.mailerlite.com/webforms/submit/x4u2q4" data-id="815048" data-code="x4u2q4" method="POST" target="_blank" >
-<div class="form-section">
-    <span style=""class="input_overflow form-group ml-field-email ml-validate-required ml-validate-email">
-<input type="email" name="fields[email]" class="form-control" placeholder="Enter your Email" value="" autocomplete="email" x-autocompletetype="email" spellcheck="false" autocapitalize="off" autocorrect="off">
-</span>
-<button class="btn btn-danger sign-up__btn">COMPRAR</button>
-<input type="hidden" name="ml-submit" value="1" />
-</div>
-</form>
-</div>
-</div>
-</section>
-<!-- advisers END-->
+<!--END CONTACT-->
+
 <div class="bottom_bg">
 <!-- faq -->
 <section class="faq" id="faq">
 <div class="container">
-<h2>Preguntas frecuentes</h2>
+<h2>Preguntas Frecuentes</h2>
 <div class="row">
 <dl class="col-lg-6">
 <dt><a href="javascript:;" class="faq__dt_a"><span class="faq__link"><span></span></span>¿Qué es easycripto?</a></dt>
@@ -409,31 +359,16 @@
 <!-- lang-popup -->
 <script src="<?php echo site_url().'static/page_front/js/jquery-2.2.4.min.js'?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/bootstrap.min.js'?>"></script>
+<script src="<?php echo site_url().'static/page_front/plugin/jvalidate/jquery.validate.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/plugins.js?3'?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/owl.carousel.min.js'?>"></script>
 <link rel="stylesheet" href="<?php echo site_url().'static/page_front/css/owl.carousel.css'?>" />
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script src="<?php echo site_url().'static/page_front/js/script.js?3266'?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f'?>"></script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-(function (d,w,c){(w[c] = w[c] || []).push(function(){try{w.yaCounter48229769 = new Ya.Metrika2({id:48229769,clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true})}catch(e){}});var n = d.getElementsByTagName("script")[0],
-s = d.createElement("script"),
-f = function (){n.parentNode.insertBefore(s, n)};s.type = "text/javascript";s.async = true;s.src = "https://mc.yandex.ru/metrika/tag.js";if (w.opera == "[object Opera]"){d.addEventListener("DOMContentLoaded",f,false)}else{f()}})(document, window, "yandex_metrika_callbacks2");</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/48229769" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- Facebook Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');fbq('init', '993567290808898');fbq('track', 'PageView');</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=993567290808898&ev=PageView&noscript=1"/></noscript>
-<!-- End Facebook Pixel Code -->
-<!-- Start Alexa Certify Javascript -->
-<script type="text/javascript">
-_atrk_opts ={atrk_acct:"4pXNq1P8cT20VR", domain:"ubex.com",dynamic: true};(function(){var as = document.createElement('script');as.type = 'text/javascript';as.async = true;as.src = "https://certify-js.alexametrics.com/atrk.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s)})();</script>
-<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=4pXNq1P8cT20VR" style="display:none" height="1" width="1" alt="" /></noscript>
-<!-- End Alexa Certify Javascript -->
 <a href="javascript:;" class="mobile_bag_clicker"></a>
 <!-- popup-menu-end -->
+
 <script type="text/javascript">
 var product;(function(){var s   = document.createElement('script');var x   = document.getElementsByTagName('script')[0];s.type  = 'text/javascript';s.async = true;s.src   = ('https:'==document.location.protocol?'https://':'http://')
 + 'eu-sonar.sociomantic.com/js/2010-07-01/adpan/ubex-eu';x.parentNode.insertBefore( s, x )})();$(document).ready(function(){$('.header__menu li a, .footer__menu a').on('click',function(){var hhhref = $(this).attr('href').split('#');product ={category : [ hhhref[1] ]};(function(){var s   = document.createElement('script');var x   = document.getElementsByTagName('script')[0];s.type  = 'text/javascript';s.async = true;s.src   = ('https:'==document.location.protocol?'https://':'http://')

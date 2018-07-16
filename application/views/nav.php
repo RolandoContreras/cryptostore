@@ -9,10 +9,12 @@
     <a href="javascript:open_popup('#popup-menu')" class="header__menu_mob_link"></a>
     <nav class="header__menu">
         <ul>
+            <li><a href="<?php echo site_url().'home'?>">Inicio</a></li>
             <li><a href="<?php echo site_url().'home/#nosotros'?>">Nosotros</a></li>
             <li><a href="<?php echo site_url().'home/#features'?>">Características</a></li>
             <li><a href="<?php echo site_url().'home/#faq'?>">FAQ</a></li>
-            <li><a href="<?php echo site_url().'home/#faq'?>">Login</a></li>
+            <li><a href="<?php echo site_url().'home/#contact'?>">Contacto</a></li>
+            <li><a href="<?php echo site_url().'login'?>">Login</a></li>
         </ul>
     </nav>
         <div class="header__right">

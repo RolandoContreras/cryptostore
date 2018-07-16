@@ -48,40 +48,15 @@ $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 
 $route['backoffice'] = "b_home";
-$route['backoffice/productos'] = "b_product";
 $route['backoffice/profile'] = "b_data";
-$route['backoffice/upgrade'] = "b_upgrade";
-$route['backoffice/binario'] = "b_binario";
-$route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
-
-$route['backoffice/productos/globalpass'] = "b_globalpass";
-
-$route['backoffice/messages'] = "b_messages";
-$route['backoffice/messages/bonus'] = "b_messages/message_type";
-$route['backoffice/messages/bonus/([0-9a-z_-]+)'] = "b_messages/message_type/$1";
 
 $route['backoffice/messages/support'] = "b_messages/message_type";
 $route['backoffice/messages/support/([0-9a-z_-]+)'] = "b_messages/message_type/$1";
 
-$route['backoffice/messages/social'] = "b_messages/message_type";
-$route['backoffice/messages/social/([0-9a-z_-]+)'] = "b_messages/message_type/$1";
-
-$route['backoffice/compose_message'] = "b_messages/compose_message"; 
-
 $route['backoffice/soporte'] = "b_soporte"; 
 $route['backoffice/soporte/validate'] = "b_soporte/validate";
 
-$route['backoffice/comisiones'] = "b_comissions";
-$route['backoffice/comisiones/binary'] = "b_comissions/index/$1";
-$route['backoffice/comisiones/referred'] = "b_comissions/index/$1";
-$route['backoffice/comisiones/teambuilder'] = "b_comissions/index/$1";
-$route['backoffice/comisiones/productor'] = "b_comissions/index/$1";
-$route['backoffice/comisiones/performance'] = "b_comissions/index/$1";
-$route['backoffice/comisiones/unilevel'] = "b_comissions/index/$1";
-$route['backoffice/comisiones/global'] = "b_comissions/index/$1";
-
-$route['backoffice/message_confirmation'] = "b_message_confirmation";
-$route['backoffice/message_confirmation/upload'] = "b_message_confirmation/upload";
+$route['backoffice/sell'] = "b_sell";
 
 $route['logout'] = "b_home/logout";
 $route['backoffice/misdatos'] = "b_data";
