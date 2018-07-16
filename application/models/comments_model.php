@@ -20,6 +20,7 @@ class comments_model_atributos{
     var $name='';
     var $email='';
     var $comment='';
+    var $phone='';
     var $subject='';
     var $date_comment='';
     var $active='';
@@ -38,6 +39,7 @@ class Comments_Model extends CI_Model{
         $this->name='';
         $this->email='';
         $this->comment='';
+        $this->phone='';
         $this->subject='';
 	$this->date_comment='';
         $this->active='';

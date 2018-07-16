@@ -3,7 +3,7 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>CMS - 3T</title>
+        <title>CMS - EASYCRIPTO</title>
         <base href="<?php echo site_url();?>">
         <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
         <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
@@ -19,7 +19,6 @@
         <link href="static/cms/css/core/buttons.css" rel="stylesheet">
         <link href="static/cms/css/core/cms.css" rel="stylesheet">
         <link href="static/cms/css/style.css" rel="stylesheet">
-        
         <!-- color style -->
         <link href="static/cms/css/core/dark.css" rel="stylesheet">
         <link href="static/cms/css/core/bootstrap-responsive.css" rel="stylesheet">
@@ -32,21 +31,15 @@
         <script src="static/cms/js/core/jquery.js"></script>        
         <script src="static/cms/plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
         <script src="static/cms/js/core/bootstrap.js"></script>	                    
-
         <script src="static/cms/plugins/datepicker/js/bootstrap-datepicker.js"></script>
         <script src="static/cms/plugins/wysiwyg/bootstrap-wysihtml5.js"></script>
         <script type="text/javascript" src="static/cms/js/browserplus-min.js"></script>
         <script type="text/javascript" src="static/cms/plugins/plupload/js/plupload.full.js"></script>
         <script type="text/javascript" src="static/cms/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
-
         <script src="static/cms/js/core/jquery.validate.min.js"></script>
         <script src="static/cms/js/core/bootstrap-alert.js"></script>
-        
         <script src="static/cms/js/demo.js"></script>
-        
         <script src="static/cms/plugins/colorpicker/js/bootstrap-colorpicker.js"></script>
-        
-        
         <script type="text/javascript">
             var site = '<?php echo site_url();?>';
         </script>
@@ -58,7 +51,7 @@
         <div class="navbar-inner">
             <div class="container-fluid">
                 <a class="brand" href="<?php echo site_url();?>dashboard/panel">
-                    <img src="<?php echo site_url().'static/page_front/images/logo/logo_small.png'?>" alt="logo" width="50"></a>
+                    <img src="<?php echo site_url().'static/page_front/images/logo/logo_cms.png'?>" alt="logo" width="65"></a>
                 <div class="btn-toolbar pull-right">                        
                 <!-- /btn-group -->
                     <div class="btn-group">
@@ -95,15 +88,7 @@
                                             <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/soporte";?>"><i class="icon-large icon-th"></i>Soporte</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/categorias";?>"><i class="icon-large icon-th"></i>Categórías</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/comisiones";?>"><i class="icon-large icon-th"></i>Comisiones</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/puntos_binario";?>"><i class="icon-large icon-th"></i>Puntos Binario</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/bonos";?>"><i class="icon-large icon-th"></i>Bonos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/productos";?>"><i class="icon-large icon-th"></i>Productos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/informativos";?>"><i class="icon-large icon-th"></i>Mensajes Informativos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/rangos";?>"><i class="icon-large icon-th"></i>Rangos</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/ventas";?>"><i class="icon-large icon-th"></i>Ventas</a></li>
                                             <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
                                             <?php } ?>
@@ -111,83 +96,6 @@
                                         </div>
                                     </div>
                             </div>
-                            <?php 
-                            if($_SESSION['usercms']['privilage'] == 3){ ?>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#activaciones">
-                                        Activaciones
-                                        </a>
-                                    </div>
-                                    <div id="activaciones" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                            <li><a href="<?php echo site_url()."dashboard/confirmation_activaciones";?>"><i class="icon-large icon-th"></i>Confirmación</a></li>
-                                             <li><a href="<?php echo site_url()."dashboard/activaciones";?>"><i class="icon-large icon-th"></i>Activaciones</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                        <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#cobros">
-                                        Cobros
-                                        </a>
-                                    </div>
-                                    <div id="cobros" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/cobros";?>"><i class="icon-large icon-th"></i>Cobros</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                        
-    
-                            <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#recargas">
-                                        Recargas
-                                        </a>
-                                    </div>
-                                    <div id="recargas" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/recargas";?>"><i class="icon-large icon-th"></i>Recargas de Saldo</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                            <?php } ?>
-                            
-                        
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#reportes">
-                                    Reportes
-                                    </a>
-                                </div>
-                                <div id="reportes" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                            <li>
-                                                <a href="<?php echo site_url()."dashboard/reportes/asociados";?>"><i class="icon-large icon-th"></i>Asociados</a>
-                                            </li>
-                                            <li>                                        
-                                                <a href="<?php echo site_url()."dashboard/reportes/cuentas";?>"><i class="icon-large icon-th"></i>Cuentas</a>
-                                            </li>
-                                            <li>                                        
-                                                <a href="<?php echo site_url()."dashboard/reportes/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a>
-                                            </li>
-                                            <li>                                        
-                                                <a><i class="icon-large icon-th"></i>Proyecciones</a>
-                                            </li>
-                                            </ul>                                     
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        <?php if($_SESSION['usercms']['privilage'] == 2){ ?>
                             <div class="accordion-group">
                                 <div class="accordion-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#report">
@@ -198,19 +106,18 @@
                                     <div class="accordion-inner">
                                         <ul class="nav nav-list">
                                             <li>
-                                                <a href="<?php echo site_url()."dashboard/reportes_comision";?>"><i class="icon-large icon-th"></i>Total Comisiones</a>
+                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Total Comisiones</a>
                                             </li>
                                             <li>
-                                                <a href="<?php echo site_url()."dashboard/reporte_comision_x_asociado";?>"><i class="icon-large icon-th"></i>Comisión x Asociado</a>
+                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Comisión x Asociado</a>
                                             </li>
                                             <li>
-                                                <a href="<?php echo site_url()."dashboard/reportes_asociados";?>"><i class="icon-large icon-th"></i>Asociados</a>
+                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Asociados</a>
                                             </li>
                                         </ul>                                     
                                     </div>
                                 </div>
                             </div>
-                        <?php } ?>
                     </div>
             </div>
             <!-- sidebar 

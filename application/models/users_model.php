@@ -25,6 +25,7 @@ class users_model_atributos{
     var $email='';
     var $phone='';
     var $privilage='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -46,6 +47,7 @@ class Users_Model extends CI_Model{
         $this->email='';
 	$this->phone='';
         $this->privilage='';
+        $this->active='';
 	$this->status_value='';
 	$this->created_at='';
 	$this->created_by='';

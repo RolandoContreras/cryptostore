@@ -54,10 +54,6 @@ $route['backoffice/upgrade'] = "b_upgrade";
 $route['backoffice/binario'] = "b_binario";
 $route['backoffice/binario/([0-9a-z_-]+)'] = "b_binario/index/$1";
 
-$route['backoffice/productos/academy'] = "b_academy";
-$route['backoffice/productos/academy/courses'] = "b_academy/courses";
-$route['backoffice/productos/academy/courses/([0-9a-z_-]+)'] = "b_academy/courses/$1";
-
 $route['backoffice/productos/globalpass'] = "b_globalpass";
 
 $route['backoffice/messages'] = "b_messages";
@@ -75,11 +71,6 @@ $route['backoffice/compose_message'] = "b_messages/compose_message";
 $route['backoffice/soporte'] = "b_soporte"; 
 $route['backoffice/soporte/validate'] = "b_soporte/validate";
 
-$route['backoffice/unilevel'] = "b_unilevel";
-$route['backoffice/unilevel/([0-9a-z_-]+)'] = "b_unilevel/index/$1";
-
-$route['backoffice/points'] = "b_points";
-
 $route['backoffice/comisiones'] = "b_comissions";
 $route['backoffice/comisiones/binary'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/referred'] = "b_comissions/index/$1";
@@ -88,11 +79,6 @@ $route['backoffice/comisiones/productor'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/performance'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/unilevel'] = "b_comissions/index/$1";
 $route['backoffice/comisiones/global'] = "b_comissions/index/$1";
-
-
-$route['backoffice/billetera'] = "b_wallet";
-$route['backoffice/cobros'] = "b_pay";
-$route['backoffice/pagos/validar'] = "b_pay/validate";
 
 $route['backoffice/message_confirmation'] = "b_message_confirmation";
 $route['backoffice/message_confirmation/upload'] = "b_message_confirmation/upload";
@@ -114,31 +100,13 @@ $route['dashboard/puntos'] = "d_points";
 $route['dashboard/puntos_binario'] = "d_binaries"; 
 
 $route['dashboard/clientes'] = "d_customer";
-$route['dashboard/financiados'] = "d_customer/financiados";
-$route['dashboard/clientes/active_customer'] = "d_customer/active_customer";
-$route['dashboard/clientes/no_active_customer'] = "d_customer/no_active_customer";
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
 $route['dashboard/clientes/validate'] = "d_customer/validate";
-
-$route['dashboard/categorias'] = "d_category";
-$route['dashboard/categorias/load'] = "d_category/load";
-$route['dashboard/categorias/load/([0-9]+)'] = "d_category/load/$1";
-$route['dashboard/categorias/validate'] = "d_category/validate";
-
-$route['dashboard/pagos_diarios'] = "d_pay_dialy"; 
-$route['dashboard/pagos_diarios/hacer_pago'] = "d_pay_dialy/hacer_pago";
-$route['dashboard/jobs/pago_binario'] = "jobs/pago_binario"; 
-
 
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
 $route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no";
-
-$route['dashboard/informativos'] = "d_informative"; 
-$route['dashboard/informativos/load'] = "d_informative/load";
-$route['dashboard/informativos/load/([0-9]+)'] = "d_informative/load/$1";
-$route['dashboard/informativos/validate'] = "d_informative/validate";
 
 $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios'] = "d_users";
@@ -148,18 +116,13 @@ $route['dashboard/usuarios/validate'] = "d_users/validate";
 
 $route['dashboard/confirmation_activaciones'] = "d_activate/confirmation";
 
-$route['dashboard/activaciones'] = "d_activate";
-$route['dashboard/activaciones/active_customer'] = "d_activate/active_customer";
-$route['dashboard/activaciones/active_financy'] = "d_activate/active_financy";
-$route['dashboard/activaciones/active'] = "d_activate/active";
-
 $route['dashboard/soporte'] = "d_messages/soporte";
 $route['dashboard/soporte/update'] = "d_messages/update";
 
-$route['dashboard/cobros'] = "d_pays";
-$route['dashboard/cobros_details/([0-9]+)'] = "d_pays/details/$1";
-$route['dashboard/cobros/pagado'] = "d_pays/pagado";
-$route['dashboard/cobros/devolver'] = "d_pays/devolver";
+$route['dashboard/ventas'] = "d_sell";
+$route['dashboard/ventas_details/([0-9]+)'] = "d_sell/details/$1";
+$route['dashboard/ventas/pagado'] = "d_sell/pagado";
+$route['dashboard/ventas/devolver'] = "d_sell/devolver";
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
