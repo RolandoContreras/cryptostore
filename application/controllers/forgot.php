@@ -27,9 +27,7 @@ class Forgot extends CI_Controller {
 		$this->load->view('forgot');
 	}
         public function send_messages(){
-            if($this->input->is_ajax_request()){ 
-                $username = $this->input->post('username');  
-                
+                $username = $_POST['username'];
                 //GER DATA USERNAME
                  $params = array("select" => "first_name,email,password",
                                 "where" => "username = '$username'");
@@ -38,6 +36,7 @@ class Forgot extends CI_Controller {
                         $name = ucfirst($obj_data->first_name);
                         $email = $obj_data->email;
                         $password = $obj_data->password;
+                        
                     //SEND MESSAGES
                     // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
                     $mensaje = wordwrap("<html><body><h1>Contraseña</h1><p>Hola $name.</p><p>Te dejamos tu contraseña de ingreso.</p><h3>Contraseña: $password</h3></body></html>", 70, "\n", true);
@@ -46,16 +45,14 @@ class Forgot extends CI_Controller {
                     //cabecera
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                    $headers .= "From: 3T Company: Travel - Training - Trade < noreplay@my3t.club >\r\n";
+                    $headers .= "From: Easycripto: Compra bitcoin de manera segura < noreplay@easycrpito.com >\r\n";
                     //Enviamos el mensaje a tu_dirección_email 
                     $bool = mail("$email",$titulo,$mensaje,$headers);
-                    $data['message'] = "true";  
+                    echo '<div class="alert alert-success" style="text-align: center">E-mail enviado al correo registrado.</div>';
                 }else{
-                    $data['message'] = "false";
+                    echo '<div class="alert alert-danger" style="text-align: center">Usuario no registrado.</div>';
                 }         
-                echo json_encode($data);  
-                exit();      
-            }
+
         }
         
 }

@@ -20,7 +20,7 @@
                     <input class="lrf-block__form-input-login" name="password" id="password" type="password" placeholder="Contraseña">
                     </label>
                     <button class="lrf-block__form-submit" type="submit">Iniciar Sesión</button>
-                    <p><a href="https://tokensale.ubex.com/password/reset">¿Olvidó su contraseña?</a></p>
+                    <p><a href="<?php echo site_url().'forgot';?>">¿Olvidó su contraseña?</a></p>
                     <label class="lrf-block__form-label"></label>
                     <div id="alert_message"></div>
                 </form>
@@ -63,7 +63,6 @@
 <script src="<?php echo site_url().'static/page_front/js/plugins.js?3'?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/owl.carousel.min.js'?>"></script>
 <link rel="stylesheet" href="<?php echo site_url().'static/page_front/css/owl.carousel.css'?>" />
-<script src="https://player.vimeo.com/api/player.js"></script>
 <script src="<?php echo site_url().'static/page_front/js/script.js?3266'?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f'?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/login.js';?>"></script>

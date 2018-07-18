@@ -255,11 +255,5 @@ $(document).ready(function() {
 });
 </script> 
 <a href="javascript:;" class="mobile_bag_clicker"></a>
-<!-- popup-menu-end -->
-<script type="text/javascript">
-var product;(function(){var s   = document.createElement('script');var x   = document.getElementsByTagName('script')[0];s.type  = 'text/javascript';s.async = true;s.src   = ('https:'==document.location.protocol?'https://':'http://')
-+ 'eu-sonar.sociomantic.com/js/2010-07-01/adpan/ubex-eu';x.parentNode.insertBefore( s, x )})();$(document).ready(function(){$('.header__menu li a, .footer__menu a').on('click',function(){var hhhref = $(this).attr('href').split('#');product ={category : [ hhhref[1] ]};(function(){var s   = document.createElement('script');var x   = document.getElementsByTagName('script')[0];s.type  = 'text/javascript';s.async = true;s.src   = ('https:'==document.location.protocol?'https://':'http://')
-+ 'eu-sonar.sociomantic.com/js/2010-07-01/adpan/ubex-eu';x.parentNode.insertBefore( s, x )})()});if ("onhashchange" in window){if ($(location.hash).length){product ={category : [ location.hash.replace('/','').replace('#','') ]};(function(){var s   = document.createElement('script');var x   = document.getElementsByTagName('script')[0];s.type  = 'text/javascript';s.async = true;s.src   = ('https:'==document.location.protocol?'https://':'http://')
-+ 'eu-sonar.sociomantic.com/js/2010-07-01/adpan/ubex-eu';x.parentNode.insertBefore( s, x )})()}}});</script>
 </body>
 </html>
