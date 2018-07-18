@@ -1940,7 +1940,7 @@ a.rose-bg:hover {
 }
 .future-adversing__text_block h2 {
     margin: 0;
-    font-size: 140px;
+    font-size: 109px;
     line-height: 88%;
     padding-bottom: 13px;
     font-weight: 700;
@@ -5272,7 +5272,8 @@ p.press__name {
 }
 .bottom_bg {
     margin-top: 80px;
-    background: url(../images/bg/grade.jpg) center top no-repeat #000;
+    /*background: url(../images/bg/grade.jpg) center top no-repeat #000;*/
+    background-color: #000;
     
 /*    background-position: center center;
     background: radial-gradient(circle, #black, #white);*/
@@ -5466,6 +5467,7 @@ p.press__name {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
     color: #9e99b5;
+    /*color: #fff;*/
     padding-bottom: 50px;
 }
 .bottom_bg_footer {

@@ -74,7 +74,7 @@
 <!-- features-->
 <section class="problems-adversting" id="features">
 <div class="container">
-<h2>¿Por qué elegir easycripto?</h2>
+<h2>¿POR QUÉ ELEGIR EASYCRIPTO?</h2>
 </div>
 <div class="black_block">
 <div class="tab-content">
@@ -111,21 +111,22 @@
     <div class="container">
         <div class="future-adversing__text_block">
             <h3>Contacto</h3>
-            <p class="under_header_p">Mantente en contacto con nosotros llenando el formulario de contacto <br/>Realiza todas las pregumtas que tengas y responderemos a la brevedad.</p>
+            <p class="under_header_p">Mantente en contacto con nosotros llenando el formulario de contacto <br/>Realiza todas las preguntas que tengas y responderemos a la brevedad.</p>
         </div>
         <div class="lrf-block__form">
-                <form>
-                    <input class="lrf-block__form-input" name="name" placeholder="Nombre">
-                    <input class="lrf-block__form-input" name="email" placeholder="Email">
+            <form id="formid">
+                    <input class="lrf-block__form-input" name="name" id="name" placeholder="Nombre">
+                    <input class="lrf-block__form-input" name="email" id="email" placeholder="Email">
                     <label class="lrf-block__form-label">
-                        <input class="lrf-block__form-input" name="telefono" placeholder="Teléfono">
-                        <input class="lrf-block__form-input" name="subjet" placeholder="Asunto">
+                        <input class="lrf-block__form-input" name="phone" id="phone" placeholder="Teléfono">
+                        <input class="lrf-block__form-input" name="subjet" id="subjet"  placeholder="Asunto">
                     </label>
                     <label class="lrf-block__form-label">
-                    <textarea class="lrf-block__form-area" placeholder="Mensaje" name="messages" rows="5"></textarea>
+                    <input class="lrf-block__form-area" name="Mensaje" id="Mensaje"  placeholder="Mensaje">
                     </label>
                     <button class="lrf-block__form-submit" type="submit">Enviar</button>
                 </form>
+            <div id="alert_message"></div>
             </div>
     </div>
 </section>
@@ -166,154 +167,10 @@
 <!-- sign-up -->
 
 </div>
-<!-- video_modal-start -->
-<section class="popup_block__modal"  id="video_modal" >
-<a href="javascript:;" class="popup_bg"></a>
-<div class="popup_block centered_block">
-<a href="javascript:;" class="popup_block__close"  data-dismiss="modal">&times;</a>
-<div class="popup_block__overflow">
-<div class="video_file"></div>
-</div>
-</div>
-</section>
-<!-- video_modal-end -->
-<!-- what-tehnologies-start -->
-<!--<section class="popup_block__modal tehnologies_popup"  id="what-tehnologies" >
-<a href="javascript:;" class="popup_bg"></a>
-<div class="popup_block ">
-<div class="container clearfix">
-<a href="javascript:;" class="popup_block__close"  data-dismiss="modal">&times;</a>
-<div class="tehnologies_popup__left">
-<div class="tehnologies_popup__left_wrap">
-<h2>Ubex</h2>
-<p>combines the most advanced technologies in the world.</p>
-</div>
-</div>
-<div class=" tehnologies_popup__right">
-<div class="tehnologies_popup__item ">
-<h4>Neural network</h4>
-<ul>
-<li>Collection of necessary information about internet resources and their users, analysis of users’ current interests and needs</li>
-<li>Selection of the most relevant and financially profitable advertisement, matching it with the appropriate advertising format</li>
-<li>Regression analysis of statistical indicators to determine the most relevant results</li>
-<li>Accumulation and processing of the regression analysis results history, and training of a neural network with reinforcement learning</li>
-</ul>
-</div>
-<div class="tehnologies_popup__item tehnologies_popup__item2">
-<h4>Blockchain</h4>
-<ul>
-<li>Development of a multi-level advertiser and publisher reputation tracking system aimed at fraud prevention</li>
-<li>Use of smart contracts to exclude any intermediaries between advertisers and publishers</li>
-<li>Storage of data necessary for artificial intelligence learning along with the information on publishers’ sites, ad content, offers and the history of the participants</li>
-<li>Tokenization of advertising spaces on publishers’ websites by receiving UBEX tokens in advance</li>
-<li>Using UBEX tokens to compensate participants for sharing data about the user visiting their websites (Data mining)
-</li>
-</ul>
-</div>
-<div class="tehnologies_popup__item">
-<h4>Programmatic</h4>
-<ul>
-<li>A combination of methods of purchasing advertising on the internet with the help of an automation engine responsible for making decisions about transactions without any human involvement, on the basis of a user’s socio-demographic and behavioral profiles</li>
-<li>Real-time trading that facilitates buying and selling of each separate ad display through instant auctions</li>
-<li>High-precision targeting, which enables the transition from buying advertising space to acquiring of the target audience</li>
-</ul>
-</div>
-<div class="tehnologies_popup__item tehnologies_popup__item2">
-<h4>Pay Per Action</h4>
-<ul>
-<li>A program that would allow advertisers to pay only for specific actions taken by users redirected from publisher websites</li>
-<li>The PPA-model is the most cost-effective option of paying for advertising and is popular among exchange members with a long-standing history and high rating</li>
-<li>The Pay per Lead, Pay per Call, Pay per Install, and Pay per Sale approaches are the most common among all PPA models</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>-->
-<!-- what-tehnologies-end -->
-<!-- main-reasons-start -->
-<!--<section class="popup_block__modal tehnologies_popup"  id="main-reasons" >
-<a href="javascript:;" class="popup_bg"></a>
-<div class="popup_block ">
-<div class="container clearfix">
-<a href="javascript:;" class="popup_block__close"  data-dismiss="modal">&times;</a>
-<div class="tehnologies_popup__left">
-<div class="tehnologies_popup__left_wrap">
-<h3>4 Main<br> Reasons </h3>
-<p>to Buy UBEX Tokens Right Now</p>
-</div>
-</div>
-<div class=" tehnologies_popup__right">
-<div class="tehnologies_popup__item">
-<div class="num">01.</div>
-<h4>Limited issue of tokens</h4>
-<p>The total number of issued tokens is 4 billion UBEX;the release of new tokens is made impossible by the smart contract.</p>
-<p>All unsold tokens will be burned. The team and the advisors are locked out of their tokens for a period of 1 year.</p>
-</div>
-<div class="tehnologies_popup__item tehnologies_popup__item2">
-<div class="num">02.</div>
-<h4>Consistent<br> demand growth</h4>
-<p>UBEX Tokens are used by advertisers to pay publishers. As this groundbreaking program expands into new geographies, it will lead to a surge in the number of advertisers that will, in turn, be translated into demand growth for the token.</p>
-</div>
-<div class="tehnologies_popup__item">
-<div class="num">03.</div>
-<h4>Financial model involving the burning of tokens</h4>
-<p>Every quarter, we will use 20% of our proceeds from transaction commissions to buy back UBEX Tokens and destroy them, until 50% of all UBEX Tokens are taken out of circulation. This approach creates a scarcity in the token supply.</p>
-</div>
-<div class="tehnologies_popup__item tehnologies_popup__item2">
-<div class="num">04.</div>
-<h4>Full compliance with SEC and FINMA</h4>
-<p>UBEX is a payment token used within an operational application. As such, the UBEX token will be in high demand on leading exchanges that comply with the regulations of the Securities and Exchange Commission (SEC) and the Swiss Financial Market Supervisory Authority (FINMA).</p>
-</div>
-</div>
-</div>
-</div>
-</section>-->
-<!-- main-reasons-end -->
-<!-- popup_subscribtion -->
-<!--<section class="popup_block__modal"  id="popup_subscribtion" >
-<a href="javascript:;" class="popup_bg"></a>
-<div class="popup_block centered_block">
-<div class=" clearfix ">
-<a href="javascript:;" class="popup_block__close "  data-dismiss="modal">&times;</a>
-<div class="popup_block__overflow ">
-<div class="popup_subscribtion__bg">
-<div class="popup_subscribtion__for_hide">
-<p class="popup_subscribtion__p1">ENTER<br> YOUR EMAIL</p>
-<p class="popup_subscribtion__p2">And get 500 UBEX tokens FREE</p>
-</div>
-<div class="popup_subscribtion__sucess">
-<p class="popup_subscribtion__p1">Thank you!</p>
-</div>
-</div>
-<div class="clearfix popup_subscribtion__form ml-subscribe-form " id="mlb2-857132">
-<form action="https://app.mailerlite.com/webforms/submit/c5p4k4" data-code="c5p4k4" method="POST" target="_blank" class="popup_subscribtion__for_hide">
-<div class="input-group mb0 ml-field-email ml-validate-required ml-validate-email">
-<input class="form-control" name="fields[email]" placeholder="Enter your Email" type="email">
-</div>
-<div class="checkbox mb0 mt15 ml-validate-required">
-<input type="checkbox" id="want_receive">
-<label class="ml-confirmation-text" for="want_receive">   I want to receive UBEX newsletters </label>
-</div>
-<span class="input-group-btn">
-<button class="btn btn-primary primary" type="submit">Subscribe</button>
-<button disabled="disabled" style="display: none;" type="button" class="loading btn btn-primary">
-<img src="https://static.mailerlite.com/images/rolling.gif"  width="20" height="20" >
-</button>
-</span>
-<input name="ml-submit" value="1" type="hidden">
-</form>
-<div class="popup_subscribtion__sucess popup_block__buttons_corners">
-<button class="btn  btn-primary primary popup_block__other_closer" type="button">Continue</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>-->
-<!-- popup_subscribtion END -->
+
+
 <!-- popup_thank_you -->
-<!--<section class="popup_block__modal"  id="popup_thank_you" >
+<section class="popup_block__modal"  id="popup_thank_you" >
 <a href="javascript:;" class="popup_bg"></a>
 <div class="popup_block centered_block">
 <div class=" clearfix ">
@@ -326,11 +183,11 @@
 </div>
 </div>
 </div>
-</div>
+</div><!--
 </section>-->
 <!-- popup_thank_you END -->
 <!-- popup-menu-start -->
-<!--<section class="popup_block__modal"  id="popup-menu" >
+<section class="popup_block__modal"  id="popup-menu" >
 <a href="javascript:;" class="popup_bg"></a>
 <div class="popup_block centered_block">
 <div class=" clearfix">
@@ -339,7 +196,7 @@
 </div>
 </div>
 </div>
-</section>-->
+</section>
 <!-- lang-popup -->
 <section class="popup_block__modal"  id="popup-lang" >
 <a href="javascript:;" class="popup_bg"></a>
@@ -366,9 +223,39 @@
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script src="<?php echo site_url().'static/page_front/js/script.js?3266'?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/webforms.min.js?v3772b61f1ec61c541c401d4eadfdd02f'?>"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#formid").validate({
+        rules: {
+            name: { required: true, minlength: 2},
+            subjet: { required: true, minlength: 2},
+            phone: { required: true, number: true},
+            email: { required:true, email: true},
+            message: { required:true, minlength: 2}
+        },
+        messages: {
+            name: "Por favor introduzca su nombre",
+            email : "Por favor introduzca un e-mail válido.",
+            subjet: "Por favor introduzca un título",
+            phone: "Por favor introduzca un teléfono",
+            message : "Por favor introduzca un mensaje."
+        },
+        submitHandler: function(form){
+            var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#subjet').val()+'&'+$('#message').val()+'&'+$('#phone').val();
+            $.ajax({
+                type: "POST",
+                url:"<?php echo site_url().'home/send_messages';?>",
+                data: {dataString : dataString},
+                success: function(data){
+                    $("#alert_message").html(data);
+                }
+            });
+        }
+    });
+});
+</script> 
 <a href="javascript:;" class="mobile_bag_clicker"></a>
 <!-- popup-menu-end -->
-
 <script type="text/javascript">
 var product;(function(){var s   = document.createElement('script');var x   = document.getElementsByTagName('script')[0];s.type  = 'text/javascript';s.async = true;s.src   = ('https:'==document.location.protocol?'https://':'http://')
 + 'eu-sonar.sociomantic.com/js/2010-07-01/adpan/ubex-eu';x.parentNode.insertBefore( s, x )})();$(document).ready(function(){$('.header__menu li a, .footer__menu a').on('click',function(){var hhhref = $(this).attr('href').split('#');product ={category : [ hhhref[1] ]};(function(){var s   = document.createElement('script');var x   = document.getElementsByTagName('script')[0];s.type  = 'text/javascript';s.async = true;s.src   = ('https:'==document.location.protocol?'https://':'http://')
