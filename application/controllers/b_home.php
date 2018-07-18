@@ -6,18 +6,20 @@ class B_home extends CI_Controller {
         $this->load->model("customer_model","obj_customer");
         $this->load->model("messages_model","obj_messages");
         $this->load->model("sell_model","obj_sell");
+        $this->load->model("news_model","obj_news");
     }
 
     public function index()
     {
-        
-        
-
         //GET SESION ACTUALY
         $this->get_session();
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
         //GET DATE
+        //GET MESSAGE INFORMATIVE
+        $messages_informative = $this->get_messages_informative();
+        //GET NEWS
+        $obj_news = $this->get_news();
         $params = array(
                         "select" =>"customer.customer_id,
                                     customer.username,
@@ -41,9 +43,31 @@ class B_home extends CI_Controller {
              //GET PRICE BTC
             $price_btc = $this->btc_price();
             $this->tmp_backoffice->set("price_btc",$price_btc);
+            $this->tmp_backoffice->set("messages_informative",$messages_informative);
+            $this->tmp_backoffice->set("obj_news",$obj_news);
             $this->tmp_backoffice->set("obj_total",$obj_total);
             $this->tmp_backoffice->set("obj_customer",$obj_customer);
             $this->tmp_backoffice->render("backoffice/b_home");
+    }
+    
+    public function get_messages_informative(){
+            $params = array(
+                            "select" =>"",
+                             "where" => "active = 1 and status_value = 1 and support = 0",
+                            "order" => "position ASC");
+                
+           $messages_informative = $this->obj_messages->search($params); 
+            return $messages_informative;
+    }
+    
+    public function get_news(){
+            $params = array(
+                            "select" =>"news_id,
+                                        img",
+                             "where" => "status_value = 1");
+                
+           $news = $this->obj_news->search($params); 
+           return $news;
     }
     
     public function btc_price(){
@@ -70,31 +94,6 @@ class B_home extends CI_Controller {
              }
              
              return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
-    }
-    
-    public function franchise(){
-            $params = array(
-                        "select" =>"franchise_id,
-                                    name,
-                                    price,
-                                    point,
-                                    img",
-                         "where" => "status_value = 1 and franchise_id <> 6",
-                        "order" => "price ASC",
-                );
-            $obj_franchise = $this->obj_franchise->search($params);
-            return $obj_franchise;
-    }
-    
-    public function next_range($range_id){
-            $params = array(
-                        "select" =>"range_id,
-                                    name,
-                                    img,
-                                    point_grupal",
-                         "where" => "range_id > $range_id");
-            $next_range = $this->obj_ranges->get_search_row($params);
-            return $next_range;
     }
     
     public function total_amount($customer_id){
@@ -153,56 +152,6 @@ class B_home extends CI_Controller {
         }else{
             redirect(site_url().'home');
         }
-    }
-    
-    public function get_total_messages($customer_id){
-        $params = array(
-                        "select" =>"count(messages_id) as total",
-                        "where" => "customer_id = $customer_id and active = 1 and status_value = 1 and support <> 1",
-                                        );
-            $obj_message = $this->obj_messages->get_search_row($params);
-            //GET TOTAL MESSAGE ACTIVE   
-            $all_message = $obj_message->total;
-            return $all_message;
-    }
-    
-    public function get_messages_informative(){
-            $params = array(
-                            "select" =>"",
-                             "where" => "status_value = 1 and page = 1 and active = 1",
-                            "order" => "position ASC");
-                
-           $messages_informative = $this->obj_otros->search($params); 
-            return $messages_informative;
-    }
-    
-    public function get_news(){
-            $params = array(
-                            "select" =>"news_id,
-                                        img",
-                             "where" => "status_value = 1");
-                
-           $news = $this->obj_news->search($params); 
-           return $news;
-    }
-    
-    
-    public function get_messages($customer_id){
-        $params = array(
-                        "select" =>"messages_id,
-                                    date,
-                                    subject,
-                                    label,
-                                    type,
-                                    messages",
-                        "where" => "customer_id = $customer_id and status_value = 1 and support <> 1",
-                        "order" => "messages_id DESC",
-                        "limit" => "3",
-                                        );
-            $obj_message = $this->obj_messages->search($params); 
-            
-            //GET ALL MESSAGE   
-            return $obj_message;
     }
 }
 
