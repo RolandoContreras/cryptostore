@@ -2,7 +2,7 @@ function validate_usd(value){
     var price = document.getElementById("price").value;
         $.ajax({
         type: "post",
-        url: site + "b_home/validate_usd",
+        url: site + "backoffice/validate_usd",
         dataType: "json",
         data: {value: value,price: price},
         success:function(data){  
@@ -14,7 +14,7 @@ function validate_btc(value){
     var price = document.getElementById("price").value;
         $.ajax({
         type: "post",
-        url: site + "b_home/validate_btc",
+        url: site + "backoffice/validate_btc",
         dataType: "json",
         data: {value: value,price: price},
         success:function(data){            

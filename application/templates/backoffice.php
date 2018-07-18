@@ -19,7 +19,7 @@
 <!-- /entypo font stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/one/style_one.css';?>" rel="stylesheet">
 <!-- Font awesome stylesheet -->
-<link href="<?php echo site_url().'static/backoffice/css/assets/font-awesome.min.css';?>" rel="stylesheet">
+<link href="<?php // echo site_url().'static/backoffice/css/assets/font-awesome.min.css';?>" rel="stylesheet">
 <!-- /font awesome stylesheet -->
 
 <!-- Bootstrap stylesheet min version -->
@@ -30,11 +30,8 @@
 <!-- Mouldifi core stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-core.css';?>" rel="stylesheet">
 <!-- /mouldifi core stylesheet -->
-
 <link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-forms.css';?>" rel="stylesheet">
 
-<!--Bootstrap-wysihtml5-->
-<link rel='stylesheet' id='bos_sb_main_css-css'  href='<?php echo site_url().'static/backoffice/css/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css';?>' type='text/css' media='all' />
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>

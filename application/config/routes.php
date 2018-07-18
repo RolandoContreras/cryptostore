@@ -56,6 +56,11 @@ $route['backoffice/messages/support/([0-9a-z_-]+)'] = "b_messages/message_type/$
 $route['backoffice/soporte'] = "b_soporte"; 
 $route['backoffice/soporte/validate'] = "b_soporte/validate";
 
+$route['backoffice/validate_usd'] = "b_home/validate_usd"; 
+$route['backoffice/validate_btc'] = "b_home/validate_btc"; 
+
+
+
 $route['backoffice/sell'] = "b_sell";
 
 $route['logout'] = "b_home/logout";
