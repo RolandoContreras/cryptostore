@@ -88,6 +88,7 @@
                                             <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/noticias";?>"><i class="icon-large icon-th"></i>Noticias</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/ventas";?>"><i class="icon-large icon-th"></i>Ventas</a></li>
                                             <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>

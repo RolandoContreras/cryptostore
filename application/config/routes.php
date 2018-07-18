@@ -78,6 +78,10 @@ $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
 $route['dashboard/clientes/validate'] = "d_customer/validate";
 
+$route['dashboard/noticias'] = "d_news";
+$route['dashboard/noticias/load'] = "d_news/load";
+$route['dashboard/noticias/load/([0-9]+)'] = "d_news/load/$1";
+$route['dashboard/noticias/validate'] = "d_news/validate";
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
