@@ -75,10 +75,10 @@
 		<ul id="side-nav" class="main-menu navbar-collapse collapse">
                      <?php 
                             if($_SESSION['customer']['active']==1){
-                                $title_active='Activo';
+                                $title_active='Cliente Activo';
                                 $style_active='label-success';
                             }else{
-                                $title_active='Inactivo';
+                                $title_active='Cliente Inactivo';
                                 $style_active='label-danger';
                             }
                             ?>
@@ -107,9 +107,11 @@
                                         $style_inicio = "a_active";
                                     }
                                     ?>  
+                        <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title">Dashboard</span></a></li>
                         <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/sell'?>" class="<?php echo $style_sell;?>"><i class="fa fa-university fa-lg"></i><span class="title">Compras</span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/sell'?>" class="<?php echo $style_sell;?>"><i class="fa fa-shopping-bag fa-lg"></i><span class="title">Compras</span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/soporte'?>" class="<?php echo $style_soporte;?>"><i class="fa fa-commenting"></i><span class="title">Contacto</span></a></li>
 		</ul>
 		<!-- /main navigation -->		
   </div>

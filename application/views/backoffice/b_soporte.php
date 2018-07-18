@@ -2,7 +2,7 @@
       <section>
           <div class="section-heading row">
             <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                <h1 class="title text-uppercase">Soporte</h1>
+                <h1 class="title text-uppercase">Mensajes</h1>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
                 <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
@@ -13,11 +13,11 @@
                <div class="col-lg-12">
                      <div class="panel panel-info">
                         <div class="panel-heading">
-                           Soporte
+                           Mensaje de consulta
                         </div>
                         <div class="panel-body">
                             <div class="form-inline" >
-                                <button onclick="show();" class="btn btn-success">Abrir un nuevo tiquet <i class="fa fa-plus-circle"></i></button>
+                                <button onclick="show();" class="btn btn-success">Abrir un nuevo mensaje <i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                               <div class="col-md-12">
@@ -28,19 +28,15 @@
                                      <form method="post" id="form_support" enctype="multipart/form-data">
                                                  <label>Asunto:</label>
                                                     <div class="form-group">
-                                                        <input class="form-control" name="subject" id="subject" placeholder="Asunto" type="text" value="">
+                                                        <input class="form-control" name="title" id="title" placeholder="Asunto" type="text" value="">
                                                     </div>
                                                     <div class="form-group">
                                                            <textarea class="form-control" name="message" id="message" placeholder="Mensaje" style="height: 200px;width: 100% !important" placeholder="Message body"></textarea>
                                                    </div>
-                                                   <label>Seleccionar imagen del envio:</label>
-                                                    <div class="form-group">
-                                                        <input type="file" value="Upload Imagen de Envio" name="image_file" id="image_file">
-                                                    </div>
                                                     <hr>
                                                     <div class="form-group text-right">
                                                         <button class="btn btn-danger" onclick="hide();">Cerrar</button>
-                                                        <button type="submit" name="upload" id="upload" class="btn btn-primary">Crear Ticket</button>
+                                                        <button type="submit" name="upload" id="upload" class="btn btn-primary">Crear Mensaje</button>
                                                     </div>
                                                      <div id="message_reponse"></div>
                                             </form>
@@ -56,9 +52,9 @@
                                     <table id="table" class="display table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                <th align="center">Número de Ticket</th>
-                                                <th align="center">Asunto</th>
+                                                 <th align="center">Número de Mensaje</th>
                                                  <th align="center">Fecha</th>
+                                                 <th align="center">Asunto</th>
                                                  <th align="center">Respuesta</th>
                                                  <th align="center">Estado</th>
                                             </tr>
@@ -67,15 +63,15 @@
                                      <?php foreach ($obj_message_support as $value) { ?>
                                       <tr>
                                           <td><?php echo $value->messages_id;?></b></td>
-                                          <td><?php echo $value->subject;?></b></td>
-                                          <td><?php echo formato_fecha($value->date);?></td>
+                                          <td><b><?php echo formato_fecha_barras($value->date);?></b></td>
+                                          <td><?php echo $value->title;?></b></td>
                                           <td><b><?php echo $value->answer;?></b></td>
                                           <td>
                                                <?php 
                                                if($value->active == 1){ ?>
-                                                   <span class="label label-success">Abierto</span>
+                                                   <span class="label label-default">En espera</span>
                                                <?php }else{ ?>
-                                                   <span class="label label-danger">Cerrado</span>
+                                                   <span class="label label-success">Contestado</span>
                                                <?php } ?>
                                            </td>
                                        </tr>
@@ -85,12 +81,8 @@
                                 </div>
                      </div>
                   </div>  
-              <!--SPINNER-->
-        <div id="spinner"></div>
-    <!--END SPINNER--> 
             </div>
             <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>  
-         <!--</div>-->
       </section>
 </body>
 <script src="<?php echo site_url().'static/cms/js/core/bootstrap-modal.js';?>"></script>
