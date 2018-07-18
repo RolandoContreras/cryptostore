@@ -10,18 +10,14 @@ class B_home extends CI_Controller {
 
     public function index()
     {
+        
+        
+
         //GET SESION ACTUALY
         $this->get_session();
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
         //GET DATE
-        $month = date("m");
-        $year = date("Y");
-        //GET LAST DAY ON MONTH
-        $last_day = last_month_day($month,$year);
-        //GET FIRST DAY ON MONTH
-        $first_day = first_month_day($month,$year); 
-        
         $params = array(
                         "select" =>"customer.customer_id,
                                     customer.username,
@@ -38,23 +34,16 @@ class B_home extends CI_Controller {
                                         );
             $obj_customer = $this->obj_customer->get_search_row($params);
             
-            //GET FRANCHISE ACTIVE
-            if($obj_customer->active == 0){
-                $obj_franchise = $this->franchise();
-                $this->tmp_backoffice->set("obj_franchise",$obj_franchise);
-            }
             //GET TOTAL AMOUNT
             $obj_buy = $this->total_amount($customer_id);
             $obj_total = $obj_buy->total;
              
              //GET PRICE BTC
-             $price_btc = $this->btc_price();
-             
-                
-                $this->tmp_backoffice->set("price_btc",$price_btc);
-                $this->tmp_backoffice->set("obj_total",$obj_total);
-                $this->tmp_backoffice->set("obj_customer",$obj_customer);
-                $this->tmp_backoffice->render("backoffice/b_home");
+            $price_btc = $this->btc_price();
+            $this->tmp_backoffice->set("price_btc",$price_btc);
+            $this->tmp_backoffice->set("obj_total",$obj_total);
+            $this->tmp_backoffice->set("obj_customer",$obj_customer);
+            $this->tmp_backoffice->render("backoffice/b_home");
     }
     
     public function btc_price(){
