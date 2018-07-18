@@ -13,7 +13,7 @@
                                 </div>
                         </div>
                 </div>
-              <input type="hidden" name="news_id" id="franchise_id" value="<?php echo isset($obj_news)?$obj_news->news_id:"";?>">
+              <input type="hidden" name="news_id" id="news_id" value="<?php echo isset($obj_news)?$obj_news->news_id:"";?>">
               <strong>Título:</strong><br>              
               <input type="text" id="title" name="title" value="<?php echo isset($obj_news->title)?$obj_news->title:"";?>" class="input-xlarge-fluid" placeholder="Título">
               <br><br>
@@ -33,9 +33,9 @@
               <div class="well nomargin" style="width: 200px;">
                   <div class="inner">
                   <strong>Estado:</strong>
-                  <select name="status_value" id="status_value">
-                         <option value="1" <?php echo isset($obj_news->status_value) == 1 ? "selected":"";?>>Activo</option>
-                         <option value="0" <?php echo isset($obj_news->status_value) == 0 ? "selected":"";?>>Inactivo</option>
+                  <select name="active" id="active">
+                         <option value="1" <?php echo isset($obj_news->active) == 1 ? "selected":"";?>>Activo</option>
+                         <option value="0" <?php echo isset($obj_news->active) == 0 ? "selected":"";?>>Inactivo</option>
                   </select>
                   </div>
               </div>

@@ -62,7 +62,7 @@ class D_news extends CI_Controller{
         $img2 = $this->input->post("img2");
         $title = $this->input->post('title');
         $date = formato_fecha_db_mes_dia_ano($this->input->post('date'));
-        $status_value =  $this->input->post('status_value');
+        $active =  $this->input->post('active');
         
             if(isset($_FILES["image_file"]["name"])){
                 $config['upload_path']          = './static/backoffice/images/new';
@@ -88,18 +88,21 @@ class D_news extends CI_Controller{
                             'title' => $title,
                             'img' => $img,
                             'date' => $date,
-                            'status_value' => $status_value,
+                            'active' => $active,
+                            'status_value' => 1,
                             'created_by' => $_SESSION['usercms']['user_id'],
                             'created_at' => date("Y-m-d H:i:s")
                         );
                     $this->obj_news->update($news_id, $data);
+                    
                 }else{
                     //INSERT REGISTER ON NEW TABLE
                     $data = array(
                             'title' => $title,
                             'img' => $img,
-                            'date' => $date,
-                            'status_value' => $status_value,
+                            'date' => $date, 
+                            'active' => $active,
+                            'status_value' => 1,
                             'created_by' => $_SESSION['usercms']['user_id'],
                             'created_at' => date("Y-m-d H:i:s")
                         ); 

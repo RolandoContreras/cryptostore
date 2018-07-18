@@ -20,6 +20,7 @@ class news_model_atributos{
     var $customer_id='';
     var $point_left='';
     var $point_rigth='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -36,6 +37,7 @@ class News_Model extends CI_Model{
         $this->news_id='';
         $this->date='';
         $this->img='';
+        $this->active='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';
