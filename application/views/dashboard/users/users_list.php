@@ -13,7 +13,7 @@
                             <div class="navbar-inner">
                                     <div class="container" style="width: auto;">
                                             <a class="brand">LISTADO DE  USUARIOS</a>
-                                            <button class="btn btn-small" onclick="nuevo_users();">Nuevo</button>
+                                            <button class="btn btn-small" onclick="nuevo_users();"><i class="fa fa-plus"></i> Nuevo</button>
                                     </div>
                             </div>
                     </div>
