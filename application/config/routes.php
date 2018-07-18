@@ -74,6 +74,11 @@ $route['dashboard/rangos'] = "d_ranges";
 $route['dashboard/puntos'] = "d_points"; 
 $route['dashboard/puntos_binario'] = "d_binaries"; 
 
+$route['dashboard/informativos'] = "d_informative"; 
+$route['dashboard/informativos/load'] = "d_informative/load";
+$route['dashboard/informativos/load/([0-9]+)'] = "d_informative/load/$1";
+$route['dashboard/informativos/validate'] = "d_informative/validate";
+
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
 $route['dashboard/clientes/validate'] = "d_customer/validate";
