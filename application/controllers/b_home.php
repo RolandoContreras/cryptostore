@@ -41,8 +41,9 @@ class B_home extends CI_Controller {
             $obj_total = $obj_buy->total;
              
              //GET PRICE BTC
-            $price_btc = $this->btc_price();
-            $this->tmp_backoffice->set("price_btc",$price_btc);
+            $only_price = $this->btc_price();
+            
+            $this->tmp_backoffice->set("only_price",$only_price);
             $this->tmp_backoffice->set("messages_informative",$messages_informative);
             $this->tmp_backoffice->set("obj_news",$obj_news);
             $this->tmp_backoffice->set("obj_total",$obj_total);
@@ -74,27 +75,53 @@ class B_home extends CI_Controller {
              $url = "https://www.bitstamp.net/api/ticker";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price_btc = $json['last'];
+             $price = $json['last'];
              $open = $json['open'];
              
-             if($open > $price_btc){
+             if($open > $price){
                  //PRICE WENT UP
                  $color = "red";
-                 $changes = $price_btc - $open;
+                 $changes = $price - $open;
                  $percent = $changes / $open;
                  $percent = $percent * 100;
                  $percent_change = number_format($percent, 2); 
              }else{
                  //PRICE WENT DOWN
                  $color = "green";
-                 $changes = $open - $price_btc;
+                 $changes = $open - $price;
                  $percent = $changes / $open;
                  $percent = $percent * 100;
                  $percent_change = number_format($percent, 2);   
              }
              
-             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+             $price_btc = "<span style='color:#D4AF37'>"."$".$price."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
+             $this->tmp_backoffice->set("price_btc",$price_btc);
+             
+             return $price;
     }
+    public function validate_usd() {
+            if ($this->input->is_ajax_request()) {
+                //SELECT ID FROM CUSTOMER
+            $value = trim($this->input->post('value'));
+            $price = trim($this->input->post('price'));
+            
+            //MULTIPLE BY THE VALUE
+            $new_data =  $value / $price;
+            echo $new_data;
+            }
+    }
+        
+    public function validate_btc() {
+            if ($this->input->is_ajax_request()) {
+                //SELECT ID FROM CUSTOMER
+            $value = trim($this->input->post('value'));
+            $price = trim($this->input->post('price'));
+            //MULTIPLE BY THE VALUE
+            $new_data =  $value * $price;
+            echo json_encode($new_data);
+            }
+    } 
+    
     
     public function total_amount($customer_id){
             $params_total = array(

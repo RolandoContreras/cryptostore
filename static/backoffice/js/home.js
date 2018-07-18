@@ -1,13 +1,24 @@
-function make_pedido(franchise_id){
+function validate_usd(value){
+    var price = document.getElementById("price").value;
         $.ajax({
         type: "post",
-        url: site +"b_home/make_pedido",
+        url: site + "b_home/validate_usd",
         dataType: "json",
-        data: {franchise_id: franchise_id},
+        data: {value: value,price: price},
+        success:function(data){  
+           $("#btc").val(data).html(data.print);
+        }            
+    });
+}
+function validate_btc(value){
+    var price = document.getElementById("price").value;
+        $.ajax({
+        type: "post",
+        url: site + "b_home/validate_btc",
+        dataType: "json",
+        data: {value: value,price: price},
         success:function(data){            
-                if(data.message == "true"){
-                    location.reload();
-                }
+            $("#usd").val(data).html(data.print);
         }            
     });
 }
