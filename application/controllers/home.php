@@ -10,7 +10,7 @@ class Home extends CI_Controller {
     public function index()
 	{
         //GET DATA COMMENTS
-        $this->load->view('home');
+        $this->load->view('home2');
 	}
     public function send_messages(){
 
