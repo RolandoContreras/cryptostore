@@ -403,5 +403,4 @@
 <script src="<?php echo site_url().'static/page_front/js/easing.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/custom.js';?>"></script>
 </body>
-
 </html>
