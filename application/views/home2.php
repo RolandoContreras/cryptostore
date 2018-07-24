@@ -47,67 +47,54 @@
 			<div class="owl-carousel owl-theme hero_slider">
 				<!-- Slider Item -->
 				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>COMPRA </span>
+					<span></span>
                                         <span></span>
-					<span>Bitcoin</span>
+					<span>CRIPTOMONEDAS</span>
 					<span>seguro, facil y rápido</span>
                                         <div class="button icon_box_button trans_200" style="border: solid 2px #FFF !important;">
                                             <a href="#" style="color:#FFF !important;"class="trans_200">COMPRAR</a>
 					</div>
+                                        <span id="compra">COMPRA CRIPTOMONEDAS DE MANERA SEGURA</span>
+                                        <div class="align-items-center justify-content-center">
+                                            <div class="double_arrow nav_links rotare270" data-scroll-to=".icon_boxes">
+                                                <i class="fa fa-chevron-left trans_200"></i>
+                                                <i class="fa fa-chevron-left trans_200"></i>
+                                            </div>
+                                        </div>
 				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>Te acercamos al</span>
-					<span></span>
-					<span>MUNDO</span>
-					<span>De las criptomonedas</span>
-                                        <div class="button icon_box_button trans_200" style="border: solid 2px #FFF !important;">
-                                            <a href="#" style="color:#FFF !important;"class="trans_200">COMPRAR</a>
-					</div>
-				</div>
-
-				<!-- Slider Item -->
-				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>Esto es</span>
-					<span></span>
-					<span>EASY!</span>
-					<span>Te enseñamos como comprar</span>
-                                        <div class="button icon_box_button trans_200" style="border: solid 2px #FFF !important;">
-                                            <a href="#" style="color:#FFF !important;"class="trans_200">COMPRAR</a>
-					</div>
-				</div>
-
 			</div>
-			
 			<!-- Hero Slider Navigation Left -->
 			<div class="hero_slider_nav hero_slider_nav_left">
 				<div class="hero_slider_prev d-flex flex-column align-items-center justify-content-center trans_200">
 					<i class="fa fa-chevron-left trans_200"></i>
 				</div>
 			</div>
-
 			<!-- Hero Slider Navigation Right -->
 			<div class="hero_slider_nav hero_slider_nav_right">
 				<div class="hero_slider_next d-flex flex-column align-items-center justify-content-center trans_200">
 					<i class="fa fa-chevron-right trans_200"></i>
 				</div>
 			</div>
-
 		</div>
 		<div class="hero_side_text_container">
-                    <div class="double_arrow_container d-flex flex-column align-items-center justify-content-center">
-                        <div class="double_arrow nav_links" data-scroll-to=".icon_boxes">
+<!--                    <div class="double_arrow_container d-flex flex-column align-items-center justify-content-center">
+                        <div class="double_arrow nav_links padding_left_15" data-scroll-to=".icon_boxes">
                             <i class="fa fa-chevron-left trans_200"></i>
                             <i class="fa fa-chevron-left trans_200"></i>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="hero_side_text">
-                        <h2>EASYCRIPT te acerca al mundo de las criptomonedas.</h2>
-                        <p>¡Compra bitcoins de forma fácil, rápida y segura!. Aquí te mostramos como hacerlo, da click en las feclas de abajo</p>
+                        <div class="col-lg-2">
+                            <div class="footer_col rotare90">
+                                    <ul>
+                                        <li class="padding_top_15"><a href="#"><i class="fa fa-facebook-f fa-2x"></i></a></li>
+                                        <li class="padding_top_15"><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+                                        <li class="padding_top_15"><a href="#"><i class="fa fa-youtube fa-2x"></i></a></li>
+                                    </ul>
+                            </div>
+                        </div>
                     </div>
 		</div>
-		
             <div class="next_section_scroll">
                 <div class="next_section nav_links" data-scroll-to=".icon_boxes">
                         <i class="fas fa-chevron-down trans_200"></i>

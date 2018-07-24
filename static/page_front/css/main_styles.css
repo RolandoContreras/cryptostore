@@ -520,16 +520,21 @@ section
 }
 .item_1 span:nth-child(3)
 {
-	font-size: 236px;
+	font-size: 140px;
 	font-weight: 800;
 	line-height: 1;
-	letter-spacing: 0.1em;
 	margin-bottom: 14px;
 	margin-right: -0.1em;
 }
 .item_1 span:nth-child(4)
 {
 	font-size: 24px;
+}
+#compra
+{   
+	font-size: 44px;
+        margin-top: 80px;
+	line-height: 1;
 }
 .hero_slider_nav
 {
@@ -598,10 +603,10 @@ section
 .hero_side_text_container
 {
 	position: absolute;
-	top: 0;
-	right: 285px;
+	top: -90px;
+        left: -41%;
 	width: 865px;
-	height: 236px;
+	height: 96px;
 	background: #301b55;
 	z-index: 9;
 	transform-origin: top right;
@@ -611,13 +616,27 @@ section
 	-o-transform: rotate(-90deg);
 	transform: rotate(-90deg);
 }
+.rotare90{
+    transform: rotate(90deg) !important;
+}
+.rotare270{
+    transform: rotate(270deg) !important;
+}
+.padding_top_15{
+    padding-top: 15px;
+}
+.padding_left_15{
+    padding-left: 15px;
+}
+
 .hero_side_text
 {
 	width: 80.5%;
 	height: 100%;
-	padding-right: 170px;
-	padding-top: 51px;
+        top: -8px;
 	float: left;
+        left: 115px;
+        
 }
 .hero_side_text h2
 {
@@ -642,7 +661,8 @@ section
 }
 .double_arrow
 {
-	padding: 5px;
+	/*padding: 5px;*/
+        margin-top: 65px;
 	-webkit-transform: translateY(-5px);
 	-moz-transform: translateY(-5px);
 	-ms-transform: translateY(-5px);
