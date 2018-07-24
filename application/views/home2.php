@@ -77,12 +77,6 @@
 			</div>
 		</div>
 		<div class="hero_side_text_container">
-<!--                    <div class="double_arrow_container d-flex flex-column align-items-center justify-content-center">
-                        <div class="double_arrow nav_links padding_left_15" data-scroll-to=".icon_boxes">
-                            <i class="fa fa-chevron-left trans_200"></i>
-                            <i class="fa fa-chevron-left trans_200"></i>
-                        </div>
-                    </div>-->
                     <div class="hero_side_text">
                         <div class="col-lg-2">
                             <div class="footer_col rotare90">
@@ -106,34 +100,36 @@
 	<div class="icon_boxes">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-12">
                             <div class="icon_box_title">
-                                <h1 class="future-adversing">SÉ PARTE DEL MUNDO DEL BITCOIN</h1>
+                                <h1 class="future-adversing">FORMA PARTE DEL MUNDO DE LAS CRIPTOMONEDAS</h1>
                             </div>
                     </div>
 
-                    <div class="col-lg-4 icon_box_col">
+                    <div class="col-lg-6 icon_box_col">
                             <!-- Icon Box Item -->
-                            <div class="icon_box_item">
-                                    <h2 class="atificial-text">DESCENTRALIZADO</h2>
-                                    <p>no es controlada por ningún Estado, banco, institución financiera o empresa. Esto no quiere decir que los gobiernos sean eliminados (de hecho algunos han tratado de regular su uso), pero no son capaces de imponerse.</p>
+                            <div class="icon_box_item" style="text-align:center">
+                                    <h2 class="atificial-text">RÁPIDO Y SENCILLO</h2>
+                                    <p><img src="<?php echo site_url().'static/page_front/images/variedad.jpg';?>" alt="rápido" width="250"/> </p>
                             </div>
                             <!-- Icon Box Item -->
-                            <div class="icon_box_item">
-                                    <h2 class="atificial-text">IMPOSIBLE SU FALSIFICACIÓN</h2>
-                                    <p>gracias a un sofisticado sistema criptográfico que protege a los usuarios, al tiempo que simplifica las transacciones. Además de la propia red -ya segura de por sí- los usuarios cuentan con sus propios monederos, protegidos por ellos mismos.</p>
+                            <div class="icon_box_item" style="text-align:center">
+                                    <h2 class="atificial-text">AMPLIA COBERTURA DE SERVICIOS</h2>
+                                    <p><img src="<?php echo site_url().'static/page_front/images/amplia.png';?>" alt="cobertura" width="250"/> </p>
                             </div>
+                            
                     </div>
-                    <div class="col-lg-4 icon_box_col">
+                    <div class="col-lg-6 icon_box_col">
                             <!-- Icon Box Item -->
-                            <div class="icon_box_item">
-                                    <h2 class="atificial-text">TRANSACCIONES IRREVERSIBLES</h2>
-                                    <p> Una vez realizado un pago, no se puede anular. En todo caso, el receptor de la moneda podría realizar una transacción de vuelta al emisor. Al no existir un intermediario, la devolución depende del acuerdo alcanzado entre las dos partes de forma directa.</p>
+                            <div class="icon_box_item" style="text-align:center">
+                                    <h2 class="atificial-text">SEGURIDAD Y CONFIANZA</h2>
+                                    <p><img src="<?php echo site_url().'static/page_front/images/seguridad.png';?>" alt="seguridad" width="250"/> </p>
                             </div>
+                            
                             <!-- Icon Box Item -->
-                            <div class="icon_box_item">
-                                    <h2 class="atificial-text">NO HAY INTERMEDIARIOS</h2>
-                                    <p> Las transacciones se hacen directamente de persona a persona. Su funcionamiento peer-to-peer permite transacciones casi instantáneas, con unos costes muy bajos de procesamient</p>
+                            <div class="icon_box_item" style="text-align:center">
+                                    <h2 class="atificial-text">SIN INTERMEDIARIOS</h2>
+                                    <p><img src="<?php echo site_url().'static/page_front/images/intermediarios.png';?>" alt="intermediarios" width="400"/> </p>
                             </div>
                     </div>
                 </div>
@@ -258,8 +254,8 @@
 					<div class="cta_content">
 						<h1>Servicio exclusivo para grandes inversores</h1>
 						<p>Servicio exclusivo enfocado a clientes que quieran adquirir Criptomonedas por un valor igual o superior a 50.000€. Easycripto te brindará una atención preferente y personalizada para la gestión de sus activos.</p>
-                                                 <div class="button icon_box_button trans_200" style="border: solid 2px #FFF !important;">
-                                                    <a href="#" style="color:#FFF !important;"class="trans_200">CONTACTE CON NOSOTROS</a>
+                                                 <div class="button icon_box_button trans_200 with250" style="border: solid 2px #FFF !important;">
+                                                    <a href="#" style="color:#FFF !important;"class="trans_200 ">CONTACTE CON NOSOTROS</a>
                                                 </div>
 					</div>
 				</div>

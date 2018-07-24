@@ -823,7 +823,7 @@ section
 }
 .icon_box_title
 {
-	padding-right: 50px;
+	/*padding-right: 50px;*/
 	
 }
 .icon_box_title h1
@@ -1602,10 +1602,12 @@ section
     font-weight: 700;
     text-transform: uppercase;
     background: linear-gradient(to right, rgba(20, 13, 77, 1) 0%, rgba(20, 13, 77, 1) 18%, rgba(111, 49, 111, 1) 50%, rgba(20, 13, 77, 1) 82%, rgba(20, 13, 77, 1) 100%);
-        background-clip: border-box;
+    background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: -6px;
+    letter-spacing: 0px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 .atificial-text{
     letter-spacing: -2px;
