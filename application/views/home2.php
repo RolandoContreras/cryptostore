@@ -25,7 +25,7 @@
                            <ul>
                                 <li class="active"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
                                 <li><a href="#features" >Características</a></li>
-                                <li><a href="<?php echo site_url().'buy';?>" data-scroll-to=".icon_boxes">¡Comprar!</a></li>
+                                <li><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
                                 <li><a href="#contact">Contacto</a></li>
                                 <li><a href="<?php echo site_url().'login';?>">Login</a></li>
                                 <li><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
@@ -39,7 +39,7 @@
 	<!-- Home -->
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(https://technext.github.io/rango/images/slider_background.jpg)"></div>
+                    <div class="home_background prlx" style="background-image:url(<?php echo site_url().'static/page_front/images/slider_background.jpg';?>)"></div>
 		</div>
 		<!-- Hero Slider -->
 		<div class="hero_slider_container">
@@ -152,53 +152,6 @@
                 </div>
             </div>
 	</div>
-	<!-- Vertical Slider Section -->
-        <div class="v_slider_section">
-            <div class="container fill_height">
-                <div class="row fill_height">
-                    <div class="col-lg-6 v_slider_section_image">
-                        <div class="v_slider_image">
-                            <img src="<?php echo site_url().'static/page_front/images/fondo_about.jpg';?>" alt="about">
-                        </div>
-                    </div>
-                    <div class="col-lg-5 offset-lg-1 v_slider_content d-flex flex-column justify-content-center">
-                        <div class="v_slider_container">
-                            <!-- Vertical Slider -->
-                            <div class="v_slider">
-                                    <!-- Vertical Slider Item -->
-                                    <div class="v_slider_item">
-                                            <h1>NOSOTROS</h1>
-                                            <p>Para tener la mejor casa de cambio de bitcoin es necesario tener un equipo serio y profesional la seguridad deber ser impecable y con transacciones bancarias sólidas y confiables. <br/><br/>Por eso te recomendamos trabajar con el mejor equipo, trabaja con easycripto, estas son nuestras cualidades</p>
-                                    </div>
-                                    <!-- Vertical Slider Item -->
-                                    <div class="v_slider_item">
-                                            <h1>Seguridad y confianza</h1>
-                                            <p>Brindamos una plataforma segura para todos los países de habla hispana. Con soporte y atención personalizada en Español. Puedes contar con nosotros durante todo el proceso. Si esta es tu primera compra de Bitcoin !no te preocupes!</p>
-                                    </div>
-                                    <!-- Vertical Slider Item -->
-                                    <div class="v_slider_item">
-                                            <h1>Amplia cobertura de servicios</h1>
-                                            <p>Porque tenemos amplia cobertura de servicios, que van desde la compra de bitcoins hasta asesoramientos personalizados. Puedes comprar cantidades pequeñas como también cantidades considerables con nuestro asesoramiento con un trato exclusivo para todos nuestros de cliente.</p>
-                                    </div>
-                                    <!-- Vertical Slider Item -->
-                                    <div class="v_slider_item">
-                                            <h1>Opciones de pago</h1>
-                                            <p>Porque ofrecemos una plataforma segura, profesional y compatible con todos los dispositivos tecnológicos. Podrás entrar en ella cómodamente por móvil, tableta u ordenador sin problemas. Con una interfaz sencilla e intuitiva. Porque contarás con un soporte y atención personalizada en Español o Inglés. Por teléfono o email puedes consultarnos cualquier duda que tengas durante todo el proceso.</p>
-                                    </div>
-                                    <!-- Vertical Slider Item -->
-                                    <div class="v_slider_item">
-                                            <h1>Soporte personalizado</h1>
-                                            <p>Porque estamos a la última del mercado Bitcoin para que estés perfectamente asesorado. Estamos todos los días analizando la actualidad Bitcoin de los principales traders del mundo y estudiando sus estrategias.</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-	</div>
-
-	<!-- Services -->
-
 	<div class="services" id="features">
 		<div class="container">
 			<div class="row">
@@ -222,9 +175,9 @@
 									<div class="service_item_icon">
                                                                             <i class="fa fa-ticket icon" aria-hidden="true"></i>
 									</div>
-									<h2>Soporte personalizado.</h2>
+									<h2>Soporte Personalizado</h2>
 								</div>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vesti bul mattis effic iturut magna.</p>
+								<p>Atención personalizada para la compra de criptomonedas.</p>
 							</div>
 						</div>
 					</div>
@@ -236,9 +189,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-certificate icon"></i>
 									</div>
-									<h2>Servicios exclusivos</h2>
+									<h2>Servicios Exclusivos</h2>
 								</div>
-								<p>Odio vestibulum est mattis effic iturut magna. Pellente sque sit am et tellus blandit. Etiam nec odio vesti bul.</p>
+								<p>Destinado a grandes inversionistas con una atención preferente.</p>
 							</div>
 						</div>
 					</div>
@@ -250,9 +203,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-shield icon"></i> 
 									</div>
-									<h2>Plataforma segura</h2>
+									<h2>Plataforma Segura</h2>
 								</div>
-								<p>Odio vestibulum est mattis effic iturut magna. Pellente sque sit am et tellus blandit. Etiam nec odio vesti bul.</p>
+								<p>Plataforma 100% segura durante todo el proceso de compras de criptomonedas.</p>
 							</div>
 						</div>
 					</div>
@@ -264,9 +217,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-area-chart icon"></i>
 									</div>
-									<h2>Inovaciones</h2>
+									<h2>Innovaciones</h2>
 								</div>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pel lentesque sit am et tellus bla ndit. Etiam nec odio vestibul.</p>
+								<p>Conectado y adaptado a cualquier dispositivo para simplificar y agilizar los procesos de pago y gestión de la información.</p>
 							</div>
 						</div>
 					</div>
@@ -278,9 +231,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-fighter-jet icon" aria-hidden="true"></i>
 									</div>
-									<h2>Venta en tiempo record</h2>
+									<h2>Rapidez</h2>
 								</div>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pel lentesque sit am et tellus bla ndit. Etiam nec odio vestibul.</p>
+								<p>Obtenga sus criptomonedas de la forma más rápida y eficiente.</p>
 							</div>
 						</div>
 					</div>
@@ -292,36 +245,16 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-users icon"></i>
 									</div>
-									<h2>Equipo de profesionales</h2>
+									<h2>Equipo</h2>
 								</div>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vesti bul mattis effic iturut magna.</p>
+								<p>Profesionales del mundo de las criptomonedas y las finanzas analizan en todo momento el mercado para ofrecer la mejor atención al cliente.</p>
 								<div class="button service_item_button trans_200">
 									<a href="#" class="trans_200">discover more</a>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- Services Slider Item-->
-					<div class="owl-item services_item">
-						<div class="services_item_inner">
-							<div class="service_item_content">
-								<div class="service_item_title">
-									<div class="service_item_icon">
-                                                                                <i class="fa fa-comments icon"></i>
-									</div>
-									<h2>Asesorias</h2>
-								</div>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vesti bul mattis effic iturut magna.</p>
-								<div class="button service_item_button trans_200">
-									<a href="#" class="trans_200">discover more</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
 				</div>
-			
 				<div class="services_slider_nav services_slider_nav_left"><i class="fas fa-chevron-left trans_200"></i></div>
 				<div class="services_slider_nav services_slider_nav_right"><i class="fas fa-chevron-right trans_200"></i></div>
 
@@ -337,9 +270,9 @@
 				<div class="col-lg-5 order-lg-1 order-2">
 					<div class="cta_content">
 						<h1>Servicio exclusivo para grandes inversores</h1>
-						<p>Servicio exclusivo enfocado a empresas o personas que quieran hacer compras superiores a 50.000€ en criptomonedas. Easycripto te brindará atención y asesoramiento personalizado. Rellena el formulario para contactar con tu asesor personal.</p>
+						<p>Servicio exclusivo enfocado a clientes que quieran adquirir Criptomonedas por un valor igual o superior a 50.000€. Easycripto te brindará una atención preferente y personalizada para la gestión de sus activos.</p>
                                                  <div class="button icon_box_button trans_200" style="border: solid 2px #FFF !important;">
-                                                    <a href="#" style="color:#FFF !important;"class="trans_200">MÁS INFORMACIÓN</a>
+                                                    <a href="#" style="color:#FFF !important;"class="trans_200">CONTACTE CON NOSOTROS</a>
                                                 </div>
 					</div>
 				</div>

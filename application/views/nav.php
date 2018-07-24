@@ -2,7 +2,7 @@
     <ul>
         <li class="active"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
         <li><a href="#features" >Características</a></li>
-        <li><a href="<?php echo site_url().'buy';?>" data-scroll-to=".icon_boxes">¡Comprar!</a></li>
+        <li><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
         <li><a href="#contact">Contacto</a></li>
         <li><a href="<?php echo site_url().'login';?>">Login</a></li>
         <li><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
