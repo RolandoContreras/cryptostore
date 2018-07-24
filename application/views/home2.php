@@ -51,8 +51,8 @@
                                         <span></span>
 					<span>CRIPTOMONEDAS</span>
 					<span>seguro, facil y rápido</span>
-                                        <div class="button icon_box_button trans_200" style="border: solid 2px #FFF !important;">
-                                            <a href="#" style="color:#FFF !important;"class="trans_200">COMPRAR</a>
+                                        <div class="button with250 icon_box_button trans_200" style="border: solid 2px #FFF !important;">
+                                            <a href="#" style="color:#FFF !important;"class="trans_200 font-size">COMPRAR</a>
 					</div>
                                         <span id="compra">COMPRA CRIPTOMONEDAS DE MANERA SEGURA</span>
                                         <div class="align-items-center justify-content-center">
