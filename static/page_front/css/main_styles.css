@@ -1612,6 +1612,18 @@ section
     text-align: center;
     padding-bottom: 50px;
 }
+.title-currency{
+    margin: 0;
+    font-size: 40px;
+    line-height: 88%;
+    padding-bottom: 13px;
+    font-weight: 600;
+    color: #452b78;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    text-align: center;
+    padding-bottom: 50px;
+}
 .atificial-text{
     letter-spacing: -2px;
     font-size: 28px;
@@ -1690,7 +1702,7 @@ section
 
 
 .single-price-plan .package-plan .ca-price h4 {
-    color: #fb397d;
+    color: #ff6b09;
     font-size: 20px;
     position: relative;
     z-index: 1;

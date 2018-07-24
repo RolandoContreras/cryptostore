@@ -101,6 +101,16 @@
         <div class="icon_boxes">
         <section class="pricing-plane-area section_padding_100_70 clearfix padding_top_50" class="icon_boxes">    
             <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Heading Text  -->
+                        <div class="section-heading text-center" id="coins">
+                            <h1 class="title-currency">COMPRAR MONEDAS</h1>
+                            <div class="line-shape"></div>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="row no-gutters">
                     <div class="col-12 col-md-6 col-lg-3 wow fadeInUp" style="padding: 10px; visibility: visible; animation-name: fadeInUp;">
                         <!-- Package Price  -->
