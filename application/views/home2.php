@@ -120,7 +120,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/btc-logo.png';?>" alt="bitcoin" width="100">
                                 <h5 class="currency_text">BITCOIN</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4>$7668.37125 </h4>                                   
+                                    <h4><?php echo "$".$btc?></h4>                                   
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -138,7 +138,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/cash-logo.jpg';?>" alt="bitcoin" width="170">
                                 <h5 class="currency_text">BITCOIN CASH</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4>$803.84625  </h4>
+                                    <h4><?php echo "$".$bch?></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -156,7 +156,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/eth-logo.png';?>" alt="bitcoin" width="90">
                                 <h5 class="currency_text">ETHEREUM</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4>$450.46125 </h4>
+                                    <h4><?php echo "$".$eth?></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
