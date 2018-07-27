@@ -174,13 +174,28 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/dash-logo.png';?>" alt="bitcoin" width="100">
                                 <h5 class="currency_text">DASH</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4>$255.53242 </h4>
+                                    <h4><?php echo "$".$dash?></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
                                 <a href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-12  col-md-3 col-lg-3 ">
+                        <!-- Package Price  -->
+                        <div class="single-price-plan text-center">
+                            <div class="plan-button">
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-12  col-md-6 col-lg-6 wow fadeInUp" style="padding: 10px; visibility: visible; animation-delay: 0.9s; animation-name: fadeInUp;" data-wow-delay="0.9s">
+                        <!-- Package Price  -->
+                        <div class="single-price-plan text-center">
+                            <div class="plan-button">
+                                <a class="criptomonedas" href="<?php echo site_url().'allcurrency';?>">VER TODAS LAS MONEDAS</a>
                             </div>
                         </div>
                     </div>
