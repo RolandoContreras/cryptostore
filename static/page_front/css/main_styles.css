@@ -1747,15 +1747,11 @@ section
 .criptomonedas_2 {
     border-radius: 30px !important;
     font-size: 13px !important;
-    padding: 3px 0 !important;
+    padding: 5px 0 !important;
 }
 .height-15{
     height: 15px;
 }
-
-
-
-
 .single-price-plan .package-description > p {
     border-bottom: 1px solid #ebebeb;
     padding: 30px; 
@@ -1800,7 +1796,7 @@ text-transform: uppercase;
 }
 .prince_all{
     color: #b38a0c;
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
     z-index: 1;
     margin-bottom: 0;
@@ -2205,9 +2201,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3399cc', end
     text-align: center;
     color: #003366;
 }
-.input-group span {
-    z-index: 10;
-}
 .input-group-addon:first-child {
     min-width: 30px;
 }
@@ -2227,9 +2220,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3399cc', end
 }
 .icon-16::before {
     content: "\e607";
-}
-.input-group span {
-    z-index: 10;
 }
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'icomoon' !important;
