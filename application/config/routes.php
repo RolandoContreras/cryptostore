@@ -47,6 +47,11 @@ $route['contact/send_messages'] = 'contact/send_messages';
 $route['allcurrency'] = 'allcurrency';
 $route['buy'] = 'buy';
 
+$route['notice/legal'] = 'notice';
+$route['notice/privacy'] = 'notice';
+$route['notice/general'] = 'notice';
+$route['notice/cookies'] = 'notice';
+
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 

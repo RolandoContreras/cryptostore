@@ -2356,4 +2356,20 @@ elemento {
 .faq__link.open:after { display: none}
 .faq__link.open span { position: absolute; left:-9px; top: -9px; width: 60px; height: 60px; border: 1px solid #0e3669; border-radius:100%; }
 
+/*notice*/
+.notice { color: #000!important;}
+.notice_title{
+font-size: 30px;
+font-weight: bolder !important;
+font-weight: 300;
+padding-bottom: 40px;
+}
+.notice p{ color: #000!important;}
+
+/*legal*/
+.margin-second{
+    margin-left: 50px !important;
+}
+
+
 

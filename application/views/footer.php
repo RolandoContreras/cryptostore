@@ -52,10 +52,10 @@
                 <div class="footer_col">
                     <div class="footer_col_title">Legal</div>
                     <ul>
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Política de Privacidad</a></li>
-                        <li><a href="#">Condiciones Generales</a></li>
-                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="<?php echo site_url().'notice/legal';?>">Aviso Legal</a></li>
+                        <li><a href="<?php echo site_url().'notice/privacy';?>">Política de Privacidad</a></li>
+                        <li><a href="<?php echo site_url().'notice/general';?>">Condiciones Generales</a></li>
+                        <li><a href="<?php echo site_url().'notice/cookies';?>">Política de Cookies</a></li>
                     </ul>
                 </div>
             </div>
