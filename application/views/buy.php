@@ -71,7 +71,8 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-usd fa-2x"></i>
                                                     </span>
-                                                    <input class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." id="ImporteSolicitadoEur" name="ImporteSolicitadoEur" placeholder="100" value="100.00" type="text">                                                    
+                                                    <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." id="ImporteSolicitadoEur" name="ImporteSolicitadoEur" placeholder="100" value="<?php echo $number_price?>" type="text">                                                    
+                                                    <input type="hidden" name="price" id="price" value="<?php echo $btc_price;?>"/> 
                                                 </div>
                                             </div>
                                         </div>
@@ -88,7 +89,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-btc fa-2x"></i>
                                                     </span>
-                                                    <input class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." id="ImporteSolicitadoEur" name="ImporteSolicitadoEur" placeholder="100" value="100.00" type="text">
+                                                    <input id="btc" class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
                                                 </div>
                                             </div>
                                             <span class="field-validation-valid error-message" data-valmsg-for="ImporteSolicitadoEur" data-valmsg-replace="true"></span>
@@ -115,6 +116,7 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
+<script src="<?php echo site_url().'static/page_front/js/buy.js';?>"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>

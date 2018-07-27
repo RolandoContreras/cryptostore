@@ -238,7 +238,7 @@
                 <div class="row separador-cripto-all-top">
                     <div class="col-lg-12 col-sm-12 height-15"></div>
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
-                    <div class="col-xs-6 col-md-1"><img src="<?php echo site_url().'static/page_front/images/monedas/sia-logo.png';?>" alt="SiaCoin" width="40"/></div>
+                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/sia-logo.png';?>" alt="SiaCoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Siacoin</span></div>
                     <div class="col-xs-6 col-md-1"><span class="prince_all"><?php echo $sia_price."$";?></span></div>
                     <div class="col-xs-6 col-md-2"><?php echo $sia_color;?></div>
@@ -253,7 +253,7 @@
                 <div class="row separador-cripto-all-top">
                     <div class="col-lg-12 col-sm-12 height-15"></div>
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
-                    <div class="col-xs-6 col-md-1"><img src="<?php echo site_url().'static/page_front/images/monedas/nht-logo.png';?>" alt="NXT" width="40"/></div>
+                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/nht-logo.png';?>" alt="NXT" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">NXT</span></div>
                     <div class="col-xs-6 col-md-1"><span class="prince_all"><?php echo $nxt_price."$";?></span></div>
                     <div class="col-xs-6 col-md-2"><?php echo $nxt_color;?></div>
