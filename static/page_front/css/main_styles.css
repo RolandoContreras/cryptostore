@@ -2338,4 +2338,22 @@ elemento {
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+/*faq*/
+.faq { color: #452b78;}
+.faq dl { padding-top: 53px;}
+.faq dt { padding-left: 60px; font-size: 18px; line-height:26px; font-weight: 300; margin-top: 45px; position: relative;}
+.faq dt a { color: #452b78; text-decoration: none}
+.faq dt:before {content: ''; position: absolute; left: 0; top: 0;}
+.faq dd { display: none; margin: 21px 30px 0 60px; font-size: 14px; line-height: 24px; color: #9e99b5;}
+.faq dd a {color: #452b78;}
+
+.faq dd p{ font-size: 14px; line-height: 24px; color: #9e99b5;}
+
+.faq__link { position: absolute; width: 42px; height: 42px; border-radius:100%; background: #a865e1; left: 0; top: -6px; }
+.faq__link:before, .faq__link:after {content:""; position: absolute; left: 11px; top:20px; background: #fff; width: 20px; height: 2px;}
+.faq__link:after {width: 2px; height: 20px; left: 20px; top:11px;}
+.faq__link.open { background: #0e3669}
+.faq__link.open:after { display: none}
+.faq__link.open span { position: absolute; left:-9px; top: -9px; width: 60px; height: 60px; border: 1px solid #0e3669; border-radius:100%; }
+
 
