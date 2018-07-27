@@ -45,8 +45,7 @@ $route['home'] = 'home';
 $route['login'] = 'login';
 $route['contact/send_messages'] = 'contact/send_messages';
 $route['allcurrency'] = 'allcurrency';
-
-
+$route['buy'] = 'buy';
 
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
