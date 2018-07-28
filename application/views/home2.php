@@ -89,14 +89,7 @@
                         </div>
                     </div>
 		</div>
-            <div class="next_section_scroll">
-                <div class="next_section nav_links" data-scroll-to=".icon_boxes">
-                        <i class="fas fa-chevron-down trans_200"></i>
-                        <i class="fas fa-chevron-down trans_200"></i>
-                </div>
-            </div>
 	</div>
-        
         <!--CRIPTOCURRENCY-->
         <div class="icon_boxes">
         <section class="pricing-plane-area section_padding_100_70 clearfix padding_top_50" class="icon_boxes">    
