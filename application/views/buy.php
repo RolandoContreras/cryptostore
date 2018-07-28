@@ -12,7 +12,7 @@
                     <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" alt="logo" width="130">
 		</div>
 		<!-- Navigation -->
-                <?php $this->load->view("nav");?>
+                <?php $this->load->view("nav2");?>
 		<!-- Hamburger -->
 		<div class="hamburger_container bez_1">
                     <i class="fa fa-bars trans_200"></i>
