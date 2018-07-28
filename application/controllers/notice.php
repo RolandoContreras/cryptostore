@@ -19,11 +19,11 @@ class Notice extends CI_Controller {
             case 'general':
                 $this->load->view('general');
                 break;
-            case 'legal':
+            case 'privacy':
                 $this->load->view('privacy');            
 
                 break;
-            case 'legal':
+            case 'cookies':
                 $this->load->view('cookies');
                 break;
         }
