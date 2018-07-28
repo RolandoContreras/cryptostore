@@ -330,9 +330,6 @@
 									<h2>Equipo</h2>
 								</div>
 								<p>Profesionales del mundo de las criptomonedas y las finanzas analizan en todo momento el mercado para ofrecer la mejor atención al cliente.</p>
-								<div class="button service_item_button trans_200">
-									<a href="#" class="trans_200">discover more</a>
-								</div>
 							</div>
 						</div>
 					</div>

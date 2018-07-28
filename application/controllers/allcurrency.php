@@ -96,6 +96,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -114,6 +115,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -131,6 +133,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -148,6 +151,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -165,6 +169,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -182,6 +187,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -199,6 +205,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -216,6 +223,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -233,6 +241,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -250,6 +259,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -267,6 +277,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -284,6 +295,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -301,6 +313,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
@@ -318,6 +331,7 @@ class Allcurrency extends CI_Controller {
              if($change > 0){
                  //PRICE WENT UP
                  $color = "text-green";
+                 $change = "+".format_number_2decimal($change);
              }else{
                  //PRICE WENT DOWN
                  $color = "text-red";
