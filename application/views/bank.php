@@ -129,7 +129,7 @@
                                             </div>
                                         </div>
                                         <div class="margin-top-15">
-                                            <a class="texto-enlace" href="<?php echo site_url().'faq';?>" target="_blank">
+                                                <a class="texto-enlace" href="#" target="_blank">
                                                     ¿Todavía sin monedero?
                                                 </a>
                                         </div>

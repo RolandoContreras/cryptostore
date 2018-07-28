@@ -46,6 +46,7 @@ $route['login'] = 'login';
 $route['contact/send_messages'] = 'contact/send_messages';
 $route['allcurrency'] = 'allcurrency';
 $route['buy'] = 'buy';
+$route['bank'] = 'bank';
 
 $route['notice/legal'] = 'notice';
 $route['notice/privacy'] = 'notice';

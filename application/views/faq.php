@@ -77,9 +77,104 @@
                         <section class="faq" id="faq">
                                 <div class="row">
                                     <dl class="col-lg-6">
+                                        <dt><a href="javascript:;" class="faq__dt_a"><span class="faq__link"><span></span></span>¿Cómo consigo una cartera o monedero (Wallet)?</a></dt>
+                                        <dd>
+                                            <p>Nosotros te recomendamos el monedero Jaxx por su sencillez y rápidez. También tienes otros muchos, caso de Copay, Mycellium...</p>
+                                            <p>Simplemente accede a su web, selecciona tu sistema operativo (Android, iOS, Windows) e instálalo.</p>
+                                            <p>En el caso de Jaxx, tu dirección de Bitcoin la verás reflejada debajo del texto "Your Current Bitcoin Address" como puedes comprobar en la imagen que detallamos a continuación. Esta es la dirección que necesitas introducir en Bitnovo como tu monedero para que te enviemos los Bitcoins.</p>
+                                            <p class="wysiwyg-text-align-center"><img src="<?php echo site_url().'static/page_front/images/jaxx.png';?>" alt="monedero"></p>
+                                            <p>Una vez recibas los Bitcoins, verás reflejada la transacción bajo el apartado "Transaction History". </p>
+                                            <p>Recuerda que es importante que realices una copia de seguridad del monedero. En Jaxx puedes hacerlo accediendo al "Menu", "Tools", "Display Backup Phrase". Aparecerán 12 palabras que debes anotar en un lugar seguro para restaurar tu monedero en caso de pérdida del dispositivo.</p>
+                                            <p>Jaxx también soporta otras criptomonedas, no sólo Bitcoin, si deseas activar un monedero de otra criptomoneda deberemos de pulsar sobre el menú superior y pulsar sobre "Wallets" y seleccionar el deseado.</p>
+                                            <p>Os dejamos a continuación algunos ejemplos de los Wallet que puedes usar para las criptomonedas soportadas en Bitnovo.com</p>
+                                            <table style="border-collapse: collapse; width: 558.05px;" cellspacing="0" cellpadding="0" border="0">
+                                                <tbody>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="wysiwyg-text-align-center" style="height: 16pt; width: 115px;" height="16">&nbsp;</td>
+                                                <td class="xl65 wysiwyg-text-align-center" style="width: 231px;"><strong>Wallet</strong></td>
+                                                <td class="xl65 wysiwyg-text-align-center" style="width: 197.05px;"><strong>Hardware</strong></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Bitcoin</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Dash</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Bitcoin Cash</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Cardano</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://daedaluswallet.io/">Daedalus</a></td>
+                                                <td class="wysiwyg-text-align-center" style="width: 197.05px;">-</td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Ethereum</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Ethereum Classic</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Litecoin</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Monero</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://getmonero.org/downloads/">Monero</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://www.ledgerwallet.com/">Ledger*</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Ripple</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://toastwallet.com/">Toast</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://www.ledgerwallet.com/">Ledger</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Verge</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://vergecurrency.com/wallets/">Verge Wallet Tor</a></td>
+                                                <td class="wysiwyg-text-align-center" style="width: 197.05px;">-</td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Zcash</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>OmiseGO</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://jaxx.io/">Jaxx</a></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Siacoin</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://sia.tech/get-started">Sia</a></td>
+                                                <td class="wysiwyg-text-align-center" style="width: 197.05px;">-</td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>NXT</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://nxtplatform.org/">Nxtplatform</a></td>
+                                                <td class="wysiwyg-text-align-center" style="width: 197.05px;">-</td>
+                                                </tr>
+                                                <tr style="height: 16.0pt;">
+                                                <td class="xl65 wysiwyg-text-align-left" style="height: 16pt; width: 115px;" height="16"><strong>Tron</strong></td>
+                                                <td class="xl66 wysiwyg-text-align-center" style="width: 231px;"><a href="https://tronscan.org/#/">Tron</a></td>
+                                                <td class="wysiwyg-text-align-center" style="width: 197.05px;"><a href="https://trezor.io/">Trezor</a></td>
+                                                </tr>
+                                                </tbody>
+                                                </table>
+                                                <p>*El proceso de instalación requiere conocimientos avanzados.</p>
+                                        </dd>
                                         <dt><a href="javascript:;" class="faq__dt_a"><span class="faq__link"><span></span></span>¿Qué es y como funciona Bitcoin?</a></dt>
                                         <dd>
-
                                             <p>Bitcoin es una moneda digital y también es la primogénita de todas las criptomonedas. Está basada en el protocolo Blockchain (cadena de bloques) y es una criptomoneda descentralizada es decir que no esta controlada ni sustentada por ninguna entidad financiera, es la comunidad la que la mantiene.</p>
                                             <p>Uno de los grandes enigmas sobre el Bitcoin es quien es su creador o grupo de creadores. Se desconoce la respuesta, tan solo conocemos su seudónimo ... Satoshi Nakamoto.</p>
                                             <p>El Bitcoin es minable es decir, los ordenadores que sostienen la Blockchain, también llamados “mineros”, pueden conseguir más monedas a través de un sistema de prueba de trabajo (POW o Proof-Of-Work). Básicamente con este sistema los mineros son las maquinas que resuelven complejos algoritmos con los que se puede verificar la validez de las transacciones que se realizan en la red y por realizar estos procesos los mineros ganan una “recompensa”.</p>
