@@ -600,6 +600,17 @@
         .atificial-text {
             font-size: 21px;
         }
+        .circle {
+            list-style-type: circle !important;
+            color: #fff !important;
+            margin-left: 25px;
+        }
+        .footer_col_title {
+            margin-top: 25px;
+        }
+        .footer_col ul li img{
+            width: 98% !important;
+        }
         
 }
 
