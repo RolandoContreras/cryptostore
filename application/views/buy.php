@@ -82,6 +82,7 @@
                             </div>
                             <div class="col-md-1"> </div>
                             <div class="col-xs-5 col-md-5">
+                                <form action="" post="">
                                 <div class="col-md-12 marginbottom15">
                                     <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
                                         <div class="col-lg-12">
@@ -93,14 +94,17 @@
                                             </p>
                                         </div>
                                         <div class="col-lg-12">
+                                            
+                                                  
                                             <div class="calculador">
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-usd fa-2x"></i>
                                                     </span>
-                                                    <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." id="ImporteSolicitadoEur" name="ImporteSolicitadoEur" placeholder="100" value="<?php echo $number_price?>" type="text">                                                    
+                                                    <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." id="ImporteSolicitadoEur" name="ImporteSolicitadoEur" placeholder="100" value="<?php echo $number_price?>" type="text">
                                                     <input type="hidden" name="price" id="price" value="<?php echo $btc_price;?>"/> 
                                                 </div>
+                                                <span id="message" style="font-size:11px; display: none;" class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
                                             </div>
                                         </div>
                                     </div>
@@ -123,10 +127,9 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-sm-12 height-15"></div>    
-                                        <div class="single-price-plan text-center">
-                                            <div class="plan-button">
-                                                <a class="criptomonedas" href="">COMPRAR <i class="fa fa-chevron-right"></i></a>
-                                            </div>
+                                        <div class="text-center">
+                                            <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="Comprar">
+                                                
                                         </div>
                                         <div class="margin-top-15">
                                             <a class="texto-enlace" href="<?php echo site_url().'faq';?>" target="_blank">
@@ -134,6 +137,7 @@
                                                 </a>
                                         </div>
                                 </div>
+                                    </form>
                             </div>
                     </div>
             </div>

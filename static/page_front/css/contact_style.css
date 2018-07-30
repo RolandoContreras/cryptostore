@@ -561,3 +561,37 @@
     margin: 5px 0;
     display: block;
 }
+.error-message {
+    color: #db0303;
+    font-size: 11px;
+}
+.submit_btn_comprar {
+    height: 54px;
+    width: 100%;
+    color: #452b78 !important;
+    text-align: center;
+    border: solid 2px #452b78;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
+.submit_btn_comprar:hover {
+    height: 54px;
+    color: #fff !important;
+    width: 100%;
+    text-align: center;
+    border: solid 2px #452b78;
+    background: #452b78;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
