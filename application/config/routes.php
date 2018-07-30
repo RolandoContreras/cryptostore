@@ -49,6 +49,9 @@ $route['buy'] = 'buy';
 $route['bank'] = 'bank';
 
 $route['contact/invest'] = 'contact_invest';
+$route['contact/invest/send_messages'] = 'contact_invest/send_messages';
+
+
 
 $route['notice/legal'] = 'notice';
 $route['notice/privacy'] = 'notice';

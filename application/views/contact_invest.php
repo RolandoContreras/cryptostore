@@ -113,48 +113,48 @@
 
                     </div>
                             <div class="col-md-8 panel-bitcoinDinero-col">
-                                <form id="form-invest">                        
+                                <form method="post" action="">                        
                                     <div class="form-group">
                                         <label for="exampleInputPassword1" class="active">Nombre</label>
-                                        <input class="form-control" data-val="true" data-val-required="El Nombre es requerido" id="name" name="name" placeholder="Indicanos tu nombre" type="text">
-                                        <!--<span class="field-validation-valid" data-valmsg-for="Nombre" data-valmsg-replace="true"></span>-->
+                                        <input class="form-control" onkeyup="fade_name(this.value);" id="name" name="name" placeholder="Indicanos tu nombre" type="text">
+                                        <span id="message_name" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Nombre es requerido</span>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" class="active">Email</label>
-                                        <input autocomplete="off" class="form-control" data-val="true" data-val-email="Email inválido." data-val-required="Rellena el formulario, estaremos encantados de ayudarte." id="email" name="email" placeholder="Indicanos tu email" type="email">
-                                        <!--<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>-->
+                                        <input autocomplete="off" onkeyup="fade_email(this.value);" class="form-control" data-val="true" data-val-required="Rellena el formulario, estaremos encantados de ayudarte." id="email" name="email" placeholder="Indicanos tu email" type="email">
+                                        <span id="message_email" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Un email válido es requerido</span>
                                     </div>
                                     <div class="form-group">
                                         <label>Teléfono</label>
-                                        <input autocomplete="off" class="form-control" id="phone" name="phone" placeholder="Teléfono" type="phone">
-                                        <!--<span class="field-validation-valid" data-valmsg-for="Telefono" data-valmsg-replace="true"></span>-->
+                                        <input autocomplete="off" onkeyup="fade_phone(this.value);" class="form-control" id="phone" name="phone" placeholder="Teléfono" type="phone">
+                                        <span id="message_phone" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El teléfono es requerido</span>
                                     </div>
                                     <div class="form-group">
                                         <label class="active">Empresa</label>
                                         <input autocomplete="off" class="form-control" id="company" name="company" placeholder="Empresa" type="text">
-                                        <!--<span class="field-validation-valid" data-valmsg-for="Empresa" data-valmsg-replace="true"></span>-->
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Comentarios</label>
-                                        <textarea class="form-control" cols="20" data-val="true" data-val-required="Debes introducirnos tus comentarios" id="comments" name="comments" rows="3"></textarea>
-                                        <!--<span class="field-validation-valid" data-valmsg-for="Comentarios" data-valmsg-replace="true"></span>-->
+                                        <textarea class="form-control" onkeyup="fade_comments(this.value);" cols="20" data-val="true" id="comments" name="comments" rows="3"></textarea>
+                                        <span id="message_comments" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Debes introducir tus comentarios</span>
                                     </div>
-                                    <div class="captcha">
+<!--                                    <div class="captcha">
                                         <script src="https://www.google.com/recaptcha/api.js"></script>
                                         <div class="g-recaptcha" data-theme="light" data-sitekey="6LdDdQwTAAAAAHlVZCFGbkSgSI8pf4zm5dpyLhWw"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdDdQwTAAAAAHlVZCFGbkSgSI8pf4zm5dpyLhWw&amp;co=aHR0cHM6Ly93d3cuYml0bm92by5jb206NDQz&amp;hl=es&amp;v=v1531759913576&amp;theme=light&amp;size=normal&amp;cb=jsl2be4lq8xd" role="presentation" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
-                                    </div>
+                                    </div>-->
                                     <div class="blockacepta">
                                         <div class="checkbox">
                                             <label>
-                                                <input data-val="true" data-val-required="'Acepto Terminos' no debe estar vacío." id="term" name="term" value="true" type="checkbox"><input name="AceptoTerminos" value="false" type="hidden">
+                                                <input data-val="true" id="term" name="term"  onClick="fade_term(this.value);"value="true" type="checkbox"><input name="AceptoTerminos" value="false" type="hidden">
                                                 Acepto la <a class="blue-color-link" href="<?php echo site_url().'notice/privacy'?>" target="_blank">política de privacidad</a>.
                                             </label>
+                                            <span id="message_term" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Acepto Terminos no debe estar vacío</span>
                                         </div>
-                                        <!--<span class="field-validation-valid" data-valmsg-for="AceptoTerminos" data-valmsg-replace="true"></span>-->
                                     </div>
-
-                            <button type="submit" class="btn btn-block btn-primary waves-effect waves-light">Enviar formulario <i class="fa fa-chevron-right"></i></button>
-                        </form>
+                                <input onclick="send_messages();"  style="cursor: pointer" class="reply_submit_btn trans_300" value="Enviar formulario"/>
+                                </form>
+                                <br/>
+                                <div id="messages" class="alert alert-success" style="text-align: center; display: none;">Enviado Correctamente.</div>
                     </div>
                     </div>
             </div>
@@ -164,41 +164,7 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
-<script>
-$(document).ready(function() {
-    $("#form-invest").validate({
-        rules: {
-            name: { required: true, minlength: 2},
-            company: { required: true, minlength: 2},
-            phone: { required: true, number: true},
-            email: { required:true, email: true},
-            term: { required:true},
-            comments: { required:true, minlength: 2}
-        },
-        messages: {
-            name: "Por favor introduzca su nombre",
-            email : "Por favor introduzca un e-mail válido.",
-            subjet: "Por favor introduzca un título",
-            phone: "Por favor introduzca un teléfono",
-            message : "Por favor introduzca un mensaje."
-        },
-        submitHandler: function(form){
-            var dataString = $('#name').val()+'&'+$('#email').val()+'&'+$('#subjet').val()+'&'+$('#message').val()+'&'+$('#phone').val();
-            $.ajax({
-                type: "POST",
-                url:"<?php echo site_url().'home/send_messages';?>",
-                data: {dataString : dataString},
-                success: function(data){
-                    $("#alert_message").html(data);
-                }
-            });
-        }
-    });
-});    
-</script>    
-    
 <script src="<?php echo site_url().'static/page_front/js/contact_invest.js';?>"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/bootstrap.min.js';?>"></script>
