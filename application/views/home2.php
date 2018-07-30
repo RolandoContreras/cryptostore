@@ -379,17 +379,45 @@
                     <div class="reply">
                         <div class="reply_form_container">
                             <!-- Reply Form -->
-                            <form id="reply_form" action="post">
-                                <div>
-                                    <input  class="input_field reply_form_name" placeholder="Nombre" required="required" data-error="Name is required." type="text">
-                                    <input  class="input_field reply_form_email" placeholder="E-mail" required="required" data-error="Valid email is required." type="email">
-                                    <input  class="input_field reply_form_subject" placeholder="Asunto" required="required" data-error="Subject is required." type="text">
-                                    <textarea class="text_field reply_form_message" name="Mensaje" placeholder="Message" rows="4" required="" data-error="Please, write us a message."></textarea>
+                            <form id="reply_form">
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-6">
+                                        <div class="wow bounceInLeft animated animated" style="visibility: visible;">
+                                            <input class="form-control" onkeyup="fade_name(this.value);" id="name" name="name" placeholder="Indicanos tu nombre" type="text">
+                                            <span id="message_name" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Nombre es requerido</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-6">
+                                        <div class="wow bounceInLeft animated animated" style="visibility: visible;">
+                                            <input class="form-control" onkeyup="fade_email(this.value);" id="email" name="email" placeholder="Indicanos tu email" type="email">
+                                        <span id="message_email" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Email es requerido</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 margin-top-20"></div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <div class="wow bounceInLeft animated animated" style="visibility: visible;">
+                                            <input class="form-control" onkeyup="fade_subject(this.value);" id="subject" name="subject" placeholder="Indicanos el Asunto" type="text">
+                                            <span id="message_subject" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Asunto es requerido</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 margin-top-20"></div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-12">
+                                        <div class="wow bounceInLeft animated animated" style="visibility: visible;">
+                                            <textarea class="form-control" onkeyup="fade_comments(this.value);" cols="20" data-val="true" id="comments" name="comments" rows="3" placeholder="Indicanos tu Comentarios"></textarea>
+                                            <span id="message_comments" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Comentario es requerido</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <button id="reply_form_submit" type="submit" class="reply_submit_btn trans_300" value="Submit">ENVIAR</button>
+                                    <input onclick="send_messages_home();"  style="cursor: pointer" class="reply_submit_btn trans_300" value="Enviar formulario"/>
                                 </div>
                             </form>
+                            <br/>
+                            <div id="messages" class="alert alert-success" style="text-align: center; display: none;">Enviado Correctamente.</div>
                         </div>
                     </div>
                 </div>
@@ -400,11 +428,10 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-
-<script src="<?php // echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
-<script src="<?php // echo site_url().'static/page_front/js/popper.js';?>"></script>
-<!--<script src="<?php echo site_url().'static/page_front/js/bootstrap.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/contact_home.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/bootstrap.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/TweenMax.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/TimelineMax.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/ScrollMagic.min.js';?>"></script>
@@ -414,6 +441,6 @@
 <script src="<?php echo site_url().'static/page_front/js/owl.carousel.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery.scrollTo.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/easing.js';?>"></script>
-<script src="<?php echo site_url().'static/page_front/js/custom.js';?>"></script>-->
+<script src="<?php echo site_url().'static/page_front/js/custom.js';?>"></script>
 </body>
 </html>

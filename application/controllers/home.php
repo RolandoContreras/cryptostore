@@ -17,34 +17,28 @@ class Home extends CI_Controller {
         $this->load->view('home2',$data);
 	}
     public function send_messages(){
+     //GET DATA BY POST
+     if($this->input->is_ajax_request()){   
+            $name = $this->input->post("name");
+            $email = $this->input->post("email");
+            $subject = $this->input->post("subject");
+            $comments = $this->input->post("comments");
 
-        //GET DATA BY POST
-        $data = $_POST['dataString']; 
-        //EXPLODE BY DEMILITER
-        $string =  explode('&', $data);
-        //GET NAME
-        $name = $string[0];
-        //GET EMAIL
-        $email = $string[1];
-        //GET SUBJECT
-        $subject = $string[2];
-        //GET MESSAGE
-        $message = $string[3];
-        //GET phone
-        $phone = $string[4];
-                //status_value 0 means (not read)
-                $data = array(
-                    'name' => $name,
-                    'email' => $email,
-                    'subject' => $subject,
-                    'comment' => $message,
-                    'phone' => $phone,
-                    'date_comment' => date("Y-m-d H:i:s"),
-                    'active' => 1,
-                    'status_value' => 1,
-                );
-                $this->obj_comments->insert($data);
-                echo '<div class="alert alert-success" style="text-align: center">Enviado Correctamente.</div>';
+            //status_value 0 means (not read)
+                    $data = array(
+                        'name' => $name,
+                        'email' => $email,
+                        'subject' => $subject,
+                        'comment' => $comments,
+                        'big_investor' => 0,
+                        'date_comment' => date("Y-m-d H:i:s"),
+                        'active' => 1,
+                        'status_value' => 1,
+                    );
+                    $this->obj_comments->insert($data);
+                    echo json_encode($data);            
+                    exit();
+        }
             }
     public function btc_price(){
              $url =  "https://api.coinmarketcap.com/v1/ticker/bitcoin";

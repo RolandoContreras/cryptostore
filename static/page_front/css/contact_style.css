@@ -181,7 +181,10 @@
 .reply_form_email
 {
 	display: inline-block;
-	width: calc(50% - 15px);
+        width: calc(49% - 24px);
+        margin-left: 0px;
+        
+        
 }
 .reply_form_name_login
 {
@@ -191,7 +194,7 @@
 
 .reply_form_name
 {
-	margin-right: -6px;
+	margin-right: 30px;
 }
 .reply_form_email
 {
@@ -200,7 +203,7 @@
 .reply_form_subject
 {
 	display: block;
-	width: 100%;
+	width: 97%;
 	margin-top: 13px;
 }
 .reply_form_message

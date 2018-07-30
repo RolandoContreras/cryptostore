@@ -42,6 +42,8 @@ $route['default_controller'] = "home";
 $route['404_override'] = 'errors/error_404';
 
 $route['home'] = 'home';
+$route['home/send_messages'] = 'home/send_messages';
+
 $route['login'] = 'login';
 $route['contact/send_messages'] = 'contact/send_messages';
 $route['allcurrency'] = 'allcurrency';
