@@ -420,3 +420,130 @@
 {
 	color: #28262d;
 }
+
+/*CONTACT INVEST*/
+.panelporqueComprar {
+    margin-bottom: 5px;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.porqueComprar {
+    border: none;
+    color: #999999;
+    background-color: #e5e5e5;
+    color: #999999;
+    border: none;
+    height: auto;
+    overflow: auto;
+    padding: 4px 15px 5px;
+}
+.porqueComprar {
+    border: none;
+    color: #999999;
+    background-color: #e5e5e5;
+    color: #999999;
+    border: none;
+    height: auto;
+    overflow: auto;
+    padding: 4px 15px 5px;
+}
+
+    .porqueComprar .textoGrisInputs {
+        color: #575757;
+        font-size: 14px;
+        position: relative;
+        top: -6px;
+    }
+
+    .porqueComprar .icon-PagoSeguro:before {
+        color: #575757;
+        font-size: 2.2em;
+        margin-right: 5px;
+        line-height: 1.2em;
+        position: relative;
+        padding-right: 5px;
+    }
+
+    #safe {
+        margin-right: 20px;
+    }
+    #support {
+        margin-right: 10px;
+    }
+    #price {
+        margin-right: 16px;
+    }
+    
+    .porqueComprar .icon-tiempoRecord:before {
+        color: #575757;
+        font-size: 2em;
+        margin-right: 10px;
+        line-height: 1.2em;
+        position: relative;
+    }
+
+    .porqueComprar .icon-Soporte:before {
+        color: #575757;
+        font-size: 2.2em;
+        margin-right: 5px;
+        line-height: 1.2em;
+        position: relative;
+    }
+
+    .porqueComprar .icon-Garantizados:before {
+        color: #575757;
+        font-size: 2.2em;
+        margin-right: 5px;
+        line-height: 1.2em;
+        position: relative;
+    }
+
+    .porqueComprar .icon-Competitivos:before {
+        color: #575757;
+        font-size: 2.2em;
+        margin-right: 5px;
+        line-height: 1.2em;
+        position: relative;
+    }
+
+
+    .porqueComprar .icon-FacilCompra:before {
+        color: #575757;
+        font-size: 2.2em;
+        margin-right: 5px;
+        line-height: 1.2em;
+        position: relative;
+    }
+
+    .porqueComprar .icon-SinRegistro:before {
+        color: #575757;
+        font-size: 2.2em;
+        margin-right: 5px;
+        line-height: 1.2em;
+        position: relative;
+    }
+
+    .porqueComprar .icon-RecargaTarjeta:before {
+        color: #575757;
+        font-size: 2.2em;
+        margin-right: 5px;
+        line-height: 1.2em;
+        position: relative;
+    }
+
+.panelporqueComprar {
+    margin-bottom: 5px;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.blockacepta {
+    color: #999999;
+}
+.blockacepta label {
+    font-size: 1em;
+    padding-left: 15px;
+}
+
+/*END CONTACT INVEST*/

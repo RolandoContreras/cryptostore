@@ -48,6 +48,8 @@ $route['allcurrency'] = 'allcurrency';
 $route['buy'] = 'buy';
 $route['bank'] = 'bank';
 
+$route['contact/invest'] = 'contact_invest';
+
 $route['notice/legal'] = 'notice';
 $route['notice/privacy'] = 'notice';
 $route['notice/general'] = 'notice';

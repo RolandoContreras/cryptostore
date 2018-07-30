@@ -351,7 +351,7 @@
 						<h1>Servicio exclusivo para grandes inversores</h1>
 						<p>Servicio exclusivo enfocado a clientes que quieran adquirir Criptomonedas por un valor igual o superior a 50.000€. Easycripto te brindará una atención preferente y personalizada para la gestión de sus activos.</p>
                                                  <div class="button icon_box_button trans_200 with250" style="border: solid 2px #FFF !important;">
-                                                    <a href="#" style="color:#FFF !important;"class="trans_200 ">CONTACTE CON NOSOTROS</a>
+                                                     <a href="<?php echo site_url().'contact/invest';?>" style="color:#FFF !important;"class="trans_200 ">CONTACTE CON NOSOTROS</a>
                                                 </div>
 					</div>
 				</div>

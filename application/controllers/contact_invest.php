@@ -10,6 +10,10 @@ class Contact_invest extends CI_Controller {
     public function index()
 	{
         //RENDER
-        $this->load->view('buy');
+        $this->load->view('contact_invest');
 	}
+    public function send_messages(){
+        echo "hola";
+        die();
+    }    
 }
