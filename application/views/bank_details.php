@@ -83,20 +83,14 @@
                             <div class="row">
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
                                     <p>
-                                        <span class="textogris">
-                                            Datos Personales
-                                        </span>
+                                        <span class="textogris">Datos Personales</span>
                                     </p>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">
-                                                Teléfono
-                                            </h3>
+                                            <h3 class="panel-title">Teléfono</h3>
                                         </div>
                                         <div class="panel-body">
-                                            <div class="content">
-                                                +34923351648
-                                            </div>
+                                            <div class="content"><?php echo $phone;?></div>
                                         </div>
                                     </div>
                                     <p>¡El monedero es el dato más importante!</p>
@@ -107,10 +101,7 @@
                                             </h3>
                                         </div>
                                         <div class="panel-body">
-                                            <div class="content monedero">                                        
-                                                1EyiZem9yp9334vkiXEx6uy1BB9xERMPXw
-
-                                            </div>
+                                            <div class="content monedero"><?php echo $wallet;?></div>
                                         </div>
                                     </div>
 
@@ -120,49 +111,34 @@
                                     </div>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">
-                                                Email
-                                            </h3>
+                                            <h3 class="panel-title">Email</h3>
                                         </div>
                                         <div class="panel-body">
-                                            <div class="content">
-                                                software.contreras@gmail.com
-                                            </div>
+                                            <div class="content"><?php echo $email;?></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
                                     <p>
-                                        <span class="textogris">
-                                            Datos del Pago
-                                        </span>
+                                        <span class="textogris">Datos del Pago</span>
                                     </p>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
-                                            <span class="icon-Transferencia"></span>
-                                            <span class="textoGrisInputs">
-                                                Transferencia Bancaria
-                                            </span>
+                                            <span class="fa fa-dollar-sign fa-1x transferencia"></span>
+                                            <span class="textoGrisInputs">Transferencia Bancaria</span>
                                         </div>
                                     </div>
-                                    <input id="bE87833DEBC" name="bE87833DEBC" value="%7B%22p1%22%3A%5B%22192.168.0.2%22%5D%2C%22p2%22%3A%5B%5D%2C%22p3%22%3A%5B%5D%7D" type="hidden">
                                     <div class="margintop20">
                                         <p>
-                                            <span class="textogris">
-                                                Tiempo estimado de entrega
-                                            </span>
+                                            <span class="textogris">Tiempo estimado de entrega</span>
                                         </p>
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
-                                                <span class="icon-tiempoRecord"></span>
-
-                                                <span class="textoGrisInputs">
-                                                    Entre 30/60 min*
-                                                </span>
+                                                <span class="fa fa-clock fa-1x transferencia"></span>
+                                                <span class="textoGrisInputs">Entre 30/60 min*</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <input id="bE87833DEBC-3" name="bE87833DEBC-3" value="30%2F7%2F2018%2022%3A43%3A24" type="hidden">
                                 </div>
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
                                     <p><span class="textogris">Resumen del Pedido</span></p>
@@ -170,45 +146,42 @@
                                         <div class="panel-body">
                                             <div class="contentSeparatorPrimer">
                                                 <div class="textoresumenRecarja">
-                                                    <h5>Tu Pedido</h5>
+                                                    <h5 id="pedido">Tu Pedido</h5>
                                                 </div>
-                                                <div class="content2"><img src="/content/img/x2/pagoSeguro.png" alt="Pago Seguro" width="61" height="28"></div>
+                                                <div class="content2"><img src="<?php echo site_url().'static/page_front/images/pago_seguro.png';?>" alt="Pago Seguro" width="61" height="28"></div>
                                             </div>
                                             <div class="contentSeparator">
                                                 <div class="textoresumenRecarja">
-                                                    <span class="icon-BTC"></span>
+                                                    <span class="fa fa-btc fa-2x"></span>
                                                 </div>
                                                 <div class="floatright">
-                                                    <h4><span id="crypto-amount">0.01383449</span> BTC*</h4>
+                                                    <h4><span id="crypto-amount"><?php echo $btc;?> BTC*</span></h4>
                                                 </div>
                                             </div>
                                             <div class="contentSeparator">
                                                 <div class="textoresumenRecarja">
-                                                    <span class="icon-Euros"></span>
+                                                    <span class="fa fa-dollar-sign fa-2x"></span>
                                                 </div>
                                                 <div class="floatright">
-                                                    <h4>100.00 €</h4>
+                                                    <h4><span id="crypto-amount"><?php echo $price_dolar;?> $</span>  </h4>
                                                 </div>
                                             </div>
 
                                             <div class="contentSeparator">
                                                 <div class="textoresumenRecarja">
-                                                    <span class="fa fa-question-circle"></span>
-                                                    + Pago sel.
-                                                    ( %)
-                                                </div>
+                                                    <span class="fa fa-check fa-2x"></span>&nbsp;&nbsp;+ Pago sel.( %)</div>
                                                 <div class="floatright">
-                                                    <h4>0 €</h4>
+                                                    <h4><span id="crypto-amount">0 $</span> </h4>
                                                 </div>
                                             </div>
 
                                             <div class="contentSeparatorResumen">
                                                 <div class="textoresumenRecarja">
-                                                    <h4>Importe Total</h4>
+                                                    <h4><span id="importe_total">Importe Total</span></h4>
                                                 </div>
                                                 <div class="floatright">
                                                     <h3>
-                                                        100.00 €
+                                                        <span id="total"><?php echo format_number_2decimal($price_dolar);?> $</span>
                                                     </h3>
                                                 </div>
                                             </div>
@@ -230,8 +203,8 @@
                                                 <label>
                                                     <input id="card-recharge-privacity" name="card-recharge-privacity" data-val="true" data-val-required="'Voucher Privacity' no debe estar vacío." value="true" type="checkbox">
                                                     <input name="card-recharge-privacity" value="false" type="hidden">
-                                                    Acepto las <a class="blue-color-link" href="/terminos-y-condiciones" target="_blank">condiciones generales de la contratación</a> y la 
-                                                        <a class="blue-color-link" href="/politica-privacidad" target="_blank">política de privacidad</a>.
+                                                    Acepto las <a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank">condiciones generales de la contratación</a> y la 
+                                                        <a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank">política de privacidad</a>.
                                                 </label>
                                             </div>
                                             <div class="floatleft">
@@ -245,7 +218,7 @@
                                                 <label>
                                                     <input id="confirm-devolutionservice-cost" name="confirm-devolutionservice-cost" data-val="true" data-val-required="'Confirm Devolution cost' no debe estar vacío." value="true" type="checkbox">
                                                     <input name="confirm-devolutionservice-cost" value="false" type="hidden">
-                                                    Acepto la verificación de mi identidad y un coste de <a href="https://www.bitnovo.com/terminos-y-condiciones" target="_blank" class="blue-color-link">devolución  mínimo de 10€ debido a gastos de gestión.</a>
+                                                    Acepto la verificación de mi identidad y un coste de <a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link">devolución  mínimo de 10€ debido a gastos de gestión.</a>
                                                 </label>
                                             </div>
                                         </div>
@@ -256,19 +229,13 @@
                                 </div>
                                 <div class="col-sm-2"></div>
                             </div>
-                            <div class="row margintop20">
+                            <div class="row margin-top-50">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <a href="/criptomoneda/datos-compra-criptomoneda" class="btn btn-block btn-volver waves-effect waves-light" role="button">
-                                        <i class="fa fa-chevron-left"></i>
-                                        Volver
-                                    </a>
+                                    <a href="javascript:window.history.back();"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <button id="btn-submit-deposit" type="submit" class="btn btn-block btn-primary disabled waves-effect waves-light">
-                                        Confirmar
-                                        <i class="fa fa-chevron-right"></i>
-                                    </button>
+                                    <input id="submit" onclick="validate();" class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
                                 </div>
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                             </div>

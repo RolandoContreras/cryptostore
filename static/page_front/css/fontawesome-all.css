@@ -493,7 +493,9 @@ readers do not read off random characters that represent icons */
   content: "\f0b1"; }
 
 .fa-btc:before {
-  content: "\f15a"; }
+  content: "\f15a"; 
+  color: #F7921A !important;
+}
 
 .fa-bug:before {
   content: "\f188"; }
@@ -672,7 +674,9 @@ readers do not read off random characters that represent icons */
   content: "\f328"; }
 
 .fa-clock:before {
-  content: "\f017"; }
+  content: "\f017"; 
+  color: #F7921A !important;
+}
 
 .fa-clone:before {
   content: "\f24d"; }
