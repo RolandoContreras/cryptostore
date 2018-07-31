@@ -145,63 +145,53 @@
                                             <span class="input-group-addon">
                                                 <span id="btcwallet-faq" class="fa fa-google-wallet fa-2x"></span>
                                             </span>
-                                            <input type="text" class="form-control padding-right-27" id="wallet" name="wallet" placeholder="Ingresa tu wallet">
+                                            <input type="text" onkeyup="fade_wallet(this.value);" class="form-control padding-right-27" id="wallet" name="wallet" placeholder="Ingresa tu wallet">
                                         </div>
-                                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+                                        <span id="message_wallet" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Ingrese una wallet valida</span>
                                     </div>
-
-
                                     <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon">
                                                 <span id="email-faq" class="fa fa-check fa-2x sweet-11"></span>
                                             </span>
-                                            <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Ingresa tu teléfono" >
+                                            <input type="text" onkeyup="fade_phone(this.value);" class="form-control" id="phone" name="phone" placeholder="Ingresa tu teléfono">
                                         </div>
-                                        <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+                                        <span id="message_phone" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Ingrese su telefono</span>
                                     </div>
-
                                     <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon">
                                                 <span id="email-faq" class="fa fa-envelope fa-2x sweet-11"></span>
                                             </span>
-                                            <input type="email"  class="form-control" id="email" name="email" placeholder="Ingresa tu email" >
+                                            <input type="email" onkeyup="fade_email(this.value);" class="form-control" id="email" name="email" placeholder="Ingresa tu email" >
                                         </div>
-                                        <span id="email-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess3Status" class="sr-only">(success)</span>
+                                        <span id="message_email" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Ingrese un email valido</span>
                                     </div>
 
                                     <p><span class="textogris">Métodos de pago</span></p>
-                                    <div class="row">
                                     <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon">
-                                                <input type="radio" name="radio" value="1"/>
+                                                <input checked="checked" type="radio" name="radio" id="radio" value="1"/>
                                             </span>
                                             <span class="input-group-addon">
                                                 <span id="telephone-faq" class="fa fa-credit-card fa-lg"></span>
                                             </span>
-                                            <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Tarjeta de débito / crédito +2%">
+                                            <input type="text" class="form-control" disabled="disabled" placeholder="Tarjeta de débito / crédito +2%">
                                         </div>
                                         <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
                                     </div>    
                                         <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon">
-                                                <input type="radio" name="radio" value="1"/>
+                                                <input type="radio" name="radio" id="radio" value="2"/>
                                             </span>
                                             <span class="input-group-addon">
                                                 <span id="telephone-faq" class="fa fa-university fa-lg"></span>
                                             </span>
-                                            
-                                            <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Transferencia Bancaria">
+                                            <input type="text" class="form-control" disabled="disabled" placeholder="Transferencia Bancaria">
                                         </div>
                                         <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
-                                    </div>
                                     </div>
                                 </div>
                             
@@ -212,7 +202,8 @@
                                             <span class="input-group-addon">
                                                 <span id="btcwallet-faq" class="fa fa-dollar-sign fa-2x"></span>
                                             </span>
-                                            <input disabled="disabled" type="text" class="form-control padding-right-27" id="price_dolar" name="price_dolar" value="<?php echo format_number_2decimal($price_dolar);?>">
+                                            <input disabled="disabled" type="text" class="form-control padding-right-27"  value="<?php echo format_number_2decimal($price_dolar);?>">
+                                            <input  type="hidden" id="price_dolar" name="price_dolar" value="<?php echo $price_dolar;?>">
                                         </div>
                                     </div>
                             <div class="form-group has-feedback">
@@ -220,7 +211,8 @@
                                             <span class="input-group-addon">
                                                 <span id="btcwallet-faq" class="fa fa-bitcoin fa-2x"></span>
                                             </span>
-                                            <input type="text" disabled="disabled" class="form-control padding-right-27" id="btc" name="btc" value="<?php echo $btc;?>">
+                                            <input type="text" disabled="disabled" class="form-control padding-right-27" value="<?php echo $btc;?>">
+                                            <input  type="hidden" id="btc" name="btc" value="<?php echo $btc;?>">
                                         </div>
                                     </div>
                                 <div class="captcha">
@@ -233,7 +225,7 @@
                             <a href="<?php echo site_url().'buy';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <input id="submit" class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
+                            <input id="submit" onclick="validate();" class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
                         </div>
                         <div class="col-sm-2"></div>
                     </div>
@@ -243,7 +235,7 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
-<script src="<?php echo site_url().'static/page_front/js/contact_invest.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/bank.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/bootstrap.min.js';?>"></script>

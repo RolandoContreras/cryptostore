@@ -706,3 +706,41 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+/*bank details*/
+.panel-primary {
+    border: 1px solid #cccccc !important;
+    color: #999999;
+}
+.panel-primary > .panel-heading {
+    background-color: #e5e5e5;
+    color: #999999;
+    border: none;
+    height: auto;
+    overflow: auto;
+    border: none !important;
+    padding: 6px 15px 8px;
+}
+.panel-title {
+    color: #999999;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+.panel-body {
+    padding: 0px;
+}
+.content {
+    color: #999999;
+    padding: 7px 15px;
+    font-weight: bold;
+    height: auto;
+    overflow: hidden;
+}
+.monedero {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+

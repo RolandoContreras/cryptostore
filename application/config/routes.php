@@ -45,10 +45,15 @@ $route['home'] = 'home';
 $route['home/send_messages'] = 'home/send_messages';
 
 $route['login'] = 'login';
+
 $route['contact/send_messages'] = 'contact/send_messages';
+
 $route['allcurrency'] = 'allcurrency';
+
 $route['buy'] = 'buy';
 $route['buy/bank'] = 'bank';
+$route['buy/bank/view_bank'] = 'bank/view_bank';
+
 
 $route['contact/invest'] = 'contact_invest';
 $route['contact/invest/send_messages'] = 'contact_invest/send_messages';
