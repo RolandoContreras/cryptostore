@@ -28,6 +28,7 @@
                             $active_buy = "";
                             $active_login = "";
                             $active_faq = "";
+                            $active_contact = "";
 
                             $url = explode("/",uri_string());
                             $nav = $url[0];
@@ -44,6 +45,9 @@
                                 case 'faq':
                                     $active_faq = "active";
                                     break;
+                                case 'contact':
+                                    $active_contact = "active";
+                                    break;
                                 default:
                                     $active_home = "active";
                                     break;
@@ -53,7 +57,7 @@
                                 <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
                                 <li><a href="<?php echo site_url().'home/#features'?>" >Características</a></li>
                                 <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
-                                <li><a href="<?php echo site_url().'home/#contact';?>">Contacto</a></li>
+                                <li class="<?php echo $active_contact;?>"><a href="<?php echo site_url().'home/#contact';?>">Contacto</a></li>
                                 <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>">Login</a></li>
                                 <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
                                 <li>
@@ -65,86 +69,181 @@
 	</div>
 	<!-- Home -->
         <!--CRIPTOCURRENCY-->
-        <header id="comprarBitcoin">
+        <header>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center margin-bottom-30">
                         <div class="icon_box_title">
-                            <h1 class="title-currency margin-top100">Comprar criptomonedas nunca fue tan fácil! </h1>
+                            <h1 class="title-currency-contact margin-top100">Rellena el formulario, estaremos encantados de ayudarte.</h1>
                         </div>
                     </div>
                 </div>
 			<div class="row">
-                            <div class="col-xs-6 col-md-6">
-                                <div class="col-md-6 hidden-sm  hidden-xs  margin-top-30 wow bounceInLeft animated animated" style="visibility: visible;">
-                                    <img src="<?php echo site_url().'static/page_front/images/compra_btc.png';?>" alt="Comprar criptomoneda" title="Comprar criptomoneda" width="600">
+                            <div class="col-md-4 hidden-xs panel-bitcoinDinero-col">
+                                <p><span class="textogris">Porqué Easycripto</span></p>
+                                <div class="panelporqueComprar">
+                                    <div class="porqueComprar">
+                                        <span class="icon-PagoSeguro">
+                                            <i id="safe" class="fa fa-shield fa-2x"></i>
+                                        </span>
+                                        <span class="textoGrisInputs">Pago seguro</span>
+                                    </div>
+                                </div>
+                                <div class="panelporqueComprar">
+                                    <div class="porqueComprar">
+                                        <span class="icon-Soporte">
+                                            <i id="support" class="fa fa-ticket fa-2x"></i>
+                                        </span>
+                                        <span class="textoGrisInputs">Soporte Personalizado</span>
+                                    </div>
+                                </div>
+                                <div class="panelporqueComprar">
+                                    <div class="porqueComprar">
+                                        <span class="icon-Competitivos">
+                                            <i id="support" class="fa fa-trophy fa-2x"></i>
+                                        </span>
+                                        <span class="textoGrisInputs">Los precios más competitivos</span>
+                                    </div>
+                                </div>
+                                <div class="panelporqueComprar">
+                                    <div class="porqueComprar">
+                                        <span class="icon-PagoSeguro">
+                                            <i id="price" class="fa fa-check-circle fa-2x"></i>
+                                        </span>
+                                        <span class="textoGrisInputs">Sin necesidad de registro</span>
+                                    </div>
+                                </div>
+                                <div class="panelporqueComprar">
+                                    <div class="porqueComprar">
+                                        <span class="icon-Soporte">
+                                            <i id="record" class="fa fa-space-shuttle fa-2x"></i>
+                                        </span>
+                                        <span class="textoGrisInputs">Tus Bitcoins en tiempo record</span>
+                                    </div>
+                                </div>
+                                <div class="panelporqueComprar">
+                                    <div class="porqueComprar">
+                                        <span class="icon-Competitivos">
+                                            <i id="price" class="fa fa-certificate fa-2x"></i>
+                                        </span>
+                                        <span class="textoGrisInputs">Tus Bitcoins garantizados</span>
+                                    </div>
+                                </div>
+                                <div class="panelporqueComprar">
+                                    <div class="porqueComprar">
+                                        <span class="icon-Competitivos">
+                                            <i id="safe" class="fa fa-user fa-2x"></i>
+                                        </span>
+                                        <span class="textoGrisInputs">Muy fáciles de comprar</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-1"> </div>
-                            <div class="col-xs-5 col-md-5">
-                                <div class="col-md-12 marginbottom15">
-                                    <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
-                                        <div class="col-lg-12">
-                                            <h4 class="question_currency">
-                                                ¿Cuánto quieres comprar?
-                                            </h4>
-                                            <p class="p_currency">
-                                                Introduce la cantidad en dólares que deseas comprar en criptomonedas.
-                                            </p>
+                            <div class="col-sm-4 panel-bitcoinDinero-col">
+                            <p><span class="textogris">Datos de cliente</span></p>
+                                    <div class="form-group has-feedback">
+                                        <div class="input-group bitcoinDineroDatos">
+                                            <span class="input-group-addon">
+                                                <span id="btcwallet-faq" class="fa fa-google-wallet fa-2x"></span>
+                                            </span>
+                                            <input type="text" class="form-control padding-right-27" id="wallet" name="wallet" placeholder="Ingresa tu wallet">
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="calculador">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-usd fa-2x"></i>
-                                                    </span>
-                                                    <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." id="ImporteSolicitadoEur" name="ImporteSolicitadoEur" placeholder="100" value="<?php echo $number_price?>" type="text">                                                    
-                                                    <input type="hidden" name="price" id="price" value="<?php echo $btc_price;?>"/> 
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
                                     </div>
-                                    <div class="col-lg-12 col-sm-12 height-15"></div>    
-                                    <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
-                                        <div class="col-lg-12">
-                                            <h4 class="question_currency">¿Qué criptomoneda quieres?</h4>
-                                            <p class="p_currency">Por el momento estamos trabajando con bitocon.</p>
+
+
+                                    <div class="form-group has-feedback">
+                                        <div class="input-group bitcoinDineroDatos">
+                                            <span class="input-group-addon">
+                                                <span id="email-faq" class="fa fa-check fa-2x sweet-11"></span>
+                                            </span>
+                                            <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Ingresa tu teléfono" >
                                         </div>
-                                        <div class="col-lg-12">
-                                            <div class="calculador">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-btc fa-2x"></i>
-                                                    </span>
-                                                    <input id="btc" class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" data-val-number="El campo ImporteSolicitadoEur debe ser un número." data-val-required="El importe no puede estar vacío." placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
-                                                </div>
-                                            </div>
-                                            <span class="field-validation-valid error-message" data-valmsg-for="ImporteSolicitadoEur" data-valmsg-replace="true"></span>
-                                        </div>
+                                        <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
+                                        <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
                                     </div>
-                                    <div class="col-lg-12 col-sm-12 height-15"></div>    
-                                        <div class="single-price-plan text-center">
-                                            <div class="plan-button">
-                                                <a class="criptomonedas" href="">COMPRAR <i class="fa fa-chevron-right"></i></a>
-                                            </div>
+
+                                    <div class="form-group has-feedback">
+                                        <div class="input-group bitcoinDineroDatos">
+                                            <span class="input-group-addon">
+                                                <span id="email-faq" class="fa fa-envelope fa-2x sweet-11"></span>
+                                            </span>
+                                            <input type="email"  class="form-control" id="email" name="email" placeholder="Ingresa tu email" >
                                         </div>
-                                        <div class="margin-top-15">
-                                                <a class="texto-enlace" href="#" target="_blank">
-                                                    ¿Todavía sin monedero?
-                                                </a>
+                                        <span id="email-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
+                                        <span id="inputGroupSuccess3Status" class="sr-only">(success)</span>
+                                    </div>
+
+                                    <p><span class="textogris">Métodos de pago</span></p>
+                                    <div class="row">
+                                    <div class="form-group has-feedback">
+                                        <div class="input-group bitcoinDineroDatos">
+                                            <span class="input-group-addon">
+                                                <input type="radio" name="radio" value="1"/>
+                                            </span>
+                                            <span class="input-group-addon">
+                                                <span id="telephone-faq" class="fa fa-credit-card fa-lg"></span>
+                                            </span>
+                                            <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Tarjeta de débito / crédito +2%">
                                         </div>
+                                        <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
+                                        <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+                                    </div>    
+                                        <div class="form-group has-feedback">
+                                        <div class="input-group bitcoinDineroDatos">
+                                            <span class="input-group-addon">
+                                                <input type="radio" name="radio" value="1"/>
+                                            </span>
+                                            <span class="input-group-addon">
+                                                <span id="telephone-faq" class="fa fa-university fa-lg"></span>
+                                            </span>
+                                            
+                                            <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Transferencia Bancaria">
+                                        </div>
+                                        <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
+                                        <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
+                            
+                            <div class="col-sm-4 panel-bitcoinDinero-col">
+                            <p><span class="textoAzulClaro">Importe de la compra</span></p>
+                            <div class="form-group has-feedback">
+                                        <div class="input-group bitcoinDineroDatos">
+                                            <span class="input-group-addon">
+                                                <span id="btcwallet-faq" class="fa fa-dollar-sign fa-2x"></span>
+                                            </span>
+                                            <input disabled="disabled" type="text" class="form-control padding-right-27" id="price_dolar" name="price_dolar" value="<?php echo format_number_2decimal($price_dolar);?>">
+                                        </div>
+                                    </div>
+                            <div class="form-group has-feedback">
+                                        <div class="input-group bitcoinDineroDatos">
+                                            <span class="input-group-addon">
+                                                <span id="btcwallet-faq" class="fa fa-bitcoin fa-2x"></span>
+                                            </span>
+                                            <input type="text" disabled="disabled" class="form-control padding-right-27" id="btc" name="btc" value="<?php echo $btc;?>">
+                                        </div>
+                                    </div>
+                                <div class="captcha">
+                                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                                <div class="g-recaptcha" data-theme="light" data-sitekey="6LdDdQwTAAAAAHlVZCFGbkSgSI8pf4zm5dpyLhWw"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdDdQwTAAAAAHlVZCFGbkSgSI8pf4zm5dpyLhWw&amp;co=aHR0cHM6Ly93d3cuYml0bm92by5jb206NDQz&amp;hl=es&amp;v=v1531759913576&amp;theme=light&amp;size=normal&amp;cb=cr8ibx6fxz6g" role="presentation" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+                                </div>
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
+                            <a href="<?php echo site_url().'buy';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
+                        </div>
+                        <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
+                            <input id="submit" class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
+                        </div>
+                        <div class="col-sm-2"></div>
                     </div>
-            </div>
         </header>
         <!--END CRYPTOCURRENCY-->
 	<!-- Footer -->
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
-<script src="<?php echo site_url().'static/page_front/js/buy.js';?>"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="<?php echo site_url().'static/page_front/js/contact_invest.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/bootstrap.min.js';?>"></script>

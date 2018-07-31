@@ -474,6 +474,9 @@
     #support {
         margin-right: 10px;
     }
+    #record {
+        margin-right: 5px;
+    }
     #price {
         margin-right: 16px;
     }
@@ -594,4 +597,112 @@
     text-transform: uppercase;
     color: #452b78;
     cursor: pointer !important;
+}
+.submit_btn_comprar_back {
+    height: 54px;
+    color: #fff !important;
+    width: 100%;
+    text-align: center;
+    border: solid 2px #aaa;
+    background: #aaa !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
+.submit_btn_comprar_back:hover {
+    height: 54px;
+    color: #fff !important;
+    width: 100%;
+    text-align: center;
+    border: solid 2px #575757;
+    background: #575757 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
+.submit_btn_comprar_2 {
+    height: 54px;
+    color: #fff !important;
+    width: 100%;
+    text-align: center;
+    border: solid 2px #F7921A;
+    background: #F7921A !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
+.submit_btn_comprar_2:hover {
+    height: 54px;
+    color: #fff !important;
+    width: 100%;
+    text-align: center;
+    border: solid 2px #99760a;
+    background: #99760a !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
+/*faq*/
+.fa-question-circle {
+    content: "\f059";
+    color: #F7921A !important;
+    font-size: 2em !important;
+    padding: 0 6px !important;
+    cursor: pointer !important;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+        font-size: 14px;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*pay*/
+.FormasPago {
+    height: auto;
+    overflow: hidden;
+}
+.FormasPago .selecFormasPago, .FormasPago .selecformaspago-dropdown-header {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 44px;
+    padding: 6px 10px;
+    color: #666666;
+    margin: 0px 0px 15px;
+    cursor: pointer;
+}
+.FormasPago .selecFormasPago, .FormasPago .selecformaspago-dropdown-header {
+    color: #666666;
+    cursor: pointer;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

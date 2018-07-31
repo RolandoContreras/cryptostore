@@ -443,7 +443,9 @@ readers do not read off random characters that represent icons */
   content: "\f171"; }
 
 .fa-bitcoin:before {
-  content: "\f379"; }
+  content: "\f379"; 
+  color: #F7921A !important;
+}
 
 .fa-bity:before {
   content: "\f37a"; }
@@ -620,7 +622,9 @@ readers do not read off random characters that represent icons */
   content: "\f200"; }
 
 .fa-check:before {
-  content: "\f00c"; }
+  content: "\f00c"; 
+  color : #F7921A !important;
+}
 
 .fa-check-circle:before {
   content: "\f058"; }
@@ -752,7 +756,9 @@ readers do not read off random characters that represent icons */
   content: "\f25e"; }
 
 .fa-credit-card:before {
-  content: "\f09d"; }
+  content: "\f09d"; 
+  color: #F7921A !important;
+}
 
 .fa-crop:before {
   content: "\f125"; }
@@ -824,7 +830,9 @@ readers do not read off random characters that represent icons */
   content: "\f395"; }
 
 .fa-dollar-sign:before {
-  content: "\f155"; }
+  content: "\f155"; 
+  color: #F7921A !important;
+}
 
 .fa-dot-circle:before {
   content: "\f192"; }
@@ -875,7 +883,9 @@ readers do not read off random characters that represent icons */
   content: "\f1d1"; }
 
 .fa-envelope:before {
-  content: "\f0e0"; }
+  content: "\f0e0"; 
+  color: #F7921A !important;
+}
 
 .fa-envelope-open:before {
   content: "\f2b6"; }
@@ -1169,7 +1179,9 @@ readers do not read off random characters that represent icons */
   content: "\f0d4"; }
 
 .fa-google-wallet:before {
-  content: "\f1ee"; }
+  content: "\f1ee"; 
+  color: #F7921A !important
+}
 
 .fa-graduation-cap:before {
   content: "\f19d"; }
@@ -1715,7 +1727,10 @@ readers do not read off random characters that represent icons */
   content: "\f3dc"; }
 
 .fa-phone:before {
-  content: "\f095"; }
+  content: "\f095"; 
+  color: #F7921A;
+  width: 27px !important;
+}
 
 .fa-phone-square:before {
   content: "\f098"; }
@@ -2339,7 +2354,9 @@ readers do not read off random characters that represent icons */
   content: "\f29a"; }
 
 .fa-university:before {
-  content: "\f19c"; }
+  content: "\f19c"; 
+  color: #F7921A !important;
+}
 
 .fa-unlink:before {
   content: "\f127"; }
