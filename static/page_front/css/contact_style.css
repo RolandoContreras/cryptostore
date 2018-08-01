@@ -842,3 +842,79 @@ label {
 .h4, h4 {
     font-size: 1.5rem !important;
 }
+/*confirm email*/
+.enhorabuenaTarjeta {
+    text-align: center;
+    position: relative;
+    height: 180px;
+    width: 300px;
+}
+.enhorabuenaTarjeta .enoratransferencia{
+    color: #575757;
+    margin-left: 40%;
+}
+.center {
+    text-align: center;
+}
+.textogrisOscuro {
+    color: #575757;
+    font-weight: normal;
+}
+.panel-primary > .panel-heading.invertido {
+    background-color: #ffffff;
+    color: #999999;
+    border: none;
+    padding: 10px 15px 6px;
+}
+.panel-primary.invertido2 {
+    border: 1px solid #999999 !important;
+    color: #999999;
+    background-color: #ffffff;
+    text-align: left;
+}
+.paddingtopbottom10px {
+    padding: 10px 0;
+}
+.margintop20 {
+    margin-top: 20px !important;
+}
+.margin-top-70{
+    margin-top: 70px;
+}
+.margin-top-140{
+    margin-top: 140px;
+}
+.panel-primary > .panel-heading {
+    background-color: #e5e5e5;
+    color: #999999;
+    border: none;
+    height: auto;
+    overflow: auto;
+    border: none !important;
+    padding: 6px 15px 8px;
+}   
+.textogrisOscuro {
+    color: #575757;
+    font-size: 14px;
+    font-weight: normal;
+}
+#title{
+    font-size: 21px;
+    font-weight: bold;
+    padding: 15px;
+}
+.textoNaranja {
+    color: #F7921A;
+    text-align: center;
+}
+.contentTransfer {
+    color: #999999;
+    padding: 7px 15px;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    text-align: left;
+}
+.paddingtopbottom10px {
+    padding: 10px 0;
+}

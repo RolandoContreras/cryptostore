@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Bank extends CI_Controller {
     public function __construct(){
      parent::__construct();
+     $this->load->model("sell_model","obj_sell");
     } 
 
     public function index()
@@ -36,13 +37,44 @@ class Bank extends CI_Controller {
         $data['email'] = $_SESSION['buy']['email'];
         $obj_radio = $_SESSION['buy']['radio'];
         $data['radio'] = $obj_radio;
-        //DELETE SESSION
-//        $this->session->unset_userdata('buy');
-//	$this->session->destroy();
-                
         //RENDER
         if($obj_radio == 2){
             $this->load->view('bank_details',$data);
         }else{}
     }
+    public function confirm_bank(){
+        //GER DATA $_SESSION
+        
+        $obj_price_dolar = $this->input->post("price_dolar");
+        $obj_btc = $this->input->post("btc");
+        $obj_iva = $this->input->post("iva");
+        $obj_radio = $this->input->post("radio");
+        $obj_wallet = $this->input->post("wallet");
+        $obj_email = $this->input->post("email");
+        $obj_phone = $this->input->post("phone");
+        
+        //insert data on table sell
+        $data = array(
+                    'date' => date("Y-m-d H:i:s"),
+                    'amount' => $obj_price_dolar,
+                    'tax' => $obj_iva,
+                    'amount_btc' => $obj_btc,
+                    'sub_total' => 0,
+                    'type_pay' => $obj_radio,
+                    'wallet' => $obj_wallet,
+                    'email' => $obj_email,
+                    'phone' => $obj_phone,
+                    'active' => 1,
+                    'status_value' => 1,
+                    );
+        $this->obj_sell->insert($data);
+        //$this->send_email_bank();
+        //RENDER
+        $this->load->view('confirm_email');
+    }
+    public function send_email_bank(){
+        
+    }
+    
+    
 }

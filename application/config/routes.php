@@ -53,6 +53,7 @@ $route['allcurrency'] = 'allcurrency';
 $route['buy'] = 'buy';
 $route['buy/bank'] = 'bank';
 $route['buy/bank/view_bank'] = 'bank/view_bank';
+$route['buy/bank/confirm_bank'] = 'bank/confirm_bank';
 
 
 $route['contact/invest'] = 'contact_invest';

@@ -16,9 +16,17 @@ BITSHARE S.A.C
 ****/
 
 class sell_model_atributos{	
-    var $pay_id='';
+    var $sell_id='';
     var $customer_id='';
+    var $type_pay='';
     var $date='';
+    var $wallet='';
+    var $email='';
+    var $phone='';
+    var $subtotal='';
+    var $amount='';
+    var $amount_btc='';
+    var $tax='';
     var $obs='';
     var $active='';
     var $status_value='';
@@ -36,9 +44,16 @@ class Sell_Model extends CI_Model{
 	$this->table_id = 'sell_id';
         $this->sell_id='';
         $this->customer_id='';
+        $this->type_pay='';
         $this->date='';
+        $this->wallet='';
+        $this->email='';
+        $this->phone='';
+        $this->subtotal='';
+        $this->amount='';
+        $this->amount_btc='';
+        $this->tax='';
         $this->obs='';
-        $this->descount='';
         $this->active='';
 	$this->status_value='';
         $this->created_at='';

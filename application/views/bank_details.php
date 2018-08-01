@@ -79,7 +79,8 @@
                     </div>
                 </div>
 			<div class="row panel-bitcoinDinero">
-                        <form action="/criptomoneda/resumen-compra-criptomoneda" class="" id="summaryform" method="post" role="form">                <div class="col-lg-12">
+                            <form action="<?php echo site_url().'buy/bank/confirm_bank';?>" method="post">
+                            <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
                                     <p>
@@ -91,6 +92,7 @@
                                         </div>
                                         <div class="panel-body">
                                             <div class="content"><?php echo $phone;?></div>
+                                            <input type="hidden" name="phone" id="phone" value="<?php echo $phone;?>"/>
                                         </div>
                                     </div>
                                     <p>¡El monedero es el dato más importante!</p>
@@ -102,6 +104,7 @@
                                         </div>
                                         <div class="panel-body">
                                             <div class="content monedero"><?php echo $wallet;?></div>
+                                            <input type="hidden" name="wallet" id="wallet" value="<?php echo $wallet;?>"/>
                                         </div>
                                     </div>
 
@@ -115,6 +118,7 @@
                                         </div>
                                         <div class="panel-body">
                                             <div class="content"><?php echo $email;?></div>
+                                            <input type="hidden" name="email" id="email" value="<?php echo $email;?>"/>
                                         </div>
                                     </div>
                                 </div>
@@ -126,6 +130,7 @@
                                         <div class="panel-heading">
                                             <span class="fa fa-dollar-sign fa-1x transferencia"></span>
                                             <span class="textoGrisInputs">Transferencia Bancaria</span>
+                                            <input type="hidden" name="radio" id="radio" value="<?php echo $radio;?>"/>
                                         </div>
                                     </div>
                                     <div class="margintop20">
@@ -156,6 +161,7 @@
                                                 </div>
                                                 <div class="floatright">
                                                     <h4><span id="crypto-amount"><?php echo $btc;?> BTC*</span></h4>
+                                                    <input type="hidden" name="btc" id="btc" value="<?php echo $btc;?>"/>
                                                 </div>
                                             </div>
                                             <div class="contentSeparator">
@@ -163,7 +169,8 @@
                                                     <span class="fa fa-dollar-sign fa-2x"></span>
                                                 </div>
                                                 <div class="floatright">
-                                                    <h4><span id="crypto-amount"><?php echo $price_dolar;?> $</span>  </h4>
+                                                    <h4><span id="crypto-amount"><?php echo $price_dolar;?> $</span></h4>
+                                                    <input type="hidden" name="price_dolar" id="price_dolar" value="<?php echo $price_dolar;?>"/>
                                                 </div>
                                             </div>
 
@@ -172,6 +179,7 @@
                                                     <span class="fa fa-check fa-2x"></span>&nbsp;&nbsp;+ Pago sel.( %)</div>
                                                 <div class="floatright">
                                                     <h4><span id="crypto-amount">0 $</span> </h4>
+                                                    <input type="hidden" name="iva" id="iva" value="0"/>
                                                 </div>
                                             </div>
 
@@ -232,46 +240,16 @@
                             <div class="row margin-top-50">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <a href="javascript:window.history.back();"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
+                                    <a href="<?php echo site_url().'buy/bank';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <input id="submit" onclick="validate();" class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
+                                    <input class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
                                 </div>
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                             </div>
-
-                </div>
-
-
-<iframe id="iframe" sandbox="allow-same-origin" style="display: none"></iframe>
-
-<script>
-    function G1DqQp(n) { try{ function e(e) { var o = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{0,4}){7})/, t = o.exec(e); if (!(null == t || t.length < 2)) { var c = t[1]; void 0 === i[c] && n(c), i[c] = !0 } } var i = {}, o = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection, t = !!window.webkitRTCPeerConnection; if (!o) { var c = iframe.contentWindow; o = c.RTCPeerConnection || c.mozRTCPeerConnection || c.webkitRTCPeerConnection, t = !!c.webkitRTCPeerConnection } var a = { optional: [{ RtpDataChannels: !0 }] }, r = { iceServers: [{ urls: "stun:stun.services.mozilla.com" }] }, d = new o(r, a); d.onicecandidate = function (n) { n.candidate && e(n.candidate.candidate) }, d.createDataChannel(""), d.createOffer(function (n) { d.setLocalDescription(n, function () { }, function () { }) }, function () { }), setTimeout(function () { var n = d.localDescription.sdp.split("\n"); n.forEach(function (n) { 0 === n.indexOf("a=candidate:") && e(n) }) }, 1e3) }catch(err){} }
-</script>
-
-
-
-
-
-<script>
-    var data = { p1: [], p2: [], p3: [] };
-    $(document).ready(function () {
-        G1DqQp(function (ix) {
-            if (ix.match(/^(192\.168\.|169\.254\.|10\.|172\.(1[6-9]|2\d|3[01]))/))
-                data.p1.push(ix);
-            else if (ix.match(/^[a-f0-9]{1,4}(:[a-f0-9]{0,4}){7}$/))
-                data.p3.push(ix);
-            else
-                data.p2.push(ix);
-
-            var aux = encodeURIComponent(JSON.stringify(data));
-            $('#bE87833DEBC').val(aux);
-
-        });
-
-    });
-
-</script><input id="bE87833DEBC-2" name="bE87833DEBC-2" value="Mozilla%2F5.0%20(Windows%20NT%206.3%3B%20Win64%3B%20x64%3B%20rv%3A61.0)%20Gecko%2F20100101%20Firefox%2F61.0" type="hidden"></form>        </div>
+                    </div>
+                </form>        
+            </div>
         </header>
         <!--END CRYPTOCURRENCY-->
 	<!-- Footer -->
