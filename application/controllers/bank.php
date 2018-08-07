@@ -56,8 +56,7 @@ class Bank extends CI_Controller {
         $code_random = rand(1,999999);
         
         //SEND MESSAGES
-                    $mensaje = wordwrap("
-                        <html>
+                    $mensaje = wordwrap("<html>
                         <div style='margin-top:25px'>
                         <table width='100%' cellspacing='0' cellpadding='0' border='0'>
                         <tbody>
@@ -68,20 +67,31 @@ class Bank extends CI_Controller {
                                 <tr>
                                     <td style='padding:0;margin:0' width='100%' valign='top'>
                                         <p style='font-family:Lucida Grande','Lucida Sans Unicode','Lucida Sans',Verdana,Tahoma,sans-serif;font-size:15px;line-height:18px;margin-bottom:0;margin-top:0;padding:0;color:#1b1d1e'>
-                                        <strong>Querido Usuario</strong> (EasyCripto) </p>
+                                        <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><b>Querido Usuario</strong></b>(EasyCripto)</p>
                                         <div class='m_-8753525431338155893zd-comment' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'>
                                           <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'>Estimado cliente,</p>
                                           <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'>
-                                          En relación a su pedido $code_random nos estamos comunicando con ud. para darle los datos bancarios y realice el deposito correspondiente.</p>
-                                          <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><strong>Por favor responda a este email indicando el código de validación que ha recibido por SMS.</strong></p>
+                                          En relación a su pedido N°$code_random nos estamos comunicando con ud. para darle los datos bancarios y realice el deposito correspondiente.</p>
+                                          <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><strong>Por favor responda a este email indicando el número de pedido y los comprobantes del envio.</strong></p>
                                           <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><em>Le recordamos los detalles de su pedido:</em></p>
                                           <ul dir='auto' style='list-style-type:disc;margin:10px 0 15px 30px;padding-left:15px' type='disc'>
-                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Pedido: <em>$code_random</em></li>
-                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Importe Total: <em>$obj_price_dolar $</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>N° Pedido: <em>$code_random</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Importe Total: <em>$$obj_price_dolar </em></li>
                                             <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Email: <em>$obj_email</em></li>
                                             <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Telefono: <em>$obj_phone</em></li>
                                             <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Método de Pago: <em>Transferencia Bancaria</em></li>
                                           </ul>
+                                          <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><em>Datos Bancarios Easycripto:</em></p>
+                                          <ul dir='auto' style='list-style-type:disc;margin:10px 0 15px 30px;padding-left:15px' type='disc'>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Nombre del Banco: <em>Banco Internacional</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Número de Cuenta: <em>22495-3265423218712</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Número de Cuenta Interbancario: <em>1965-22495-3265423218712-6513651</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Títular: <em>SERFORTEC S.L</em></li>                                            
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Código SWIFT: <em>BINPPL</em></li>
+                                          </ul>
+                                          <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'>
+                                          <em>Responder al correo compras@easycripto.com con el N° Pedido y los comprobantes del envio y en 30 minutos estaremos procesando su compra.</em></p>
+                                          <p></p>
                                           <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'>
                                           <em><a href='http://www.easycripto.com' rel='noreferrer' target='_blank' data-saferedirecturl='https://www.google.com/url?hl=es&amp;q=http://www.easycripto.com&amp;source=gmail&amp;ust=1533191115659000&amp;usg=AFQjCNH81sc5NC2jENYoO2QtgKdakGyHbA'>www.easycripto.com</a></em></p>
                                           <p></p>
@@ -103,14 +113,12 @@ class Bank extends CI_Controller {
                                 Si usted lee este mensaje y no es el destinatario señalado, el empleado o el agente responsable de entregar el mensaje al destinatario, o ha recibido esta comunicación por error, le informamos que está totalmente prohibida, y puede ser ilegal, cualquier divulgación, distribución o reproducción de esta comunicación, y le rogamos que nos lo notifique inmediatamente y nos devuelva el mensaje original a la dirección arriba mencionada. Gracias 
                                 </span>
                             </div>'
-                            .</html>"
-                            , 70, "\n", true);
-                    $titulo = "Ticket [Easycripto] : Información Bancaria";
+                            .</html>", 70, "\n", true);
+                    $titulo = "N° Pedido [Easycripto] : Información Bancaria";
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                    $headers .= "Easycripto <soporte@easycripto.com> < noreplay@easycripto.com >\r\n";
+                    $headers .= "Easycripto <soporte@easycripto.com>\r\n";
                     $bool = mail("$obj_email",$titulo,$mensaje,$headers);
-        
         $data = array(
                     'date' => date("Y-m-d H:i:s"),
                     'code' => $code_random,
