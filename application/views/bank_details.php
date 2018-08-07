@@ -209,7 +209,7 @@
                                         <div class="checkbox display-inline-block">
                                             <div class="floatleft">
                                                 <label>
-                                                    <input id="card-recharge-privacity" name="card-recharge-privacity" data-val="true" data-val-required="'Voucher Privacity' no debe estar vacío." value="true" type="checkbox">
+                                                    <input id="card-recharge-privacity" name="card-recharge-privacity" data-val="true" data-val-required="'Voucher Privacity' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="card-recharge-privacity" value="false" type="hidden">
                                                     Acepto las <a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank">condiciones generales de la contratación</a> y la 
                                                         <a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank">política de privacidad</a>.
@@ -217,14 +217,14 @@
                                             </div>
                                             <div class="floatleft">
                                                 <label>
-                                                    <input id="confirm-wallet-property" name="confirm-wallet-property" data-val="true" data-val-required="'Confirm Wallet property' no debe estar vacío." value="true" type="checkbox">
+                                                    <input id="confirm-wallet-property" name="confirm-wallet-property" data-val="true" data-val-required="'Confirm Wallet property' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="confirm-wallet-property" value="false" type="hidden">
                                                     Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero.
                                                 </label>
                                             </div>
                                             <div class="floatleft">
                                                 <label>
-                                                    <input id="confirm-devolutionservice-cost" name="confirm-devolutionservice-cost" data-val="true" data-val-required="'Confirm Devolution cost' no debe estar vacío." value="true" type="checkbox">
+                                                    <input id="confirm-devolutionservice-cost" name="confirm-devolutionservice-cost" data-val="true" data-val-required="'Confirm Devolution cost' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="confirm-devolutionservice-cost" value="false" type="hidden">
                                                     Acepto la verificación de mi identidad y un coste de <a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link">devolución  mínimo de 10€ debido a gastos de gestión.</a>
                                                 </label>
