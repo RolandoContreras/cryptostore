@@ -5,6 +5,7 @@ class Bank extends CI_Controller {
     public function __construct(){
      parent::__construct();
      $this->load->model("sell_model","obj_sell");
+     $this->load->model("paises_model","obj_paises");
     } 
 
     public function index()
@@ -28,6 +29,33 @@ class Bank extends CI_Controller {
             exit();
 	}
     }
+    public function view_credit_card(){
+        if($this->input->is_ajax_request()){
+            //GET DATA POST
+            $data['price_dolar'] = $this->input->post("price_dolar");
+            $data['btc'] = $this->input->post("btc");
+            $data['phone'] = $this->input->post("phone");
+            $data['wallet'] = $this->input->post("wallet");
+            $data['email'] = $this->input->post("email");
+            $data['radio'] = $this->input->post("radio");
+            
+            $data['name'] = $this->input->post("name");
+            $data['last_name'] = $this->input->post("last_name");
+            $data['day'] = $this->input->post("day");
+            $data['month'] = $this->input->post("month");
+            $data['year'] = $this->input->post("year");
+            $data['address'] = $this->input->post("address");
+            $data['postal'] = $this->input->post("postal");
+            $data['poblacion'] = $this->input->post("poblacion");
+            $data['provincia'] = $this->input->post("provincia");
+            $data['country'] = $this->input->post("country");
+            
+            $_SESSION['buy'] = $data;
+            echo json_encode($data);            
+            exit();
+	}
+    }
+    
     public function details_bank(){
         //GER DATA $_SESSION
         $data['price_dolar'] = $_SESSION['buy']['price_dolar'];
@@ -38,10 +66,59 @@ class Bank extends CI_Controller {
         $obj_radio = $_SESSION['buy']['radio'];
         $data['radio'] = $obj_radio;
         //RENDER
-        if($obj_radio == 2){
+        if($obj_radio == 1){
+            
+        //GET DATA PAISES
+            $params = array(
+                "select" => "id, nombre",
+                "where" => "id_idioma = 7");
+            $data['obj_paises'] = $this->obj_paises->search($params);
+            
+            $this->load->view('credit_card',$data);
+        }else{
             $this->load->view('bank_details',$data);
-        }else{}
+        }
     }
+    
+    public function details_credit_card(){
+        //RENDER
+            $obj_dolar = $_SESSION['buy']['price_dolar'];
+            $data['price_dolar'] = $_SESSION['buy']['price_dolar'];
+            $data['btc'] = $_SESSION['buy']['btc'];
+            $data['phone'] = $_SESSION['buy']['phone'];
+            $data['wallet'] = $_SESSION['buy']['wallet'];
+            $data['email'] = $_SESSION['buy']['email'];
+            $data['radio'] = $_SESSION['buy']['radio'];
+            
+            $data['name'] = $_SESSION['buy']['name'];
+            $data['last_name'] = $_SESSION['buy']['last_name'];
+            $data['day'] = $_SESSION['buy']['day'];
+            $data['month'] = $_SESSION['buy']['month'];
+            $data['year'] = $_SESSION['buy']['year'];
+            $data['address'] = $_SESSION['buy']['address'];
+            $data['postal'] = $_SESSION['buy']['postal'];
+            $data['poblacion'] = $_SESSION['buy']['poblacion'];
+            $data['provincia'] = $_SESSION['buy']['provincia'];
+            $obj_country = $_SESSION['buy']['country'];
+            //GET DATA OF COUNTRY
+            $params = array(
+                            "select" =>"nombre",
+                            "where" => "id = $obj_country and id_idioma = 7"              
+                          );            
+            //GET DATA COMMISSIONS
+            $country = $this->obj_paises->get_search_row($params);
+            $country = $country->nombre;
+            $data['country'] = $country;
+            
+            $subtotal = $obj_dolar * 0.02;
+            $data['subtotal'] = $subtotal;
+            $total = $obj_dolar + $subtotal;
+            $data['total'] = $total;
+            //SEND DATA
+            $this->load->view('credit_card_details', $data);
+    }
+    
+    
     public function confirm_bank(){
         //GER DATA $_SESSION
         

@@ -53,8 +53,10 @@ $route['allcurrency'] = 'allcurrency';
 $route['buy'] = 'buy';
 $route['buy/bank'] = 'bank';
 $route['buy/bank/view_bank'] = 'bank/view_bank';
-$route['buy/bank/confirm_bank'] = 'bank/confirm_bank';
+$route['buy/bank/view_credit_card'] = 'bank/view_credit_card';
+$route['buy/bank/details_credit_card'] = 'bank/details_credit_card';
 
+$route['buy/bank/confirm_bank'] = 'bank/confirm_bank';
 
 $route['contact/invest'] = 'contact_invest';
 $route['contact/invest/send_messages'] = 'contact_invest/send_messages';
@@ -66,8 +68,6 @@ $route['notice/privacy'] = 'notice';
 $route['notice/general'] = 'notice';
 $route['notice/cookies'] = 'notice';
 
-$route['plan/([0-9a-z_-]+)'] = "plan/packages";
-$route['plan/([0-9a-z_-]+)'] = "plan/packages";
 
 $route['backoffice'] = "b_home";
 $route['backoffice/profile'] = "b_data";
