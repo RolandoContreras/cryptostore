@@ -335,9 +335,15 @@
 
 .footer
 {
-	padding-top: 99px;
-	padding-bottom: 82px;
-	border-top: solid 1px #dcdcdc;
+	padding-top: 55px;
+	padding-bottom: 55px;
+        color: rgba(255,255,255,.7);
+        background-color: transparent;
+        background-image: url(../images/bg-bottom.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        border: none;
 }
 .footer p
 {
@@ -419,6 +425,19 @@
 	transition: all 200ms ease;
          
 }
+.redes{
+    color: #000 !important;
+}
+.redes:hover{
+    color: #000 !important;
+}
+.button_comprar{
+    font-size: 18px !important;
+}
+.button a:hover{
+    color: #ffd800 !important;
+}
+
 .footer_col ul li a:hover
 {
 	color: #28262d;

@@ -14,7 +14,7 @@ class Home extends CI_Controller {
         $data['bch'] = $this->bch_price();
         $data['eth'] = $this->eth_price();
         $data['dash'] = $this->dash_price();
-        $this->load->view('home2',$data);
+        $this->load->view('home',$data);
 	}
     public function send_messages(){
      //GET DATA BY POST

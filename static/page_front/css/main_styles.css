@@ -97,6 +97,11 @@ p a
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
+
+.icon_box_button:hover a {
+    color: #ffd800 !important;
+}
+
 a, a:hover, a:visited, a:active, a:link
 {
 	text-decoration: none;
@@ -292,14 +297,25 @@ section
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 128px;
-	background: rgba(27, 11, 51, 0.92);
+	height: 100px;
+        background: rgb(69,72,77);
+        background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+        background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+        color: #fff;
 	z-index: 10;
 }
 .header.scrolled
 {
 	height: 100px;
-	background: rgba(27, 11, 51, 0.92);
+	background: rgb(69,72,77);
+        background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%);
+        background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+        background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+        color: #fff;
+
 }
 
 /*********************************
@@ -356,7 +372,7 @@ section
 .main_nav ul li a
 {
 	display: block;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: 400;
 	line-height: 40.51px;
 	color: #FFFFFF;
@@ -366,7 +382,7 @@ section
         font-weight: 700;
         background-color: #dfaf1f;
         padding: 20px;
-        color: #452b78 !important;
+        color: #fff !important;
         padding-top: 6px !important;
         padding-bottom: 6px !important;
         border-radius: 30px;
@@ -495,7 +511,7 @@ section
 }
 .item_1 span:nth-child(3)
 {
-	font-size: 140px;
+	font-size: 100px;
 	font-weight: 800;
 	line-height: 1;
 	margin-bottom: 14px;
@@ -588,7 +604,7 @@ section
         left: -46%;
 	width: 865px;
 	height: 96px;
-	background: #301b55;
+	background:transparent;
 	z-index: 9;
 	transform-origin: top right;
 	-webkit-transform: rotate(-90deg);
@@ -619,7 +635,7 @@ section
 	height: 100%;
         top: -8px;
 	float: left;
-        left: 115px;
+        left: 350px;
         
 }
 .hero_side_text h2
@@ -1099,7 +1115,7 @@ section
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 475px;
+	height: 400px;
 	max-width: 100%;
 	box-shadow: 0px 30px 59px rgba(24, 29, 33, 0.23);
 	padding-left: 75px;
@@ -1112,7 +1128,7 @@ section
 }
 .services_slider .owl-item.active.center .services_item_inner
 {
-	height: 663px;
+	height: 400px;
 }
 .service_item_content
 {
