@@ -118,6 +118,18 @@ class Bank extends CI_Controller {
             $this->load->view('credit_card_details', $data);
     }
     
+    public function enter_credit_card(){
+        
+        //RENDER
+            //create name
+              $fisrt_name = $_SESSION['buy']['name'];
+              $last_name = $_SESSION['buy']['last_name'];
+              $data['name'] = strtoupper($fisrt_name." ".$last_name);
+            //get total  
+              $data['total'] = $this->input->post("total");
+            //SEND DATA
+            $this->load->view('view_credit_card',$data);
+    }
     
     public function confirm_bank(){
         //GER DATA $_SESSION

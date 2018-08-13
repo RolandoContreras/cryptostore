@@ -55,6 +55,10 @@ $route['buy/bank'] = 'bank';
 $route['buy/bank/view_bank'] = 'bank/view_bank';
 $route['buy/bank/view_credit_card'] = 'bank/view_credit_card';
 $route['buy/bank/details_credit_card'] = 'bank/details_credit_card';
+$route['buy/bank/enter_credit_card'] = 'bank/enter_credit_card';
+
+//VERIFY PAY CREDIT / DEBIT CARD
+$route['buy/charge_payment'] = 'charge_payment';
 
 $route['buy/bank/confirm_bank'] = 'bank/confirm_bank';
 

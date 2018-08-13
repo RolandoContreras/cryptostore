@@ -79,7 +79,7 @@
                     </div>
                 </div>
 			<div class="row panel-bitcoinDinero">
-                            <form action="#" method="post">
+                            <form action="<?php echo site_url().'buy/bank/enter_credit_card';?>" method="post">
                             <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
@@ -230,6 +230,7 @@
                                                 <div class="floatright">
                                                     <h3>
                                                         <span id="total"><?php echo format_number_2decimal($total);?> $</span>
+                                                        <input type="hidden" name="total" id="total" value="<?php echo $total;?>"/>    
                                                     </h3>
                                                 </div>
                                             </div>
