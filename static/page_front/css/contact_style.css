@@ -216,7 +216,7 @@
 .input_field:focus,
 .text_field:focus
 {
-	border-bottom: solid 1px #452b78 !important;
+	border-bottom: solid 1px #000 !important;
 	box-shadow: none !important;
 	outline: none !important;
 }
@@ -227,14 +227,14 @@
 	height: 54px;
 	width: 174px;
 	text-align: center;
-	border: solid 2px #452b78;
+	border: solid 2px #000;
 	background: transparent;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 50px;
 	text-transform: uppercase;
-	color: #452b78;
+	color: #000;
 	cursor: pointer;
 }
 
@@ -258,7 +258,8 @@
 }
 .reply_submit_btn:hover
 {
-	background: #452b78;
+	background: #efb810;
+        border: solid 2px #ae841a;
 	color: #FFFFFF;
 }
 
@@ -403,7 +404,7 @@
 {
 	font-size: 15px;
 	font-weight: 500;
-	color: #fff;
+        color: #dfaf1f;
         text-transform: uppercase;
         font-weight: bolder;
 	margin-bottom: 9px;

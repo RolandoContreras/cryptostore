@@ -210,12 +210,12 @@
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
                                     <h2 class="atificial-text">RÁPIDO Y SENCILLO</h2>
-                                    <p><img src="<?php echo site_url().'static/page_front/images/variedad.jpg';?>" alt="rápido" width="250"/> </p>
+                                    <p><img src="<?php echo site_url().'static/page_front/images/rapido.png';?>" alt="rápido" width="400"/> </p>
                             </div>
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
                                     <h2 class="atificial-text">AMPLIA COBERTURA DE SERVICIOS</h2>
-                                    <p><img src="<?php echo site_url().'static/page_front/images/amplia.png';?>" alt="cobertura" width="250"/> </p>
+                                    <p><img src="<?php echo site_url().'static/page_front/images/cobertura.png';?>" alt="cobertura" width="400"/> </p>
                             </div>
                             
                     </div>
@@ -223,7 +223,7 @@
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
                                     <h2 class="atificial-text">SEGURIDAD Y CONFIANZA</h2>
-                                    <p><img src="<?php echo site_url().'static/page_front/images/seguridad.png';?>" alt="seguridad" width="250"/> </p>
+                                    <p><img src="<?php echo site_url().'static/page_front/images/seguridad_btc.png';?>" alt="seguridad" width="400"/> </p>
                             </div>
                             
                             <!-- Icon Box Item -->
@@ -329,7 +329,7 @@
 									</div>
 									<h2>Equipo</h2>
 								</div>
-								<p>Profesionales del mundo de las criptomonedas y las finanzas analizan en todo momento el mercado para ofrecer la mejor atención al cliente.</p>
+								<p>Profesionales del mundo de las criptomonedas analizan en todo momento el mercado para ofrecer la mejor atención.</p>
 							</div>
 						</div>
 					</div>
@@ -343,7 +343,7 @@
         
         
 	<div class="cta">
-		<div class="cta_background" style="background-color:#452b78"></div>
+		<div class="cta_background"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 order-lg-1 order-2">
@@ -358,7 +358,7 @@
 
 				<div class="col-lg-6 offset-lg-1 order-lg-2 order-1">
 					<div class="cta_image d-flex flex-column justify-content-end">
-                                            <img src="<?php echo site_url().'static/page_front/images/tablet.png';?>" alt="clientes exclusivos">
+                                            <img src="<?php echo site_url().'static/page_front/images/vip.png';?>" alt="clientes exclusivos">
 					</div>
 				</div>
 			</div>
