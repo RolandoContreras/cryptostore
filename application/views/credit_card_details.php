@@ -94,8 +94,6 @@
                                             <div class="content"><?php echo $name;?></div>
                                             <input type="hidden" name="name" id="name" value="<?php echo $name;?>"/>
                                         </div>
-                                    </div>
-                                    <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h3 class="panel-title">Apellidos</h3>
                                         </div>
@@ -103,8 +101,6 @@
                                             <div class="content"><?php echo $last_name;?></div>
                                             <input type="hidden" name="last_name" id="last_name" value="<?php echo $last_name;?>"/>
                                         </div>
-                                    </div>
-                                    <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h3 class="panel-title">Fecha de Nacimiento</h3>
                                         </div>
@@ -114,8 +110,13 @@
                                             <input type="hidden" name="month" id="month" value="<?php echo $month;?>"/>
                                             <input type="hidden" name="year" id="year" value="<?php echo $year;?>"/>
                                         </div>
-                                    </div>
-                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Domicilio</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="content"><?php echo $address;?></div>
+                                            <input type="hidden" name="address" id="address" value="<?php echo $postal;?>"/>
+                                        </div>
                                         <div class="panel-heading">
                                             <h3 class="panel-title">Código Postal</h3>
                                         </div>
@@ -123,8 +124,6 @@
                                             <div class="content"><?php echo $postal;?></div>
                                             <input type="hidden" name="postal" id="postal" value="<?php echo $postal;?>"/>
                                         </div>
-                                    </div>
-                                    <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h3 class="panel-title">Población / Provincia / País</h3>
                                         </div>
@@ -134,6 +133,7 @@
                                             <input type="hidden" name="provincia" id="provincia" value="<?php echo $provincia;?>"/>
                                             <input type="hidden" name="country" id="country" value="<?php echo $country;?>"/>
                                         </div>
+                                        
                                     </div>
                                     <p>¡El monedero es el dato más importante!</p>
                                     <div class="panel panel-primary">
