@@ -9,7 +9,7 @@ function validate(){
     
     if(wallet == ""){
         document.getElementById("message_wallet").style.display = "block";
-        $("#name").focus();
+        $("#wallet").focus();
     }else if(phone == ""){
         document.getElementById("message_phone").style.display = "block";
         $("#phone").focus();

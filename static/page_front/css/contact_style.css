@@ -426,6 +426,10 @@
 	transition: all 200ms ease;
          
 }
+.footer_col ul li a:hover
+{
+       color: #ae841a !important;
+}
 .redes{
     color: #000 !important;
 }
@@ -591,9 +595,9 @@
 .submit_btn_comprar {
     height: 54px;
     width: 100%;
-    color: #452b78 !important;
+    color: #99760a !important;
     text-align: center;
-    border: solid 2px #452b78;
+    border: solid 2px #99760a;
     background: transparent;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -608,8 +612,8 @@
     color: #fff !important;
     width: 100%;
     text-align: center;
-    border: solid 2px #452b78;
-    background: #452b78;
+    border: solid 2px #99760a;
+    background: #99760a;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700;

@@ -8,6 +8,7 @@
 
     $url = explode("/",uri_string());
     $nav = $url[0];
+    
     switch ($nav) {
         case 'home':
             $active_home = "active";
@@ -23,6 +24,9 @@
             break;
         case 'contact':
             $active_contact = "active";
+            break;
+        case 'forgot':
+            $active_login = "active";
             break;
         default:
             $active_home = "active";

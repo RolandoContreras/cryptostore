@@ -2080,11 +2080,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3399cc', end
 }
 
 .bloqueGris {
-    background: -webkit-linear-gradient(to left, #7873ed, #a865e1);
-    background: -webkit-linear-gradient(right, #7873ed, #a865e1);
-    background: -webkit-gradient(linear, right top, left top, from(#7873ed), to(#a865e1));
-    background: -o-linear-gradient(right, #7873ed, #a865e1);
-    background: linear-gradient(to left, #7873ed, #a865e1);
+    background: -webkit-linear-gradient(to left, #efb810, #ae841a);
+    background: -webkit-linear-gradient(right, #efb810, #ae841a);
+    background: -webkit-gradient(linear, right top, left top, from(#efb810), to(#ae841a));
+    background: -o-linear-gradient(right, #efb810, #ae841a);
+    background: linear-gradient(to left, #efb810, #ae841a);
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 6px;
@@ -2154,7 +2154,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3399cc', end
 .faq { color: #452b78;}
 .faq dl { padding-top: 53px;}
 .faq dt { padding-left: 60px; font-size: 18px; line-height:26px; font-weight: 300; margin-top: 45px; position: relative;}
-.faq dt a { color: #452b78; text-decoration: none}
+.faq dt a { color: #000; text-decoration: none}
 .faq dt:before {content: ''; position: absolute; left: 0; top: 0;}
 .faq dd { display: none; margin: 21px 30px 0 60px; font-size: 14px; line-height: 24px; color: #9e99b5;}
 .faq dd a {color: #452b78;}
