@@ -75,7 +75,7 @@
                 <div class="col-sm-3 panel-bitcoinDinero-col"></div>
                 <div class="col-sm-6 panel-bitcoinDinero-col">
                 <div class="enhorabuenaTarjeta">
-                        <img src="<?php echo site_url().'static/page_front/images/criptos.png';?>" width="530"/>
+                    <img class="img_confirm_email_bank" src="<?php echo site_url().'static/page_front/images/criptos.png';?>" width="530"/>
                 </div>
                 <div class="center margin-top-140">
                     <h3 class="textogrisOscuro" id="title">

@@ -210,12 +210,12 @@
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
                                     <h2 class="atificial-text">RÁPIDO Y SENCILLO</h2>
-                                    <p><img src="<?php echo site_url().'static/page_front/images/rapido.png';?>" alt="rápido" width="400"/> </p>
+                                    <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/rapido.png';?>" alt="rápido" width="400"/> </p>
                             </div>
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
                                     <h2 class="atificial-text">AMPLIA COBERTURA DE SERVICIOS</h2>
-                                    <p><img src="<?php echo site_url().'static/page_front/images/cobertura.png';?>" alt="cobertura" width="400"/> </p>
+                                    <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/cobertura.png';?>" alt="cobertura" width="400"/> </p>
                             </div>
                             
                     </div>
@@ -223,13 +223,13 @@
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
                                     <h2 class="atificial-text">SEGURIDAD Y CONFIANZA</h2>
-                                    <p><img src="<?php echo site_url().'static/page_front/images/seguridad_btc.png';?>" alt="seguridad" width="400"/> </p>
+                                    <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/seguridad_btc.png';?>" alt="seguridad" width="400"/> </p>
                             </div>
                             
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
                                     <h2 class="atificial-text">SIN INTERMEDIARIOS</h2>
-                                    <p><img src="<?php echo site_url().'static/page_front/images/intermediarios.png';?>" alt="intermediarios" width="400"/> </p>
+                                    <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/intermediarios.png';?>" alt="intermediarios" width="400"/> </p>
                             </div>
                     </div>
                 </div>

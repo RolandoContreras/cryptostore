@@ -1092,8 +1092,8 @@ section
 {
 	/*background: #28262d;*/
         background: linear-gradient(to right, rgba(010,010, 010, 1) 0%, rgba(010,010, 010, 1) 18%, rgba(010,010, 010, 1) 50%, rgba(010,010, 010, 1) 82%, rgba(010, 010, 010, 1) 100%);
-    background-clip: border-box;
-background-clip: border-box;
+        background-clip: border-box;
+        background-clip: border-box;
 }
 .services_item
 {
@@ -1603,7 +1603,6 @@ background-clip: border-box;
     margin-top: 100px;
 }
 
-
 .single-price-plan {
     background: #ffffff;
     border: 1px solid #ebebeb;
@@ -1615,8 +1614,8 @@ background-clip: border-box;
 }
 
 .single-price-plan:hover{
-     -webkit-box-shadow: 10px 10px 90px #000;
-            box-shadow: 0 10px 90px #000;
+     -webkit-box-shadow: 10px 10px 20px #000;
+            box-shadow: 0 10px 20px #000;
 }
 
 .single-price-plan .package-plan {

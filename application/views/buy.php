@@ -77,7 +77,7 @@
 			<div class="row">
                             <div class="col-xs-6 col-md-6">
                                 <div class="col-md-6 hidden-sm  hidden-xs  margin-top-30 wow bounceInLeft animated animated" style="visibility: visible;">
-                                    <img src="<?php echo site_url().'static/page_front/images/compra_btc.png';?>" alt="Comprar criptomoneda" title="Comprar criptomoneda" width="600">
+                                    <img class="img_buy" src="<?php echo site_url().'static/page_front/images/compra_btc.png';?>" alt="Comprar criptomoneda" title="Comprar criptomoneda" width="600">
                                 </div>
                             </div>
                             <div class="col-md-1"> </div>
