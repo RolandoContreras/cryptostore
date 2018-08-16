@@ -383,13 +383,13 @@
                                 <div class="row">
                                     <div class="col-xs-6 col-md-6">
                                         <div class="wow bounceInLeft animated animated" style="visibility: visible;">
-                                            <input class="form-control" onkeyup="fade_name(this.value);" id="name" name="name" placeholder="Indicanos tu nombre" type="text">
+                                            <input class="form-control form-control-2" onkeyup="fade_name(this.value);" id="name" name="name" placeholder="Indicanos tu nombre" type="text">
                                             <span id="message_name" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Nombre es requerido</span>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-md-6">
                                         <div class="wow bounceInLeft animated animated" style="visibility: visible;">
-                                            <input class="form-control" onkeyup="fade_email(this.value);" id="email" name="email" placeholder="Indicanos tu email" type="email">
+                                            <input class="form-control form-control-2" onkeyup="fade_email(this.value);" id="email" name="email" placeholder="Indicanos tu email" type="email">
                                         <span id="message_email" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Email es requerido</span>
                                         </div>
                                     </div>
@@ -398,7 +398,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-md-12">
                                         <div class="wow bounceInLeft animated animated" style="visibility: visible;">
-                                            <input class="form-control" onkeyup="fade_subject(this.value);" id="subject" name="subject" placeholder="Indicanos el Asunto" type="text">
+                                            <input class="form-control form-control-2" onkeyup="fade_subject(this.value);" id="subject" name="subject" placeholder="Indicanos el Asunto" type="text">
                                             <span id="message_subject" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Asunto es requerido</span>
                                         </div>
                                     </div>
@@ -407,7 +407,7 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-md-12">
                                         <div class="wow bounceInLeft animated animated" style="visibility: visible;">
-                                            <textarea class="form-control" onkeyup="fade_comments(this.value);" cols="20" data-val="true" id="comments" name="comments" rows="3" placeholder="Indicanos tu Comentarios"></textarea>
+                                            <textarea class="form-control form-control-2" onkeyup="fade_comments(this.value);" cols="20" data-val="true" id="comments" name="comments" rows="3" placeholder="Indicanos tu Comentarios"></textarea>
                                             <span id="message_comments" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Comentario es requerido</span>
                                         </div>
                                     </div>

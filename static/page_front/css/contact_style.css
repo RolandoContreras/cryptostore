@@ -465,7 +465,7 @@
     border: none;
     color: #999999;
     background-color: #e5e5e5;
-    color: #999999;
+    color: #ae841a;
     border: none;
     height: auto;
     overflow: auto;
@@ -957,4 +957,12 @@ label {
 }
 .input-group-addon:first-child {
     border-right: 0;
+}
+
+.form-control-2{
+    border:1px solid #999 !important;
+}  
+.form-control-2::placeholder {
+    color: #000 !important;
+    opacity: 0.5 !important;
 }
