@@ -124,7 +124,52 @@
 
 @media only screen and (max-width: 1024px)
 {
-	
+    h1 {
+        font-size: 40px;
+    }
+    .main_nav ul li {
+        margin-right: 25px;
+    }
+    .main_nav ul li a {
+        font-size: 16px;
+    }
+    .item_1 span:nth-child(3) {
+        font-size: 70px;
+    }
+    #compra {
+        font-size: 30px;
+    }
+    .future-adversing {
+        font-size: 40px;
+    }
+    .img_home{
+        width: 250px;
+    }
+    .atificial-text {
+        font-size: 25px;
+    }
+    .section_title{
+        margin-top: 60px;
+    }
+    .services_slider_container {
+        margin-top: 0px;
+    }
+    .cta_image img {
+        width: 290px;
+    }
+    .img_buy{
+        width: 500px;
+    }
+    .title-currency-contact {
+        font-size: 30px;
+    }
+    .img_confirm_email_bank{
+        width: 450px;
+    }
+    .form-control::placeholder {
+        font-size: 13px;
+    }
+    
 }
 
 /************
