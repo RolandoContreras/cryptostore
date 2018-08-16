@@ -53,7 +53,23 @@
 
 @media only screen and (max-width: 1380px)
 {
-	
+	.item_1 span:nth-child(3) {
+            font-size: 75px;
+        }
+        #compra {
+            font-size: 35px;
+            line-height: 1;
+        }
+        .hero_side_text {
+            top: -234px;
+        }
+        .future-adversing {
+            font-size: 47px;
+        }
+        .cta_image img {
+            width: 300px;
+        }
+
 }
 
 /************
@@ -95,6 +111,55 @@
 	{
 		padding-left: 0px;
 	}
+        
+        h1 {
+        font-size: 40px;
+    }
+    .main_nav ul li {
+        margin-right: 25px;
+    }
+    .main_nav ul li a {
+        font-size: 17px;
+    }
+    .item_1 span:nth-child(3) {
+        font-size: 70px;
+    }
+    #compra {
+        font-size: 30px;
+    }
+    .future-adversing {
+        font-size: 40px;
+    }
+    .img_home{
+        width: 250px;
+    }
+    .atificial-text {
+        font-size: 25px;
+    }
+    .section_title{
+        margin-top: 60px;
+    }
+    .services_slider_container {
+        margin-top: 0px;
+    }
+    .cta_image img {
+        width: 290px;
+    }
+    .img_buy{
+        width: 500px;
+    }
+    .title-currency-contact {
+        font-size: 30px;
+    }
+    .img_confirm_email_bank{
+        width: 515px;
+    }
+    .form-control::placeholder {
+        font-size: 13px;
+    }
+    .single-price-plan .package-plan .ca-price h4 {
+        font-size: 20px !important;
+    }
 }
 
 /************
@@ -116,6 +181,7 @@
 	{
 		right: -15px;
 	}
+        
 }
 
 /************
@@ -169,6 +235,9 @@
     .form-control::placeholder {
         font-size: 13px;
     }
+    .single-price-plan .package-plan .ca-price h4 {
+        font-size: 20px !important;
+    }
     
 }
 
@@ -206,7 +275,7 @@
 	}
 	.item_1 span:nth-child(3)
 	{
-		font-size: 186px;
+		margin-top: 90px;
 		margin-bottom: 0px;
 	}
 	.item_1 span:nth-child(4)
@@ -288,6 +357,7 @@
 		width: 184px;
 		height: auto;
                 margin-bottom: 10px;
+                margin-left: 18px;
 	}
 	.cta_content
 	{
@@ -384,6 +454,11 @@
 	{
 		margin-top: 52px;
 	}
+        .item_1 span:nth-child(3) {
+            font-size: 0px;
+
+        }
+        
 }
 
 /************
@@ -481,6 +556,7 @@
 	.cta_content
 	{
 		padding-top: 40px;
+                text-align: center;
 	}
 	.cta_content p
 	{
@@ -498,6 +574,9 @@
 	{
 		font-size: 14px;
 	}
+        .cta_image img {
+            margin-left: 5px !important;
+        }
 }
 
 /************
@@ -631,7 +710,7 @@
 		line-height: 1.7;
 	}
         .item_1 span:nth-child(3) {
-            font-size: 30px !important;
+            font-size: 30px;
         }
         #compra {
             font-size: 11px;
@@ -681,7 +760,7 @@
             font-size: 22px;
         }
         .title-currency-contact {
-           font-size: 22px;
+           font-size: 25px;
         }
         .question_currency {
             font-size: 18px !important;
@@ -701,6 +780,9 @@
         .form-list__input-inline {
             width: 108%;
         }
+        .padding-responsive{
+            padding-bottom: 22px;
+        }
 }
 
 /************
@@ -709,7 +791,9 @@
 
 @media only screen and (max-width: 479px)
 {
-	
+	.cta_image img {
+            margin-left: 18px;
+        }
 }
 
 /************

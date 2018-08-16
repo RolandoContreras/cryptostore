@@ -382,7 +382,7 @@
                             <form id="reply_form">
                                 <div class="row">
                                     <div class="col-xs-6 col-md-6">
-                                        <div class="wow bounceInLeft animated animated" style="visibility: visible;">
+                                        <div class="wow bounceInLeft animated animated padding-responsive" style="visibility: visible;">
                                             <input class="form-control form-control-2" onkeyup="fade_name(this.value);" id="name" name="name" placeholder="Indicanos tu nombre" type="text">
                                             <span id="message_name" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">El Nombre es requerido</span>
                                         </div>

@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 <meta property="og:url"  content="http://easycripto.com/" /> 
 <meta property="og:type" content="website" /> 
-<meta property="og:title" content="CriptoStore | Compra Bitcoin" />
+<meta property="og:title" content="EasyCripto | Compra Bitcoin" />
 <meta property="og:description" content="En Easycripto puedes comprar Bitcoin de forma fácil, rápida y segura. ¡Sin necesidad de registro!" /> 
 <meta property="og:image" content="<?php echo site_url().'static/page_front/images/easyx200.jpg'?>" />
 <!--STAR FAVICON-->
