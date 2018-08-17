@@ -57,7 +57,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/bitcoin';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -74,7 +74,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/dash';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -90,7 +90,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/ethereum';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -99,14 +99,14 @@
                 <div class="row separador-cripto-all-top">
                     <div class="col-lg-12 col-sm-12 height-15"></div>
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
-                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/btc-logo.png';?>" alt="bitcoin" width="40"/></div>
+                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/lite-logo.png';?>" alt="bitcoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">LiteCoin</span></div>
                     <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$ltc_price;?></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $ltc_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/litecoin';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div> 
@@ -122,7 +122,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/bitcoin-cash';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -138,7 +138,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/cardano';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -154,7 +154,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/monero';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -170,7 +170,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/ripple';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -185,7 +185,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/verge';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -200,7 +200,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/zcash';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div> 
@@ -215,7 +215,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/tron';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -230,7 +230,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/omisego';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -245,7 +245,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/siacoin';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -260,7 +260,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/nxt';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>

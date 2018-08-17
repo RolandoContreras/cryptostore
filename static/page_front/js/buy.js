@@ -17,3 +17,14 @@ function validate_usd(value){
         }            
     });
 }
+
+function show_currency(){
+    document.getElementById("crypto-container").style.display = "block";
+    document.getElementById("span-dropdown-arrow_up").style.display = "none";
+    document.getElementById("span-dropdown-arrow_down").style.display = "block";
+}
+function hide_currency(){
+    document.getElementById("crypto-container").style.display = "none";
+    document.getElementById("span-dropdown-arrow_up").style.display = "block";
+    document.getElementById("span-dropdown-arrow_down").style.display = "none";
+}

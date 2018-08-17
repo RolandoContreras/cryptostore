@@ -4,12 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Allcurrency extends CI_Controller {
     public function __construct(){
      parent::__construct();
-     $this->load->model('comments_model','obj_comments');
     } 
 
     public function index()
 	{
-        //GET DATA COMMENTS
+        //GET DATA PRICE CRIPTOCURRENCY
         $obj_btc = $this->btc_price();
         $obj_btc = explode('&', $obj_btc);
         $data['btc_price'] = $obj_btc[0];

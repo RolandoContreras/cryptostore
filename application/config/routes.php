@@ -62,17 +62,34 @@ $route['buy/charge_payment'] = 'charge_payment';
 
 $route['buy/bank/confirm_bank'] = 'bank/confirm_bank';
 
+//CURRENCY
+$route['buy/bitcoin'] = 'buy/currency';
+$route['buy/dash'] = 'buy/currency';
+$route['buy/ethereum'] = 'buy/currency';
+$route['buy/litecoin'] = 'buy/currency';
+$route['buy/bitcoin-cash'] = 'buy/currency';
+$route['buy/cardano'] = 'buy/currency';
+$route['buy/monero'] = 'buy/currency';
+$route['buy/ripple'] = 'buy/currency';
+$route['buy/verge'] = 'buy/currency';
+$route['buy/zcash'] = 'buy/currency';
+$route['buy/tron'] = 'buy/currency';
+$route['buy/omisego'] = 'buy/currency';
+$route['buy/siacoin'] = 'buy/currency';
+$route['buy/nxt'] = 'buy/currency';
+
+
+//CONTACT INVERST
 $route['contact/invest'] = 'contact_invest';
 $route['contact/invest/send_messages'] = 'contact_invest/send_messages';
 
-
-
+//LEGAL
 $route['notice/legal'] = 'notice';
 $route['notice/privacy'] = 'notice';
 $route['notice/general'] = 'notice';
 $route['notice/cookies'] = 'notice';
 
-
+//BACKOFFICE
 $route['backoffice'] = "b_home";
 $route['backoffice/profile'] = "b_data";
 
@@ -94,6 +111,7 @@ $route['backoffice/misdatos'] = "b_data";
 
 $route['register/afiliate/([0-9a-z_-]+)'] = "register/index/$1";
 
+//MANAGER - DASHBOARD
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";

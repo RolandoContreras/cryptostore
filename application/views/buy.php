@@ -118,10 +118,25 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-btc fa-2x"></i>
                                                     </span>
-                                                    <input id="btc" name="btc" class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
+                                                    <input id="btc" name="btc" class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" placeholder="0" value="<?php echo $btc_price_10;?> " type="text">
+                                                    
                                                 </div>
+                                                <span style="cursor:pointer" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
+                                                <span style="cursor:pointer;display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
                                             </div>
-                                            <span class="field-validation-valid error-message" data-valmsg-for="ImporteSolicitadoEur" data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 381px; display: none;">
+                                            <?php foreach ($obj_currency as $value) { ?>
+                                                      <div class="selecformaspago-desplegable">
+                                                            <span>
+                                                                <img class="img_cripto" src='<?php echo site_url()."static/page_front/images/monedas/$value->img";?>' width="20"/>
+                                                            </span>
+                                                            <span class="textoGrisInputsDropdown">
+                                                                <?php echo $value->name;?>
+                                                            </span>
+                                                       </div>                      
+                                            <?php } ?>
+                                            
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-sm-12 height-15"></div>    
