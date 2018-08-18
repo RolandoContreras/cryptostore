@@ -122,7 +122,7 @@
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/bitcoin-cash';?>">COMPRAR</a>
+                                <a class="criptomonedas_2" href="<?php echo site_url().'buy/bitcoincash';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>  
@@ -223,7 +223,8 @@
                 <div class="row separador-cripto-all-top">
                     <div class="col-lg-12 col-sm-12 height-15"></div>
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
-                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/omisego-logo.jpg';?>" alt="OmiseGo" width="40"/></div>
+                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;">
+                            <img src="<?php echo site_url().'static/page_front/images/monedas/omisego-logo.jpg';?>" alt="OmiseGo" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">OmiseGo</span></div>
                     <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$omg_price;?></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $omg_color;?></div>

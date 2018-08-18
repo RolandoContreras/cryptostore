@@ -75,8 +75,14 @@ class Buy extends CI_Controller {
         
      public function currency()
 	{
-         
-        //GET DATA PRICE CRIPTOCURRENCY
+        //GET URI
+        $url = uri_string();
+        $url = explode("/", $url);
+        $currency = $url[1];
+        //SEND DATA CURRENCY
+        $data['currency'] = $currency; 
+        
+        //GET DATA PRICE ALL CRIPTOCURRENCY
         $params = array(
                         "select" =>"currency_id,
                                     name,
@@ -84,15 +90,23 @@ class Buy extends CI_Controller {
                                     active",
                         "where" => "status_value = 1",
                         );
-
-        $data['obj_currency'] = $this->obj_currency->search($params);
-         
-        //GET URI
-        $url = uri_string();
-        $url = explode("/", $url);
-        $currency = $url[1];
-        //SEND DATA CURRENCY
-        $data['currency'] = $currency;
+        $obj_currency = $this->obj_currency->search($params);
+        
+        //SEN DATA
+        $data['obj_currency'] = $obj_currency;
+        
+        //GET IMAGES ARRAY
+        foreach ($obj_currency as $value) {
+            
+            $name = strtolower($value->name);
+            $name = str_replace(" ", "", $name);          
+            
+            if($name == "$currency"){
+                $img = $value->img;
+                //send data
+                $data['img'] = $img;
+            }
+        }
         
         //GET CURRENCY PRICE + 10%
         $obj_number = 100;
@@ -133,7 +147,7 @@ class Buy extends CI_Controller {
                 $data['btc_price_10'] = $price_btc;
                 $data['number_price'] = $obj_number;
                 break;
-            case "bitcoin-cash":
+            case "bitcoincash":
                 //GET PRICE BTC
                 $obj_btc = $this->bch_price();
                 $data['btc_price'] = $obj_btc;

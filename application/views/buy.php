@@ -116,7 +116,7 @@
                                             <div class="calculador">
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
-                                                        <i class="fa fa-btc fa-2x"></i>
+                                                        <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
                                                     </span>
                                                     <input id="btc" name="btc" class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" placeholder="0" value="<?php echo $btc_price_10;?> " type="text">
                                                     

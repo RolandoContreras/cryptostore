@@ -119,7 +119,7 @@
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/bitcoin';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                         <div class="single-price-plan text-center">
                             <!-- Package Text  -->
                             <div class="package-plan">
-                                <img src="<?php echo site_url().'static/page_front/images/monedas/cash-logo.jpg';?>" alt="bitcoin" width="170">
+                                <img src="<?php echo site_url().'static/page_front/images/monedas/cash-logo.png';?>" alt="bitcoin" width="105">
                                 <h5 class="currency_text">BITCOIN CASH</h5>
                                 <div class="ca-price d-flex justify-content-center">
                                     <h4><?php echo "$".$bch?></h4>
@@ -137,7 +137,7 @@
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/bitcoincash';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/ethereum';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div> 
@@ -173,7 +173,7 @@
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/dash';?>">COMPRAR</a>
                             </div>
                         </div>
                     </div>
