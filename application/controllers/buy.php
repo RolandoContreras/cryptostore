@@ -26,8 +26,8 @@ class Buy extends CI_Controller {
         $data['btc_price'] = $obj_btc;
         
         
-        $obj_btc = $this->eth_price();
-        $data['btc_price'] = $obj_btc;
+        $obj_eth = $this->eth_price();
+        $data['btc_price'] = $obj_eth;
         
         $obj_bch = $this->bch_price();
         $data['bch_price'] = $obj_bch;
@@ -82,6 +82,52 @@ class Buy extends CI_Controller {
         //SEND DATA CURRENCY
         $data['currency'] = $currency; 
         
+        
+        //GET PRICE ALL CURRNCY
+        $obj_btc = $this->btc_price();
+        $data['btc_price'] = $obj_btc;
+        
+        $obj_eth = $this->eth_price();
+        $data['eth_price'] = $obj_eth;
+        
+        $obj_bch = $this->bch_price();
+        $data['bch_price'] = $obj_bch;
+        
+        $obj_dash = $this->dash_price();
+        $data['dash_price'] = $obj_dash;
+        
+        $obj_ripple = $this->ripple_price();
+        $data['ripple_price'] = $obj_ripple;
+        
+        $obj_litecoin = $this->litecoin_price();
+        $data['litecoin_price'] = $obj_litecoin;
+        
+        $obj_cardano = $this->cardano_price();
+        $data['cardano_price'] = $obj_cardano;
+        
+        $obj_tron = $this->tron_price();
+        $data['tron_price'] = $obj_tron;
+        
+        $obj_monero = $this->monero_price();
+        $data['monero_price'] = $obj_monero;
+        
+        $obj_omisego = $this->omisego_price();
+        $data['omisego_price'] = $obj_omisego;
+        
+        $obj_zcash = $this->zcash_price();
+        $data['zcash_price'] = $obj_zcash;
+        
+        $obj_siacoin = $this->siacoin_price();
+        $data['siacoin_price'] = $obj_siacoin;
+        
+        $obj_verge = $this->verge_price();
+        $data['verge_price'] = $obj_verge;
+        
+        $obj_nxt = $this->nxt_price();
+        $data['nxt_price'] = $obj_nxt;
+        
+        
+        
         //GET DATA PRICE ALL CRIPTOCURRENCY
         $params = array(
                         "select" =>"currency_id,
@@ -110,132 +156,76 @@ class Buy extends CI_Controller {
         
         //GET CURRENCY PRICE + 10%
         $obj_number = 100;
+        $data['number_price'] = $obj_number;
         switch ($currency) {
             case "bitcoin":
-                //GET PRICE BTC
-                $obj_btc = $this->btc_price();
-                $data['btc_price'] = $obj_btc;
                 //CALCULATE % BTC IF ONLY DIRECT TO BUY
                 $price_btc = $obj_number/$obj_btc;
                 $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
                 break;
             case "dash":
-                //GET PRICE BTC
-                $obj_btc = $this->dash_price();
-                $data['btc_price'] = $obj_btc;
                 //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
+                $price_btc = $obj_number/$obj_dash;
                 $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
                 break;
             case "ethereum":
-                //GET PRICE BTC
-                $obj_btc = $this->eth_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
+                $price_btc = $obj_number/$obj_eth;
                 $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
                 break;
             case "litecoin":
-                //GET PRICE BTC
-                $obj_btc = $this->litecoin_price();
-                $data['btc_price'] = $obj_btc;
                 //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_litecoin;
+                $data['btc_price_10'] = $price;
                 break;
             case "bitcoincash":
                 //GET PRICE BTC
-                $obj_btc = $this->bch_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_bch;
+                $data['btc_price_10'] = $price;
                 break;
             case "cardano":
                 //GET PRICE BTC
-                $obj_btc = $this->cardano_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_cardano;
+                $data['btc_price_10'] = $price;
                 break;
             case "monero":
                 //GET PRICE BTC
-                $obj_btc = $this->monero_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_monero;
+                $data['btc_price_10'] = $price;
                 break;
             case "ripple":
                 //GET PRICE BTC
-                $obj_btc = $this->ripple_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_ripple;
+                $data['btc_price_10'] = $price;
                 break;
             case "verge":
                 //GET PRICE BTC
-                $obj_btc = $this->verge_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
+                $price_btc = $obj_number/$obj_verge;
                 $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
                 break;
             case "zcash":
                 //GET PRICE BTC
-                $obj_btc = $this->zcash_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_zcash;
+                $data['btc_price_10'] = $price;
                 break;
             case "tron":
                 //GET PRICE BTC
-                $obj_btc = $this->tron_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_tron;
+                $data['btc_price_10'] = $price;
                 break;
             case "omisego":
                 //GET PRICE BTC
-                $obj_btc = $this->omisego_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_omisego;
+                $data['btc_price_10'] = $price;
                 break;
             case "siacoin":
                 //GET PRICE BTC
-                $obj_btc = $this->siacoin_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_siacoin;
+                $data['btc_price_10'] = $price;
                 break;
             case "nxt":
                 //GET PRICE BTC
-                $obj_btc = $this->nxt_price();
-                $data['btc_price'] = $obj_btc;
-                //CALCULATE % BTC IF ONLY DIRECT TO BUY
-                $price_btc = $obj_number/$obj_btc;
-                $data['btc_price_10'] = $price_btc;
-                $data['number_price'] = $obj_number;
+                $price = $obj_number/$obj_nxt;
+                $data['btc_price_10'] = $price;
                 break;
         }
         //RENDER
