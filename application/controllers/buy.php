@@ -20,14 +20,15 @@ class Buy extends CI_Controller {
 
         $data['obj_currency'] = $this->obj_currency->search($params);
         
+        $data['currency'] = "bitcoin";
+        
         //GET CURRENCY PRICE + 10%
         $obj_number = 100;
         $obj_btc = $this->btc_price();
         $data['btc_price'] = $obj_btc;
         
-        
         $obj_eth = $this->eth_price();
-        $data['btc_price'] = $obj_eth;
+        $data['eth_price'] = $obj_eth;
         
         $obj_bch = $this->bch_price();
         $data['bch_price'] = $obj_bch;
@@ -81,7 +82,6 @@ class Buy extends CI_Controller {
         $currency = $url[1];
         //SEND DATA CURRENCY
         $data['currency'] = $currency; 
-        
         
         //GET PRICE ALL CURRNCY
         $obj_btc = $this->btc_price();

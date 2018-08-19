@@ -138,7 +138,7 @@
                                                         <?php }  ?>
                                                         
                                                     </span>
-                                                    <input id="amount_cripto" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;"  placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
+                                                    <input disabled="" id="amount_cripto" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;"  placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
                                                     <input type="hidden" id="type_cripto" name="type_cripto" value="<?php echo $btc_price_10;?>">
                                                 </div>
                                                 <span style="cursor:pointer" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>

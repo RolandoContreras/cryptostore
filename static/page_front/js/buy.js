@@ -72,32 +72,46 @@ function change_cripto(cripto, img){
     
     if(cripto == 1){
         var cripto_price = document.getElementById("btc_price").value;
+        $("#currency").val("bitcoin");
     }else if(cripto == 2){
         var cripto_price = document.getElementById("dash_price").value;
+        $("#currency").val("dash");
     }else if(cripto == 3){
         var cripto_price = document.getElementById("eth_price").value;
+        $("#currency").val("ethereum");
     }else if(cripto == 4){
         var cripto_price = document.getElementById("litecoin_price").value;
+        $("#currency").val("litecoin");
     }else if(cripto == 5){
         var cripto_price = document.getElementById("bch_price").value;
+        $("#currency").val("bitcoincash");
     }else if(cripto == 6){
         var cripto_price = document.getElementById("cardano_price").value;
+        $("#currency").val("cardano");
     }else if(cripto == 7){
         var cripto_price = document.getElementById("monero_price").value;
+        $("#currency").val("monero");
     }else if(cripto == 8){
         var cripto_price = document.getElementById("ripple_price").value;
+        $("#currency").val("ripple");
     }else if(cripto == 9){
         var cripto_price = document.getElementById("verge_price").value;
+        $("#currency").val("verge");
     }else if(cripto == 10){
         var cripto_price = document.getElementById("zcash_price").value;
+        $("#currency").val("zcash");
     }else if(cripto == 11){
         var cripto_price = document.getElementById("tron_price").value;
+        $("#currency").val("tron");
     }else if(cripto == 12){
         var cripto_price = document.getElementById("omisego_price").value;
+        $("#currency").val("omisego");
     }else if(cripto == 13){
         var cripto_price = document.getElementById("siacoin_price").value;
+        $("#currency").val("siacoin");
     }else if(cripto == 14){
         var cripto_price = document.getElementById("nxt_price").value;
+        $("#currency").val("nxt");
     }
     
     $.ajax({
