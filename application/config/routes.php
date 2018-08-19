@@ -117,11 +117,8 @@ $route['dashboard/panel'] = "panel";
 $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 
-$route['dashboard/comisiones'] = "d_comission";
-$route['dashboard/bonos'] = "d_bonus"; 
-$route['dashboard/rangos'] = "d_ranges"; 
-$route['dashboard/puntos'] = "d_points"; 
-$route['dashboard/puntos_binario'] = "d_binaries"; 
+$route['dashboard/monedas'] = "d_criptocurrency"; 
+$route['dashboard/inversores'] = "d_comments/invest";
 
 $route['dashboard/informativos'] = "d_informative"; 
 $route['dashboard/informativos/load'] = "d_informative/load";

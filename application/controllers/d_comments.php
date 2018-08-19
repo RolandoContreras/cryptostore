@@ -19,6 +19,7 @@ class D_comments extends CI_Controller{
                                     comments.active,
                                     comments.status_value,
                                     comments.date_comment",
+                         "where" => "big_investor = 0",
                          "order" => "date_comment ASC"
             );
             //GET DATA COMMENTS
@@ -38,6 +39,39 @@ class D_comments extends CI_Controller{
             $this->tmp_mastercms->set("obj_comments",$obj_comments);
             $this->tmp_mastercms->render("dashboard/comentarios/comments_list");
     }
+    
+    public function invest(){  
+            //GER SESSION
+            $this->get_session();
+            $params = array(
+                        "select" =>"comments.comment_id,
+                                    comments.name,
+                                    comments.comment,
+                                    comments.email,
+                                    comments.phone,
+                                    comments.active,
+                                    comments.status_value,
+                                    comments.date_comment",
+                         "where" => "big_investor = 1",
+                         "order" => "date_comment ASC"
+            );
+            //GET DATA COMMENTS
+            $obj_comments= $this->obj_comments->search($params);
+            
+            /// PAGINADO
+            $modulos ='inversores'; 
+            $seccion = 'Lista';        
+            $link_modulo =  site_url().'dashboard/'.$modulos; 
+            /// DATA
+            
+            /// VISTA
+            $this->tmp_mastercms->set('link_modulo',$link_modulo);
+            $this->tmp_mastercms->set('modulos',$modulos);
+            $this->tmp_mastercms->set('seccion',$seccion);
+            $this->tmp_mastercms->set("obj_comments",$obj_comments);
+            $this->tmp_mastercms->render("dashboard/comentarios/comments_invest_list");
+    }
+    
     
     public function change_status(){
             //UPDATE DATA ORDERS

@@ -12,7 +12,7 @@
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
                                     <div class="container" style="width: auto;">
-                                            <a class="brand">COMENTARIOS</a>
+                                            <a class="brand">COMENTARIOS INVERSORES</a>
                                     </div>
                             </div>
                     </div>
@@ -27,6 +27,7 @@
                                 <th>Fecha de Comentario</th>
                                 <th>Nombres</th>
                                 <th>Correo Electrónico</th>
+                                <th>Teléfono</th>
                                 <th>Comentario</th>
                                 <th>Estado</th>
                                 <th>Acción</th>
@@ -39,6 +40,7 @@
                             <td><?php echo formato_fecha($value->date_comment);?></td>
                             <td align="center" style="color:#fff;" class="label-success"><?php echo $value->name;?></td>
                             <td><?php echo $value->email;?></td>
+                            <td align="center" style="color:#fff;" class="label-info"><?php echo $value->phone;?></td>
                             <td><?php echo $value->comment;?></td>
                             
                             <td>
