@@ -100,6 +100,7 @@
                                                         <i class="fa fa-usd fa-2x"></i>
                                                     </span>
                                                     <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="<?php echo $number_price?>" type="text">
+                                                    <input type="hidden" name="currency" id="currency" value="<?php echo $currency;?>"/> 
                                                     <input type="hidden" name="btc_price" id="btc_price" value="<?php echo $btc_price;?>"/> 
                                                     <input type="hidden" name="dash_price" id="dash_price" value="<?php echo $dash_price;?>"/> 
                                                     <input type="hidden" name="eth_price" id="eth_price" value="<?php echo $eth_price;?>"/> 
@@ -123,12 +124,12 @@
                                     <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
                                         <div class="col-lg-12">
                                             <h4 class="question_currency">¿Qué criptomoneda quieres?</h4>
-                                            <p class="p_currency">Por el momento estamos trabajando con bitocon.</p>
+                                            <p class="p_currency">Selecciona tu criptomoneda a comprar.</p>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="calculador">
                                                 <div class="input-group">
-                                                    <span class="input-group-addon">
+                                                    <span class="input-group-addon" id="img_currency">
                                                         <?php 
                                                         if(isset($img)){ ?>
                                                             <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
@@ -137,8 +138,8 @@
                                                         <?php }  ?>
                                                         
                                                     </span>
-                                                    <input id="btc" name="btc" class="form-control erroneous-input" style="height: 44px; width: 50%;" data-val="true" placeholder="0" value="<?php echo $btc_price_10;?> " type="text">
-                                                    
+                                                    <input id="amount_cripto" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;"  placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
+                                                    <input type="hidden" id="type_cripto" name="type_cripto" value="<?php echo $btc_price_10;?>">
                                                 </div>
                                                 <span style="cursor:pointer" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
                                                 <span style="cursor:pointer;display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
@@ -146,7 +147,7 @@
                                         </div>
                                         <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 381px; display: none;">
                                             <?php foreach ($obj_currency as $value) { ?>
-                                            <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>');">
+                                            <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>','<?php echo $value->img;?>');">
                                                             <span>
                                                                 <img class="img_cripto" src='<?php echo site_url()."static/page_front/images/monedas/$value->img";?>' width="20"/>
                                                             </span>

@@ -149,7 +149,8 @@ $route['dashboard/confirmation_activaciones'] = "d_activate/confirmation";
 $route['dashboard/soporte'] = "d_messages/soporte";
 $route['dashboard/soporte/update'] = "d_messages/update";
 
-$route['dashboard/ventas'] = "d_sell";
+$route['dashboard/ventas_bank'] = "d_sell";
+$route['dashboard/ventas_card'] = "d_sell/card";
 $route['dashboard/ventas_details/([0-9]+)'] = "d_sell/details/$1";
 $route['dashboard/ventas/pagado'] = "d_sell/pagado";
 $route['dashboard/ventas/devolver'] = "d_sell/devolver";

@@ -14,6 +14,7 @@ class Panel extends CI_Controller{
          //GET PENDING ROWS
         $params = array("select" =>"count(*) as pending_comments,
                                     (select count(*) from sell where active = 1) as pending_sell,
+                                    (select count(*) from comments where big_investor = 1 and active = 1) as pending_investor,
                                     (select count(*) from messages where support = 1 and active = 1) as pending_messages_support,
                                     ",
                         "where" => "active = 1");
@@ -34,6 +35,8 @@ class Panel extends CI_Controller{
         //GET TOTAL ROWS
         $params = array("select" =>"count(comment_id) as total_comments,
                                     (select count(*) from customer) as total_customer, 
+                                    (select count(*) from comments where big_investor = 1) as total_invest, 
+                                    (select count(*) from currency) as total_currency, 
                                     (select count(*) from messages where support = 1) as total_messages_support,
                                     (select count(*) from users) as total_users,
                                     (select count(*) from sell) as total_sell");

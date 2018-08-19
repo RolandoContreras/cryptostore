@@ -231,7 +231,6 @@ class Buy extends CI_Controller {
         //RENDER
         $this->load->view('buy',$data);
 	}   
-    
         
     public function btc_price(){
              $url =  "https://api.coinmarketcap.com/v1/ticker/bitcoin";
@@ -241,6 +240,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function eth_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/ethereum";
              $fgc = file_get_contents($url);
@@ -249,6 +249,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function bch_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/bitcoin-cash";
              $fgc = file_get_contents($url);
@@ -257,6 +258,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }     
+    
     public function dash_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/dash/";
              $fgc = file_get_contents($url);
@@ -265,6 +267,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function ripple_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/ripple";
              $fgc = file_get_contents($url);
@@ -273,6 +276,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function litecoin_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/litecoin";
              $fgc = file_get_contents($url);
@@ -281,6 +285,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function cardano_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/cardano";
              $fgc = file_get_contents($url);
@@ -289,6 +294,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function tron_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/tron";
              $fgc = file_get_contents($url);
@@ -297,6 +303,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function monero_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/monero";
              $fgc = file_get_contents($url);
@@ -305,6 +312,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function omisego_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/omisego";
              $fgc = file_get_contents($url);
@@ -313,6 +321,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function zcash_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/zcash";
              $fgc = file_get_contents($url);
@@ -321,6 +330,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function siacoin_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/siacoin";
              $fgc = file_get_contents($url);
@@ -329,6 +339,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function verge_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/verge";
              $fgc = file_get_contents($url);
@@ -337,6 +348,7 @@ class Buy extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function nxt_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/nxt";
              $fgc = file_get_contents($url);
@@ -351,10 +363,17 @@ class Buy extends CI_Controller {
                 //SELECT ID FROM CUSTOMER
             $value = trim($this->input->post('value'));
             $price = trim($this->input->post('price'));
+            $img = trim($this->input->post('img'));
             
             //MULTIPLE BY THE VALUE
-            $new_data =  $value / $price;
-            echo $new_data;
+            $data['amount_btc'] =  $value / $price;
+            
+            $images = site_url()."static/page_front/images/monedas/$img";
+            $img = "<img src='$images' alt='criptomoneda' width='30'/>";
+            
+            //SEND DATA
+            $data['img'] =  $img;            
+            echo json_encode($data);
             }
     }
         
@@ -366,6 +385,7 @@ class Buy extends CI_Controller {
             //MULTIPLE BY THE VALUE
             $new_data =  $value * $price;
             echo json_encode($new_data);
+            
             }
     }
 }

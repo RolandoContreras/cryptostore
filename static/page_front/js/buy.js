@@ -1,12 +1,46 @@
 function validate_usd(value){
-    var price = document.getElementById("price").value;
+    var currency = document.getElementById("currency").value;
+    
+    if(currency == "bitcoin"){
+        var cripto_price = document.getElementById("btc_price").value;
+    }else if(currency == "dash"){
+        var cripto_price = document.getElementById("dash_price").value;
+    }else if(currency == "ethereum"){
+        var cripto_price = document.getElementById("eth_price").value;
+    }else if(currency == "litecoin"){
+        var cripto_price = document.getElementById("litecoin_price").value;
+    }else if(currency == "bitcoincash"){
+        var cripto_price = document.getElementById("bch_price").value;
+    }else if(currency == "cardano"){
+        var cripto_price = document.getElementById("cardano_price").value;
+    }else if(currency == "monero"){
+        var cripto_price = document.getElementById("monero_price").value;
+    }else if(currency == "ripple"){
+        var cripto_price = document.getElementById("ripple_price").value;
+    }else if(currency == "verge"){
+        var cripto_price = document.getElementById("verge_price").value;
+    }else if(currency == "zcash"){
+        var cripto_price = document.getElementById("zcash_price").value;
+    }else if(currency == "tron"){
+        var cripto_price = document.getElementById("tron_price").value;
+    }else if(currency == "omisego"){
+        var cripto_price = document.getElementById("omisego_price").value;
+    }else if(currency == "siacoin"){
+        var cripto_price = document.getElementById("siacoin_price").value;
+    }else if(currency == "nxt"){
+        var cripto_price = document.getElementById("nxt_price").value;
+    }else{
+        var cripto_price = document.getElementById("btc_price").value;
+    }
+    
+    var img = "";
         $.ajax({
         type: "post",
         url: site + "buy/validate_usd",
         dataType: "json",
-        data: {value: value,price: price},
+        data: {value: value,price: cripto_price,img: img},
         success:function(data){  
-           $("#btc").val(data).html(data.print);
+           $("#amount_cripto").val(data.amount_btc).html(data.amount_btc);
            if(value < 10){
             document.getElementById("message").style.display = "block";
             document.getElementById("submit").disabled = true;
@@ -23,13 +57,14 @@ function show_currency(){
     document.getElementById("span-dropdown-arrow_up").style.display = "none";
     document.getElementById("span-dropdown-arrow_down").style.display = "block";
 }
+
 function hide_currency(){
     document.getElementById("crypto-container").style.display = "none";
     document.getElementById("span-dropdown-arrow_up").style.display = "block";
     document.getElementById("span-dropdown-arrow_down").style.display = "none";
 }
 
-function change_cripto(cripto){
+function change_cripto(cripto, img){
     document.getElementById("crypto-container").style.display = "none";
     document.getElementById("span-dropdown-arrow_up").style.display = "block";
     document.getElementById("span-dropdown-arrow_down").style.display = "none";
@@ -65,25 +100,22 @@ function change_cripto(cripto){
         var cripto_price = document.getElementById("nxt_price").value;
     }
     
-    console.log(cripto);
-    console.log(cripto_price);
-    
-    
-//    $.ajax({
-//        type: "post",
-//        url: site + "buy/validate_usd",
-//        dataType: "json",
-//        data: {value: value,price: price},
-//        success:function(data){  
-//           $("#btc").val(data).html(data.print);
-//           if(value < 10){
-//            document.getElementById("message").style.display = "block";
-//            document.getElementById("submit").disabled = true;
-//           }else{
-//            document.getElementById("message").style.display = "none";   
-//            document.getElementById("submit").disabled = false;
-//           }
-//        }            
-//    });
+    $.ajax({
+        type: "post",
+        url: site + "buy/validate_usd",
+        dataType: "json",
+        data: {value: price_dolar,price: cripto_price, img: img},
+        success:function(data){  
+           $("#amount_cripto").val(data.amount_btc).html(data.amount_btc);
+           $("#img_currency").html(data.img);
+           if(price_dolar < 10){
+            document.getElementById("message").style.display = "block";
+            document.getElementById("submit").disabled = true;
+           }else{
+            document.getElementById("message").style.display = "none";   
+            document.getElementById("submit").disabled = false;
+           }
+        }            
+    });
     
 }

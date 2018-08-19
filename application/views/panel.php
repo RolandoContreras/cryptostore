@@ -23,13 +23,21 @@
                                             <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados</a></td><td></td>
                                     </tr>
                                     <tr>
-                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>"><b><?php echo $obj_total->total_sell;?></b><i class="fa fa-btc"></i> Ventas Realizados</a></td><td></td>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>"><b><?php echo $obj_total->total_currency;?></b><i class="fa fa-btc"></i> Criptomonedas</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>"><b><?php echo $obj_total->total_sell;?></b><i class="fa fa-btc"></i> Ventas Realizados</a></td>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_sell;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
                                     </tr>
                                     <tr>
                                             <td><a href="<?php echo site_url().'dashboard/comentarios';?>"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
                                             <td><a href="<?php echo site_url().'dashboard/comentarios';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_comments;?></b><i class="fa fa-comments"></i> Por Leer</a></td>
                                     </tr>
-                                    
+                                    <tr>
+                                            <td><a href="<?php echo site_url().'dashboard/inversores';?>"><b><?php echo $obj_total->total_invest;?></b><i class="fa fa-comments"></i> Comentarios Inversores</a></td>
+                                            <td><a href="<?php echo site_url().'dashboard/inversores';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_investor;?></b><i class="fa fa-comments"></i> Por Leer</a></td>
+                                    </tr>
                                     <tr>
                                             <td><a href="<?php echo site_url().'dashboard/soporte';?>"><b><?php echo $obj_total->total_messages_support;?></b><i class="fa fa-question"></i> Soporte</a></td>
                                             <td><a href="<?php echo site_url().'dashboard/soporte';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_messages_support;?></b><i class="fa fa-question"></i> Por Solucionar</a></td>

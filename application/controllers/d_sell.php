@@ -13,20 +13,14 @@ class D_sell extends CI_Controller{
            $this->get_session();
            $params = array(
                         "select" =>"sell.sell_id,
+                                    sell.code,
                                     sell.date,
                                     sell.amount,
-                                    sell.descount,
-                                    sell.obs,
-                                    sell.active,
-                                    customer.customer_id,
-                                    customer.first_name,
-                                    customer.username,
-                                    customer.btc_address,
-                                    customer.last_name,
-                                    customer.email,
-                                    customer.dni",
-                        "join" => array('customer, sell.customer_id = customer.customer_id'),
-                        "where" => "sell.status_value = 1",
+                                    sell.wallet,
+                                    sell.email,
+                                    sell.phone,
+                                    sell.active",
+                        "where" => "sell.status_value = 1 and type_pay = 2",
                         "order" => "sell.sell_id DESC"
                );
            //GET DATA FROM CUSTOMER
@@ -42,7 +36,41 @@ class D_sell extends CI_Controller{
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->set("obj_pay",$obj_pay);
-            $this->tmp_mastercms->render("dashboard/ventas/sell_list");
+            $this->tmp_mastercms->render("dashboard/ventas/sell_bank");
+    }
+    
+    public function card(){  
+        
+           $this->get_session();
+           $params = array(
+                        "select" =>"sell.sell_id,
+                                    sell.customer_id,
+                                    sell.date,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    sell.amount,
+                                    sell.wallet,
+                                    sell.email,
+                                    sell.phone,
+                                    sell.active",
+                        "join" => array('customer, sell.customer_id = customer.customer_id'),
+                        "where" => "sell.status_value = 1 and type_pay = 1",
+                        "order" => "sell.sell_id DESC"
+               );
+           //GET DATA FROM CUSTOMER
+           $obj_pay= $this->obj_sell->search($params);
+           
+           /// PAGINADO
+            $modulos ='ventas'; 
+            $seccion = 'Lista';        
+            $link_modulo =  site_url().'dashboard/ventas'; 
+            
+            /// VISTA
+            $this->tmp_mastercms->set('link_modulo',$link_modulo);
+            $this->tmp_mastercms->set('modulos',$modulos);
+            $this->tmp_mastercms->set('seccion',$seccion);
+            $this->tmp_mastercms->set("obj_pay",$obj_pay);
+            $this->tmp_mastercms->render("dashboard/ventas/sell_card");
     }
     
     public function details($pay_id){  
