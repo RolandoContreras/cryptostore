@@ -208,8 +208,8 @@
                                     </div>
                             <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
-                                            <span class="input-group-addon">
-                                                <span id="btcwallet-faq" class="fa fa-bitcoin fa-2x"></span>
+                                            <span class="input-group-addon" id="img_currency">
+                                                <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
                                             </span>
                                             <input type="text" disabled="disabled" class="form-control padding-right-27" value="<?php echo $btc;?>">
                                             <input  type="hidden" id="btc" name="btc" value="<?php echo $btc;?>">

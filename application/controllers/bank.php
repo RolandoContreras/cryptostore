@@ -4,15 +4,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Bank extends CI_Controller {
     public function __construct(){
      parent::__construct();
-     $this->load->model("sell_model","obj_sell");
-     $this->load->model("paises_model","obj_paises");
+     $this->load->model('currency_model','obj_currency');
     } 
 
     public function index()
 	{
         $data['price_dolar'] = $this->input->post("price_dolar");
-        $data['btc'] = $this->input->post("btc");
-
+        $data['btc'] = $this->input->post("amount_cripto");
+        $currency = $this->input->post("currency");
+        
+        //GET IMG CURRENCY
+        $params = array(
+                        "select" =>"currency_id,
+                                    img",
+                        "where" => "slug like '%$currency%'",
+                        );
+        $obj_currency = $this->obj_currency->get_search_row($params);
+        $data['img'] = $obj_currency->img;
+        
         //RENDER
         $this->load->view('bank',$data);
     }

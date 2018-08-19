@@ -946,7 +946,7 @@ label {
     position: relative;
 }
 .input-group-addon:first-child {
-    min-width: 30px;
+    min-width: 42px;
 }
 .input-group-addon, .input-group-btn, .input-group .form-control {
     display: table-cell;

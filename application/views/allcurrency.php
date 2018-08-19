@@ -163,7 +163,7 @@
                 <div class="row separador-cripto-all-top">
                     <div class="col-lg-12 col-sm-12 height-15"></div>
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
-                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/ripple-logo.jpg';?>" alt="RippleCoin" width="40"/></div>
+                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/ripple-logo.png';?>" alt="RippleCoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Ripple</span></div>
                     <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$rrp_price;?></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $rrp_color;?></div>
@@ -193,7 +193,7 @@
                 <div class="row separador-cripto-all-top">
                     <div class="col-lg-12 col-sm-12 height-15"></div>
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
-                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/zcash-logo.jpg';?>" alt="ZCash" width="40"/></div>
+                    <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/zcash-logo.png';?>" alt="ZCash" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">ZCash</span></div>
                     <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$zch_price;?></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $zch_color;?></div>
@@ -224,7 +224,7 @@
                     <div class="col-lg-12 col-sm-12 height-15"></div>
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;">
-                            <img src="<?php echo site_url().'static/page_front/images/monedas/omisego-logo.jpg';?>" alt="OmiseGo" width="40"/></div>
+                            <img src="<?php echo site_url().'static/page_front/images/monedas/omisego-logo.png';?>" alt="OmiseGo" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">OmiseGo</span></div>
                     <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$omg_price;?></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $omg_color;?></div>
