@@ -55,7 +55,7 @@ function format_number_miles($number){
     return $number;
 }
 function format_number_2decimal($number){
-    $number = number_format($number, 2);
+    $number = number_format($number, 2, '.', ',');
     return $number;
 }
 

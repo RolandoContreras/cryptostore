@@ -145,7 +145,7 @@
                                             <span class="input-group-addon">
                                                 <span id="btcwallet-faq" class="fa fa-google-wallet fa-2x"></span>
                                             </span>
-                                            <input type="text" onkeyup="fade_wallet(this.value);" class="form-control padding-right-27" id="wallet" name="wallet" placeholder="Ingresa tu wallet">
+                                            <input type="text" onkeyup="fade_wallet(this.value);" class="form-control padding-right-27" id="wallet" name="wallet" placeholder="Ingresa tu wallet" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['wallet']:"";?>">
                                         </div>
                                         <span id="message_wallet" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Ingrese una wallet valida</span>
                                     </div>
@@ -154,7 +154,7 @@
                                             <span class="input-group-addon">
                                                 <span id="email-faq" class="fa fa-check fa-2x sweet-11"></span>
                                             </span>
-                                            <input type="text" onkeyup="fade_phone(this.value);" class="form-control" id="phone" name="phone" placeholder="Ingresa tu teléfono">
+                                            <input type="text" onkeyup="fade_phone(this.value);" class="form-control" id="phone" name="phone" placeholder="Ingresa tu teléfono" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['phone']:"";?>">
                                         </div>
                                         <span id="message_phone" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Ingrese su telefono</span>
                                     </div>
@@ -163,7 +163,7 @@
                                             <span class="input-group-addon">
                                                 <span id="email-faq" class="fa fa-envelope fa-2x sweet-11"></span>
                                             </span>
-                                            <input type="email" onkeyup="fade_email(this.value);" class="form-control" id="email" name="email" placeholder="Ingresa tu email" >
+                                            <input type="email" onkeyup="fade_email(this.value);" class="form-control" id="email" name="email" placeholder="Ingresa tu email" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['email']:"";?>">
                                         </div>
                                         <span id="message_email" class="field-validation-error" style="display:none;" data-valmsg-for="Nombre" data-valmsg-replace="true">Ingrese un email valido</span>
                                     </div>
@@ -172,26 +172,41 @@
                                     <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon" style="padding-top: 13px;">
-                                                <input checked="checked" type="radio" name="radio" id="radio" value="1"/>
+                                                <input type="radio" name="radio" id="radio" value="1" 
+                                                       <?php 
+                                                       if(isset($_SESSION['buy'])){
+                                                           if($_SESSION['buy']['radio'] == 1){
+                                                                echo "checked='checked'";
+                                                           }
+                                                       }else{
+                                                           echo "checked='checked'";
+                                                       }
+                                                       ?>
+                                                       />
                                             </span>
                                             <span class="input-group-addon" style="padding-top: 13px;">
                                                 <span id="telephone-faq" class="fa fa-credit-card fa-lg"></span>
                                             </span>
                                             <input type="text" class="form-control" disabled="disabled" placeholder="Tarjeta de débito / crédito +2%">
                                         </div>
-                                        <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
                                     </div>    
                                         <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon" style="padding-top: 13px;">
-                                                <input type="radio" name="radio" id="radio" value="2"/>
+                                                <input type="radio" name="radio" id="radio" value="2" 
+                                                    <?php 
+                                                       if(isset($_SESSION['buy'])){
+                                                           if($_SESSION['buy']['radio'] == 2){
+                                                                echo "checked='checked'";
+                                                           }
+                                                       }
+                                                       ?>/>
                                             </span>
                                             <span class="input-group-addon" style="padding-top: 13px;">
                                                 <span id="telephone-faq" class="fa fa-university fa-lg"></span>
                                             </span>
-                                            <input type="text" class="form-control" disabled="disabled" placeholder="Transferencia Bancaria">
+                                            <input  type="text" class="form-control" disabled="disabled" placeholder="Transferencia Bancaria"/>
                                         </div>
-                                        <span id="telephone-valid" class="glyphicon glyphicon-ok form-control-feedback success-glypp-bit-2 hidden" aria-hidden="true"></span>
                                     </div>
                                 </div>
                             
@@ -202,8 +217,8 @@
                                             <span class="input-group-addon">
                                                 <span id="btcwallet-faq" class="fa fa-dollar-sign fa-2x"></span>
                                             </span>
-                                            <input disabled="disabled" type="text" class="form-control padding-right-27"  value="<?php echo format_number_2decimal($price_dolar);?>">
-                                            <input  type="hidden" id="price_dolar" name="price_dolar" value="<?php echo $price_dolar;?>">
+                                            <input disabled="disabled" type="text" class="form-control padding-right-27"  value="<?php echo isset($_SESSION['buy'])? format_number_2decimal($_SESSION['buy']['price_dolar']):format_number_2decimal($price_dolar);?>">
+                                            <input  type="hidden" id="price_dolar" name="price_dolar" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['price_dolar']:$price_dolar;?>">
                                         </div>
                                     </div>
                             <div class="form-group has-feedback">
@@ -211,8 +226,8 @@
                                             <span class="input-group-addon" id="img_currency">
                                                 <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
                                             </span>
-                                            <input type="text" disabled="disabled" class="form-control padding-right-27" value="<?php echo $btc;?>">
-                                            <input  type="hidden" id="btc" name="btc" value="<?php echo $btc;?>">
+                                            <input type="text" disabled="disabled" class="form-control padding-right-27" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['btc']:$btc;?>">
+                                            <input  type="hidden" id="btc" name="btc" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['btc']:$btc;?>">
                                         </div>
                                     </div>
                         </div>

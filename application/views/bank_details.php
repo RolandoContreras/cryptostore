@@ -169,7 +169,7 @@
                                                     <span class="fa fa-dollar-sign fa-2x"></span>
                                                 </div>
                                                 <div class="floatright">
-                                                    <h4><span id="crypto-amount"><?php echo $price_dolar;?> $</span></h4>
+                                                    <h4><span id="crypto-amount"><?php echo format_number_2decimal($price_dolar);?> $</span></h4>
                                                     <input type="hidden" name="price_dolar" id="price_dolar" value="<?php echo $price_dolar;?>"/>
                                                 </div>
                                             </div>

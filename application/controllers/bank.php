@@ -5,14 +5,32 @@ class Bank extends CI_Controller {
     public function __construct(){
      parent::__construct();
      $this->load->model('currency_model','obj_currency');
+     $this->load->model('paises_model','obj_paises');
+     $this->load->model('sell_model','obj_sell');
     } 
 
     public function index()
 	{
-        $data['price_dolar'] = $this->input->post("price_dolar");
-        $data['btc'] = $this->input->post("amount_cripto");
-        $currency = $this->input->post("currency");
+        //GET DATA POST
+        $obj_price_dolar = $this->input->post("price_dolar");
+        $data_btc = $this->input->post("amount_cripto");
         
+        if(isset($_SESSION['buy'])){
+            if($obj_price_dolar == false){
+                //IF SAME DATA
+                $data['price_dolar'] = $_SESSION['buy']['price_dolar'] ;
+                $data['btc'] = $_SESSION['buy']['btc'];
+            }else{
+                if($_SESSION['buy']['price_dolar'] != $obj_price_dolar){
+                    $_SESSION['buy']['price_dolar'] = $obj_price_dolar;
+                    $_SESSION['buy']['btc'] = $data_btc;
+                }
+            }
+        }else{
+            $data['price_dolar'] = $obj_price_dolar;
+            $data['btc'] = $data_btc;
+        }
+        $currency = $this->input->post("currency");
         //GET IMG CURRENCY
         $params = array(
                         "select" =>"currency_id,
@@ -27,17 +45,49 @@ class Bank extends CI_Controller {
     }
     public function view_bank(){
         if($this->input->is_ajax_request()){
-            $data['price_dolar'] = $this->input->post("price_dolar");
-            $data['btc'] = $this->input->post("btc");
-            $data['phone'] = $this->input->post("phone");
-            $data['wallet'] = $this->input->post("wallet");
-            $data['email'] = $this->input->post("email");
-            $data['radio'] = $this->input->post("radio");
-            $_SESSION['buy'] = $data;
+            
+            //GET DATA POST
+            $obj_price_dolar = $this->input->post("price_dolar");
+            $obj_btc = $this->input->post("btc");
+            $obj_phone = $this->input->post("phone");
+            $obj_wallet = $this->input->post("wallet");
+            $obj_email = $this->input->post("email");
+            $obj_radio = $this->input->post("radio");
+                        
+            //CREATE SESSION BUY
+            if($_SESSION['buy']){
+                switch ($_SESSION['buy']) {
+                    case $_SESSION['buy']['phone'] != $obj_phone:
+                        $_SESSION['buy']['phone'] = $obj_phone;
+                        break;
+                    case $_SESSION['buy']['wallet'] != $obj_wallet:
+                        $_SESSION['buy']['wallet'] = $obj_wallet;
+                        break;
+                    case $_SESSION['buy']['email'] != $obj_email:
+                        $_SESSION['buy']['email'] = $obj_email;
+                        break;
+                    case $_SESSION['buy']['radio'] != $obj_radio:
+                        $_SESSION['buy']['radio'] = $obj_radio;
+                        break;
+                }
+            }else{
+                //CREATE SESSION
+                $data['price_dolar'] = $obj_price_dolar;
+                $data['btc'] = $obj_btc;
+                $data['phone'] = $obj_phone;
+                $data['wallet'] = $obj_wallet;
+                $data['email'] = $obj_email;
+                $data['radio'] = $obj_radio;
+                $data['logged_customer'] = "TRUE";
+                $data['status'] = 1;
+                $_SESSION['buy'] = $data;
+            }
+            $data = "";
             echo json_encode($data);            
             exit();
 	}
     }
+    
     public function view_credit_card(){
         if($this->input->is_ajax_request()){
             //GET DATA POST
@@ -66,7 +116,8 @@ class Bank extends CI_Controller {
     }
     
     public function details_bank(){
-        //GER DATA $_SESSION
+        //GET SESION ACTUALY BUY
+        $this->get_session();
         $data['price_dolar'] = $_SESSION['buy']['price_dolar'];
         $data['btc'] = $_SESSION['buy']['btc'];
         $data['phone'] = $_SESSION['buy']['phone'];
@@ -74,9 +125,9 @@ class Bank extends CI_Controller {
         $data['email'] = $_SESSION['buy']['email'];
         $obj_radio = $_SESSION['buy']['radio'];
         $data['radio'] = $obj_radio;
+        
         //RENDER
         if($obj_radio == 1){
-            
         //GET DATA PAISES
             $params = array(
                 "select" => "id, nombre",
@@ -236,4 +287,17 @@ class Bank extends CI_Controller {
         //RENDER
         $this->load->view('confirm_email');
     }
+    
+    public function get_session(){          
+        if (isset($_SESSION['buy'])){
+            if($_SESSION['buy']['logged_customer']=="TRUE" && $_SESSION['buy']['status']=='1'){               
+                return true;
+            }else{
+                redirect(site_url().'buy');
+            }
+        }else{
+            redirect(site_url().'buy');
+        }
+    }
+    
 }
