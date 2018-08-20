@@ -160,7 +160,7 @@
                                                     <span class="fa fa-btc fa-2x"></span>
                                                 </div>
                                                 <div class="floatright">
-                                                    <h4><span id="crypto-amount"><?php echo $btc;?> BTC*</span></h4>
+                                                    <h4><span id="crypto-amount"><?php echo $btc;?></span></h4>
                                                     <input type="hidden" name="btc" id="btc" value="<?php echo $btc;?>"/>
                                                 </div>
                                             </div>
