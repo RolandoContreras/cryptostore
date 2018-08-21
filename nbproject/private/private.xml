@@ -3,16 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/cryptostore/application/templates/admin_tmp.php</file>
-            <file>file:/C:/wamp64/www/cryptostore/application/views/dashboard/ventas/sell_bank.php</file>
-            <file>file:/C:/wamp64/www/cryptostore/application/views/panel.php</file>
+            <file>file:/C:/wamp64/www/cryptostore/static/page_front/js/bank.js</file>
             <file>file:/C:/wamp64/www/cryptostore/application/controllers/buy.php</file>
-            <file>file:/C:/wamp64/www/cryptostore/application/config/routes.php</file>
-            <file>file:/C:/wamp64/www/cryptostore/application/views/dashboard/ventas/sell_card.php</file>
+            <file>file:/C:/wamp64/www/cryptostore/application/views/credit_card.php</file>
             <file>file:/C:/wamp64/www/cryptostore/application/views/buy.php</file>
-            <file>file:/C:/wamp64/www/cryptostore/application/controllers/d_sell.php</file>
-            <file>file:/C:/wamp64/www/cryptostore/application/controllers/panel.php</file>
-            <file>file:/C:/wamp64/www/cryptostore/static/page_front/js/buy.js</file>
+            <file>file:/C:/wamp64/www/cryptostore/application/views/bank_details.php</file>
+            <file>file:/C:/wamp64/www/cryptostore/application/controllers/bank.php</file>
+            <file>file:/C:/wamp64/www/cryptostore/application/helpers/basico_helper.php</file>
+            <file>file:/C:/wamp64/www/cryptostore/application/views/bank.php</file>
         </group>
     </open-files>
 </project-private>

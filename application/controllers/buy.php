@@ -9,6 +9,7 @@ class Buy extends CI_Controller {
 
     public function index()
 	{
+        
         //GET DATA PRICE CRIPTOCURRENCY
         $params = array(
                         "select" =>"currency_id,

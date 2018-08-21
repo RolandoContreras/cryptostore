@@ -157,11 +157,12 @@
                                             </div>
                                             <div class="contentSeparator">
                                                 <div class="textoresumenRecarja">
-                                                    <span class="fa fa-btc fa-2x"></span>
+                                                    <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
                                                 </div>
                                                 <div class="floatright">
                                                     <h4><span id="crypto-amount"><?php echo $btc;?></span></h4>
                                                     <input type="hidden" name="btc" id="btc" value="<?php echo $btc;?>"/>
+                                                    <input type="hidden" name="img" id="img" value="<?php echo $img;?>"/>
                                                 </div>
                                             </div>
                                             <div class="contentSeparator">
@@ -240,7 +241,7 @@
                             <div class="row margin-top-50">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <a href="<?php echo site_url().'buy/bank';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
+                                    <a href="<?php echo site_url().'buy/bank';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder" /></a>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
                                     <input class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">

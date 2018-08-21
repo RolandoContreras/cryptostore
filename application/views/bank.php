@@ -225,6 +225,7 @@
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon" id="img_currency">
                                                 <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
+                                                <input  type="hidden" id="img" name="img" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['img']:$img;?>">
                                             </span>
                                             <input type="text" disabled="disabled" class="form-control padding-right-27" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['btc']:$btc;?>">
                                             <input  type="hidden" id="btc" name="btc" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['btc']:$btc;?>">
@@ -233,7 +234,7 @@
                         </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <a href="<?php echo site_url().'buy';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
+                            <a href="<?php echo site_url().'buy';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder" /></a>
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
                             <input id="submit" onclick="validate();" class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">

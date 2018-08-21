@@ -2,6 +2,7 @@ function validate(){
     
     var btc =  document.getElementById("btc").value;
     var price_dolar =  document.getElementById("price_dolar").value;
+    var img =  document.getElementById("img").value;
     var phone = document.getElementById("phone").value;
     var wallet = document.getElementById("wallet").value;
     var email = document.getElementById("email").value;
@@ -27,6 +28,7 @@ function validate(){
                         dataType: "json",
                         data: {btc : btc,
                                price_dolar : price_dolar,
+                               img : img,
                                phone : phone,
                                wallet : wallet,
                                email : email,

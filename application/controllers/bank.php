@@ -14,31 +14,36 @@ class Bank extends CI_Controller {
         //GET DATA POST
         $obj_price_dolar = $this->input->post("price_dolar");
         $data_btc = $this->input->post("amount_cripto");
+        $currency = $this->input->post("currency");
+        
+        
+        $data['price_dolar'] = $obj_price_dolar;
+            $data['btc'] = $data_btc;
+            //GET IMG CURRENCY
+            $params = array(
+                            "select" =>"currency_id,
+                                        img",
+                            "where" => "slug like '%$currency%'",
+                            );
+            $obj_currency = $this->obj_currency->get_search_row($params);
+            $obj_img = $obj_currency->img;
+            $data['img'] = $obj_img;
         
         if(isset($_SESSION['buy'])){
             if($obj_price_dolar == false){
+                
                 //IF SAME DATA
                 $data['price_dolar'] = $_SESSION['buy']['price_dolar'] ;
                 $data['btc'] = $_SESSION['buy']['btc'];
+                $data['img'] = $_SESSION['buy']['img'];
             }else{
-                if($_SESSION['buy']['price_dolar'] != $obj_price_dolar){
+                if($_SESSION['buy']['btc'] != $data_btc){
                     $_SESSION['buy']['price_dolar'] = $obj_price_dolar;
                     $_SESSION['buy']['btc'] = $data_btc;
+                    $_SESSION['buy']['img'] = $obj_img;
                 }
             }
-        }else{
-            $data['price_dolar'] = $obj_price_dolar;
-            $data['btc'] = $data_btc;
         }
-        $currency = $this->input->post("currency");
-        //GET IMG CURRENCY
-        $params = array(
-                        "select" =>"currency_id,
-                                    img",
-                        "where" => "slug like '%$currency%'",
-                        );
-        $obj_currency = $this->obj_currency->get_search_row($params);
-        $data['img'] = $obj_currency->img;
         
         //RENDER
         $this->load->view('bank',$data);
@@ -49,11 +54,12 @@ class Bank extends CI_Controller {
             //GET DATA POST
             $obj_price_dolar = $this->input->post("price_dolar");
             $obj_btc = $this->input->post("btc");
+            $obj_img = $this->input->post("img");
             $obj_phone = $this->input->post("phone");
             $obj_wallet = $this->input->post("wallet");
             $obj_email = $this->input->post("email");
             $obj_radio = $this->input->post("radio");
-                        
+            
             //CREATE SESSION BUY
             if($_SESSION['buy']){
                 switch ($_SESSION['buy']) {
@@ -62,6 +68,9 @@ class Bank extends CI_Controller {
                         break;
                     case $_SESSION['buy']['wallet'] != $obj_wallet:
                         $_SESSION['buy']['wallet'] = $obj_wallet;
+                        break;
+                    case $_SESSION['buy']['img'] != $obj_img:
+                        $_SESSION['buy']['img'] = $obj_img;
                         break;
                     case $_SESSION['buy']['email'] != $obj_email:
                         $_SESSION['buy']['email'] = $obj_email;
@@ -78,6 +87,7 @@ class Bank extends CI_Controller {
                 $data['wallet'] = $obj_wallet;
                 $data['email'] = $obj_email;
                 $data['radio'] = $obj_radio;
+                $data['img'] = $obj_img;
                 $data['logged_customer'] = "TRUE";
                 $data['status'] = 1;
                 $_SESSION['buy'] = $data;
@@ -122,6 +132,7 @@ class Bank extends CI_Controller {
         $data['btc'] = $_SESSION['buy']['btc'];
         $data['phone'] = $_SESSION['buy']['phone'];
         $data['wallet'] = $_SESSION['buy']['wallet'];
+        $data['img'] = $_SESSION['buy']['img'];
         $data['email'] = $_SESSION['buy']['email'];
         $obj_radio = $_SESSION['buy']['radio'];
         $data['radio'] = $obj_radio;
