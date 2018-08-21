@@ -16,9 +16,9 @@ class Bank extends CI_Controller {
         $data_btc = $this->input->post("amount_cripto");
         $currency = $this->input->post("currency");
         
-        
         $data['price_dolar'] = $obj_price_dolar;
-            $data['btc'] = $data_btc;
+        $data['btc'] = $data_btc;
+        $data['currency'] = $currency;
             //GET IMG CURRENCY
             $params = array(
                             "select" =>"currency_id,
@@ -36,24 +36,25 @@ class Bank extends CI_Controller {
                 $data['price_dolar'] = $_SESSION['buy']['price_dolar'] ;
                 $data['btc'] = $_SESSION['buy']['btc'];
                 $data['img'] = $_SESSION['buy']['img'];
+                $data['currency'] = $_SESSION['buy']['currency'];
             }else{
                 if($_SESSION['buy']['btc'] != $data_btc){
                     $_SESSION['buy']['price_dolar'] = $obj_price_dolar;
                     $_SESSION['buy']['btc'] = $data_btc;
                     $_SESSION['buy']['img'] = $obj_img;
+                    $_SESSION['buy']['currency'] = $currency;
                 }
             }
         }
-        
         //RENDER
         $this->load->view('bank',$data);
     }
     public function view_bank(){
         if($this->input->is_ajax_request()){
-            
             //GET DATA POST
             $obj_price_dolar = $this->input->post("price_dolar");
             $obj_btc = $this->input->post("btc");
+            $obj_currency = $this->input->post("currency");
             $obj_img = $this->input->post("img");
             $obj_phone = $this->input->post("phone");
             $obj_wallet = $this->input->post("wallet");
@@ -83,6 +84,7 @@ class Bank extends CI_Controller {
                 //CREATE SESSION
                 $data['price_dolar'] = $obj_price_dolar;
                 $data['btc'] = $obj_btc;
+                $data['currency'] = $obj_currency;
                 $data['phone'] = $obj_phone;
                 $data['wallet'] = $obj_wallet;
                 $data['email'] = $obj_email;
@@ -130,13 +132,14 @@ class Bank extends CI_Controller {
         $this->get_session();
         $data['price_dolar'] = $_SESSION['buy']['price_dolar'];
         $data['btc'] = $_SESSION['buy']['btc'];
+        $data['currency'] = $_SESSION['buy']['currency'];
         $data['phone'] = $_SESSION['buy']['phone'];
         $data['wallet'] = $_SESSION['buy']['wallet'];
         $data['img'] = $_SESSION['buy']['img'];
         $data['email'] = $_SESSION['buy']['email'];
         $obj_radio = $_SESSION['buy']['radio'];
         $data['radio'] = $obj_radio;
-        
+
         //RENDER
         if($obj_radio == 1){
         //GET DATA PAISES
@@ -212,8 +215,13 @@ class Bank extends CI_Controller {
         $obj_wallet = $this->input->post("wallet");
         $obj_email = $this->input->post("email");
         $obj_phone = $this->input->post("phone");
+        $obj_currency = $this->input->post("currency");
+        
         //create id random 6 digit
         $code_random = rand(1,999999);
+        
+        
+        
         
         //SEND MESSAGES
                     $mensaje = wordwrap("<html>
@@ -279,9 +287,19 @@ class Bank extends CI_Controller {
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
                     $headers .= "Easycripto <soporte@easycripto.com>\r\n";
                     $bool = mail("$obj_email",$titulo,$mensaje,$headers);
+                    
+        //GET ID CURRENCY
+        $params = array(
+                        "select" =>"currency_id",
+                        "where" => "slug = '$obj_currency' and status_value = 1",
+                        );
+        $obj_currency = $this->obj_currency->get_search_row($params);
+        $currency_id = $obj_currency->currency_id;
+                    
         $data = array(
                     'date' => date("Y-m-d H:i:s"),
                     'code' => $code_random,
+                    'currency_id' => $currency_id,
                     'amount' => $obj_price_dolar,
                     'tax' => $obj_iva,
                     'amount_btc' => $obj_btc,
@@ -296,6 +314,7 @@ class Bank extends CI_Controller {
         $this->obj_sell->insert($data);
         //$this->send_email_bank();
         //RENDER
+        $this->logout();
         $this->load->view('confirm_email');
     }
     
@@ -309,6 +328,10 @@ class Bank extends CI_Controller {
         }else{
             redirect(site_url().'buy');
         }
+    }
+    public function logout(){        
+        $this->session->unset_userdata('buy');
+	$this->session->destroy();
     }
     
 }

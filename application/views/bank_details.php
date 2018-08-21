@@ -163,6 +163,7 @@
                                                     <h4><span id="crypto-amount"><?php echo $btc;?></span></h4>
                                                     <input type="hidden" name="btc" id="btc" value="<?php echo $btc;?>"/>
                                                     <input type="hidden" name="img" id="img" value="<?php echo $img;?>"/>
+                                                    <input type="hidden" name="currency" id="currency" value="<?php echo $currency;?>"/>
                                                 </div>
                                             </div>
                                             <div class="contentSeparator">

@@ -226,6 +226,7 @@
                                             <span class="input-group-addon" id="img_currency">
                                                 <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
                                                 <input  type="hidden" id="img" name="img" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['img']:$img;?>">
+                                                <input  type="hidden" id="currency" name="currency" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['currency']:$currency;?>">
                                             </span>
                                             <input type="text" disabled="disabled" class="form-control padding-right-27" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['btc']:$btc;?>">
                                             <input  type="hidden" id="btc" name="btc" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['btc']:$btc;?>">
