@@ -74,6 +74,7 @@
                                                     <input type="hidden" name="siacoin_price" id="siacoin_price" value="<?php echo $siacoin_price;?>"/> 
                                                     <input type="hidden" name="nxt_price" id="nxt_price" value="<?php echo $nxt_price;?>"/> 
                                              </div>
+                                            <span id="message" style="font-size:11px; display: none;" class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="img_currency">
                                                     <img src="http://localhost/cryptostore/static/page_front/images/monedas/btc-logo.png" alt="criptomoneda" style="width:30px !important;">
