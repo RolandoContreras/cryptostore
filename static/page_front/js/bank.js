@@ -21,28 +21,44 @@ function validate(){
     }else{
         var email_2 = validar_email(email);
         if(email_2 == true){
-            var wallet_2 = validar_wallet_btc(wallet);
-                if(wallet_2 == true){
-                     $.ajax({
-                        type: "post",
-                        url: site+"buy/bank/view_bank",
-                        dataType: "json",
-                        data: {btc : btc,
-                               price_dolar : price_dolar,
-                               currency : currency,
-                               img : img,
-                               phone : phone,
-                               wallet : wallet,
-                               email : email,
-                               radio : radio},
-                        success:function(data){          
-                        location.href = site + "bank/details_bank";
-                        }         
-                      });
+            if(currency == "cardano"){
+                wallet_2 = true;
+            }else if(currency == "monero"){
+                wallet_2 = true;
+            }else if(currency == "bitcoincash"){
+                wallet_2 = true;
+            }else if(currency == "tron"){
+                wallet_2 = true;
+            }else if(currency == "omisego"){
+                wallet_2 = true;
+            }else if(currency == "siacoin"){
+                wallet_2 = true;
+            }else if(currency == "nxt"){
+                wallet_2 = true;
+            }else{
+                var wallet_2 = WAValidator.validate(wallet, currency);
+            }
+                if(wallet_2){
+                    $.ajax({
+                            type: "post",
+                            url: site+"buy/bank/view_bank",
+                            dataType: "json",
+                            data: {btc : btc,
+                                   price_dolar : price_dolar,
+                                   currency : currency,
+                                   img : img,
+                                   phone : phone,
+                                   wallet : wallet,
+                                   email : email,
+                                   radio : radio},
+                            success:function(data){          
+                            location.href = site + "bank/details_bank";
+                            }         
+                          });
                 }else{
                     document.getElementById("message_wallet").style.display = "block";
                 }
-               
+            
         }else{
             document.getElementById("message_email").style.display = "block";
             $("#email").focus();

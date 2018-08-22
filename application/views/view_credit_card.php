@@ -176,7 +176,7 @@
 <script>
         // Create a Stripe client.
         // Create a Public Key.
-            var stripe = Stripe('pk_test_SCNGJ2qonbYs5a5sX5Nj0ksm');
+            var stripe = Stripe('pk_live_d9865WCSsZ5cjUgmdjO4cpla');
             // Create an instance of Elements.
             var elements = stripe.elements();
             // Custom styling can be passed to options when creating an Element.

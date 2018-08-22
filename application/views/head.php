@@ -45,4 +45,5 @@
 <script>
     var site = '<?php echo site_url();?>';
 </script>
+<script src="<?php echo site_url().'static/page_front/plugin/wallet-address-validator/wallet-address-validator.min.js';?>"></script>
 </head>
