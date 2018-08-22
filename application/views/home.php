@@ -51,9 +51,42 @@
                                         <span></span>
 					<span>CRIPTOMONEDAS</span>
 					<span>seguro, facil y rápido</span>
-                                        <div class="button with250 icon_box_button trans_200" style="border: solid 2px #FFF !important;">
-                                            <a class="button_comprar" href="<?php echo site_url().'buy';?>" style="color:#FFF !important;"class="trans_200 font-size">COMPRAR</a>
-					</div>
+                                        <form action="<?php echo site_url().'buy/bank';?>" method="post">
+                                        <div class="with400 margin-top-20">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="font-size: 14px !important;color: #F7921A;">
+                                                        <i class="fa fa-usd fa-2x"></i>
+                                                    </span>
+                                                    <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%; border-bottom-right-radius: .25rem;border-top-right-radius: .25rem;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="<?php echo $number_price?>" type="text">
+                                                    <input type="hidden" name="currency" id="currency" value="<?php echo $currency;?>"/> 
+                                                    <input type="hidden" name="btc_price" id="btc_price" value="<?php echo $btc_price;?>"/> 
+                                                    <input type="hidden" name="dash_price" id="dash_price" value="<?php echo $dash_price;?>"/> 
+                                                    <input type="hidden" name="eth_price" id="eth_price" value="<?php echo $eth_price;?>"/> 
+                                                    <input type="hidden" name="litecoin_price" id="litecoin_price" value="<?php echo $litecoin_price;?>"/> 
+                                                    <input type="hidden" name="bch_price" id="bch_price" value="<?php echo $bch_price;?>"/> 
+                                                    <input type="hidden" name="cardano_price" id="cardano_price" value="<?php echo $cardano_price;?>"/> 
+                                                    <input type="hidden" name="monero_price" id="monero_price" value="<?php echo $monero_price;?>"/> 
+                                                    <input type="hidden" name="ripple_price" id="ripple_price" value="<?php echo $ripple_price;?>"/> 
+                                                    <input type="hidden" name="verge_price" id="verge_price" value="<?php echo $verge_price;?>"/> 
+                                                    <input type="hidden" name="zcash_price" id="zcash_price" value="<?php echo $zcash_price;?>"/> 
+                                                    <input type="hidden" name="tron_price" id="tron_price" value="<?php echo $tron_price;?>"/> 
+                                                    <input type="hidden" name="omisego_price" id="omisego_price" value="<?php echo $omisego_price;?>"/> 
+                                                    <input type="hidden" name="siacoin_price" id="siacoin_price" value="<?php echo $siacoin_price;?>"/> 
+                                                    <input type="hidden" name="nxt_price" id="nxt_price" value="<?php echo $nxt_price;?>"/> 
+                                             </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="img_currency">
+                                                    <img src="http://localhost/cryptostore/static/page_front/images/monedas/btc-logo.png" alt="criptomoneda" style="width:30px !important;">
+                                                </span>
+                                                <input id="amount_cripto" readonly="readonly" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;" placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
+                                            </div>
+                                            
+                                            <div class="text-center">
+                                                <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="Comprar">
+                                            </div>
+                                        </div>
+                                        
+                                        </form>
                                         <span id="compra">COMPRA CRIPTOMONEDAS DE MANERA SEGURA</span>
                                         <div class="align-items-center justify-content-center">
                                             <div class="double_arrow nav_links rotare270" data-scroll-to=".icon_boxes">
@@ -428,6 +461,7 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
+<script src="<?php echo site_url().'static/page_front/js/buy.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/contact_home.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>
