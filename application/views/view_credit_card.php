@@ -70,7 +70,7 @@
 	<!-- Home -->
         <!--CRIPTOCURRENCY-->
         <header>
-            <div class="container">
+            <div class="container" style="max-width: 800px;">
                 <div class="row">
                     <div class="col-lg-12 text-center margin-bottom-30">
                         <div class="icon_box_title">
@@ -80,11 +80,12 @@
                 </div>
                 <div class="row panel-bitcoinDinero">
                           <div class="modal__featured">
-                            <button type="button" class="button--transparent button--close">
-                              <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
-                                <g><path fill="#ffffff" d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"></path> </g></svg>
-                                <span class="visuallyhidden"><a >Return to Product Page</a></span>
-                            </button>
+                            <a href="<?php echo site_url().'bank/details_credit_card';?>">
+                                <button type="button" class="button--transparent button--close">
+                                    <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+                                    <g><path fill="#ffffff" d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"></path> </g></svg>
+                                </button>
+                            </a>
                             <div class="modal__circle"></div>
                             <img src="<?php echo site_url().'static/page_front/images/pagos_tarjeta.png';?>" class="modal__product" />
                           </div>
@@ -111,7 +112,7 @@
                                             <span class="input-group-addon">
                                                 <span id="btcwallet-faq" class="fa fa-credit-card fa-2x"></span>
                                             </span>
-                                            <input required="" class="form-control padding-right-27" id="card_number" name="card_number" type="text">
+                                            <input required="" class="form-control padding-right-27" id="card_number" name="card_number"   minlength="16" maxlength="16" type="text" placeholder="XXXX XXXX XXXX XXXX">
                                         </div>
                                     </div>
                                   </div>
@@ -147,21 +148,25 @@
                                                 </span>
                                                 <input onkeyup="fade_wallet(this.value);" required="" class="form-control padding-right-27" id="wallet" name="wallet" placeholder="123" type="text">
                                                 <input type="hidden" name="total" id="total" value="<?php echo format_number_2decimal($total);?>"/>    
+                                                <input type="hidden" name="tax" id="tax" value="<?php echo format_number_2decimal($tax);?>"/>    
                                             </div>
                                         </div>
                                   </div>
                                 </li>
-                                <li class="form-list__row form-list__row--agree"></li>
                                 <li>
-                                    <button type="submit" name="btnsubmit" class="button">Pagar Ahora</button>
+                                <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
+                                    <button name="btnsubmit" class="submit_btn_comprar_2 trans_300" type="submit">Pagar Ahora</button>
+                                </div>
                                 </li>
                               </ul>
                                   <?php 
-                                  if(isset($message)){echo $message;}
+                                  if(isset($message))
+                                      {echo $message;}
                                   ?>
                             </form>
                       </div>
                 </div>
+            </div>
         </header>
 <script>
         // Create a Stripe client.

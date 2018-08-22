@@ -95,16 +95,15 @@
                     <div class="panel-body">
                         <div class="contentTransfer textogrisOscuro">
                             Gracias por su confianza, acabamos de enviar un correo a su email con los detalles de la compra.
-                            Y a la vez le hemos creado una cuenta en nuestra plataforma para que obtenga mas beneficios .
+                            Tambien le hemos creado una cuenta en la plataforma EASYCRIPTo para que obtenga mas beneficios.
                         </div>
                     </div>
                 </div>
-                    <a class="margin-top-70" href="<?php echo site_url().'login';?>"><input class="submit_btn_comprar_2 trans_300" value="Iniciar Sesión" type="button"></a>
-                    
+                    <a class="margin-top-70" href="<?php echo site_url();?>"><input class="submit_btn_comprar_2 trans_300" value="Finalizar"></a>
                 </div>
                 <div class="col-sm-3 panel-bitcoinDinero-col"></div>
-        </div>
                 </div>
+            </div>
         </header>
         <!--END CRYPTOCURRENCY-->
 	<!-- Footer -->

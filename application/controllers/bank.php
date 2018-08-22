@@ -105,11 +105,12 @@ class Bank extends CI_Controller {
             //GET DATA POST
             $data['price_dolar'] = $this->input->post("price_dolar");
             $data['btc'] = $this->input->post("btc");
+            $data['img'] = $this->input->post("img");
+            $data['currency'] = $this->input->post("currency");
             $data['phone'] = $this->input->post("phone");
             $data['wallet'] = $this->input->post("wallet");
             $data['email'] = $this->input->post("email");
             $data['radio'] = $this->input->post("radio");
-            
             $data['name'] = $this->input->post("name");
             $data['last_name'] = $this->input->post("last_name");
             $data['day'] = $this->input->post("day");
@@ -120,6 +121,8 @@ class Bank extends CI_Controller {
             $data['poblacion'] = $this->input->post("poblacion");
             $data['provincia'] = $this->input->post("provincia");
             $data['country'] = $this->input->post("country");
+            $data['logged_customer'] = "TRUE";
+            $data['status'] = 1;
             
             $_SESSION['buy'] = $data;
             echo json_encode($data);            
@@ -130,16 +133,17 @@ class Bank extends CI_Controller {
     public function details_bank(){
         //GET SESION ACTUALY BUY
         $this->get_session();
+        
         $data['price_dolar'] = $_SESSION['buy']['price_dolar'];
         $data['btc'] = $_SESSION['buy']['btc'];
         $data['currency'] = $_SESSION['buy']['currency'];
+        $data['img'] = $_SESSION['buy']['img'];
         $data['phone'] = $_SESSION['buy']['phone'];
         $data['wallet'] = $_SESSION['buy']['wallet'];
-        $data['img'] = $_SESSION['buy']['img'];
         $data['email'] = $_SESSION['buy']['email'];
         $obj_radio = $_SESSION['buy']['radio'];
         $data['radio'] = $obj_radio;
-
+        
         //RENDER
         if($obj_radio == 1){
         //GET DATA PAISES
@@ -159,6 +163,8 @@ class Bank extends CI_Controller {
             $obj_dolar = $_SESSION['buy']['price_dolar'];
             $data['price_dolar'] = $_SESSION['buy']['price_dolar'];
             $data['btc'] = $_SESSION['buy']['btc'];
+            $data['img'] = $_SESSION['buy']['img'];
+            $data['currency'] = $_SESSION['buy']['currency'];
             $data['phone'] = $_SESSION['buy']['phone'];
             $data['wallet'] = $_SESSION['buy']['wallet'];
             $data['email'] = $_SESSION['buy']['email'];
@@ -188,6 +194,7 @@ class Bank extends CI_Controller {
             $data['subtotal'] = $subtotal;
             $total = $obj_dolar + $subtotal;
             $data['total'] = $total;
+            
             //SEND DATA
             $this->load->view('credit_card_details', $data);
     }
@@ -201,6 +208,7 @@ class Bank extends CI_Controller {
               $data['name'] = strtoupper($fisrt_name." ".$last_name);
             //get total  
               $data['total'] = $this->input->post("total");
+              $data['tax'] = $this->input->post("tax");
             //SEND DATA
             $this->load->view('view_credit_card',$data);
     }
@@ -219,9 +227,6 @@ class Bank extends CI_Controller {
         
         //create id random 6 digit
         $code_random = rand(1,999999);
-        
-        
-        
         
         //SEND MESSAGES
                     $mensaje = wordwrap("<html>
@@ -312,7 +317,6 @@ class Bank extends CI_Controller {
                     'status_value' => 1,
                     );
         $this->obj_sell->insert($data);
-        //$this->send_email_bank();
         //RENDER
         $this->logout();
         $this->load->view('confirm_email');

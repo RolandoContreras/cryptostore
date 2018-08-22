@@ -239,6 +239,8 @@
                         </div>
                         <input  type="hidden" id="price_dolar" name="price_dolar" value="<?php echo $price_dolar;?>">
                         <input  type="hidden" id="btc" name="btc" value="<?php echo $btc;?>">
+                        <input  type="hidden" id="img" name="img" value="<?php echo $img;?>">
+                        <input  type="hidden" id="currency" name="currency" value="<?php echo $currency;?>">
                         <input type="hidden" name="phone" id="phone" value="<?php echo $phone;?>"/>
                         <input type="hidden" name="wallet" id="wallet" value="<?php echo $wallet;?>"/>
                         <input type="hidden" name="email" id="email" value="<?php echo $email;?>"/>
@@ -247,7 +249,7 @@
                 </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <a href="<?php echo site_url().'buy';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
+                            <a href="<?php echo site_url().'bank';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
                             <input onclick="validate_credit_card();" class="submit_btn_comprar_2 trans_300" value="Comprar">

@@ -23,7 +23,7 @@ class sell_model_atributos{
     var $wallet='';
     var $email='';
     var $phone='';
-    var $subtotal='';
+    var $price='';
     var $amount='';
     var $amount_btc='';
     var $tax='';
@@ -49,7 +49,7 @@ class Sell_Model extends CI_Model{
         $this->wallet='';
         $this->email='';
         $this->phone='';
-        $this->subtotal='';
+        $this->price='';
         $this->amount='';
         $this->amount_btc='';
         $this->tax='';

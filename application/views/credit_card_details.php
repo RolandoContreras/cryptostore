@@ -197,7 +197,7 @@
                                             </div>
                                             <div class="contentSeparator">
                                                 <div class="textoresumenRecarja">
-                                                    <span class="fa fa-btc fa-2x"></span>
+                                                    <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30" style="margin-left: -7px;"/>
                                                 </div>
                                                 <div class="floatright">
                                                     <h4><span id="crypto-amount"><?php echo $btc;?> BTC*</span></h4>
@@ -219,7 +219,7 @@
                                                     <span class="fa fa-check fa-2x"></span>&nbsp;&nbsp;+ Pago sel. (2%)</div>
                                                 <div class="floatright">
                                                     <h4><span id="crypto-amount"><?php echo format_number_2decimal($subtotal);?> $</span> </h4>
-                                                    <input type="hidden" name="iva" id="iva" value="<?php echo format_number_2decimal($subtotal);?>"/>
+                                                    <input type="hidden" name="tax" id="tax" value="<?php echo $subtotal;?>"/>
                                                 </div>
                                             </div>
 
@@ -281,7 +281,7 @@
                             <div class="row margin-top-50">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <a href="<?php echo site_url().'buy/bank';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
+                                    <a href="<?php echo site_url().'buy/bank';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder"></a>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
                                     <input class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">

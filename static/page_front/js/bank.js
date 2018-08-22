@@ -111,6 +111,8 @@ function validate_credit_card(){
                     //  get data pass
                     var btc =  document.getElementById("btc").value;
                     var price_dolar =  document.getElementById("price_dolar").value;
+                    var img =  document.getElementById("img").value;
+                    var currency =  document.getElementById("currency").value;
                     var phone = document.getElementById("phone").value;
                     var wallet = document.getElementById("wallet").value;
                     var email = document.getElementById("email").value;
@@ -121,6 +123,8 @@ function validate_credit_card(){
                             dataType: "json",
                             data: {btc : btc,
                                    price_dolar : price_dolar,
+                                   img : img,
+                                   currency : currency,
                                    phone : phone,
                                    wallet : wallet,
                                    email : email,
@@ -159,6 +163,7 @@ function validar_wallet_btc(){
         return true;
     }
 }
+
 function fade_wallet(wallet){
     var wallet = document.getElementById("wallet").value;
     if(wallet != ""){ 
@@ -167,24 +172,28 @@ function fade_wallet(wallet){
     
     
 }
+
 function fade_email(email){
     var email = document.getElementById("email").value;
     if(email != ""){ 
         document.getElementById("message_email").style.display = "none";
     }
 }
+
 function fade_phone(phone){
     var phone = document.getElementById("phone").value;
     if(phone != ""){ 
         document.getElementById("message_phone").style.display = "none";
     }
 }
+
 function fade_comments(comments){
     var comments = document.getElementById("comments").value;
     if(comments != ""){ 
         document.getElementById("message_comments").style.display = "none";
     }
 }
+
 function fade_term(term){
     var term = document.getElementById("term").checked;
     if(term == true){ 
@@ -198,18 +207,21 @@ function name(){
         document.getElementById("message_term").style.display = "none";
     }
 }
+
 function fade_name(){
     var name = document.getElementById("name").value;
     if(name != ""){ 
         document.getElementById("message_name").style.display = "none";
     }
 }
+
 function fade_last_name(){
     var last_name = document.getElementById("last_name").value;
     if(last_name != ""){ 
         document.getElementById("message_last_name").style.display = "none";
     }
 }
+
 function fade_day(){
     var day = document.getElementById("day").value;
 
@@ -217,45 +229,52 @@ function fade_day(){
         document.getElementById("message_day").style.display = "none";
     }
 }
+
 function fade_month(){
     var month = document.getElementById("month").value;
     if(month != ""){ 
         document.getElementById("message_month").style.display = "none";
     }
-}function fade_year(){
+}
+
+function fade_year(){
     var year = document.getElementById("year").value;
     if(year != ""){ 
         document.getElementById("message_year").style.display = "none";
     }
 }
+
 function fade_address(){
     var address = document.getElementById("address").value;
     if(address != ""){ 
         document.getElementById("message_address").style.display = "none";
     }
 }
+
 function fade_postal(){
     var postal = document.getElementById("postal").value;
     if(postal != ""){ 
         document.getElementById("message_postal").style.display = "none";
     }
 }
+
 function fade_poblacion(){
     var poblacion = document.getElementById("poblacion").value;
     if(poblacion != ""){ 
         document.getElementById("message_poblacion").style.display = "none";
     }
 }
+
 function fade_provincia(){
     var provincia = document.getElementById("provincia").value;
     if(provincia != ""){ 
         document.getElementById("message_provincia").style.display = "none";
     }
 }
+
 function fade_country(){
     var country = document.getElementById("country").value;
     if(country != ""){ 
         document.getElementById("message_country").style.display = "none";
     }
 }
-
