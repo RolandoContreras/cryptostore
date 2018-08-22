@@ -109,7 +109,7 @@ class Charge_payment extends CI_Controller {
             $this->obj_sell->insert($data);
             
             //CREATE EMAIL
-            $this->message($obj_total_2,$btc,$currency_name,$email,$password);
+            $this->message($obj_total_card,$btc,$currency_name,$email,$password);
             //UNSET $_SESSION
             $this->logout();
             $this->load->view('confirm_credit_card');
@@ -120,7 +120,7 @@ class Charge_payment extends CI_Controller {
             $this->load->view('view_credit_card',$data);
         }
     }
-    public function message($obj_total_2,$btc,$currency_name,$email,$password){          
+    public function message($obj_total_card,$btc,$currency_name,$email,$password){          
        $mensaje = wordwrap("<html>
             <div style='margin-top:25px'>
             <table width='100%' cellspacing='0' cellpadding='0' border='0'>
@@ -140,7 +140,7 @@ class Charge_payment extends CI_Controller {
                               <ul dir='auto' style='list-style-type:disc;margin:10px 0 15px 30px;padding-left:15px' type='disc'>
                               <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Moneda: <em>$currency_name </em></li>
                                 <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Cantidad: <em>$btc</em></li>
-                                <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Total: <em>$obj_total_2</em></li>
+                                <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Total: <em>$obj_total_card</em></li>
                                 <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Método de Pago: <em>Tarjeta de Crédito / Debido</em></li>
                               </ul>
                               <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><em>Datos de entrada a plataforma:</em></p>

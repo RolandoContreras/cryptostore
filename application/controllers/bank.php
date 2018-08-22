@@ -245,7 +245,6 @@ class Bank extends CI_Controller {
                     'amount' => $obj_price_dolar,
                     'tax' => $obj_iva,
                     'amount_btc' => $obj_btc,
-                    'sub_total' => 0,
                     'type_pay' => $obj_radio,
                     'wallet' => $obj_wallet,
                     'email' => $obj_email,
