@@ -94,8 +94,8 @@
                     </div>
                     <div class="panel-body">
                         <div class="contentTransfer textogrisOscuro">
-                            Gracias por su confianza, acabamos de enviar un correo a su email con los detalles de la compra.
-                            Tambien le hemos creado una cuenta en la plataforma EASYCRIPTo para que obtenga mas beneficios.
+                            Gracias por su confianza, acabamos de enviar un mensaje a su correo electrónico con los detalles de su compra.
+                            También le hemos creado una cuenta en la plataforma EASYCRIPTO para que obtenga más beneficios.
                         </div>
                     </div>
                 </div>
