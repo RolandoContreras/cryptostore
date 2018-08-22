@@ -112,7 +112,7 @@
                                             <span class="input-group-addon">
                                                 <span id="btcwallet-faq" class="fa fa-credit-card fa-2x"></span>
                                             </span>
-                                            <input required="" class="form-control padding-right-27" id="card_number" name="card_number"   minlength="16" maxlength="16" type="text" placeholder="XXXX XXXX XXXX XXXX">
+                                            <input required="" class="form-control padding-right-27" id="card_number" name="card_number" minlength="16" maxlength="16" type="text" placeholder="XXXX XXXX XXXX XXXX">
                                         </div>
                                     </div>
                                   </div>
@@ -126,7 +126,7 @@
                                                 <span class="input-group-addon">
                                                     <span id="btcwallet-faq" class="fa fa-calendar-alt fa-2x"></span>
                                                 </span>
-                                                <input required="" class="form-control padding-right-27" id="cc_month" maxlength="2" name="cc_month" placeholder="MM" type="text">
+                                                <input required="" class="form-control padding-right-27" id="cc_month" minlength="2" maxlength="2" name="cc_month" placeholder="MM" type="text">
                                             </div>
                                         </div>
                                         <div class="form-group has-feedback">
@@ -134,7 +134,7 @@
                                                 <span class="input-group-addon">
                                                     <span id="btcwallet-faq" class="fa fa-calendar-alt fa-2x"></span>
                                                 </span>
-                                                <input required="" class="form-control padding-right-27" maxlength="4" id="cc_year" name="cc_year" placeholder="AAAA" type="text">
+                                                <input required="" class="form-control padding-right-27" minlength="4" maxlength="4" id="cc_year" name="cc_year" placeholder="AAAA" type="text">
                                             </div>
                                         </div>
                                     </div>
@@ -147,11 +147,19 @@
                                                     <span id="btcwallet-faq" class="fa fa-question-circle fa-2x"></span>
                                                 </span>
                                                 <input onkeyup="fade_wallet(this.value);" required="" class="form-control padding-right-27" id="wallet" name="wallet" placeholder="123" type="text">
-                                                <input type="hidden" name="total" id="total" value="<?php echo format_number_2decimal($total);?>"/>    
+                                                <input type="hidden" name="total" id="total" value="<?php echo $total;?>"/>    
                                                 <input type="hidden" name="tax" id="tax" value="<?php echo format_number_2decimal($tax);?>"/>    
                                             </div>
                                         </div>
                                   </div>
+                                </li>
+                                <li>
+                                    <div class="col-xs-12 col-sm-12 col-centered-nofloat" style="float: left;">
+                                    <?php if(isset($message)) { ?>
+                                          <span id="message_name" class="field-validation-error" style="text-align:center;" data-valmsg-for="Nombre" data-valmsg-replace="true"><?php echo $message;?></span>
+                                      <?php } ?>
+                                    </div>
+                                    <br/><br/>
                                 </li>
                                 <li>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
@@ -159,10 +167,7 @@
                                 </div>
                                 </li>
                               </ul>
-                                  <?php 
-                                  if(isset($message))
-                                      {echo $message;}
-                                  ?>
+                                  
                             </form>
                       </div>
                 </div>
@@ -240,8 +245,6 @@
             }
             
 </script>
-        
-        
         <!--END CRYPTOCURRENCY-->
 	<!-- Footer -->
 	<?php $this->load->view("footer");?>

@@ -17,16 +17,17 @@ class Charge_payment extends CI_Controller {
         $data["message"] = "";
         //GET DATA POST
         $obj_total = $this->input->post("total");
-        $obj_total_2 = $obj_total;
         $tax = $this->input->post("tax");
+        $obj_total_card = format_number_2decimal($obj_total);
+        
         //QUITAR PUNTO
-        $obj_total = str_replace(".", "", $obj_total);
+        $obj_total_new = str_replace(".", "", $obj_total_card);
         if(isset($_POST['btnsubmit'])){
             $data = array(
                  'number' => $this->input->post("card_number"),
                  'exp_month' => $this->input->post("cc_month"),
                  'exp_year' => $this->input->post("cc_year"),
-                 'amount' => $obj_total,
+                 'amount' => $obj_total_new,
             );
         //GET MESSAGES RESPOSE   
         $message = $this->stripegateway->checkout($data);
@@ -97,8 +98,8 @@ class Charge_payment extends CI_Controller {
                     'email' => $email,
                     'phone' => $phone,
                     'price' => $price,
-                    'amount' => $obj_total_2,
-                    'tax' => $tax,
+                    'amount' => format_number_2decimal($obj_total),
+                    'tax' => format_number_2decimal($tax),
                     'amount_btc' => $btc,
                     'active' => 1,
                     'status_value' => 1,
@@ -113,6 +114,8 @@ class Charge_payment extends CI_Controller {
             $this->logout();
             $this->load->view('confirm_credit_card');
         }else{
+            $data["tax"] = $tax;
+            $data["total"] = $obj_total;
             $data["message"] = $message;
             $this->load->view('view_credit_card',$data);
         }
