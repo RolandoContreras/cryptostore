@@ -21,12 +21,8 @@ function guardar_btc(comment_id){
         }
     ]);
 }
-function message_public(){
-    
-    var title = $("#title").val();
-    var message_content = $("#message_content").val();
-    
-     bootbox.dialog("Confirma que desea enviar el mensaje?", [        
+function change_state(comment_id){
+     bootbox.dialog("Confirma que desea marcar como contestado?", [        
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",
@@ -34,15 +30,11 @@ function message_public(){
             "callback": function() {
                $.ajax({
                    type: "post",
-                   url: site+"dashboard/panel/masive_messages",
+                   url: site+"dashboard/panel/cambiar_status",
                    dataType: "json",
-                   data: {title : title,
-                          message_content : message_content},
+                   data: {comment_id : comment_id},
                    success:function(data){                             
-                        bootbox.dialog(data.message, [        
-                            { "label" : "Cerrar"}
-                        ]);
-//                   location.reload();
+                   location.reload();
                    }         
            });
             }

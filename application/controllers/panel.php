@@ -10,10 +10,22 @@ class Panel extends CI_Controller{
     public function index(){
         //GET THE SESSION
         $this->get_session();
+        
+        //GET TOTAL ROWS
+        $params = array("select" =>"count(comment_id) as total_comments,
+                                    (select count(*) from customer) as total_customer, 
+                                    (select count(*) from comments where big_investor = 1) as total_invest, 
+                                    (select count(*) from currency) as total_currency, 
+                                    (select count(*) from messages where support = 1) as total_messages_support,
+                                    (select count(*) from users) as total_users,
+                                    (select count(*) from sell where type_pay = 2) as total_sell_bank,
+                                    (select count(*) from sell where type_pay = 1) as total_sell_card");
+        $obj_total = $this->obj_comments->get_search_row($params);
 
          //GET PENDING ROWS
         $params = array("select" =>"count(*) as pending_comments,
-                                    (select count(*) from sell where active = 1) as pending_sell,
+                                    (select count(*) from sell where active = 1 and type_pay = 1) as pending_sell_card,
+                                    (select count(*) from sell where active = 1 and type_pay = 2) as pending_sell_bank,
                                     (select count(*) from comments where big_investor = 1 and active = 1) as pending_investor,
                                     (select count(*) from messages where support = 1 and active = 1) as pending_messages_support,
                                     ",
@@ -26,27 +38,35 @@ class Panel extends CI_Controller{
                                     name,
                                     comment,
                                     email,
+                                    active,
                                     status_value,
                                     date_comment",
+                         "where" => "big_investor = 0",
                          "order" => "date_comment DESC"
             );
         $obj_last_comment = $this->obj_comments->get_search_row($params);
         
-        //GET TOTAL ROWS
-        $params = array("select" =>"count(comment_id) as total_comments,
-                                    (select count(*) from customer) as total_customer, 
-                                    (select count(*) from comments where big_investor = 1) as total_invest, 
-                                    (select count(*) from currency) as total_currency, 
-                                    (select count(*) from messages where support = 1) as total_messages_support,
-                                    (select count(*) from users) as total_users,
-                                    (select count(*) from sell) as total_sell");
-        $obj_total = $this->obj_comments->get_search_row($params);
+        //GET LASTEST COMMENT INVEST 
+        $params = array(
+                        "select" =>"comment_id,
+                                    name,
+                                    comment,
+                                    email,
+                                    company,
+                                    active,
+                                    status_value,
+                                    date_comment",
+                        "where" => "big_investor = 1",
+                        "order" => "date_comment DESC"
+            );
+        $obj_last_comment_investor = $this->obj_comments->get_search_row($params);
         
         $modulos ='Home'; 
         $link_modulo =  site_url().$modulos; 
         $seccion = 'Vista global';        
 
         $this->tmp_mastercms->set('obj_pending',$obj_pending);
+        $this->tmp_mastercms->set('obj_last_comment_investor',$obj_last_comment_investor);
         $this->tmp_mastercms->set('obj_last_comment',$obj_last_comment);
         $this->tmp_mastercms->set('obj_total',$obj_total);
         $this->tmp_mastercms->set('modulos',$modulos);
@@ -106,7 +126,24 @@ class Panel extends CI_Controller{
         exit();
             }
     } 
-     
+    
+    public function cambiar_status(){
+        if($this->input->is_ajax_request()){   
+              $comment_id = $this->input->post("comment_id");
+              
+                if(count($comment_id) > 0){
+                    $data = array(
+                        'active' => 0,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_comments->update($comment_id,$data);
+                }
+                echo json_encode($data);            
+        exit();
+        }
+    } 
+    
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
             if($_SESSION['usercms']['logged_usercms']=="TRUE" && $_SESSION['usercms']['status']==1){               

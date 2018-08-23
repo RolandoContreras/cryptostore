@@ -116,6 +116,8 @@ $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
+$route['dashboard/panel/cambiar_status'] = "panel/cambiar_status";
+$route['dashboard/panel/cambiar_status_invest'] = "panel/cambiar_status_invest";
 
 $route['dashboard/monedas'] = "d_criptocurrency"; 
 $route['dashboard/inversores'] = "d_comments/invest";

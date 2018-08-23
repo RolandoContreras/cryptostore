@@ -13,14 +13,15 @@ class D_customer extends CI_Controller{
            $this->get_session();
            $params = array(
                         "select" =>"customer.customer_id,
-                                    customer.username,
                                     customer.first_name,
                                     customer.email,
                                     customer.dni,
                                     customer.last_name,
+                                    customer.country,
                                     customer.created_at,
                                     customer.active,
                                     customer.status_value",
+                        "join" => "customer.status_value = 1",
                         "where" => "customer.status_value = 1"
                );
            //GET DATA FROM CUSTOMER
@@ -29,6 +30,7 @@ class D_customer extends CI_Controller{
             $modulos ='clientes'; 
             $seccion = 'Lista';        
             $link_modulo =  site_url().'dashboard/clientes'; 
+            //GET PAIS NAME
             
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);

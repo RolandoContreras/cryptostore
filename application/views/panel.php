@@ -20,15 +20,12 @@
                             </thead><!-- table heading -->
                             <tbody>
                                     <tr>
-                                            <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados</a></td><td></td>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas_card';?>"><b><?php echo $obj_total->total_sell_card;?></b><i class="fa fa-btc"></i> Ventas por Tarjeta</a></td>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas_card';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_sell_card;?></b><i class="fa fa-btc"></i> Por Procesar</a></td>
                                     </tr>
                                     <tr>
-                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>"><b><?php echo $obj_total->total_currency;?></b><i class="fa fa-btc"></i> Criptomonedas</a></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>"><b><?php echo $obj_total->total_sell;?></b><i class="fa fa-btc"></i> Ventas Realizados</a></td>
-                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_sell;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas_bank';?>"><b><?php echo $obj_total->total_sell_bank;?></b><i class="fa fa-btc"></i> Ventas por Banco</a></td>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas_bank';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_sell_bank;?></b><i class="fa fa-btc"></i> Por Procesar</a></td>
                                     </tr>
                                     <tr>
                                             <td><a href="<?php echo site_url().'dashboard/comentarios';?>"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
@@ -43,6 +40,13 @@
                                             <td><a href="<?php echo site_url().'dashboard/soporte';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_messages_support;?></b><i class="fa fa-question"></i> Por Solucionar</a></td>
                                     </tr>
                                     <tr>
+                                            <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados</a></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>"><b><?php echo $obj_total->total_currency;?></b><i class="fa fa-btc"></i> Criptomonedas</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
                                             <td><a href="<?php echo site_url().'dashboard/usuarios';?>"><b><?php echo $obj_total->total_users;?></b><i class="fa fa-user-secret"></i> Usuarios</a></td><td></td>
                                             <td class="blank">&nbsp;</td>
                                     </tr>
@@ -50,46 +54,6 @@
                             </tbody>
                     </table>
             </div>
-        </div>
-        <div id="quick_post" class="widget_container">
-                <div class="well">
-                        <div class="navbar navbar-static navbar_as_heading">
-                                <div class="navbar-inner">
-                                        <div class="container" style="width: auto;">
-                                                <a class="brand">Mensaje Correo Masivo</a>
-                                        </div>
-                                </div>
-                        </div>
-
-<!--                        <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom:20px;">
-                                <button class="btn btn-duadua active">Red</button>
-                                <button class="btn btn-duadua">Page</button>
-                                <button class="btn btn-duadua">Report</button>
-                                <button class="btn btn-duadua">Event</button>
-                        </div>-->
-
-                        <form>
-                        <fieldset>
-                        <div class="control-group">
-                        <div class="controls">
-                        <div class="input-prepend">
-                        <span class="add-on"><i class="icon-edit"></i></span>
-                        <input class="input-large" size="16" type="text" id="title"  name="title" style="width:88%;" placeholder="<?php echo replace_vocales_voculeshtml("Título");?>" />
-                        </div>
-                        </div>
-                        </div>
-
-                        <div class="control-group">
-                        <div class="controls">
-                        <textarea class="input-large" id="message_content" name="message_content" rows="5" style="width:97%;height:180px;" placeholder="Content"></textarea>
-                        </div>
-                        </div>
-
-                        <a onclick="message_public();" class="btn btn-primary">Enviar</a>
-
-                        </fieldset>
-                        </form>
-                </div>
         </div>
     </div>
     <div class="span6">
@@ -107,35 +71,79 @@
                     <div class="row-fluid">
                         <div class="comment_container span12" style="margin-left:auto;">
                             <div class="span2">
-                                <img style="padding: 8px" src="<?php echo site_url('static/cms/images/email-icon.jpg');?>" alt="mensajes"/>
+                                <img style="padding: 8px" src="<?php echo site_url('static/cms/images/mensaje.png');?>" alt="mensajes"/>
                             </div>
                             <div class="span10" style="margin-left:auto;">
                                 <div class="comment_content">
-                                    <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a href="#"><?php echo $obj_last_comment->email;?></a></p>
-                                        <p><a href="#" class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?></p>
+                                    <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a><?php echo $obj_last_comment->email;?></a></p>
                                         <p>
-                                                <a class="btn btn-mini btn-primary" href="#">Marcar Contestado</a> <a class="btn btn-mini btn-danger" href="#">Marcar No Contestado</a>
+                                            <a class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?>
+                                            
+                                            <b>Estado</b> : <?php echo $obj_last_comment->active == 0? "Contestado":"No Contestado";?>
+                                        </p>
+                                        <p>
+                                            <?php 
+                                            if($obj_last_comment->active == 1){ ?>
+                                                <a class="btn btn-mini btn-success" onclick="change_state('<?php echo $obj_last_comment->comment_id;?>');">Marcar Contestado</a> 
+                                            <?php } ?>
+                                            <a class="btn btn-mini btn-primary" href="<?php echo site_url("dashboard/comentarios");?>">Ver más</a>
                                         </p>
                                 </div>
                             </div>
                         </div>
-                        <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
                     </div>
                 <?php }else{ ?>
                         <div class="row-fluid">
-                                <div class="comment_container span12" style="margin-left:auto;">
-                                    <div class="span10" style="margin-left:auto;">
-                                        <div class="comment_content">
-                                            <h4><b>NO HAY MENSAJES</b></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
+                            <div class="alert alert-success" style="text-align: center"><b>NO HAY MENSAJES</b></div>
                         </div>
                 <?php }  ?>
             </div>
         </div>
+    </div>
+    <div class="span6">
+        <div id="quick_comment_view" class="widget_container">
+            <div class="well">							
+                    <div class="navbar navbar-static navbar_as_heading">
+                            <div class="navbar-inner">
+                                    <div class="container" style="width: auto;">
+                                            <a class="brand">Último Comentario Inversiones</a>
+                                    </div>
+                            </div>
+                    </div>
+                <?php 
+                if(count($obj_last_comment_investor) > 0){ ?>
+                    <div class="row-fluid">
+                        <div class="comment_container span12" style="margin-left:auto;">
+                            <div class="span2">
+                                <img style="padding: 8px" src="<?php echo site_url('static/cms/images/vip.png');?>" alt="mensajes"/>
+                            </div>
+                            <div class="span10" style="margin-left:auto;">
+                                <div class="comment_content">
+                                    <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment_investor->date_comment);?></span> | <a><?php echo $obj_last_comment_investor->email;?></a></p>
+                                    <p>
+                                        <a class="comment_author"><?php echo $obj_last_comment_investor->name;?></a> : <?php echo $obj_last_comment_investor->comment;?><br/>
+                                        <a class="comment_author">Empresa</a> : <b><?php echo $obj_last_comment_investor->company;?></b><br/>
+                                        <b>Estado</b> : <?php echo $obj_last_comment_investor->active == 0? "Contestado":"No Contestado";?>
+                                    </p>
+                                        <p>
+                                            <?php 
+                                            if($obj_last_comment_investor->active == 1){ ?>
+                                                <a class="btn btn-mini btn-success" onclick="change_state('<?php echo $obj_last_comment_investor->comment_id;?>');">Marcar Contestado</a> 
+                                            <?php } ?>
+                                            <a class="btn btn-mini btn-primary" href="<?php echo site_url("dashboard/inversores");?>">Ver más</a>
+                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php }else{ ?>
+                        <div class="row-fluid">
+                            <div class="alert alert-success" style="text-align: center"><b>NO HAY MENSAJES</b></div>
+                        </div>
+                <?php }  ?>
+            </div>
         </div>
+    </div>
 </div>
 <script src="static/cms/js/panel.js"></script>
 <script src="static/cms/js/jobs.js"></script>
