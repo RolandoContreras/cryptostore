@@ -40,78 +40,15 @@
                         </option>
                             <?php endforeach; ?>
                         </select>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        
-                        <strong>Región:</strong>
-                            <select name="region" id="region">
-                            <option value="">[ Seleccionar ]</option>
-                                <?php foreach ($obj_regiones as $value ): ?>
-                            <option value="<?php echo $value->id;?>"
-                                <?php 
-                                        if(isset($obj_customer->region)){
-                                                if($obj_customer->region==$value->id){
-                                                    echo "selected";
-                                                }
-                                        }else{
-                                                  echo "";
-                                        }
-
-                                ?>><?php echo $value->nombre;?>
-                            </option>
-                                <?php endforeach; ?>
-                            </select>
                     </div>
                     <br/>
-                    <div class="inner">
-                        <strong>Paquete:</strong>
-                            <select name="franchise" id="franchise">
-                                <option value="">[ Seleccionar ]</option>
-                                    <?php foreach ($obj_franchise as $value ): ?>
-                                <option value="<?php echo $value->franchise_id;?>"
-                                    <?php 
-                                            if(isset($obj_customer->franchise_id)){
-                                                    if($obj_customer->franchise_id==$value->franchise_id){
-                                                        echo "selected";
-                                                    }
-                                            }else{
-                                                      echo "";
-                                            }
-
-                                    ?>><?php echo $value->name;?>
-                                </option>
-                                    <?php endforeach; ?>
-                            </select>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                        <strong>Rango:</strong>
-                            <select name="rango" id="rango">
-                            <option value="">[ Seleccionar ]</option>
-                                <?php foreach ($obj_ranges as $value ): ?>
-                            <option value="<?php echo $value->range_id;?>"
-                                <?php 
-                                        if(isset($obj_customer->range_id)){
-                                                if($obj_customer->range_id==$value->range_id){
-                                                    echo "selected";
-                                                }
-                                        }else{
-                                                  echo "";
-                                        }
-
-                                ?>><?php echo $value->name;?>
-                            </option>
-                                <?php endforeach; ?>
-                            </select>
-                        
-                    </div>
                 </div>
               <br><br>
               <strong>ID:</strong><br>
               <input type="text" id="customer_id" name="customer_id" value="<?php echo isset($obj_customer->customer_id)?$obj_customer->customer_id:"";?>" class="input-xlarge-fluid" placeholder="ID" disabled="">
               <br><br>
-              <strong>Padre ID:</strong><br>
-              <input type="text" id="parents_id" name="parents_id" value="<?php echo isset($obj_customer->parents_id)?$obj_customer->parents_id:"";?>" class="input-xlarge-fluid" placeholder="Padre">
-              <br><br>
               <strong>Usuario:</strong><br>
-              <input type="text" id="username" name="username" value="<?php echo isset($obj_customer->username)?$obj_customer->username:"";?>" class="input-xlarge-fluid" placeholder="Username">
+              <input type="text" id="username" name="username" value="<?php echo isset($obj_customer->email)?$obj_customer->email:"";?>" class="input-xlarge-fluid" placeholder="Username">
               <br><br>
               <strong>Contraseña:</strong><br>              
               <input type="text" id="password" name="password" value="<?php echo isset($obj_customer->password)?$obj_customer->password:"";?>" class="input-xlarge-fluid" placeholder="Contraseña">
@@ -134,77 +71,22 @@
               <strong>Telefono:</strong><br>
               <input type="text" id="phone" name="phone" class="input-small-fluid" placeholder="Telefono" value="<?php echo isset($obj_customer->phone)?$obj_customer->phone:"";?>">
               <br><br>
-              <strong>Fecha de Activación:</strong><br>
-              <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="Fecha de Activación" value="<?php echo formato_fecha_barras($obj_customer->date_start);?>">
-              <br><br>
-              <strong>Fecha de Stand By:</strong><br>
-              <input type="text" id="date_stand_by" name="date_stand_by" class="input-small-fluid" placeholder="Fecha de Activación" value="<?php echo formato_fecha_barras($obj_customer->date_start);?>">
-              <br><br>
-              <div class="inner">
-                <strong>Financiada:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <select name="financy" id="financy">
-                                <option value="">[ Seleccionar ]</option>
-                                <option value="1" <?php if(isset($obj_customer)){
-                                    if($obj_customer->financy == 1){ echo "selected";}
-                                }else{echo "";} ?>>Si</option>
-                                <option value="0" <?php if(isset($obj_customer)){
-                                    if($obj_customer->financy == 0){ echo "selected";}
-                                }else{echo "";} ?>>No</option>
-                    </select>
-               </div>
-              <br><br>
-              <div class="inner">
-                <strong>Binario:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <select name="binaries" id="binaries">
-                                <option value="">[ Seleccionar ]</option>
-                                <option value="1" <?php if(isset($obj_customer)){
-                                    if($obj_customer->binaries == 1){ echo "selected";}
-                                }else{echo "";} ?>>Calificado</option>
-                                <option value="0" <?php if(isset($obj_customer)){
-                                    if($obj_customer->binaries == 0){ echo "selected";}
-                                }else{echo "";} ?>>No Calificado</option>
-                    </select>
-               </div>
-              <br><br>
-              <div class="inner">
-                <strong>Posición Pierna:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <select name="position" id="position">
-                                <option value="">[ Seleccionar ]</option>
-                                <option value="1" <?php if(isset($obj_customer)){
-                                    if($obj_customer->position == 1){ echo "selected";}
-                                }else{echo "";} ?>>Izquierda</option>
-                                <option value="2" <?php if(isset($obj_customer)){
-                                    if($obj_customer->position == 2){ echo "selected";}
-                                }else{echo "";} ?>>Derecha</option>
-                    </select>
-               </div>
-               <br><br>
-              <div class="inner">
-                <strong>Posición Pierna Temporal:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <select name="position_temporal" id="position_temporal">
-                                <option value="">[ Seleccionar ]</option>
-                                <option value="1" <?php if(isset($obj_customer)){
-                                    if($obj_customer->position_temporal == 1){ echo "selected";}
-                                }else{echo "";} ?>>Izquierda</option>
-                                <option value="2" <?php if(isset($obj_customer)){
-                                    if($obj_customer->position_temporal == 2){ echo "selected";}
-                                }else{echo "";} ?>>Derecha</option>
-                    </select>
-               </div>
-              <br><br>
               <strong>Dirección:</strong><br>
               <textarea name="address" id="address" placeholder="Dirección ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->address)?$obj_customer->address:"";?></textarea>
               <script type="text/javascript">CKEDITOR.replace("adress")</script> 
               <br><br>
-              <strong>Ciudad:</strong><br>
-              <input type="text" id="city" name="city" class="input-small-fluid" placeholder="Ciudad" value="<?php echo isset($obj_customer->city)?$obj_customer->city:"";?>">
-              <br><br>
               <strong>Dirección de BTC:</strong><br>
               <input type="text" id="btc_address" name="btc_address" class="input-xlarge-fluid" placeholder="Direccion de BitCoin" value="<?php echo isset($obj_customer->btc_address)?$obj_customer->btc_address:"";?>">
               <br><br>
+              <strong>Provincia:</strong><br>
+              <input type="text" id="provincia" name="provincia" class="input-small-fluid" placeholder="Provincia" value="<?php echo isset($obj_customer->provincia)?$obj_customer->provincia:"";?>">
+              <br><br>
+              <strong>Población:</strong><br>
+              <input type="text" id="city" name="city" class="input-small-fluid" placeholder="Ciudad" value="<?php echo isset($obj_customer->city)?$obj_customer->city:"";?>">
+              <br><br>
                 <div class="well nomargin" style="width: 200px;">
                 <div class="inner">
-                <strong>Activo o Pagado:</strong>
+                <strong>Estado:</strong>
                     <select name="active" id="active">
                                 <option value="">[ Seleccionar ]</option>
                                 <option value="0" <?php if(isset($obj_customer)){
@@ -217,32 +99,8 @@
                 </div>
                 </div>
                 <br><br>
-                <strong>Puntos Calificación Izquierda:</strong><br>
-                <input type="text" id="point_calification_left" name="point_calification_left" class="input-small-fluid" placeholder="Puntos Calificar Izquierda" value="<?php echo ($obj_customer->point_calification_left == 0 ) ? "Calificado" : $obj_customer->point_calification_left;?>">
-                <br><br>
-                <strong>Puntos Calificación Derecha:</strong><br>
-                <input type="text" id="point_calification_rigth" name="point_calification_rigth" class="input-small-fluid" placeholder="Puntos Calificar Derecha" value="<?php echo ($obj_customer->point_calification_rigth == 0 ) ? "Calificado" : $obj_customer->point_calification_rigth;?>">
-                <br><br>
-                <strong>Indicador Posición:</strong><br>
-                <textarea name="identificador" id="identificador" placeholder="Identificador ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->identificador)?$obj_customer->identificador:"";?></textarea>
-                <br><br>
                 <strong>Fecha de Creación:</strong><br>
                 <input type="text" id="created_at" name="created_at" class="input-small-fluid" placeholder="Fecha de Creación" value="<?php echo isset($obj_customer->created_at)?$obj_customer->created_at:"";?>" disabled="">
-                <br><br>
-                <div class="well nomargin" style="width: 200px;">
-                  <div class="inner">
-                  <strong>Estado para el sistema:</strong>
-                      <select name="status_value" id="status_value">
-                                  <option value="">[ Seleccionar ]</option>
-                                  <option value="0" <?php if(isset($obj_customer)){
-                                      if($obj_customer->status_value == 0){ echo "selected";}
-                                  }else{echo "";} ?>>Inactivo</option>
-                                  <option value="1" <?php if(isset($obj_customer)){
-                                      if($obj_customer->status_value == 1){ echo "selected";}
-                                  }else{echo "";} ?>>Activo</option>
-                      </select>
-                  </div>
-                  </div>
                 <br><br>
                 <br><br>
                 <div class="subnav nobg">

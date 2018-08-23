@@ -77,8 +77,7 @@
                                 <div class="comment_content">
                                     <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a><?php echo $obj_last_comment->email;?></a></p>
                                         <p>
-                                            <a class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?>
-                                            
+                                            <a class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?><br/>
                                             <b>Estado</b> : <?php echo $obj_last_comment->active == 0? "Contestado":"No Contestado";?>
                                         </p>
                                         <p>
