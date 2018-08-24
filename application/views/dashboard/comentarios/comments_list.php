@@ -24,12 +24,13 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Fecha de Comentario</th>
-                                <th>Nombres</th>
-                                <th>Correo Electrónico</th>
-                                <th>Comentario</th>
-                                <th>Estado</th>
-                                <th>Acción</th>
+                                <th>FECHA</th>
+                                <th>NOMBRE</th>
+                                <th>CORREO</th>
+                                <th>ASUNTO</th>
+                                <th>COMENTARIO</th>
+                                <th>ESTADO</th>
+                                <th>ACCIÓN</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -39,6 +40,7 @@
                             <td><?php echo formato_fecha($value->date_comment);?></td>
                             <td align="center" style="color:#fff;" class="label-success"><?php echo $value->name;?></td>
                             <td><?php echo $value->email;?></td>
+                            <td><?php echo $value->subject;?></td>
                             <td><?php echo $value->comment;?></td>
                             
                             <td>
@@ -56,9 +58,9 @@
                                         <div class="btn-group">
                                             <?php 
                                             if($value->active == 0){ ?>
-                                                    <button class="btn btn-small" onclick="change_state_no('<?php echo $value->comment_id;?>');">Marcar como no Contestado</button>
+                                                    <button class="btn btn-small" onclick="change_state_no('<?php echo $value->comment_id;?>');"><i class="fa fa-bookmark"></i> Marcar como no Contestado</button>
                                             <?php }else{ ?>
-                                                    <button class="btn btn-small" onclick="change_state('<?php echo $value->comment_id;?>');">Marcar como Contestado</button> 
+                                                    <button class="btn btn-small" onclick="change_state('<?php echo $value->comment_id;?>');"><i class="fa fa-bookmark"></i> Marcar como Contestado</button> 
                                             <?php } ?>
                                         </div>
                                 </div>

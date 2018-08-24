@@ -13,6 +13,7 @@ class D_comments extends CI_Controller{
             $params = array(
                         "select" =>"comments.comment_id,
                                     comments.name,
+                                    comments.subject,
                                     comments.comment,
                                     comments.email,
                                     comments.phone,
@@ -46,6 +47,8 @@ class D_comments extends CI_Controller{
             $params = array(
                         "select" =>"comments.comment_id,
                                     comments.name,
+                                    comments.subject,
+                                    comments.company,
                                     comments.comment,
                                     comments.email,
                                     comments.phone,
