@@ -22,6 +22,7 @@
                             <tr>
                                 <th>CODIGO</th>
                                 <th>NOMBRE</th>
+                                <th>API</th>
                                 <th>IMAGEN</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
@@ -30,9 +31,10 @@
                         <tbody>
                             <tr>
                             <?php foreach ($obj_currency as $value): ?>
-                                <td align="center"><?php echo $value->currency_id;?></td>
+                                <td align="center"><b><?php echo $value->currency_id;?></b></td>
                                 <td class="label-success" align="center" style="color:#fff"><b><?php echo $value->name;?></b></td>
-                                <td align="center"><img src="<?php echo site_url()."static/page_front/images/monedas/$value->img";?>" alt="<?php echo $value->name;?>" width="50"/></td>
+                                <td align="center"><?php echo $value->slug;?></td>
+                                <td align="center"><img src="<?php echo site_url()."static/page_front/images/monedas/$value->img";?>" alt="<?php echo $value->name;?>" width="35"/></td>
                                 <td align="center">
                                     <?php if ($value->active == 1) {
                                         $valor = "Activo";
@@ -45,8 +47,9 @@
                                 </td>
                                 <td>
                                     <div class="operation">
-                                            <div class="btn-group">
+                                        <div class="btn-group">
                                                 <button class="btn btn-small" onclick="edit_moneda('<?php echo $value->currency_id;?>');"><i class="fa fa-edit"></i> Editar</button>
+                                                <button class="btn btn-small" onclick="delete_moneda('<?php echo $value->currency_id;?>');"><i class="fa fa-trash"></i> Eliminar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -66,4 +69,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/news.js"></script>
+<script src="static/cms/js/moneda.js"></script>

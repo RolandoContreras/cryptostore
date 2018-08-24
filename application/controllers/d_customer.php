@@ -17,7 +17,7 @@ class D_customer extends CI_Controller{
                                     customer.email,
                                     customer.dni,
                                     customer.last_name,
-                                    paises.nombre,
+                                    paises.nombre as country,
                                     customer.created_at,
                                     customer.active,
                                     customer.status_value",
@@ -75,6 +75,24 @@ class D_customer extends CI_Controller{
                 if(count($customer_id) > 0){
                     $data = array(
                         'calification' => 1,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_customer->update($customer_id,$data);
+                }
+                echo json_encode($data);            
+        exit();
+            }
+    }
+    
+    public function delete(){
+        //DELETE CUSTOMER
+        if($this->input->is_ajax_request()){  
+                $customer_id = $this->input->post("customer_id");
+                if(count($customer_id) > 0){
+                    $data = array(
+                        'status_value' => 0,
+                        'active' => 0,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 

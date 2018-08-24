@@ -120,6 +120,10 @@ $route['dashboard/panel/cambiar_status'] = "panel/cambiar_status";
 $route['dashboard/panel/cambiar_status_invest'] = "panel/cambiar_status_invest";
 
 $route['dashboard/monedas'] = "d_criptocurrency"; 
+$route['dashboard/monedas/load/([0-9]+)'] = "d_criptocurrency/load/$1";
+$route['dashboard/monedas/validate'] = "d_criptocurrency/validate";
+$route['dashboard/monedas/delete'] = "d_criptocurrency/delete";
+
 $route['dashboard/inversores'] = "d_comments/invest";
 
 $route['dashboard/informativos'] = "d_informative"; 
@@ -130,6 +134,7 @@ $route['dashboard/informativos/validate'] = "d_informative/validate";
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
 $route['dashboard/clientes/validate'] = "d_customer/validate";
+$route['dashboard/clientes/delete'] = "d_customer/delete";
 
 $route['dashboard/noticias'] = "d_news";
 $route['dashboard/noticias/load'] = "d_news/load";

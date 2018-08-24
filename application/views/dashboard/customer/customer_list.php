@@ -7,18 +7,18 @@
 <!-- main content -->
 <div id="main_content" class="span9">
     <div class="row-fluid">
-        <div class="widget_container" style="width: 110%;">
+        <div class="widget_container">
             <div class="well">
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
-                                    <div class="container" style="width: 110%;">
-                                            <a class="brand">LISTADO DE  ASOCIADOS</a>
+                                    <div class="container" style="width: auto;">
+                                            <a class="brand">LISTADO DE CLIENTES</a>
                                     </div>
                             </div>
                     </div>
                 
              <!--<form>-->
-                <div class="well nomargin" style="width: 100%;">
+                <div class="well nomargin" style="width: 100% !important;">
                     <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
@@ -26,16 +26,17 @@
                                 <th>CODIGO</th>
                                 <th>USUARIO</th>
                                 <th>ASOCIADO</th>
+                                <th>PAÍS</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <?php foreach ($obj_customer as $value): ?>
+                             <?php foreach ($obj_customer as $value): ?>
                                 <td align="center"><b><?php echo $value->customer_id;?></b></td>
                                 <td align="center" style="color:#fff;" class="label-success"><?php echo $value->email;?></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center"><b><?php echo $value->country;?></b></td>
                                 <td align="center">
                                     <?php if ($value->active == 0) {
                                         $valor = "Inactivo";

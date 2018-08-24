@@ -47,3 +47,23 @@ function cancelar_customer(){
 	var url= 'dashboard/clientes';
 	location.href = site+url;
 }
+function delete_customer(customer_id){
+    bootbox.dialog("Confirma que desea elimiar el cliente del sistema", [        
+        { "label" : "Cancelar"},
+        {
+            "label" : "Confirmar",
+            "class" : "btn-success",
+            "callback": function() {
+           $.ajax({
+               type: "post",
+               url: site+"dashboard/clientes/delete",
+               dataType: "json",
+               data: {customer_id : customer_id},
+               success:function(data){                             
+               location.reload();
+               }         
+           });
+           }
+        }
+    ]);
+}
