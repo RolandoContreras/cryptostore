@@ -25,30 +25,37 @@
                             <tr>
                                 <th>ID</th>
                                 <th>FECHA</th>
-                                <th>NOMBRE</th>
+                                <th>MONEDA</th>
+                                <th>PRECIO</th>
+                                <th>COMISIÓN</th>
                                 <th>MONTO</th>
                                 <th>WALLET BTC</th>
-                                <th>EMAIL</th>
-                                <th>TELÉFONO</th>
+                                <th>MONTO MONEDA</th>
+                                <th>CLIENTE</th>
                                 <th>ESTADO</th>
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($obj_pay as $value): ?>
+                            <?php foreach ($obj_sell as $value): ?>
                             <tr>
                                 <td align="center"><b><?php echo $value->sell_id;?></b></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
-                                <td align="center"><b><?php echo $value->first_name." ".$value->last_name;?></b></td>
+                                <td align="center" style="color:#fff;" class="label-warning"><b><?php echo $value->currency;?></b></td>
+                                <td align="center"><?php echo "$".$value->price;?></td>
+                                <td align="center"><?php echo $value->tax;?></td>
                                 <td align="center" style="color:#fff;" class="label-success"><?php echo "$".$value->amount;?></td>
                                 <td align="center" style="color:#fff;" class="label-info"><?php echo $value->wallet;?></td>
-                                <td align="center"><?php echo $value->email;?></td>
-                                <td align="center"><?php echo $value->phone;?></td>
+                                <td align="center" style="color:#fff;" class="label-important"><?php echo $value->amount_btc;?></td>
+                                <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center">
                                     <?php if ($value->active == 1) {
                                         $valor = "Pendiente";
                                         $stilo = "label label-warning";
-                                    }elseif($value->active == 0){
+                                    }elseif($value->active == 2){
+                                        $valor = "Cancelado";
+                                        $stilo = "label label-important";
+                                    }else{
                                         $valor = "Procesado";
                                         $stilo = "label label-success";
                                     } ?>
@@ -57,8 +64,9 @@
                                 <td align="center">
                                     <div class="operation">
                                             <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="edit_pay('<?php echo $value->sell_id;?>');"><i class="fa fa-edit"></i>  Editar</button>
-                                                    <button class="btn btn-small" onclick="process_pay('<?php echo $value->sell_id;?>');"><i class="fa fa-check"></i>  Procesado</button>
+                                                    <button class="btn btn-small" onclick="edit_sell_card('<?php echo $value->sell_id;?>');"><i class="fa fa-edit"></i>  Editar</button>
+                                                    <button class="btn btn-small" onclick="process_sell_card('<?php echo $value->sell_id;?>','<?php echo $value->first_name;?>','<?php echo $value->last_name;?>','<?php echo $value->email;?>');"><i class="fa fa-check"></i>  Procesar</button>
+                                                    <button class="btn btn-small" onclick="cancel_sell('<?php echo $value->sell_id;?>');"><i class="fa fa-times-circle"></i>  Cancelar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -79,4 +87,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/cobros.js"></script>
+<script src="static/cms/js/sell.js"></script>

@@ -38,21 +38,22 @@
               <strong>ID:</strong><br>
               <input type="text" value="<?php echo isset($obj_sell->sell_id)?$obj_sell->sell_id:"";?>" class="input-xlarge-fluid" placeholder="ID" disabled="">
               <input type="hidden" id="sell_id" name="sell_id" value="<?php echo isset($obj_sell->sell_id)?$obj_sell->sell_id:"";?>">
+              <input type="hidden" id="type_sell" name="type_sell" value="1">
               <br><br>
-              <strong>CÓDIGO:</strong><br>
-              <input type="text" value="<?php echo isset($obj_sell->code)?$obj_sell->code:"";?>" class="input-xlarge-fluid" placeholder="Código" disabled="">
+              <strong>Cliente:</strong><br>
+              <input type="text" value="<?php echo isset($obj_sell->first_name)?$obj_sell->first_name." ".$obj_sell->last_name:"";?>" class="input-xlarge-fluid" placeholder="Cliente" disabled="">
               <br><br>
               <strong>Fecha:</strong><br>              
               <input type="text" id="date" name="date" value="<?php echo isset($obj_sell->date)?formato_fecha_barras($obj_sell->date):"";?>" class="input-xlarge-fluid">
               <br><br>
+              <strong>Precio $:</strong><br>   
+              <input type="text" id="price" name="price" value="<?php echo isset($obj_sell->price)?$obj_sell->price:0;?>" class="input-xlarge-fluid">
+              <br><br>
+              <strong>Comisión $:</strong><br>   
+              <input type="text" id="tax" name="tax" value="<?php echo isset($obj_sell->tax)?$obj_sell->tax:0;?>" class="input-xlarge-fluid">
+              <br><br>
               <strong>Monto $:</strong><br>   
               <input type="text" id="amount" name="amount" value="<?php echo isset($obj_sell->amount)?$obj_sell->amount:0;?>" class="input-xlarge-fluid">
-              <br><br>
-              <strong>Email:</strong><br>   
-              <input type="text" id="email" name="email" value="<?php echo isset($obj_sell->email)?$obj_sell->email:"";?>" class="input-xlarge-fluid">
-              <br><br>
-              <strong>Teléfono:</strong><br>   
-              <input type="text" id="phone" name="phone" value="<?php echo isset($obj_sell->phone)?$obj_sell->phone:"";?>" class="input-xlarge-fluid">
               <br><br>
               <strong>Wallet:</strong><br>   
               <input type="text" id="wallet" name="wallet" value="<?php echo isset($obj_sell->wallet)?$obj_sell->wallet:"";?>" class="input-xlarge-fluid">
@@ -66,10 +67,10 @@
               <div class="well nomargin" style="width: 200px;">
                   <div class="inner">
                   <strong>Estado:</strong>
-                  <select name="status_value" id="status_value">
-                         <option value="2" <?php if($obj_sell->status_value == 1){ echo "selected";}?>>Cancelado</option>
-                         <option value="3" <?php if($obj_sell->status_value == 2){ echo "selected";}?>>Es espera de procesar</option>
-                         <option value="4" <?php if($obj_sell->status_value == 3){ echo "selected";}?>>Pagado</option>
+                  <select name="active" id="active">
+                         <option value="1" <?php if($obj_sell->active == 1){ echo "selected";}?>>Pendiente</option>
+                         <option value="2" <?php if($obj_sell->active == 2){ echo "selected";}?>>Cancelado</option>
+                         <option value="3" <?php if($obj_sell->active == 3){ echo "selected";}?>>Procesado</option>
                   </select>
                   </div>
               </div>
@@ -77,7 +78,7 @@
               <br><br>
               <br><br>
               <div class="subnav nobg">
-                    <button class="btn btn-danger btn-small pull-left" type="reset" onclick="cancelar_bank();">Cancelar</button>                    
+                    <button class="btn btn-danger btn-small pull-left" type="reset" onclick="cancelar_card();">Cancelar</button>                    
                     <button class="btn btn-primary btn-small pull-right"  type="submit">Guardar</button>
                </div>
             </div>

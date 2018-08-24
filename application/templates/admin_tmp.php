@@ -109,8 +109,8 @@
                                 <div id="ventas" class="accordion-body collapse">
                                     <div class="accordion-inner">
                                         <ul class="nav nav-list">
-                                            <li><a href="<?php echo site_url()."dashboard/ventas_bank";?>"><i class="icon-large icon-th"></i>Ventas por Banco</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/ventas_card";?>"><i class="icon-large icon-th"></i>Ventas por Tarjeta</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/ventas_bank";?>"><i class="icon-large icon-th"></i>Ventas por Banco</a></li>
                                         </ul>                                     
                                     </div>
                                 </div>

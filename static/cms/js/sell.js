@@ -30,7 +30,7 @@ function process_sell_bank(sell_id,code,email){
     ]);
 }
 
-function process_sell_card(sell_id,first_name,last_name){
+function process_sell_card(sell_id,first_name,last_name,email){
     bootbox.dialog("Confirma que desea marcar como procesado?", [        
         { "label" : "Cancelar"},
         {
@@ -39,11 +39,12 @@ function process_sell_card(sell_id,first_name,last_name){
             "callback": function() {
            $.ajax({
                type: "post",
-               url: site+"dashboard/ventas/procesar",
+               url: site+"dashboard/ventas/procesar_card",
                dataType: "json",
                data: {sell_id : sell_id,
                       first_name:first_name,
-                      last_name:last_name
+                      last_name:last_name,
+                      email:email
                       },
                success:function(data){                             
                location.reload();
@@ -79,6 +80,6 @@ function cancelar_bank(){
      location.href = site+url;
 }
 function cancelar_card(){
-    var url = 'dashboard/ventas_bank';
+    var url = 'dashboard/ventas_card';
      location.href = site+url;
 }
