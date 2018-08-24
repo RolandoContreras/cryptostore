@@ -43,7 +43,7 @@
                                             <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados</a></td><td></td>
                                     </tr>
                                     <tr>
-                                        <td><a href="<?php echo site_url().'dashboard/ventas';?>"><b><?php echo $obj_total->total_currency;?></b><i class="fa fa-btc"></i> Criptomonedas</a></td>
+                                        <td><a href="<?php echo site_url().'dashboard/monedas';?>"><b><?php echo $obj_total->total_currency;?></b><i class="fa fa-btc"></i> Criptomonedas</a></td>
                                         <td></td>
                                     </tr>
                                     <tr>

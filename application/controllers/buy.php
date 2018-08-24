@@ -9,14 +9,13 @@ class Buy extends CI_Controller {
 
     public function index()
 	{
-        
         //GET DATA PRICE CRIPTOCURRENCY
         $params = array(
                         "select" =>"currency_id,
                                     name,
                                     img,
                                     active",
-                        "where" => "status_value = 1",
+                        "where" => "active = 1 and status_value = 1",
                         );
 
         $data['obj_currency'] = $this->obj_currency->search($params);
