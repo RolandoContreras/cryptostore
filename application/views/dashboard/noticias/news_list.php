@@ -7,17 +7,20 @@
 <!-- main content -->
 <div id="main_content" class="span9">
     <div class="row-fluid">
-        <div class="widget_container" style="width: 110%;">
+        <div class="widget_container">
             <div class="well">
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
-                                    <div class="container" style="width: 110%;">
-                                            <a class="brand">LISTADO DE  NOTICIAS</a>
+                                    <div class="container" style="width: auto;">
+                                            <a class="brand">NOTICIAS</a>
                                             <button class="btn btn-small" onclick="add_news();"><i class="fa fa-plus"></i> Nuevo</button>
                                     </div>
                             </div>
                     </div>
-                <div class="well nomargin" style="width: 100%;">
+                
+             <!--<form>-->
+                <div class="well nomargin" style="width: 100% !important;">
+                    <!--- INCIO DE TABLA DE RE4GISTRO -->
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -30,17 +33,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <?php foreach ($obj_news as $value): ?>
+                           <?php foreach ($obj_news as $value): ?>
                                 <td align="center"><?php echo $value->news_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td class="post_title" align="center"><b><?php echo $value->title;?></b></td>
                                 <td align="center"><img src="<?php echo site_url()."static/backoffice/images/new/$value->img";?>" alt="<?php echo $value->title;?>"/></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 1) {
+                                    <?php if ($value->active == 1) {
                                         $valor = "Activo";
                                         $stilo = "label label-success";
-                                    }elseif($value->status_value == 0){
+                                    }elseif($value->active == 0){
                                         $valor = "Inactivo";
                                         $stilo = "label label-important";
                                     } ?>
@@ -50,6 +52,7 @@
                                     <div class="operation">
                                             <div class="btn-group">
                                                 <button class="btn btn-small" onclick="edit_news('<?php echo $value->news_id;?>');"><i class="fa fa-edit"></i> Editar</button>
+                                                <button class="btn btn-small" onclick="delete_news('<?php echo $value->news_id;?>');"><i class="fa fa-trash-o"></i> Eliminar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -58,6 +61,7 @@
                         </tbody>
                     </table>
             </div>
+           <!--</form>-->         
         </div>
     </div>
 </div><!-- main content -->

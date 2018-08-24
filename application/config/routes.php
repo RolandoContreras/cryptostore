@@ -130,6 +130,7 @@ $route['dashboard/informativos'] = "d_informative";
 $route['dashboard/informativos/load'] = "d_informative/load";
 $route['dashboard/informativos/load/([0-9]+)'] = "d_informative/load/$1";
 $route['dashboard/informativos/validate'] = "d_informative/validate";
+$route['dashboard/informativos/delete_informative'] = "d_informative/delete_informative";
 
 $route['dashboard/clientes'] = "d_customer";
 $route['dashboard/clientes/load/([0-9]+)'] = "d_customer/load/$1";
@@ -140,6 +141,7 @@ $route['dashboard/noticias'] = "d_news";
 $route['dashboard/noticias/load'] = "d_news/load";
 $route['dashboard/noticias/load/([0-9]+)'] = "d_news/load/$1";
 $route['dashboard/noticias/validate'] = "d_news/validate";
+$route['dashboard/noticias/delete_news'] = "d_news/delete_news";
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";

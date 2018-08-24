@@ -95,22 +95,15 @@ class D_informative extends CI_Controller{
     public function delete_informative(){
             //UPDATE DATA OTROS
         if($this->input->is_ajax_request()){  
-            
-            echo "hola";
-            die();
-            
-              $otros_id = $this->input->post("otros_id");
-              
-              var_dump($otros_id);
-              die();
-              
-                if(count($otros_id) > 0){
+              $message_id = $this->input->post("message_id");
+                if(count($message_id) > 0){
                     $data = array(
                         'status_value' => 0,
+                        'active' => 0,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
-                    $this->obj_comments->update($otros_id,$data);
+                    $this->obj_messages->update($message_id,$data);
                 }
                 echo json_encode($data);            
         exit();

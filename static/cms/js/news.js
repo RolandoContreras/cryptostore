@@ -10,3 +10,23 @@ function add_news(){
 	var url= 'dashboard/noticias/load';
 	location.href = site+url;
 }
+function delete_news(news_id){
+    bootbox.dialog("Confirma que desea elimiar la moticia", [        
+        { "label" : "Cancelar"},
+        {
+            "label" : "Confirmar",
+            "class" : "btn-success",
+            "callback": function() {
+           $.ajax({
+               type: "post",
+               url: site+"dashboard/noticias/delete_news",
+               dataType: "json",
+               data: {news_id : news_id},
+               success:function(data){                             
+               location.reload();
+               }         
+           });
+           }
+        }
+    ]);
+}

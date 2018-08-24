@@ -15,7 +15,9 @@ class D_news extends CI_Controller{
                                         date,
                                         title,
                                         img,
+                                        active,
                                         status_value",
+                           "where" => "status_value = 1"
                             );            
             //GET DATA COMMISSIONS
             $obj_news = $this->obj_news->search($params);
@@ -111,6 +113,24 @@ class D_news extends CI_Controller{
                 }
         
         redirect(site_url()."dashboard/noticias");
+    }
+    
+    public function delete_news(){
+            //UPDATE DATA OTROS
+        if($this->input->is_ajax_request()){  
+              $news_id = $this->input->post("news_id");
+                if(count($news_id) > 0){
+                    $data = array(
+                        'status_value' => 0,
+                        'active' => 0,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_news->update($news_id,$data);
+                }
+                echo json_encode($data);            
+        exit();
+            }
     }
     
     public function get_session(){          
