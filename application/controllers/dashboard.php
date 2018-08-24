@@ -47,7 +47,6 @@ class Dashboard extends CI_Controller {
                 $data_user_session['user_id'] = $obj_user->user_id;
                 $data_user_session['name'] = $obj_user->first_name.' '.$obj_user->last_name;
                 $data_user_session['email'] = $obj_user->email;
-                $data_user_session['privilage'] = $obj_user->privilage;
                 $data_user_session['logged_usercms'] = "TRUE";
                 $data_user_session['status'] = $obj_user->status_value;
                 $_SESSION['usercms'] = $data_user_session;                

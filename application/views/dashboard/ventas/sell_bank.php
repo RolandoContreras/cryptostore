@@ -25,8 +25,10 @@
                             <tr>
                                 <th>CODE</th>
                                 <th>FECHA</th>
+                                <th>MONEDA</th>
                                 <th>MONTO</th>
                                 <th>WALLET BTC</th>
+                                <th>MONTO MONEDA</th>
                                 <th>EMAIL</th>
                                 <th>TELÉFONO</th>
                                 <th>ESTADO</th>
@@ -34,19 +36,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($obj_pay as $value): ?>
+                            <?php foreach ($obj_sell as $value): ?>
                             <tr>
                                 <td align="center"><b><?php echo $value->code;?></b></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
+                                <td align="center" style="color:#fff;" class="label-warning"><b><?php echo $value->currency;?></b></td>
                                 <td align="center" style="color:#fff;" class="label-success"><?php echo "$".$value->amount;?></td>
                                 <td align="center" style="color:#fff;" class="label-info"><?php echo $value->wallet;?></td>
+                                <td align="center" style="color:#fff;" class="label-important"><?php echo $value->amount_btc;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
                                 <td align="center"><?php echo $value->phone;?></td>
                                 <td align="center">
                                     <?php if ($value->active == 1) {
                                         $valor = "Pendiente";
                                         $stilo = "label label-warning";
-                                    }elseif($value->active == 0){
+                                    }elseif($value->active == 2){
+                                        $valor = "Cancelado";
+                                        $stilo = "label label-important";
+                                    }else{
                                         $valor = "Procesado";
                                         $stilo = "label label-success";
                                     } ?>
@@ -55,8 +62,9 @@
                                 <td align="center">
                                     <div class="operation">
                                             <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="edit_pay('<?php echo $value->sell_id;?>');"><i class="fa fa-edit"></i>  Editar</button>
-                                                    <button class="btn btn-small" onclick="process_pay('<?php echo $value->sell_id;?>');"><i class="fa fa-check"></i>  Procesado</button>
+                                                    <button class="btn btn-small" onclick="edit_sell_bank('<?php echo $value->sell_id;?>');"><i class="fa fa-edit"></i>  Editar</button>
+                                                    <button class="btn btn-small" onclick="process_sell_bank('<?php echo $value->sell_id;?>','<?php echo $value->code;?>','<?php echo $value->email;?>');"><i class="fa fa-check"></i>  Procesar</button>
+                                                    <button class="btn btn-small" onclick="cancel_sell('<?php echo $value->sell_id;?>');"><i class="fa fa-times-circle"></i>  Cancelar</button>
                                           </div>
                                     </div>
                                 </td>
@@ -77,4 +85,4 @@
     } );
 } );
 </script>
-<script src="static/cms/js/cobros.js"></script>
+<script src="static/cms/js/sell.js"></script>

@@ -124,8 +124,6 @@ $route['dashboard/monedas/load/([0-9]+)'] = "d_criptocurrency/load/$1";
 $route['dashboard/monedas/validate'] = "d_criptocurrency/validate";
 $route['dashboard/monedas/delete'] = "d_criptocurrency/delete";
 
-$route['dashboard/inversores'] = "d_comments/invest";
-
 $route['dashboard/informativos'] = "d_informative"; 
 $route['dashboard/informativos/load'] = "d_informative/load";
 $route['dashboard/informativos/load/([0-9]+)'] = "d_informative/load/$1";
@@ -144,6 +142,7 @@ $route['dashboard/noticias/validate'] = "d_news/validate";
 $route['dashboard/noticias/delete_news'] = "d_news/delete_news";
 
 $route['dashboard/comentarios'] = "d_comments";
+$route['dashboard/inversores'] = "d_comments/invest";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
 $route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no";
 
@@ -162,9 +161,12 @@ $route['dashboard/soporte/update'] = "d_messages/update";
 
 $route['dashboard/ventas_bank'] = "d_sell";
 $route['dashboard/ventas_card'] = "d_sell/card";
-$route['dashboard/ventas_details/([0-9]+)'] = "d_sell/details/$1";
-$route['dashboard/ventas/pagado'] = "d_sell/pagado";
-$route['dashboard/ventas/devolver'] = "d_sell/devolver";
+$route['dashboard/ventas_bank/load/([0-9]+)'] = "d_sell/load_bank/$1";
+$route['dashboard/ventas_card/load/([0-9]+)'] = "d_sell/load_card/$1";
+$route['dashboard/ventas/procesar_bank'] = "d_sell/procesar_bank";
+$route['dashboard/ventas/procesar_card'] = "d_sell/procesar_card";
+$route['dashboard/ventas/cancelar'] = "d_sell/cancelar";
+$route['dashboard/ventas/validate'] = "d_sell/validate";
 
 $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
