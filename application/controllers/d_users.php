@@ -38,7 +38,6 @@ class D_Users extends CI_Controller{
             $data = array(
                'first_name' => $this->input->post('first_name'),
                'last_name   ' => $this->input->post('last_name'),
-               'user_name' => $this->input->post('username'),
                'password' => $this->input->post('password'),
                'email' => $this->input->post('email'),
                'phone' => $this->input->post('phone'),
@@ -54,7 +53,6 @@ class D_Users extends CI_Controller{
             $data = array(
                'first_name' => $this->input->post('first_name'),
                'last_name   ' => $this->input->post('last_name'),
-               'user_name' => $this->input->post('username'),
                'password' => $this->input->post('password'),
                'email' => $this->input->post('email'),
                'phone' => $this->input->post('phone'),
@@ -93,6 +91,24 @@ class D_Users extends CI_Controller{
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->render("dashboard/users/users_form");    
+    }
+    
+    public function delete(){
+            //UPDATE DATA OTROS
+        if($this->input->is_ajax_request()){  
+              $user_id = $this->input->post("user_id");
+                if(count($user_id) > 0){
+                    $data = array(
+                        'status_value' => 0,
+                        'active' => 0,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_users->update($user_id,$data);
+                }
+                echo json_encode($data);            
+        exit();
+            }
     }
     
     public function get_session(){          

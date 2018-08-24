@@ -20,8 +20,6 @@
                 </div>
                 <!--GET CUSTOMER ID-->
               <input type="hidden" name="user_id" id="user_id" value="<?php echo isset($obj_users)?$obj_users->user_id:"";?>">
-              <input type="text" id="username" name="username" value="<?php echo isset($obj_users->user_name)?$obj_users->user_name:"";?>" class="input-xlarge-fluid" placeholder="Username">
-              <br><br>
               <input type="password" id="password" name="password" value="<?php echo isset($obj_users->password)?$obj_users->password:"";?>" class="input-xlarge-fluid" placeholder="Contraseña">
               <br><br>
               <input type="text" id="first_name" name="first_name" value="<?php echo isset($obj_users->first_name)?$obj_users->first_name:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
@@ -36,12 +34,11 @@
                         <div class="inner">
                             <strong>Estado para el sistema:</strong>
                             <select name="active" id="active">
-                                        <option value="">[ Seleccionar ]</option>
                                         <option value="0" <?php if(isset($obj_customer)){
-                                            if($obj_users->status_value == 0){ echo "selected";}
+                                            if($obj_users->active == 0){ echo "selected";}
                                         }else{echo "";} ?>>Inactivo</option>
                                         <option value="1" <?php if(isset($obj_customer)){
-                                            if($obj_users->status_value == 1){ echo "selected";}
+                                            if($obj_users->active == 1){ echo "selected";}
                                         }else{echo "";} ?>>Activo</option>
                             </select>
                         </div>

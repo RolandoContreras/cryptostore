@@ -52,7 +52,7 @@ function delete_customer(customer_id){
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",
-            "class" : "btn-success",
+            "class" : "btn-danger",
             "callback": function() {
            $.ajax({
                type: "post",

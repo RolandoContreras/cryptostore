@@ -11,7 +11,7 @@ function delete_informative(message_id){
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",
-            "class" : "btn-warning",
+            "class" : "btn-danger",
             "callback": function() {
                $.ajax({
                    type: "post",
