@@ -173,6 +173,7 @@ $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
 $route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no";
 
 $route['dashboard/report_customer'] = "d_report_customer";
+$route['dashboard/report_sell'] = "d_report_sell";
 
 $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios'] = "d_users";

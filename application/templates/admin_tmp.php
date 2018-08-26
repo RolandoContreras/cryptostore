@@ -127,7 +127,7 @@
                                                 <a href="<?php echo site_url()."dashboard/report_customer";?>"><i class="icon-large icon-th"></i>Total Clientes</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Total Ventas</a>
+                                                <a href="<?php echo site_url()."dashboard/report_sell";?>"><i class="icon-large icon-th"></i>Total Ventas</a>
                                             </li>
                                         </ul>                                     
                                     </div>
