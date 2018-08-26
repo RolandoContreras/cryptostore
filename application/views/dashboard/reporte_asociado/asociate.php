@@ -70,6 +70,18 @@
 </div>
 <script>
     var ene = document.getElementById('ene').value;
+    var feb = document.getElementById('feb').value;
+    var mar = document.getElementById('mar').value;
+    var abr = document.getElementById('abr').value;
+    var may = document.getElementById('may').value;
+    var jun = document.getElementById('jun').value;
+    var jul = document.getElementById('jul').value;
+    var ago = document.getElementById('ago').value;
+    var set = document.getElementById('set').value;
+    var oct = document.getElementById('oct').value;
+    var nov = document.getElementById('nov').value;
+    var dic = document.getElementById('dic').value;
+    
     var ctx = document.getElementById('chart').getContext('2d');
     var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -85,7 +97,7 @@
             borderWidth: 2,
             hoverBackgroundColor: "rgba(14, 11, 63,0.4)",
             hoverBorderColor: "rgba(14, 11, 63)",
-            data: [0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20]
+            data: [ene, feb, mar, abr, may, jun, jul, ago, set, oct, nov, dic]
         }]
     },
     options: {}

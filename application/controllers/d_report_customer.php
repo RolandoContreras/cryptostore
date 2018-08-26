@@ -63,7 +63,7 @@ class D_report_customer extends CI_Controller{
                                         (select count(customer_id) from customer where created_at BETWEEN '$year-05-01' AND '$last_month_may') as total_may,
                                         (select count(customer_id) from customer where created_at BETWEEN '$year-06-01' AND '$last_month_jun') as total_jun,
                                         (select count(customer_id) from customer where created_at BETWEEN '$year-07-01' AND '$last_month_jul') as total_jul,
-                                        (select count(customer_id) from customer where created_at BETWEEN '$year-08-01' AND '$last_month_ago') as total_agos,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-08-01' AND '$last_month_ago') as total_ago,
                                         (select count(customer_id) from customer where created_at BETWEEN '$year-09-01' AND '$last_month_set') as total_set,
                                         (select count(customer_id) from customer where created_at BETWEEN '$year-10-01' AND '$last_month_oct') as total_oct,
                                         (select count(customer_id) from customer where created_at BETWEEN '$year-11-01' AND '$last_month_nov') as total_nov,
