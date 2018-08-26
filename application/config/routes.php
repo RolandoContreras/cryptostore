@@ -45,6 +45,7 @@ $route['home'] = 'home';
 $route['home/send_messages'] = 'home/send_messages';
 
 $route['login'] = 'login';
+$route['login/validate'] = 'login/validate';
 
 $route['contact/send_messages'] = 'contact/send_messages';
 
