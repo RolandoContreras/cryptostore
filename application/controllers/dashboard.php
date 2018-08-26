@@ -8,10 +8,25 @@ class Dashboard extends CI_Controller {
     
     public function index(){    
        $this->load->view('dashboard');
+        header("Access-Control-Allow-Origin: *");
     }
     
     public function validate(){
-        if($this->input->is_ajax_request()){    
+        if (isset($_SERVER['HTTP_ORIGIN'])) {  
+            header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");  
+            header('Access-Control-Allow-Credentials: true');  
+            header('Access-Control-Max-Age: 86400');   
+        }  
+
+        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {  
+
+            if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))  
+                header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");  
+
+            if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))  
+                header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");  
+        }  
+//        if($this->input->is_ajax_request()){    
             $this->form_validation->set_rules('email','email',"required|trim|valid_email|callback_validar_user");
             $this->form_validation->set_rules('password','password','required|trim');              
     	    $this->form_validation->set_message('required','Campo requerido %s');    	    
@@ -33,7 +48,7 @@ class Dashboard extends CI_Controller {
             }         
             echo json_encode($data);  
             exit();           
-        }
+//        }
     }
     
     public function validar_user($email){
