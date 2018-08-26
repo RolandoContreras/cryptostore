@@ -23,7 +23,7 @@
                 <script src="plugins/html5.js"></script>
         <![endif]-->
         <script>
-            var site = '<?php echo site_url();?>';
+            var site = '<?php echo site_url().'dashboard/';?>';
         </script>
     </head>
     <body>
