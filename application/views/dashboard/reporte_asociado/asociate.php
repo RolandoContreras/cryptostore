@@ -4,226 +4,102 @@
 <script src="static/cms/js/core/jquery.dataTables.min.js"></script>
 <link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
 
-
+<div id="main_content" class="span10">
 <div class="row-fluid">
-    <div class="span6">
-            <div class="widget_container">
-                    <div class="well nomargin">
+        <div class="widget_container">
+            <div class="well nomargin" style="padding:10px;">
                             <div class="navbar navbar-static navbar_as_heading">
                                     <div class="navbar-inner">
                                             <div class="container" style="width: auto;">
-                                                    <a class="brand">Vista Global de Asociados</a>
+                                                    <a class="brand">Vista Global de Clientes</a>
                                             </div>
                                     </div>
                             </div>
                             <table id="quick_view" class="table">
                                     <thead>
-                                            <tr>
-                                                    <th>CONCEPTO</th>
-                                                    <th>TOTAL</th>
-                                            </tr>
-                                    </thead><!-- table heading -->
+                                        <tr>
+                                            <th>CONCEPTO</th>
+                                            <th>TOTAL</th>
+                                        </tr>
+                                    </thead>
                                     <tbody>
-                                            <tr>
-                                                    <td><a>Total Asociados</a></td>
-                                                    <td><b><?php echo $obj_customer;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Asociados Pagados</a></td>
-                                                <td><b><?php echo $obj_pagados;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Asociados Financiados</a></td> 
-                                                <td><b><?php echo $obj_financiado;?></b></td>
-                                            </tr>
+                                        <tr>
+                                            <td><a><i class="fa fa-users"></i> Total Clientes</a></td>
+                                            <td><b><?php echo $obj_total_customer;?></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a><i class="fa fa-users"></i> Total Clientes Activos</a></td>
+                                            <td><b><?php echo $obj_total_activos;?></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a><i class="fa fa-users"></i> Total Clientes Inactivos</a></td>
+                                            <td><b><?php echo $obj_total_inactivos;?></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a><i class="fa fa-users"></i> Total Clientes en <?php echo $year;?></a></td>
+                                            <td><b><?php echo $obj_total_customer_year;?></b></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a><i class="fa fa-users"></i> Total Clientes <?php echo $month;?></a></td>
+                                            <td><b><?php echo $obj_total_customer_month;?></b></td>
+                                        </tr>
                                     </tbody>
                             </table>
                     </div>
-            </div>
-                
-            <div class="widget_container">
-                    <div class="well nomargin">
-                            <div class="navbar navbar-static navbar_as_heading">
-                                    <div class="navbar-inner">
-                                            <div class="container" style="width: auto;">
-                                                    <a class="brand">Activos e Inactivos</a>
-                                            </div>
-                                    </div>
-                            </div>
-                            <table id="quick_view" class="table">
-                                    <thead>
-                                            <tr>
-                                                    <th>CONCEPTO</th>
-                                                    <th>TOTAL</th>
-                                            </tr>
-                                    </thead><!-- table heading -->
-                                    <tbody>
-                                           <tr>
-                                               <td><a>Asociados Activo</a></td>
-                                                <td><b><?php echo $obj_activos;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a>Asociados Inactivos</a></td>
-                                                    <td><b><?php echo $obj_inactivos;?></b></td>
-                                            </tr>
-                                    </tbody>
-                            </table>
-                    </div>
-            </div>
-        
-            <div class="widget_container">
-                    <div class="well nomargin">
-                            <div class="navbar navbar-static navbar_as_heading">
-                                    <div class="navbar-inner">
-                                            <div class="container" style="width: auto;">
-                                                    <a class="brand">Ratio de Asociados Haciendo la Red</a>
-                                            </div>
-                                    </div>
-                            </div>
-                            <table id="quick_view" class="table">
-                                    <thead>
-                                            <tr>
-                                                    <th>CONCEPTO</th>
-                                                    <th>TOTAL</th>
-                                            </tr>
-                                    </thead><!-- table heading -->
-                                    <tbody>
-                                           <tr>
-                                               <td><a>Ratio de Asociados</a></td>
-                                                <td><b><?php echo $ratio;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a>Promedio de Asociados Activos</a></td>
-                                                    <td><b><?php echo $promedio;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a>Porcentaje de Retención de  Asociados Activos</a></td>
-                                                    <td><b><?php echo $porcentaje_retencion."%";?></b></td>
-                                            </tr>
-                                            
-                                            <tr>
-                                                    <td><a>Promedio de Asociados Pagados</a></td>
-                                                    <td><b><?php echo $promedio_pagado;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a>Porcentaje de Retención de  Asociados Pagados</a></td>
-                                                    <td><b><?php echo $porcentaje_retencion_pagado."%";?></b></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a>Promedio Total de Asociados </a></td>
-                                                    <td><b><?php echo $promedio_total;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a>Porcentaje de Retención Total de  Asociados</a></td>
-                                                    <td><b><?php echo $porcentaje_retencion_total."%";?></b></td>
-                                            </tr>
-                                    </tbody>
-                            </table>
-                    </div>
-            </div>
-        
-              <div class="widget_container">
-                    <div class="well nomargin">
-                            <div class="navbar navbar-static navbar_as_heading">
-                                    <div class="navbar-inner">
-                                            <div class="container" style="width: auto;">
-                                                    <a class="brand">Medias Absolutas</a>
-                                            </div>
-                                    </div>
-                            </div>
-                            <table id="quick_view" class="table">
-                                    <thead>
-                                            <tr>
-                                                    <th>CONCEPTO</th>
-                                                    <th>TOTAL</th>
-                                            </tr>
-                                    </thead><!-- table heading -->
-                                    <tbody>
-                                           <tr>
-                                               <td><a>Media de Promedio </a></td>
-                                                <td><b><?php echo $media_promedio;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                    <td><a>Media de Porcentaje de Retención</a></td>
-                                                    <td><b><?php echo $media_porcentaje."%";?></b></td>
-                                            </tr>
-                                    </tbody>
-                            </table>
-                    </div>
-            </div>
-        
-    </div>
-
-        <div class="span6">
-                  <div class="widget_container">
-                    <div class="well nomargin">
-                            <div class="navbar navbar-static navbar_as_heading">
-                                    <div class="navbar-inner">
-                                            <div class="container" style="width: auto;">
-                                                    <a class="brand">Crecimiento Primer año</a>
-                                            </div>
-                                    </div>
-                            </div>
-                            <table id="quick_view" class="table">
-                                    <thead>
-                                            <tr>
-                                                    <th>MESES</th>
-                                                    <th>TOTAL</th>
-                                            </tr>
-                                    </thead><!-- table heading -->
-                                    <tbody>
-                                            <tr>
-                                                    <td><a>Enero</a></td>
-                                                    <td><b><?php echo $obj_grow_year->enero;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Febrero</a></td>
-                                                <td><b><?php echo $obj_grow_year->febrero;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Marzo</a></td> 
-                                                <td><b><?php echo $obj_grow_year->marzo;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Abril</a></td> 
-                                                <td><b><?php echo $obj_grow_year->abril;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Mayo</a></td> 
-                                                <td><b><?php echo $obj_grow_year->mayo;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Junio</a></td> 
-                                                <td><b><?php echo $obj_grow_year->junio;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Julio</a></td> 
-                                                <td><b><?php echo $obj_grow_year->julio;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Agosto</a></td> 
-                                                <td><b><?php echo $obj_grow_year->agosto;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Setiembre</a></td> 
-                                                <td><b><?php echo $obj_grow_year->septiembre;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Octubre</a></td> 
-                                                <td><b><?php echo $obj_grow_year->octubre;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Noviembre</a></td> 
-                                                <td><b><?php echo $obj_grow_year->noviembre;?></b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><a>Diciembre</a></td> 
-                                                <td><b><?php echo $obj_grow_year->diciembre;?></b></td>
-                                            </tr>
-                                    </tbody>
-                            </table>
-                    </div>
-            </div>
         </div>
+        <div class="widget_container">
+                    <div class="well nomargin" style="padding:10px;">
+                            <div class="chart-container">
+                                <canvas id="chart"></canvas>
+                            </div>
+                    </div>
+            </div>
+    </div>
+    <input type="hidden" id="ene" value="<?php echo $obj_customer_by_month->total_ene;?>"/>
+    <input type="hidden" id="feb" value="<?php echo $obj_customer_by_month->total_feb;?>"/>
+    <input type="hidden" id="mar" value="<?php echo $obj_customer_by_month->total_mar;?>"/>
+    <input type="hidden" id="abr" value="<?php echo $obj_customer_by_month->total_abr;?>"/>
+    <input type="hidden" id="may" value="<?php echo $obj_customer_by_month->total_may;?>"/>
+    <input type="hidden" id="jun" value="<?php echo $obj_customer_by_month->total_jun;?>"/>
+    <input type="hidden" id="jul" value="<?php echo $obj_customer_by_month->total_jul;?>"/>
+    <input type="hidden" id="ago" value="<?php echo $obj_customer_by_month->total_ago;?>"/>
+    <input type="hidden" id="set" value="<?php echo $obj_customer_by_month->total_set;?>"/>
+    <input type="hidden" id="oct" value="<?php echo $obj_customer_by_month->total_oct;?>"/>
+    <input type="hidden" id="nov" value="<?php echo $obj_customer_by_month->total_nov;?>"/>
+    <input type="hidden" id="dic" value="<?php echo $obj_customer_by_month->total_dic;?>"/>
 </div>
+<script>
+    var ene = document.getElementById('ene').value;
+    var ctx = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Setiembre", "Octubre", "Noviembre", "Diciembre"],
+        datasets: [{
+            label: "Clientes por mes",
+            backgroundColor: 'transparent',
+            borderColor: 'rgb(14, 11, 63)',
+            borderWidth: 2,
+            hoverBackgroundColor: "rgba(14, 11, 63,0.4)",
+            hoverBorderColor: "rgba(14, 11, 63)",
+            data: [0, 10, 5, 2, 20, 30, 45,0, 10, 5, 2, 20]
+        }]
+    },
+    options: {}
+});
+</script>
+<style>
+canvas {
+  border: 1px dotted blue;
+}
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 60vh;
+  width: 60vw;
+}
+</style>
 <script src="static/cms/js/panel.js"></script>

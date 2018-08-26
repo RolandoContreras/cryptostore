@@ -44,6 +44,8 @@
             var site = '<?php echo site_url();?>';
         </script>
         <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+        
     </head>
 <body>
 <!-- top fixed navbar -->
@@ -92,10 +94,7 @@
                                             <li><a href="<?php echo site_url()."dashboard/inversores";?>"><i class="icon-large icon-th"></i>Comentarios Inversores</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/informativos";?>"><i class="icon-large icon-th"></i>Mensajes Informativos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/noticias";?>"><i class="icon-large icon-th"></i>Noticias</a></li>
-                                            
-                                            <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
-                                            <?php } ?>
                                         </ul>
                                         </div>
                                     </div>
@@ -125,13 +124,10 @@
                                     <div class="accordion-inner">
                                         <ul class="nav nav-list">
                                             <li>
-                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Total Comisiones</a>
+                                                <a href="<?php echo site_url()."dashboard/report_customer";?>"><i class="icon-large icon-th"></i>Total Clientes</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Comisión x Asociado</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Asociados</a>
+                                                <a href="javascript:void(0);"><i class="icon-large icon-th"></i>Total Ventas</a>
                                             </li>
                                         </ul>                                     
                                     </div>

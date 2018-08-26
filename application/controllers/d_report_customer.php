@@ -11,79 +11,67 @@ class D_report_customer extends CI_Controller{
     public function index(){  
             //GER SESSION
             $this->get_session();
+            //GET YEAR
+            $year = date("Y");
+            $date_start = "$year-01-01";
+            $date_end = "$year-12-31";
+            //GET MONTH
+            $month = date("m");
+            $first_month_day =  first_month_day($month, $year);
+            //get last day of this month
+            $last_month_day = last_month_day($month, $year);
+            //get month name
+            $month = mostrar_mes($month);
             //GET AND COUNT ALL THE CUSTOMER
-            
-            
-        $params = array("select" =>"count(customer_id) as customer_id,
-                                    (select count(customer_id) from customer where financy = 1) as financiado,
+            $params = array("select" =>"count(customer_id) as customer_id,
+                                    (select count(customer_id) from customer where created_at BETWEEN '$date_start' AND '$date_end') as total_year,
+                                    (select count(customer_id) from customer where created_at BETWEEN '$first_month_day' AND '$last_month_day') as total_month,
                                     (select count(customer_id) from customer where active = 1) as activos,
-                                    (select count(customer_id) from customer where active = 0) as inactivos,
-                                    (select count(customer_id) from customer where financy = 0) as pagados,");
+                                    (select count(customer_id) from customer where active = 0) as inactivos");
         $obj_customer = $this->obj_customer->get_search_row($params);
-        
-        //TOTAL FINANCIADOS
-        $obj_financiado = $obj_customer->financiado;
         //TOTAL ACTIVOS
-        $obj_activos = $obj_customer->activos;
+        $obj_total_activos = $obj_customer->activos;
         //TOTAL ACTIVOS
-        $obj_inactivos = $obj_customer->inactivos;
+        $obj_total_inactivos = $obj_customer->inactivos;
         //TOTAL CUSTOMER
-        $obj_pagados = $obj_customer->pagados;
-        //TOTAL CUSTOMER
-        $obj_customer = $obj_customer->customer_id;
-        
-        //CRECIMIENTO EN EL PRIMER AÑO
-        $params_grow = array("select" =>"(select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-01-01' AND '2017-01-31') as enero,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-02-01' AND '2017-02-31') as febrero,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-03-01' AND '2017-03-31') as marzo,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-04-01' AND '2017-04-31') as abril,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-05-01' AND '2017-05-31') as mayo,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-06-01' AND '2017-06-31') as junio,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-07-01' AND '2017-07-31') as julio,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-08-01' AND '2017-08-31') as agosto,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-09-01' AND '2017-09-31') as septiembre,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-10-01' AND '2017-10-31') as octubre,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-11-01' AND '2017-11-31') as noviembre,
-                                    (select count(customer_id) from customer where franchise_id <> 6 and date_start BETWEEN '2017-12-01' AND '2017-12-31') as diciembre");
-        $obj_grow_year = $this->obj_customer->get_search_row($params_grow);
-        
-        //RATIO DE ACTIVOS
-        $param_ratio = array("select" =>"customer_id",
-                            "where" => "active = 1");
-        $obj_active = $this->obj_customer->search($param_ratio);
-        
-        //for para hallar los activos haciendo la red
-        $ratio = 0;
-        foreach ($obj_active as $key => $value) {
-            
-                     $param_ratio_parents = array("select" =>"count(customer_id) as ratio",
-                            "where" => "parents_id = $value->customer_id");
-        $obj_ratio = $this->obj_customer->get_search_row($param_ratio_parents);
-            //IF RATIO > 0 THEN SUM
-            if($obj_ratio->ratio > 0 ){
-                $ratio = $ratio + 1;
-            }
-        }
-        
-        //PROMEDIO RATIO
-        $promedio = number_format($obj_activos / $ratio,3);
-        $porcentaje_retencion = number_format(($ratio /$obj_activos) * 100,2);
-        
-        //PROMEDIO RATIO PAGADOS
-        $promedio_pagado = number_format($ratio/$obj_pagados ,3);
-        $porcentaje_retencion_pagado = number_format(($ratio /$obj_pagados) * 100,2);
+        $obj_total_customer = $obj_customer->customer_id;
+        //TOTAL CUSTOMER THIS YEAR
+        $obj_total_customer_month = $obj_customer->total_month;
+        //TOTAL CUSTOMER THIS YEAR
+        $obj_total_customer_year = $obj_customer->total_year;
 
-        //PROMEDIO RATIO TOTAL
-        $promedio_total = number_format($ratio/$obj_customer ,3);
-        $porcentaje_retencion_total = number_format(($ratio /$obj_customer) * 100,2);
+        //GET TOTAL FOM MONTH
+        $last_month_ene = last_month_day(1, $year);
+        $last_month_feb = last_month_day(2, $year);
+        $last_month_mar = last_month_day(3, $year);
+        $last_month_abr = last_month_day(4, $year);
+        $last_month_may = last_month_day(5, $year);
+        $last_month_jun = last_month_day(6, $year);
+        $last_month_jul = last_month_day(7, $year);
+        $last_month_ago = last_month_day(8, $year);
+        $last_month_set = last_month_day(9, $year);
+        $last_month_oct = last_month_day(10, $year);
+        $last_month_nov = last_month_day(11, $year);
+        $last_month_dic = last_month_day(12, $year);
         
-        //MEDIAS ABSOLUTAS
         
-        $media_promedio = ( $promedio + $promedio_pagado + $promedio_total) / 3;
-        $media_porcentaje = ( $porcentaje_retencion + $porcentaje_retencion_pagado + $porcentaje_retencion_total) / 3;
-        
-        /// PAGINADO
-            $modulos ='reportes/asociados'; 
+        //GET AND COUNT ALL THE CUSTOMER
+            $params = array("select" =>"(select count(customer_id) from customer where created_at BETWEEN '$year-01-01' AND '$last_month_ene') as total_ene,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-02-01' AND '$last_month_feb') as total_feb,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-03-01' AND '$last_month_mar') as total_mar,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-04-01' AND '$last_month_abr') as total_abr,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-05-01' AND '$last_month_may') as total_may,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-06-01' AND '$last_month_jun') as total_jun,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-07-01' AND '$last_month_jul') as total_jul,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-08-01' AND '$last_month_ago') as total_agos,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-09-01' AND '$last_month_set') as total_set,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-10-01' AND '$last_month_oct') as total_oct,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-11-01' AND '$last_month_nov') as total_nov,
+                                        (select count(customer_id) from customer where created_at BETWEEN '$year-12-01' AND '$last_month_dic') as total_dic");
+            $obj_customer_by_month = $this->obj_customer->get_search_row($params);
+            
+            // PAGINADO
+            $modulos ='reportes/report_customer'; 
             $seccion = 'Lista';        
             $link_modulo =  site_url().'dashboard/'.$modulos; 
             /// DATA
@@ -93,24 +81,15 @@ class D_report_customer extends CI_Controller{
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             
-            $this->tmp_mastercms->set("media_promedio",$media_promedio);
-            $this->tmp_mastercms->set("media_porcentaje",$media_porcentaje);
             
-            $this->tmp_mastercms->set("promedio_total",$promedio_total);
-            $this->tmp_mastercms->set("porcentaje_retencion_total",$porcentaje_retencion_total);
-            
-            $this->tmp_mastercms->set("promedio_pagado",$promedio_pagado);
-            $this->tmp_mastercms->set("porcentaje_retencion_pagado",$porcentaje_retencion_pagado);
-            
-            $this->tmp_mastercms->set("ratio",$ratio);
-            $this->tmp_mastercms->set("promedio",$promedio);
-            $this->tmp_mastercms->set("porcentaje_retencion",$porcentaje_retencion);
-            $this->tmp_mastercms->set("obj_grow_year",$obj_grow_year);
-            $this->tmp_mastercms->set("obj_activos",$obj_activos);
-            $this->tmp_mastercms->set("obj_inactivos",$obj_inactivos);
-            $this->tmp_mastercms->set("obj_pagados",$obj_pagados);
-            $this->tmp_mastercms->set("obj_customer",$obj_customer);
-            $this->tmp_mastercms->set("obj_financiado",$obj_financiado);
+            $this->tmp_mastercms->set("month",$month);
+            $this->tmp_mastercms->set("year",$year);
+            $this->tmp_mastercms->set("obj_total_customer_year",$obj_total_customer_year);
+            $this->tmp_mastercms->set("obj_total_customer_month",$obj_total_customer_month);
+            $this->tmp_mastercms->set("obj_total_activos",$obj_total_activos);
+            $this->tmp_mastercms->set("obj_total_inactivos",$obj_total_inactivos);
+            $this->tmp_mastercms->set("obj_total_customer",$obj_total_customer);
+            $this->tmp_mastercms->set("obj_customer_by_month",$obj_customer_by_month);
             $this->tmp_mastercms->render("dashboard/reporte_asociado/asociate");
     }
     
