@@ -25,8 +25,8 @@ class D_report_sell extends CI_Controller{
             $params = array("select" =>"count(sell_id) as sell_id,
                                         (select sum(amount) from sell where active = 3) as total_amount,
                                         (select sum(amount) from sell where active = 3 and date BETWEEN '$date_start' AND '$date_end') as total_amount_year,
-                                        (select sum(amount) from sell where date BETWEEN '$first_month_day' AND '$last_month_day') as total_amout_month,
-                                        (select count(sell_id) from sell where active = 3 and date BETWEEN '$date_start' AND '$date_end') as total_year,
+                                        (select sum(amount) from sell where active = 3 and date BETWEEN '$first_month_day' AND '$last_month_day') as total_amout_month,
+                                        (select count(sell_id) from sell where date BETWEEN '$date_start' AND '$date_end') as total_year,
                                         (select count(sell_id) from sell where date BETWEEN '$first_month_day' AND '$last_month_day') as total_month,
                                         (select count(sell_id) from sell where active = 3) as procesadas,
                                         (select count(sell_id) from sell where active = 2) as canceladas");
