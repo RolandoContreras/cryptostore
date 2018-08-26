@@ -3,7 +3,7 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>CriptoStore | Compra Bitcoin</title>
+        <title>Easycripto | Compra Bitcoin</title>
         <base href="<?php echo site_url();?>">
         <link rel="shortcut icon" href="<?php echo site_url().'static/images/icon.ico';?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,9 @@
         <!--[if lt IE 9]>
                 <script src="plugins/html5.js"></script>
         <![endif]-->
-        
+        <script>
+            var site = '<?php echo site_url();?>';
+        </script>
     </head>
     <body>
         

@@ -6,7 +6,7 @@ $(".btn-primary").on("click",function(){
      
     $.ajax({
         type: "Post",
-        url: "dashboard/validate",
+        url: site+"dashboard/validate",
         dataType: "json",
         data: {email : username, password:password},
         success:function(data){            

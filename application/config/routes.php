@@ -113,6 +113,8 @@ $route['register/afiliate/([0-9a-z_-]+)'] = "register/index/$1";
 
 //MANAGER - DASHBOARD
 $route['dashboard'] = "dashboard";
+$route['dashboard/validate'] = "dashboard/validate";
+
 $route['dashboard/panel'] = "panel";
 $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
@@ -145,8 +147,6 @@ $route['dashboard/comentarios'] = "d_comments";
 $route['dashboard/inversores'] = "d_comments/invest";
 $route['dashboard/comentarios/cambiar_status'] = "d_comments/change_status";
 $route['dashboard/comentarios/cambiar_status_no'] = "d_comments/change_status_no";
-
-$route['dashboard/validate'] = "dashboard/validate";
 
 $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios/load'] = "d_users/load";
