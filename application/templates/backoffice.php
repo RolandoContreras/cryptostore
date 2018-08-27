@@ -8,37 +8,22 @@
 <meta name="keywords" content="easycripto,bitcoin,comprar bitcoins,compra bitcoins,criptomonedas,adquirir bitcoins,vende bitcoin">
 <title>EasyCripto | Compra Bitcoin</title>
 <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
-<!-- Site favicon -->
 <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>" type="image/x-icon">
 <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>" type="image/x-icon">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>">
-<!-- /site favicon -->
-<!-- Entypo font stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/entypo.css';?>" rel="stylesheet">
-<!-- /entypo font stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/one/style_one.css';?>" rel="stylesheet">
-<!-- Font awesome stylesheet -->
-<link href="<?php // echo site_url().'static/backoffice/css/assets/font-awesome.min.css';?>" rel="stylesheet">
-<!-- /font awesome stylesheet -->
-
-<!-- Bootstrap stylesheet min version -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/bootstrap.min.css';?>" rel="stylesheet">
-
-<!-- /bootstrap stylesheet min version -->
-
-<!-- Mouldifi core stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-core.css';?>" rel="stylesheet">
-<!-- /mouldifi core stylesheet -->
 <link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-forms.css';?>" rel="stylesheet">
-
+<link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/style_price.css';?>">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
       <script src="js/respond.min.js"></script>
 <![endif]-->
-
 <!--[if lte IE 8]>
 	<script src="js/plugins/flot/excanvas.min.js"></script>
 <![endif]-->

@@ -58,6 +58,10 @@ function format_number_2decimal($number){
     $number = number_format($number, 2, '.', ',');
     return $number;
 }
+function format_number_6decimal($number){
+    $number = number_format($number, 6, '.', ',');
+    return $number;
+}
 
 function formato_fecha($fecha){    
     $dia=substr($fecha, 8, 2);

@@ -1,0 +1,205 @@
+/* --------------------------
+:: 9.0 Pricing Plan Area CSS
+-------------------------- */
+.pricing-plane-area {
+    background: #f5f9fc;
+}
+
+.single-price-plan {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 30px 30px 30px 30px;
+    margin-bottom: 30px;
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+}
+
+.single-price-plan:hover{
+     -webkit-box-shadow: 10px 10px 20px #000;
+            box-shadow: 0 10px 20px #000;
+}
+
+.single-price-plan .package-plan {
+    padding: 20px;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px solid;
+    border-color: #ae841a;
+}
+
+.single-price-plan .package-plan > h5 {
+    color: #000;
+    font-size: 18px;
+}
+
+
+.single-price-plan .package-plan .ca-price h4 {
+    color: #ff6b09;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.single-price-plan .package-plan .ca-price span {
+    font-size: 18px;
+    color: #fb397d;
+}
+
+.single-price-plan .plan-button > a {
+    background: -webkit-linear-gradient(to left, #efb810, #ae841a);
+    background: -webkit-linear-gradient(right, #efb810, #ae841a);
+    background: -webkit-gradient(linear, right top, left top, from(#efb810), to(#ae841a));
+    background: -o-linear-gradient(right, #efb810, #ae841a);
+    background: linear-gradient(to left, #efb810, #ae841a);
+    padding: 10px 0;
+    border-bottom-right-radius: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.criptomonedas {
+    border-radius: 30px !important;
+}
+
+.criptomonedas_2 {
+    border-radius: 30px !important;
+    font-size: 13px !important;
+    padding: 5px 0 !important;
+}
+.height-15{
+    height: 15px;
+}
+.single-price-plan .package-description > p {
+    border-bottom: 1px solid #ebebeb;
+    padding: 30px; 
+    line-height: 35px;
+    color: #647585;
+}
+
+.single-price-plan .package-description > p:first-child {
+    border-top: 1px solid #ebebeb;
+}
+
+.single-price-plan.active .package-plan,
+.single-price-plan.active .plan-button > a,
+.single-price-plan:hover .plan-button > a {
+    background-color: #a865e1;
+}
+
+.single-price-plan.active .package-plan .ca-price > h4,
+.single-price-plan.active .package-plan .ca-price > span,
+.single-price-plan.active .package-plan > h5,
+.single-price-plan.active .plan-button > a {
+    color: #fff;
+}
+.currency_text{
+font-size: 15px;
+line-height: 88%;
+font-weight: 700;
+color: #002166;
+letter-spacing: 0px;
+text-align: center;
+padding: 10px;
+}
+
+.currency_text_all{
+font-size: 16px;
+line-height: 88%;
+font-weight: 600;
+color: #000;
+letter-spacing: 0px;
+text-align: center;
+text-transform: uppercase;
+}
+.prince_all{
+    color: #b38a0c;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.text-red{
+    color: red;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.text-green{
+    color: green;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+header .container {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+.separador-padding {
+    padding: 0 0 5px 0;
+}
+.separador-cripto-all-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+.floatleft {
+    float: left;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+.margin-top-50 {
+    margin-top: 50px;
+}
+.text-center {
+    text-align: center !important;
+}
+.margin-top-porcentaje {
+    margin-top: 20px;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-variacion-positivo {
+    font-size: 14px;
+    color: #61CA00;
+}   
+.margin-top-4 {
+    margin-top: 4px;
+}
+.text-center {
+    text-align: center !important;
+}
+.margin-top-10 {
+    margin-top: 10px;
+}
+.cryptocurrency {
+    color: #F7921A !important;
+    background-color: #ffffff !important;
+    border-color: #F7921A !important;
+}
+h6{
+ font-size: 14px !important;   
+}
