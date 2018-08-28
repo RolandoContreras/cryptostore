@@ -39,7 +39,6 @@ class B_home extends CI_Controller {
         $obj_btc = $btc;
         $obj_btc_10 = $btc * 1.10;
         
-        
         $eth = $this->eth_price();
         $obj_eth = $eth;
         $obj_eth_10 = $eth * 1.10;

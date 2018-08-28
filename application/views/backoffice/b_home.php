@@ -306,7 +306,7 @@
             </div>    
             <div class="container">
             <div class="col-lg-12">
-                <div class="row padding_bottom_50 margin-top-50">
+                <div class="row margin-top-50">
                     <div class="col-sm-6 margin-top-10 bloqueGris_1">
                         <div id="bloqueGris-original" class="col-lg-12 bloqueGris_1">
                                         <div class="col-lg-12">
@@ -325,27 +325,27 @@
                                                     </span>
                                                     <input class="form-control" onkeyup="validate_usd(this.value);" style="height: 44px;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="100" type="text">
                                                     <input name="currency" id="currency" value="bitcoin" type="hidden"> 
-                                                    <input name="btc_price" id="btc_price" value="7432.599734901" type="hidden"> 
-                                                    <input name="dash_price" id="dash_price" value="171.6961546564" type="hidden"> 
-                                                    <input name="eth_price" id="eth_price" value="306.2005982783" type="hidden"> 
-                                                    <input name="litecoin_price" id="litecoin_price" value="63.85403693625" type="hidden"> 
-                                                    <input name="bch_price" id="bch_price" value="584.4639303767" type="hidden"> 
-                                                    <input name="cardano_price" id="cardano_price" value="0.10853381561" type="hidden"> 
-                                                    <input name="monero_price" id="monero_price" value="109.90393134985" type="hidden"> 
-                                                    <input name="ripple_price" id="ripple_price" value="0.36325688938" type="hidden"> 
-                                                    <input name="verge_price" id="verge_price" value="0.0157559182" type="hidden"> 
-                                                    <input name="zcash_price" id="zcash_price" value="158.0588782168" type="hidden"> 
-                                                    <input name="tron_price" id="tron_price" value="0.02663537063" type="hidden"> 
-                                                    <input name="omisego_price" id="omisego_price" value="4.49511197971" type="hidden"> 
-                                                    <input name="siacoin_price" id="siacoin_price" value="0.00641587188" type="hidden"> 
-                                                    <input name="nxt_price" id="nxt_price" value="0.07609423327" type="hidden"> 
+                                                    <input name="btc_price" id="btc_price" value="<?php echo $obj_btc_10;?>" type="hidden"> 
+                                                    <input name="dash_price" id="dash_price" value="<?php echo $obj_dash_10;?>" type="hidden"> 
+                                                    <input name="eth_price" id="eth_price" value="<?php echo $obj_eth_10;?>" type="hidden"> 
+                                                    <input name="litecoin_price" id="litecoin_price" value="<?php echo $obj_litecoin_10;?>" type="hidden"> 
+                                                    <input name="bch_price" id="bch_price" value="<?php echo $obj_bch_10;?>" type="hidden"> 
+                                                    <input name="cardano_price" id="cardano_price" value="<?php echo $obj_cardano_10;?>" type="hidden"> 
+                                                    <input name="monero_price" id="monero_price" value="<?php echo $obj_monero_10;?>" type="hidden"> 
+                                                    <input name="ripple_price" id="ripple_price" value="<?php echo $obj_ripple_10;?>" type="hidden"> 
+                                                    <input name="verge_price" id="verge_price" value="<?php echo $obj_verge_10;?>" type="hidden"> 
+                                                    <input name="zcash_price" id="zcash_price" value="<?php echo $obj_zcash_10;?>" type="hidden"> 
+                                                    <input name="tron_price" id="tron_price" value="<?php echo $obj_tron_10;?>" type="hidden"> 
+                                                    <input name="omisego_price" id="omisego_price" value="<?php echo $obj_omisego_10;?>" type="hidden"> 
+                                                    <input name="siacoin_price" id="siacoin_price" value="<?php echo $obj_siacoin_10;?>" type="hidden"> 
+                                                    <input name="nxt_price" id="nxt_price" value="<?php echo $obj_nxt_10;?>" type="hidden"> 
                                                 </div>
                                                 <span id="message" style="font-size:11px; display: none;" class="field-validation-error"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
                                             </div>
                                         </div>
                                     </div>
                     </div>
-                    <div class="col-sm-6 margin-top-10">
+                    <div class="col-sm-6 margin-top-10 bloke_change">
                         <div id="bloqueGris-original" class="col-lg-12 bloqueGris_2">
                             <div class="col-lg-12">
                                 <h4 class="question_currency">¿Qué criptomoneda quieres?</h4>
@@ -363,7 +363,7 @@
                                     <span style="cursor:pointer;display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
                                 </div>
                             </div>
-                            <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 381px; display: none;">
+                            <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 92%; display: none; margin-top: 22%;">
                                 <?php foreach ($obj_currency as $value) { ?>
                                 <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>','<?php echo $value->img;?>');">
                                                 <span>
@@ -378,15 +378,16 @@
                             </div>
                         </div>
                     </div>
+                   
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
                     <div class="col-sm-6 margin-top-10">
-                        <div class="text-center">
-                            <input class="submit_btn_comprar" value="Comprar" type="submit">
-                        </div>
+                        <input class="submit_btn_comprar" value="Comprar" type="submit">
                     </div>
                 </div>
             </div>
-            </div>
-        </div>
         </div>
    </section>
 <script src="<?php echo site_url().'static/backoffice/js/home.js';?>"></script>

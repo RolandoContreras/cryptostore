@@ -407,3 +407,46 @@ submit_btn_comprar:hover {
     white-space: nowrap;
     vertical-align: middle;
 }
+.box-dropdown-cryptocurrency {
+    border-radius: 4px;
+    padding: 7px 10px 10px 10px;
+    margin-bottom: 15px;
+    background-color: #999999;
+    position: absolute;
+    z-index: 100;
+    right: 15px;
+    display: none;
+    text-align: left;
+}
+.selecformaspago-desplegable {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 44px;
+    padding: 3px 10px;
+    color: #666666;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.deplegable-criptomonedas {
+    width: 401px;
+    z-index: 999999;
+    max-height: 306px !important;
+    overflow-y: scroll;
+}
+.img_cripto {
+    width: 35px;
+    padding-right: 5px;
+    margin-left: 8px;
+}
+/*error message*/
+.field-validation-error {
+    border: none;
+    font-size: 1px;
+    background-color: rgba(236, 187, 185, 0.52);
+    color: #ff0000;
+    padding: 5px 15px;
+    margin: 5px 0;
+    display: block;
+}
