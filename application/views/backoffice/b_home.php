@@ -71,7 +71,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_btc);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_bch);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_eth);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +119,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_dash);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_litecoin);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_cardano);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +172,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_monero);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_ripple);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +204,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_verge);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_zcash);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -236,7 +236,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_tron);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +252,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_omisego);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +273,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_siacoin);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -289,7 +289,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_nxt);?></h4>                                   
                                     </div>
-                                    <h6 style="color: #BCC0CA;">por moneda</h6>
+                                    <h6>por moneda</h6>
                                 </div>
                             </div>
                         </div>
@@ -297,11 +297,18 @@
                 </div>
             </div>
             <!--BUY BITCOIN-->
-            
+             <div class="col-lg-12">
+                <div class="section-heading row">
+                    <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
+                        <h1 class="title text-uppercase">COMPRA</h1>
+                    </div>
+                </div> 
+            </div>    
+            <div class="container">
             <div class="col-lg-12">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
+                <div class="row padding_bottom_50 margin-top-50">
+                    <div class="col-sm-6 margin-top-10 bloqueGris_1">
+                        <div id="bloqueGris-original" class="col-lg-12 bloqueGris_1">
                                         <div class="col-lg-12">
                                             <h4 class="question_currency">
                                                 ¿Cuánto quieres comprar?
@@ -316,7 +323,7 @@
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-usd fa-2x"></i>
                                                     </span>
-                                                    <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="100" type="text">
+                                                    <input class="form-control" onkeyup="validate_usd(this.value);" style="height: 44px;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="100" type="text">
                                                     <input name="currency" id="currency" value="bitcoin" type="hidden"> 
                                                     <input name="btc_price" id="btc_price" value="7432.599734901" type="hidden"> 
                                                     <input name="dash_price" id="dash_price" value="171.6961546564" type="hidden"> 
@@ -333,52 +340,52 @@
                                                     <input name="siacoin_price" id="siacoin_price" value="0.00641587188" type="hidden"> 
                                                     <input name="nxt_price" id="nxt_price" value="0.07609423327" type="hidden"> 
                                                 </div>
-                                                <span id="message" style="font-size:11px; display: none;" class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
+                                                <span id="message" style="font-size:11px; display: none;" class="field-validation-error"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
                                             </div>
                                         </div>
                                     </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
-                                        <div class="col-lg-12">
-                                            <h4 class="question_currency">
-                                                ¿Cuánto quieres comprar?
-                                            </h4>
-                                            <p class="p_currency">
-                                                Introduce la cantidad en dólares que deseas comprar en criptomonedas.
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="calculador">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-usd fa-2x"></i>
-                                                    </span>
-                                                    <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="100" type="text">
-                                                    <input name="currency" id="currency" value="bitcoin" type="hidden"> 
-                                                    <input name="btc_price" id="btc_price" value="7432.599734901" type="hidden"> 
-                                                    <input name="dash_price" id="dash_price" value="171.6961546564" type="hidden"> 
-                                                    <input name="eth_price" id="eth_price" value="306.2005982783" type="hidden"> 
-                                                    <input name="litecoin_price" id="litecoin_price" value="63.85403693625" type="hidden"> 
-                                                    <input name="bch_price" id="bch_price" value="584.4639303767" type="hidden"> 
-                                                    <input name="cardano_price" id="cardano_price" value="0.10853381561" type="hidden"> 
-                                                    <input name="monero_price" id="monero_price" value="109.90393134985" type="hidden"> 
-                                                    <input name="ripple_price" id="ripple_price" value="0.36325688938" type="hidden"> 
-                                                    <input name="verge_price" id="verge_price" value="0.0157559182" type="hidden"> 
-                                                    <input name="zcash_price" id="zcash_price" value="158.0588782168" type="hidden"> 
-                                                    <input name="tron_price" id="tron_price" value="0.02663537063" type="hidden"> 
-                                                    <input name="omisego_price" id="omisego_price" value="4.49511197971" type="hidden"> 
-                                                    <input name="siacoin_price" id="siacoin_price" value="0.00641587188" type="hidden"> 
-                                                    <input name="nxt_price" id="nxt_price" value="0.07609423327" type="hidden"> 
-                                                </div>
-                                                <span id="message" style="font-size:11px; display: none;" class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
-                                            </div>
-                                        </div>
+                    <div class="col-sm-6 margin-top-10">
+                        <div id="bloqueGris-original" class="col-lg-12 bloqueGris_2">
+                            <div class="col-lg-12">
+                                <h4 class="question_currency">¿Qué criptomoneda quieres?</h4>
+                                <p class="p_currency">Selecciona tu criptomoneda a comprar.</p>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="calculador">
+                                    <div class="input-group">
+                                        <span class="input-group-addon" id="img_currency" style="width: 10%;" width="50">
+                                            <img src='<?php echo site_url()."static/page_front/images/monedas/btc-logo.png";?>' alt="bitcoin" style="margin-bottom: 3px;"/>
+                                        </span>
+                                        <input id="amount_cripto" readonly="readonly" name="amount_cripto" class="form-control erroneous-input" style="height: 44px;"  placeholder="0" value="<?php echo $obj_btc_10;?>" type="text">
                                     </div>
+                                    <span style="cursor:pointer" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
+                                    <span style="cursor:pointer;display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
+                                </div>
+                            </div>
+                            <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 381px; display: none;">
+                                <?php foreach ($obj_currency as $value) { ?>
+                                <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>','<?php echo $value->img;?>');">
+                                                <span>
+                                                    <img class="img_cripto" src='<?php echo site_url()."static/page_front/images/monedas/$value->img";?>' width="20"/>
+                                                </span>
+                                                <span class="textoGrisInputsDropdown">
+                                                    <?php echo $value->name;?>
+                                                </span>
+                                           </div>                      
+                                <?php } ?>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 margin-top-10">
+                        <div class="text-center">
+                            <input class="submit_btn_comprar" value="Comprar" type="submit">
+                        </div>
                     </div>
                 </div>
             </div>
-            
+            </div>
         </div>
         </div>
    </section>

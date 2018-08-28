@@ -35,11 +35,12 @@
 
 .single-price-plan .package-plan .ca-price h4 {
     color: #ff6b09;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
     z-index: 1;
     margin-bottom: 0;
     line-height: 1;
+    font-weight: bolder;
 }
 
 .single-price-plan .package-plan .ca-price span {
@@ -202,4 +203,207 @@ header .container {
 }
 h6{
  font-size: 14px !important;   
+}
+.section-heading{
+    background-size: cover;
+    min-height: 100px;
+}
+.bloqueGris {
+    color: #ffffff;
+}
+.bloqueGris_1 {
+    background: -webkit-linear-gradient(to left, #efb810, #ae841a);
+    background: -webkit-linear-gradient(right, #efb810, #ae841a);
+    background: -webkit-gradient(linear, right top, left top, from(#efb810), to(#ae841a));
+    background: -o-linear-gradient(right, #efb810, #ae841a);
+    background: linear-gradient(to left, #efb810, #ae841a);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+    padding-bottom: 50px !important;
+    padding: 10px 0;
+    display: block;
+    color: #ffffff;
+}
+.bloqueGris_2 {
+    background: -webkit-linear-gradient(to left, #efb810, #ae841a);
+    background: -webkit-linear-gradient(right, #efb810, #ae841a);
+    background: -webkit-gradient(linear, right top, left top, from(#efb810), to(#ae841a));
+    background: -o-linear-gradient(right, #efb810, #ae841a);
+    background: linear-gradient(to left, #efb810, #ae841a);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+    padding-top: 20px !important;
+    padding-bottom: 2px !important;
+    display: block;
+    color: #ffffff;
+}
+
+.bloqueGris_1{
+    padding-bottom: 15px !important;
+}
+
+.padding_bottom_50{
+    padding-bottom: 50px;
+}
+.floatright {
+    float: right !important;
+}
+.icono-dropdown-cryptocurrency {
+    position: relative;
+    right: 30px;
+    top: -36px;
+    color: #575757;
+    z-index: 9;
+}
+.margin-top-100{
+    margin-top: 50px;
+}
+/*//footer*/
+.bottom_bg{
+    margin-top: 80px;
+    background: url(../images/bg-bottom.jpg) center top no-repeat #000;
+}
+.footer
+{
+	padding-top: 55px;
+	padding-bottom: 55px;
+        color: rgba(255,255,255,.7);
+        background-color: transparent;
+        background-image: url(../images/bg-bottom.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        border: none;
+}
+.footer p
+{
+	color: #fff !important;
+        font-size: 12px;
+}
+.footer_logo
+{
+	padding-left: 0px;
+	margin-bottom: 39px;
+}
+.footer_logo a
+{
+	color: #fff;
+	line-height: 1;
+}
+.footer_intro p
+{
+	margin-bottom: 0px;
+}
+.footer_social
+{
+	margin-top: 27px;
+}
+.footer_social ul
+{
+	display: inline-block;
+	margin-left: -5px;
+}
+.footer_social ul li
+{
+	display: inline-block;
+	margin-right: 22px;
+}
+.footer_social ul li a
+{
+	padding: 5px;
+}
+.footer_social ul li a i
+{
+	font-size: 12px;
+	color: #bab6c3;
+}
+.footer_social ul li a:hover i
+{
+	color: #1b0d37;
+}
+.footer_col
+{
+	margin-bottom: 27px;
+}
+.footer_col:last-child
+{
+	margin-bottom: 0px;
+}
+.footer_col_title
+{
+	font-size: 15px;
+	font-weight: 500;
+        color: #dfaf1f;
+        text-transform: uppercase;
+        font-weight: bolder;
+	margin-bottom: 9px;
+        margin-left: 25px;
+}
+.circle
+{
+	list-style-type:circle !important;
+        color: #fff !important;
+}
+.footer_col ul li a
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+         
+}
+.footer_col ul li a:hover
+{
+       color: #ae841a !important;
+}
+.redes{
+    color: #000 !important;
+}
+.redes:hover{
+    color: #000 !important;
+}
+.button_comprar{
+    font-size: 18px !important;
+}
+.button a:hover{
+    color: #ffd800 !important;
+}
+
+.footer_col ul li a:hover
+{
+	color: #28262d;
+}
+/*BOTON COMPRAR*/
+.submit_btn_comprar{
+    height: 54px;
+    width: 100%;
+    color: #99760a !important;
+    text-align: center;
+    border: solid 2px #99760a;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
+submit_btn_comprar:hover {
+    color: #fff !important;
+    border: solid 2px #99760a;
+    background: #99760a !important;
+    color: #452b78;
+    cursor: pointer !important;
+}
+.input-group-addon-2{
+    width: 11%;
+    white-space: nowrap;
+    vertical-align: middle;
 }
