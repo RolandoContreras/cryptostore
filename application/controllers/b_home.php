@@ -92,22 +92,6 @@ class B_home extends CI_Controller {
         $obj_nxt = $nxt;
         $obj_nxt_10 = $nxt * 1.10;
         
-        $params = array(
-                        "select" =>"customer.customer_id,
-                                    customer.username,
-                                    customer.email,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.active,
-                                    customer.dni,
-                                    customer.birth_date,
-                                    customer.created_at,
-                                    customer.status_value,
-                                    ",
-                         "where" => "customer.customer_id = $customer_id",
-                                        );
-            $obj_customer = $this->obj_customer->get_search_row($params);
-            
             //RENDER DATA PRICE
             $this->tmp_backoffice->set("obj_nxt_10",$obj_nxt_10);
             $this->tmp_backoffice->set("obj_nxt",$obj_nxt);
@@ -155,7 +139,7 @@ class B_home extends CI_Controller {
             $this->tmp_backoffice->set("obj_currency",$obj_currency);
             $this->tmp_backoffice->set("messages_informative",$messages_informative);
             $this->tmp_backoffice->set("obj_news",$obj_news);
-            $this->tmp_backoffice->set("obj_customer",$obj_customer);
+//            $this->tmp_backoffice->set("obj_customer",$obj_customer);
             $this->tmp_backoffice->render("backoffice/b_home");
     }
     
