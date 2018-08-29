@@ -42,7 +42,7 @@
                     <div class="home_background prlx" style="background-image:url(<?php echo site_url().'static/page_front/images/bg_header.jpg';?>)"></div>
 		</div>
 		<!-- Hero Slider -->
-		<div class="hero_slider_container">
+		<div class="hero_slider_container margin-top-50">
 				<div class="hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
 					<span></span>
                                         <span></span>
@@ -51,7 +51,7 @@
                                         
                                         
                                         <form action="<?php echo site_url().'buy/bank';?>" method="post">
-                                        <div class="with400 margin-top-50">
+                                        <div class="with500 margin-top-50">
                                             <div class="input-group">
                                                 <span class="input-group-addon" style="font-size: 14px !important;color: #F7921A;">
                                                         <i class="fa fa-usd fa-2x"></i>
@@ -73,7 +73,7 @@
                                                     <input type="hidden" name="siacoin_price" id="siacoin_price" value="<?php echo $siacoin_price;?>"/> 
                                                     <input type="hidden" name="nxt_price" id="nxt_price" value="<?php echo $nxt_price;?>"/> 
                                              </div>
-                                            <span id="message_home" style="font-size:11px; display: none; " class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
+                                            <!--<span id="message_home" style="font-size:11px; display: none; " class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>-->
                                             <div class="input-group">
                                                 <span class="input-group-addon" id="img_currency" style="font-size: 18px;">
                                                     <?php 
@@ -85,9 +85,9 @@
                                                 </span>
                                                 <input id="amount_cripto" readonly="readonly" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;" placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
                                             </div>
-                                            <span style="cursor:pointer; margin-top: -27px; color: #000;" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
+                                            <span style="cursor:pointer; margin-top: -21px; font-size: 25px; color: #000;" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
                                             <span style="cursor:pointer; margin-top: -27px; color: #000; display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
-                                            <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 381px; display: none;">
+                                            <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 485px; display: none;">
                                             <?php foreach ($obj_currency as $value) { ?>
                                             <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>','<?php echo $value->img;?>');">
                                                             <span>
