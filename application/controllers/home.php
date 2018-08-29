@@ -271,7 +271,7 @@ class Home extends CI_Controller {
             $data['amount_btc'] =  $value / $price;
             
             $images = site_url()."static/page_front/images/monedas/$img";
-            $img = "<img src='$images' alt='criptomoneda' width='30'/>";
+            $img = "<img src='$images' alt='criptomoneda' width='28'/>";
             
             //SEND DATA
             $data['img'] =  $img;            
