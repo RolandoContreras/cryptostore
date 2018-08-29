@@ -22,17 +22,21 @@
                                             <tr>
                                                  <th>Fecha</th>
                                                  <th>Monto</th>
+                                                 <th>Moneda</th>
+                                                 <th>Cantidad</th>
                                                  <th>Estado</th>
                                             </tr>
                                          </thead>
                                  <tbody>
                                      <?php foreach ($obj_sell as $value) { ?>
                                       <tr>
-                                          <td><?php echo formato_fecha($value->date);?></td>
+                                          <td><?php echo formato_fecha_barras($value->date);?></td>
                                           <td><b><?php echo format_number_dolar($value->amount);?></b></td>
+                                          <td><b><img src='<?php echo site_url()."static/page_front/images/monedas/$value->img";?>' width="30" alt="<?php echo $value->currency;?>"/>&nbsp;&nbsp;<?php echo $value->currency;?></b></td>
+                                          <td><b><?php echo $value->amount_btc;?></b></td>
                                           <td>
                                                <?php if ($value->active == 1) {
-                                                    $valor = "En Proceso";
+                                                    $valor = "Pendiente";
                                                     $stilo = "label label-default";
                                                 }elseif($value->active == 2){
                                                     $valor = "Cancelado";
