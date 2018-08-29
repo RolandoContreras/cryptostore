@@ -109,6 +109,7 @@ class Home extends CI_Controller {
              $price = $json[0]['price_usd'];
              return $price;
     }
+    
     public function eth_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/ethereum";
              $fgc = file_get_contents($url);
@@ -116,6 +117,7 @@ class Home extends CI_Controller {
              $price = $json[0]['price_usd'];
              return $price;
     }
+    
     public function bch_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/bitcoin-cash";
              $fgc = file_get_contents($url);
@@ -123,6 +125,7 @@ class Home extends CI_Controller {
              $price = $json[0]['price_usd'];
              return $price;
     }     
+    
     public function dash_price(){
              $url = "https://api.coinmarketcap.com/v1/ticker/dash/";
              $fgc = file_get_contents($url);
@@ -139,6 +142,7 @@ class Home extends CI_Controller {
              $price = $price * 1.10;
              return $price;
     }
+    
     public function eth_price_10(){
              $url = "https://api.coinmarketcap.com/v1/ticker/ethereum";
              $fgc = file_get_contents($url);

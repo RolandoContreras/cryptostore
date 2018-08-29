@@ -86,7 +86,7 @@
                                     </div>
                                     <div class="col-xs-6 col-md-6">
                                         <div class="wow bounceInLeft animated animated" style="visibility: visible;">
-                                            <input onkeyup="fade_password(this.value);"  class="form-control form-control-2" id="password" name="password" placeholder="Indicanos tu contraseña" type="text">
+                                            <input onkeyup="fade_password(this.value);"  class="form-control form-control-2" id="password" name="password" placeholder="Indicanos tu contraseña" type="password">
                                         <span id="message_password" class="field-validation-error" style="display:none;">Ingrese contraseña valida</span>
                                         </div>
                                     </div>

@@ -1034,3 +1034,8 @@ label {
 .error{
    border-color: red !important;
 }
+.textoGrisInputsDropdown{
+    font-size: 14px;
+    color:#000 !important;
+    font-weight: 0 !important;
+}

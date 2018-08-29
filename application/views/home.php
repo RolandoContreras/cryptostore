@@ -43,16 +43,15 @@
 		</div>
 		<!-- Hero Slider -->
 		<div class="hero_slider_container">
-			<!-- Slider -->
-			<div class="owl-carousel owl-theme hero_slider">
-				<!-- Slider Item -->
-				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
+				<div class="hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
 					<span></span>
                                         <span></span>
 					<span>CRIPTOMONEDAS</span>
 					<span>seguro, facil y rápido</span>
+                                        
+                                        
                                         <form action="<?php echo site_url().'buy/bank';?>" method="post">
-                                        <div class="with400 margin-top-20">
+                                        <div class="with400 margin-top-50">
                                             <div class="input-group">
                                                 <span class="input-group-addon" style="font-size: 14px !important;color: #F7921A;">
                                                         <i class="fa fa-usd fa-2x"></i>
@@ -74,20 +73,41 @@
                                                     <input type="hidden" name="siacoin_price" id="siacoin_price" value="<?php echo $siacoin_price;?>"/> 
                                                     <input type="hidden" name="nxt_price" id="nxt_price" value="<?php echo $nxt_price;?>"/> 
                                              </div>
-                                            <span id="message" style="font-size:11px; display: none;" class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
+                                            <span id="message_home" style="font-size:11px; display: none; " class="field-validation-error" data-valmsg-for="Nombre" data-valmsg-replace="true"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
                                             <div class="input-group">
-                                                <span class="input-group-addon" id="img_currency">
-                                                    <img src="http://localhost/cryptostore/static/page_front/images/monedas/btc-logo.png" alt="criptomoneda" style="width:30px !important;">
+                                                <span class="input-group-addon" id="img_currency" style="font-size: 18px;">
+                                                    <?php 
+                                                        if(isset($img)){ ?>
+                                                            <img src='<?php echo site_url()."static/page_front/images/monedas/$img";?>' alt="criptomoneda" width="30"/>
+                                                        <?php  }else{ ?>
+                                                            <img src='<?php echo site_url()."static/page_front/images/monedas/btc-logo.png";?>' alt="criptomoneda" width="30"/>
+                                                        <?php }  ?>
                                                 </span>
                                                 <input id="amount_cripto" readonly="readonly" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;" placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
                                             </div>
+                                            <span style="cursor:pointer; margin-top: -27px; color: #000;" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
+                                            <span style="cursor:pointer; margin-top: -27px; color: #000; display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
+                                            <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 381px; display: none;">
+                                            <?php foreach ($obj_currency as $value) { ?>
+                                            <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>','<?php echo $value->img;?>');">
+                                                            <span>
+                                                                <img class="img_cripto" src='<?php echo site_url()."static/page_front/images/monedas/$value->img";?>' width="20"/>
+                                                            </span>
+                                                            <span class="textoGrisInputsDropdown" style="font-size: 14px;color:#000 !important">
+                                                                <?php echo $value->name;?>
+                                                            </span>
+                                                       </div>                      
+                                            <?php } ?>
                                             
+                                        </div>
                                             <div class="text-center">
                                                 <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="Comprar">
                                             </div>
                                         </div>
                                         
                                         </form>
+                                        
+                                        
                                         <span id="compra">COMPRA CRIPTOMONEDAS DE MANERA SEGURA</span>
                                         <div class="align-items-center justify-content-center">
                                             <div class="double_arrow nav_links rotare270" data-scroll-to=".icon_boxes">
@@ -96,20 +116,11 @@
                                             </div>
                                         </div>
 				</div>
-			</div>
-			<!-- Hero Slider Navigation Left -->
-			<div class="hero_slider_nav hero_slider_nav_left">
-				<div class="hero_slider_prev d-flex flex-column align-items-center justify-content-center trans_200">
-					<i class="fa fa-chevron-left trans_200"></i>
-				</div>
-			</div>
-			<!-- Hero Slider Navigation Right -->
-			<div class="hero_slider_nav hero_slider_nav_right">
-				<div class="hero_slider_next d-flex flex-column align-items-center justify-content-center trans_200">
-					<i class="fa fa-chevron-right trans_200"></i>
-				</div>
-			</div>
 		</div>
+
+                                
+                
+                
 		<div class="hero_side_text_container">
                     <div class="hero_side_text">
                         <div class="col-lg-2">
@@ -122,7 +133,13 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
+                    
 		</div>
+                
+                
+                
 	</div>
         <!--CRIPTOCURRENCY-->
         <div class="icon_boxes">
@@ -462,7 +479,7 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
-<script src="<?php echo site_url().'static/page_front/js/buy.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/home.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/contact_home.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>
