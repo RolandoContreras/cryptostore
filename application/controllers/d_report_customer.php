@@ -76,6 +76,22 @@ class D_report_customer extends CI_Controller{
             $link_modulo =  site_url().'dashboard/'.$modulos; 
             /// DATA
             
+            $params = array(
+                        "select" =>"customer.customer_id,
+                                    customer.first_name,
+                                    customer.email,
+                                    customer.dni,
+                                    customer.last_name,
+                                    paises.nombre as country,
+                                    customer.created_at,
+                                    customer.active,
+                                    customer.status_value",
+                        "join" => array('paises, customer.country = paises.id'),
+                        "where" => "created_at BETWEEN '$first_month_day' AND '$last_month_day' and customer.status_value = 1 and id_idioma = 7"
+               );
+           //GET DATA FROM CUSTOMER
+           $obj_customer= $this->obj_customer->search($params);
+            
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
@@ -90,6 +106,7 @@ class D_report_customer extends CI_Controller{
             $this->tmp_mastercms->set("obj_total_inactivos",$obj_total_inactivos);
             $this->tmp_mastercms->set("obj_total_customer",$obj_total_customer);
             $this->tmp_mastercms->set("obj_customer_by_month",$obj_customer_by_month);
+            $this->tmp_mastercms->set("obj_customer",$obj_customer);
             $this->tmp_mastercms->render("dashboard/reporte_asociado/asociate");
     }
     

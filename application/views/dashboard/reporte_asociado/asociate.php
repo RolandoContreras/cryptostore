@@ -67,6 +67,54 @@
     <input type="hidden" id="oct" value="<?php echo $obj_customer_by_month->total_oct;?>"/>
     <input type="hidden" id="nov" value="<?php echo $obj_customer_by_month->total_nov;?>"/>
     <input type="hidden" id="dic" value="<?php echo $obj_customer_by_month->total_dic;?>"/>
+    
+    <div class="row-fluid">
+        <div class="widget_container">
+            <div class="well">
+                    <div class="navbar navbar-static navbar_as_heading">
+                            <div class="navbar-inner">
+                                    <div class="container" style="width: auto;">
+                                            <a class="brand">LISTA DE USUARIO MES - <?php echo $month;?> </a>
+                                            <button class="btn btn-small" onclick="expert();"><i class="fa fa-bookmark"></i> Exportar Clientes</button>
+                                    </div>
+                            </div>
+                    </div>
+                <div class="well nomargin" style="width: 100% !important;">
+                    <!--- INCIO DE TABLA DE RE4GISTRO -->
+                   <table id="table" class="display" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>CODIGO</th>
+                                <th>USUARIO</th>
+                                <th>ASOCIADO</th>
+                                <th>PAÍS</th>
+                                <th>ESTADO</th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($obj_customer as $value): ?>
+                                <td align="center"><b><?php echo $value->customer_id;?></b></td>
+                                <td align="center" style="color:#fff;" class="label-success"><?php echo $value->email;?></td>
+                                <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center"><b><?php echo $value->country;?></b></td>
+                                <td align="center">
+                                    <?php if ($value->active == 0) {
+                                        $valor = "Inactivo";
+                                        $stilo = "label label-important";
+                                    }else{
+                                        $valor = "Activo";
+                                        $stilo = "label label-success";
+                                    } ?>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div><!-- main content -->
 </div>
 <script>
     var ene = document.getElementById('ene').value;
@@ -114,4 +162,10 @@ canvas {
   width: 60vw;
 }
 </style>
-<script src="static/cms/js/panel.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+    $('#table').dataTable( {
+         "order": [[ 0, "desc" ]]
+    } );
+} );
+</script>

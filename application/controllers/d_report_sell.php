@@ -79,6 +79,25 @@ class D_report_sell extends CI_Controller{
                                         (select sum(amount) from sell where active = 3 and date BETWEEN '$year-12-01' AND '$last_month_dic') as total_dic");
             $obj_sell_by_month = $this->obj_sell->get_search_row($params);
             
+            //GET SELL THIS MONTH
+            $params = array(
+                        "select" =>"sell.sell_id,
+                                    currency.name as currency,
+                                    sell.date,
+                                    sell.type_pay,
+                                    sell.amount,
+                                    sell.amount_btc,
+                                    sell.wallet,
+                                    sell.email,
+                                    sell.phone,
+                                    sell.active",
+                        "join" => array('currency, sell.currency_id = currency.currency_id'),
+                        "where" => "sell.status_value = 1",
+                        "order" => "sell.sell_id DESC"
+               );
+           //GET DATA FROM CUSTOMER
+           $obj_sell = $this->obj_sell->search($params);
+            
             // PAGINADO
             $modulos ='reportes/report_customer'; 
             $seccion = 'Lista';        
@@ -104,6 +123,7 @@ class D_report_sell extends CI_Controller{
             $this->tmp_mastercms->set("obj_total_canceladas",$obj_total_canceladas);
             $this->tmp_mastercms->set("obj_total_sell",$obj_total_sell);
             $this->tmp_mastercms->set("obj_sell_by_month",$obj_sell_by_month);
+            $this->tmp_mastercms->set("obj_sell",$obj_sell);
             $this->tmp_mastercms->render("dashboard/reporte_ventas/ventas");
     }
     
