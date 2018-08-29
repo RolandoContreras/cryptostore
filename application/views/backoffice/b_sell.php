@@ -10,13 +10,13 @@
         </div>
          <!-- Page content-->
          <!--<div class="content-wrapper">-->
-            <div class="row">
+            <div class="row padding-botom-150">
                <div class="col-lg-12">
-                     <div class="panel panel-info">
+                     <div class="panel panel-warning">
                         <div class="panel-heading">
                            Compras
                         </div>
-                                <div role="alert" class="alert alert-success" style="overflow:auto;">
+                                <div role="alert" class="alert alert-default" style="overflow:auto;">
                                     <table id="table" class="display table table-striped table-hover">
                                         <thead>
                                             <tr>
