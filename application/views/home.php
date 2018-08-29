@@ -84,9 +84,9 @@
                                                 </span>
                                                 <input id="amount_cripto" readonly="readonly" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;" placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
                                             </div>
-                                            <span style="cursor:pointer; margin-top: -21px; font-size: 25px; color: #000;" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
-                                            <span style="cursor:pointer; margin-top: -27px; color: #000; display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
-                                            <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 485px; display: none;">
+                                            <span style="cursor:pointer; margin-top: -21px; font-size: 25px; color: #000;" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down cursor_arrow"></span>
+                                            <span style="cursor:pointer; margin-top: -27px; color: #000; display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up cursor_down"></span>
+                                            <div id="crypto-container" class="width-crypto box-dropdown-cryptocurrency deplegable-criptomonedas">
                                             <?php foreach ($obj_currency as $value) { ?>
                                             <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>','<?php echo $value->img;?>');">
                                                             <span>

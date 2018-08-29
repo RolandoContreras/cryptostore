@@ -712,6 +712,9 @@
         .item_1 span:nth-child(3) {
             font-size: 30px;
         }
+        .with500 {
+            width: 260px !important;
+        }
         #compra {
             font-size: 11px;
             margin-top: 6px;
@@ -783,6 +786,17 @@
         .padding-responsive{
             padding-bottom: 22px;
         }
+        .with500 {
+            width: 260px !important;
+        }
+        .cursor_arrow{
+            margin-top: -11px;
+        }
+        .cursor_down{
+            margin-top: -17px;
+            font-size: 20px;
+        }
+        
 }
 
 /************
@@ -793,6 +807,24 @@
 {
 	.cta_image img {
             margin-left: 18px;
+        }
+        .with500 {
+            width: 257px !important;
+        }
+        .cursor_arrow{
+            margin-top: -11px !important;
+        }
+        #price_dolar{
+            height: 43px !important; 
+        }
+        .submit_btn_comprar {
+            height: 50px !important;
+        }
+        .double_arrow {
+            margin-top: 31px;
+        }
+        .width-crypto{
+            width: 243px !important;
         }
 }
 
