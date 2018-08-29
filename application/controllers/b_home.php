@@ -32,8 +32,7 @@ class B_home extends CI_Controller {
                         );
 
         $obj_currency = $this->obj_currency->search($params);
-        
-//        $obj_number = 100;
+
         //GET PRICE CURRENCY
         $btc = $this->btc_price();
         $obj_btc = $btc;
@@ -135,10 +134,10 @@ class B_home extends CI_Controller {
             $this->tmp_backoffice->set("obj_btc_10",$obj_btc_10);
             $this->tmp_backoffice->set("obj_btc",$obj_btc);
         
+            $this->tmp_backoffice->set("price_btc",$obj_btc);
             $this->tmp_backoffice->set("obj_currency",$obj_currency);
             $this->tmp_backoffice->set("messages_informative",$messages_informative);
             $this->tmp_backoffice->set("obj_news",$obj_news);
-//            $this->tmp_backoffice->set("obj_customer",$obj_customer);
             $this->tmp_backoffice->render("backoffice/b_home");
     }
     
@@ -167,7 +166,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -176,7 +174,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -185,7 +182,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }     
     
@@ -194,7 +190,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -203,7 +198,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -212,7 +206,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -221,7 +214,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -230,7 +222,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -239,7 +230,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -248,7 +238,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -257,7 +246,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -266,7 +254,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -275,7 +262,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -284,7 +270,6 @@ class B_home extends CI_Controller {
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
              $price = $json[0]['price_usd'];
-             $price = $price * 1.10;
              return $price;
     }
     
@@ -310,43 +295,6 @@ class B_home extends CI_Controller {
             echo json_encode($new_data);
             }
     } 
-    
-    public function make_pedido(){
-
-             if($this->input->is_ajax_request()){   
-                //SELECT ID FROM CUSTOMER
-               $franchise_id = $this->input->post('franchise_id');
-               $customer_id = $_SESSION['customer']['customer_id'];
-               //verify
-               
-               
-               
-               if(($franchise_id != "") && ($customer_id != "")){
-                            //UPDATE DATA EN CUSTOMER TABLE
-                         $params_total = array(
-                                "select" =>"point",
-                                 "where" => "franchise_id = $franchise_id",
-                                );
-                        $obj_franchise = $this->obj_franchise->get_search_row($params_total);    
-                        
-                        
-                        
-                        //UPDATE
-                        $data = array(
-                            'franchise_id' => $franchise_id,
-                            'point_calification_left' => $obj_franchise->point,
-                            'point_calification_rigth' => $obj_franchise->point,
-                            'updated_by' => $customer_id,
-                            'updated_at' => date("Y-m-d H:i:s")
-                        ); 
-                        $this->obj_customer->update($customer_id,$data);
-                        //send data
-                             $data['message'] = "true";
-                             echo json_encode($data); 
-                             exit();
-               }
-            }
-        }
     
     public function get_session(){          
         if (isset($_SESSION['customer'])){

@@ -4,13 +4,9 @@
             <h1 class="title text-uppercase">Perfil</h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+            <a class="white">Precio del BITCOIN: <span style='color:#D4AF37'><?php echo "$".format_number_6decimal($price_btc);?></span></a>
         </div>
     </div> 
-    <div class="tab">
-        <button class="tablinks active"  onclick="openCity(event, 'principal')"><b>INFORMACIÓN PRINCIPAL</b></button>
-        <button class="tablinks" onclick="openCity(event, 'payments')"><b>CONTRASEÑAS</b></button>
-    </div>
 <div id="principal" class="tabcontent" style="display:block !important">
     <div class="row ml-custom">
         <div class="col-xs-12">
@@ -19,7 +15,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-default panel-form" data-behaviour="container">
                             <div class="panel-heading text-uppercase clearfix">
-                                <h3 class="title"><?php echo "Información";?></h3>
+                                <h3 class="title">Información</h3>
                             </div>
                             <hr class="style-2"/>
                             <div class="panel-body">         
@@ -32,7 +28,7 @@
                                             <i class="fa fa-male fa-4x" aria-hidden="true"></i>
                                         </div>
                                         <div class="media-body">
-                                            <div class="user-name-info"><span><?php echo $obj_customer->username;?></span></div>
+                                            <div class="user-name-info"><span><?php echo $obj_customer->email;?></span></div>
                                                 <p class="form-control">
                                                     <span><?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></span>
                                                 </p>
@@ -45,9 +41,9 @@
                                     <div class="media">
                                         <div class="media-left"><i class="fa fa-envelope fa-3x"></i></div>
                                         <div class="media-body">
-                                            <div class="control-label"><?php echo "E-mail";?></div>
+                                            <div class="control-label">E-mail</div>
                                             <p class="form-control">
-                                                <span><?php echo $obj_customer->email;?></span>
+                                                <span><?php echo strtolower($obj_customer->email);?></span>
                                                 <input type="hidden" id="customer_id" name="customer_id" disabled value="<?php echo $obj_customer->customer_id;?>">
                                             </p>
                                         </div>
@@ -60,7 +56,7 @@
                                     <div class="media">
                                         <div class="media-left"><i class="fa fa-mobile fa-4x" aria-hidden="true"></i></div>
                                         <div class="media-body">
-                                            <div class="control-label"><?php echo "Teléfono Movil:";?></div>
+                                            <div class="control-label">Teléfono Movil :</div>
                                             <p class="form-control">
                                                 <span><?php echo $obj_customer->phone;?></span>
                                             </p>
@@ -78,11 +74,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <div class="panel panel-default panel-form fix-info">
                             <div class="panel-heading text-uppercase">
                                 <div class="clearfix">
-                                    <h3 class="title"><?php echo "País";?></h3>
+                                    <h3 class="title">Fecha de Nacimiento</h3>
                                 </div>
                             </div>
                             <hr class="style-1"/>
@@ -92,8 +88,31 @@
                                             <div class="media">
                                                 <div class="media-left"><i class="fa fa-calendar fa-3x"></i></div>
                                                 <div class="media-body">
-                                                     <label class="control-label"><?php echo "País :";?></label>
-                                                    <p class="form-control"><span><?php echo $obj_customer->pais;?></span></p>
+                                                     <label class="control-label">Fecha :</label>
+                                                     <p class="form-control"><span><?php echo formato_fecha_barras($obj_customer->birth_date);?></span></p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default panel-form fix-info">
+                            <div class="panel-heading text-uppercase">
+                                <div class="clearfix">
+                                    <h3 class="title">Código Postal</h3>
+                                </div>
+                            </div>
+                            <hr class="style-1"/>
+                            <div class="panel-body">
+                                <div data-behaviour="content">
+                                    <div class="form-group has-feedback">
+                                            <div class="media">
+                                                <div class="media-left"><i class="fa fa-id-card fa-3x"></i></div>
+                                                <div class="media-body">
+                                                     <label class="control-label">Número :</label>
+                                                     <p class="form-control"><span><?php echo $obj_customer->postal;?></span></p>
                                                 </div>
                                             </div>
                                     </div>
@@ -105,7 +124,11 @@
                     <div class="panel panel-default panel-form fix-info">
                         <div class="panel-heading text-uppercase">
                             <div class="clearfix">
-                                <h3 class="title"><?php echo "Identificación";?></h3>
+                                <h3 class="title">Identificación
+                                    <?php $obj_customer->dni == "" ? $style="disable":$style=""?>
+                                    <div class="pull-right">
+                                        <input onclick="alter_dni();" <?php echo $style;?> class="submit_btn_comprar" value="Guardar" style="height: 40px !important; ">
+                                 </div></h3>
                             </div>
                         </div>
                         <hr class="style-1"/>
@@ -115,8 +138,16 @@
                                     <div class="media">
                                         <div class="media-left"><i class="fa fa-id-card fa-3x"></i></div>
                                         <div class="media-body">
-                                             <label class="control-label"><?php echo "Pasaporte / Numero de Identidad:";?></label>
-                                             <p class="form-control"><span><?php echo $obj_customer->dni;?></span></p>
+                                             <label class="control-label">Pasaporte / Numero de Identidad :</label>
+                                             <?php 
+                                             if($obj_customer->dni == ""){ ?>
+                                                 <input type="text" id="dni" name="dni" required="required" class="form-control form-control"/>
+                                                 <span id="dni_success" style="font-size: 12px; display: none;" class="label label-success">Dni Guardado</span>
+                                            </div>
+                                             <?php }else{ ?>
+                                                <p class="form-control"><span><?php echo $obj_customer->dni;?></span></p>
+                                             <?php } ?>
+                                                
                                         </div>
                                     </div>
                                 </div>
@@ -124,32 +155,40 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default panel-form" data-behaviour="container">
                         <div class="panel-heading text-uppercase clearfix">
-                            <h3 class="title"><?php echo "Dirección";?></h3>
+                            <h3 class="title">Dirección</h3>
                         </div>
                        <hr class="style-2"/> 
                         <div class="panel-body">
                                 <div data-behaviour="content">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <div class="media">
                                                 <div class="media-left"><i class="fa fa-globe fa-3x"></i></div>
                                                 <div class="media-body">
-                                                     <label class="control-label"><?php echo "Región :";?></label>
-                                                     <p class="form-control"><span><?php echo $obj_customer->region;?></span></p>
+                                                     <label class="control-label">Pais :</label>
+                                                     <p class="form-control"><span><?php echo $obj_customer->pais;?></span></p>
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-4">
                                             <div class="media">
                                                 <div class="media-left"><i class="fa fa-globe fa-3x"></i></div>
                                                 <div class="media-body">
-                                                    <label class="control-label"><?php echo "Ciudad :";?></label>
+                                                     <label class="control-label"><?php echo "Provincia :";?></label>
+                                                     <p class="form-control"><span><?php echo $obj_customer->provincia;?></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="media">
+                                                <div class="media-left"><i class="fa fa-globe fa-3x"></i></div>
+                                                <div class="media-body">
+                                                    <label class="control-label">Ciudad :</label>
                                                 <p class="form-control"><span><?php echo $obj_customer->city;?></span></p>
                                                 </div>
                                             </div>
@@ -159,7 +198,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label class="control-label"><?php echo "Dirección :";?></label>
+                                                <label class="control-label">Dirección :</label>
                                                     <p class="form-control"><span><?php echo $obj_customer->address;?></span></p>
                                             </div>
                                         </div>
@@ -169,47 +208,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-</div>
-</div>
-</div>
-</div>  
-<!--BANK DETAILS-->    
-<div id="payments" class="tabcontent">
-    <div class="row ml-custom">
-        <div class="col-xs-12">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default panel-form" data-behaviour="container">
-                        <div class="panel-heading text-uppercase clearfix">
-                            <h3 class="title pull-left"><?php echo replace_vocales_voculeshtml("Billetera de bitcoin");?></h3>
-                            <div class="pull-right">
-                                <button type="button" onclick="alter_btc();" class="btn btn-primary btn-sm edit-btn">
-                                    <i class="fa fa-floppy-o" aria-hidden="true"></i>Guardar </button>
-                                </div>                            
-                        </div>
-                        <hr class="style-2"/>
-                        <div class="panel-body">
-                            <div data-behaviour="content">
-                                <div class="form-group">
-                                    <label class="control-label"><?php echo replace_vocales_voculeshtml("Dirección de bitcoin: ");?></label>
-                                    <div class="form-group">
-                                        <p class="form-control">
-                                            <input type="text" id="btc" name="btc" class="form-control form-control" data-constraints="@NotEmpty" value="<?php echo $obj_customer->btc_address;?>"/>
-                                        </p>
-                                    </div>
-                                    <div id="alert_message_wallet"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
+                <div class="col-md-12">
                         <form name="form">
                         <div class="panel panel-default panel-form">
                             <div class="panel-heading text-uppercase">
-                                <h3>Cambiar Contraseña</h3>
+                                <h3 class="title">Cambiar Contraseña</h3>
                             </div>
                             <hr class="style-2">
                             <div class="panel-body">
@@ -220,7 +224,8 @@
                                         <label class="control-label required">Contraseña Actual</label>
                                         <span class="invite-link-more-info" data-tooltip data-tooltip-class="tooltip-info" title="Introduzca su contraseña actual."><i class="fa fa-lg fa-question-circle"></i></span>
                                         <input type="password" id="password" name="password" onkeyup="validate_password(this.value);" class="form-control form-control" maxlength="50" data-constraints="@NotEmpty"/>
-                                        <span class="alert-0"></span>
+                                        <span id="message" style="font-size: 12px; display: none; text-align: center" class="field-validation-error"> Contraseña Invalida</span>
+                                        <span id="message_success" style="font-size: 12px; display: none;" class="label label-success"> Contraseña Correcta</span>
                                     </div>
                                     </div>
                                     </div>
@@ -242,7 +247,7 @@
                                 <hr class="style-1">
                                     <div class="row">
                                         <div class="mb-10">
-                                            <a class="btn btn-primary btn-block" onclick="alter_password();" name="button_password" style="word-wrap: break-word; white-space: normal !important;"><?php echo replace_vocales_voculeshtml("Cambiar Contraseña");?></a>
+                                            <input onclick="alter_password();" class="submit_btn_comprar" value="Cambiar Contraseña">
                                             <div id="alert_message_password"></div>
                                         </div>
                                     </div>
@@ -252,82 +257,17 @@
                         </div>
                      </form>
                 </div>
-            </div>
         </div>
-    </div> 
-</div>    
-<script src="<?php echo site_url().'static/backoffice/js/data.js';?>"></script>
+            
+            
+            
+            </div>
+</div>
+</div>
+</div>
+</div>  
 </section>
-<script>
-function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
-<style>
-    /* Style the tab */
-div.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-/* Style the buttons inside the tab */
-div.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    
-    border-radius: 15px 15px 0px 0px;
-    -moz-border-radius: 15px 15px 0px 0px;
-    -webkit-border-radius: 15px 15px 0px 0px;
-    border: 0px solid #000000;
-    
-}
-
-/* Change background color of buttons on hover */
-div.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-div.tab button.active {
-   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
-background: #45484d; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, #45484d 0%, #000000 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-color:white;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-</style>
+<script src="<?php echo site_url().'static/backoffice/js/data.js';?>"></script>
 <script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
     
     

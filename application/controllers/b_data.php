@@ -28,11 +28,14 @@ class B_data extends CI_Controller {
 	{
         //VERIFIRY GET SESSION    
         $this->get_session();
+        
+        //GET PRICE CURRENCY
+        $btc = $this->btc_price();
+        
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
         $params = array(
                         "select" =>"customer.customer_id,
-                                    customer.username,
                                     customer.email,
                                     customer.created_at,
                                     customer.phone,
@@ -40,89 +43,33 @@ class B_data extends CI_Controller {
                                     customer.first_name,
                                     customer.last_name,
                                     customer.dni,
+                                    customer.postal,
                                     customer.birth_date,
                                     customer.address,
                                     customer.btc_address,
                                     customer.city,
+                                    customer.provincia,                                    
                                     customer.status_value,
-                                    paises.nombre as pais,
-                                    regiones.nombre as region
-                                    ",
-                        "where" => "customer.customer_id = $customer_id and paises.id_idioma = 7 and regiones.id_idioma = 7",
-                        "join" => array('paises, customer.country = paises.id',
-                                        'regiones, customer.region = regiones.id')
+                                    paises.nombre as pais",
+                        "where" => "customer.customer_id = $customer_id and paises.id_idioma = 7",
+                        "join" => array('paises, customer.country = paises.id')
                                         );
 
          $obj_customer = $this->obj_customer->get_search_row($params);  
          //GET PRICE BTC
          $price_btc = $this->btc_price();
          //SEND DATA TO VIEW  
-         $this->tmp_backoffice->set("price_btc",$price_btc);
+         $this->tmp_backoffice->set("price_btc",$btc);
          $this->tmp_backoffice->set("obj_customer",$obj_customer);
          $this->tmp_backoffice->render("backoffice/b_data");
 	}
         
         public function btc_price(){
-             $url = "https://www.bitstamp.net/api/ticker";
+             $url =  "https://api.coinmarketcap.com/v1/ticker/bitcoin";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price_btc = $json['last'];
-             $open = $json['open'];
-             
-             if($open > $price_btc){
-                 //PRICE WENT UP
-                 $color = "red";
-                 $changes = $price_btc - $open;
-                 $percent = $changes / $open;
-                 $percent = $percent * 100;
-                 $percent_change = number_format($percent, 2); 
-             }else{
-                 //PRICE WENT DOWN
-                 $color = "green";
-                 $changes = $open - $price_btc;
-                 $percent = $changes / $open;
-                 $percent = $percent * 100;
-                 $percent_change = number_format($percent, 2);   
-             }
-             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
-        }
-       
-        public function udpate_address(){
-            
-         if($this->input->is_ajax_request()){  
-           //SELECT ID FROM CUSTOMER
-           $address = $this->input->post('address');
-           $customer_id = $this->input->post('customer_id');
-
-           //UPDATE DATA EN CUSTOMER TABLE
-           $data = array(
-                           'address' => $address,
-                           'updated_by' => $customer_id,
-                           'updated_at' => date("Y-m-d H:i:s")
-                       ); 
-                       $this->obj_customer->update($customer_id,$data);
-
-                $data['message'] = "true";
-            echo json_encode($data); 
-            }
-        }
-    
-        public function update_position(){
-         if($this->input->is_ajax_request()){   
-            //SELECT ID FROM CUSTOMER
-           $pierna = $this->input->post('pierna');
-           $customer_id = $this->input->post('customer_id');
-           //UPDATE DATA EN CUSTOMER TABLE
-           $data = array(
-                           'position_temporal' => $pierna,
-                           'updated_by' => $customer_id,
-                           'updated_at' => date("Y-m-d H:i:s")
-                       ); 
-                       $this->obj_customer->update($customer_id,$data);
-
-                $data['message'] = "true";
-            echo json_encode($data); 
-            }
+             $price = $json[0]['price_usd'];
+             return $price;
         }
         
         public function update_password(){
@@ -154,7 +101,36 @@ class B_data extends CI_Controller {
                }
             }
         }
-    
+        
+        public function update_dni(){
+
+             if($this->input->is_ajax_request()){   
+                //SELECT ID FROM CUSTOMER
+               $dni = $this->input->post('dni');
+               $customer_id = $this->input->post('customer_id');
+               if($dni != ""){
+                            //UPDATE DATA EN CUSTOMER TABLE
+                            $data = array(
+                                            'dni' => $dni,
+                                            'updated_by' => $customer_id,
+                                            'updated_at' => date("Y-m-d H:i:s")
+                                        ); 
+                                        $this->obj_customer->update($customer_id,$data);
+
+                                 $data['message'] = "true";
+                                 $data['print'] = "La contraseña de cambio con exito";
+                                 $data['url'] = "misdatos";
+                             echo json_encode($data); 
+                    
+               }else{
+                     $data['message'] = "false";
+                     $data['print'] = "Las contraseñas no deben estan en blanco";
+                     $data['url'] = "misdatos";
+                     echo json_encode($data); 
+               }
+            }
+        }
+        
         public function update_btc_address(){
             
          if($this->input->is_ajax_request()){   
