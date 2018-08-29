@@ -36,18 +36,21 @@ class b_sell extends CI_Controller {
          $url = explode("/", uri_string());
             
         $params = array(
-                "select" =>"customer.username,
-                            customer.first_name,
+                "select" =>"customer.first_name,
                             customer.last_name,
+                            currency.name as currency,
+                            sell.amount,
+                            sell.date,
                             sell.amount,
                             sell.date,
                             sell.active",
-                    "join" => array('sell, customer.customer_id = sell.customer_id'),
+                    "join" => array('sell, customer.customer_id = sell.customer_id',
+                                    'currency, sell.currency_id = currency.currency_id'),
                      "where" => "customer.customer_id = $customer_id",
                      "order" => "sell.date DESC");
         //GET DATA FROM CUSTOMER
-        
         $obj_sell  = $this->obj_customer->search($params);
+        
         //SEND DATA
         $this->tmp_backoffice->set("price_btc",$price_btc);
         $this->tmp_backoffice->set("obj_sell",$obj_sell);

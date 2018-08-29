@@ -26,14 +26,68 @@ class D_informative extends CI_Controller{
             $modulos ='informativos'; 
             $seccion = 'Lista';        
             $link_modulo =  site_url().'dashboard/'.$modulos; 
-            /// DATA
-            
             /// VISTA
             $this->tmp_mastercms->set('link_modulo',$link_modulo);
             $this->tmp_mastercms->set('modulos',$modulos);
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->set("obj_messages_informative",$obj_messages_informative);
             $this->tmp_mastercms->render("dashboard/informative/informative_list");
+    }
+    
+    public function soporte(){
+        
+        //GET SESSION
+        $this->get_session();
+        $params = array(
+                        "select" =>"messages.messages_id,
+                                    customer.customer_id,
+                                    customer.email,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    messages.date,
+                                    messages.title,
+                                    messages.answer,
+                                    messages.text,
+                                    messages.active,
+                                    ",
+                        "where" => "messages.support = 1 and messages.status_value = 1",
+                        "order" => "messages_id DESC",
+                        "join" => array('customer, customer.customer_id = messages.customer_id')
+                                        );
+            $obj_message = $this->obj_messages->search($params);
+            
+            /// PAGINADO
+            $modulos ='soporte'; 
+            $seccion = 'Lista';        
+            $link_modulo =  site_url().'dashboard/'.$modulos; 
+            /// DATA
+            
+            /// VISTA
+            $this->tmp_mastercms->set('link_modulo',$link_modulo);
+            $this->tmp_mastercms->set('modulos',$modulos);
+            $this->tmp_mastercms->set('seccion',$seccion);
+            $this->tmp_mastercms->set("obj_message",$obj_message);
+            $this->tmp_mastercms->render("dashboard/messages/support_list");
+    }
+    
+    public function update(){
+            //UPDATE DATA ORDERS
+        if($this->input->is_ajax_request()){   
+                $message_id = $this->input->post("message_id");
+                $message = $this->input->post("message");
+                
+                if(count($message_id) > 0){
+                    $data = array(
+                        'active' => 0,
+                        'answer' => $message,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_messages->update($message_id,$data);
+                }
+                echo json_encode($data);            
+            exit();
+            }
     }
     
     public function load($messages_id=NULL){

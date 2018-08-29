@@ -157,8 +157,8 @@ $route['dashboard/usuarios/delete'] = "d_users/delete";
 
 $route['dashboard/confirmation_activaciones'] = "d_activate/confirmation";
 
-$route['dashboard/soporte'] = "d_messages/soporte";
-$route['dashboard/soporte/update'] = "d_messages/update";
+$route['dashboard/soporte'] = "d_informative/soporte";
+$route['dashboard/soporte/update'] = "d_informative/update";
 
 $route['dashboard/ventas_bank'] = "d_sell";
 $route['dashboard/ventas_card'] = "d_sell/card";

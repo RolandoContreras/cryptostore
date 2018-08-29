@@ -92,6 +92,7 @@
                                             <li><a href="<?php echo site_url()."dashboard/monedas";?>"><i class="icon-large icon-th"></i>Criptomonedas</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/inversores";?>"><i class="icon-large icon-th"></i>Comentarios Inversores</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/soporte";?>"><i class="icon-large icon-th"></i>Soporte</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/informativos";?>"><i class="icon-large icon-th"></i>Mensajes Informativos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/noticias";?>"><i class="icon-large icon-th"></i>Noticias</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
