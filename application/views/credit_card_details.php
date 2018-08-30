@@ -243,22 +243,29 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row margin-top-50">
+                            <div class="row">
+                                    <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
+                                    <div class="col-xs-12 col-sm-8 col-centered-nofloat" style="float: left;">
+                                         <?php 
+                                            if(isset($message)){ ?>
+                                            <span id="message_wallet" class="field-validation-error"><?php echo $message;?></span>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
                                     <a href="<?php echo site_url().'buy/bank';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder"></a>
                                 </div>
-                                <?php 
-                                    $path = site_url().'static/page_front/images/easyx200.jpg';
-                                    $img = "<img src='$path'/>"
-                                ?>
-                                <form action="<?php echo site_url().'charge_payment';?>" method="POST">
+                                <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
+                                    <form action="<?php echo site_url().'charge_payment';?>" method="POST">
                                     <input type="hidden" name="total_card" value="<?php echo $total_card;?>"/>
                                     <input type="hidden" name="tax" value="<?php echo $subtotal;?>"/>
                                     <input type="hidden" name="total_db" value="<?php echo $total_db;?>"/>
                                     <script
                                       src="https://checkout.stripe.com/checkout.js" class="stripe-button submit_btn_comprar_2"
-                                      data-key="pk_test_o0c1SIapQ0qxBEPnpdbESNtl"
+                                      data-key="pk_live_hkJ3sunnrXSMThENiXfBUlZ5"
                                       data-amount="<?php echo $total_card;?>"
                                       data-name="Easycripto"
                                       data-description="Ingrese los datos de su tarjeta"
@@ -267,10 +274,17 @@
                                       data-zip-code="false">
                                     </script>
                                   </form>
+                                </div>
+                                <?php 
+                                    $path = site_url().'static/page_front/images/easyx200.jpg';
+                                    $img = "<img src='$path'/>"
+                                ?>
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                             </div>
+                            
                     </div>
             </div>
+                </div>
         </header>
         <!--END CRYPTOCURRENCY-->
 	<!-- Footer -->

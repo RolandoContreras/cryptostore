@@ -1051,6 +1051,7 @@ label {
 }
 .stripe-button-el {
     height: 54px;
+    width: 100%;
     color: #fff !important;
     text-align: center;
     background: #99760a !important;
@@ -1080,4 +1081,10 @@ label {
     text-transform: uppercase;
     color: #452b78;
     cursor: pointer !important;
+}
+#message_wallet{
+    text-align: center;
+    font-size: 13px;
+    padding: 5px;
+    height: 50px;
 }

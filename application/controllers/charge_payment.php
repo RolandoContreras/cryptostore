@@ -8,6 +8,7 @@ class Charge_payment extends CI_Controller {
         $this->load->model('customer_model','obj_customer');
         $this->load->model('sell_model','obj_sell');
         $this->load->model('currency_model','obj_currency');
+        $this->load->model('paises_model','obj_paises');
     } 
 
     public function index(){
@@ -106,11 +107,48 @@ class Charge_payment extends CI_Controller {
             $this->logout();
             $this->load->view('confirm_credit_card');
         }else{
+            $obj_dolar = $_SESSION['buy']['price_dolar'];
+            $data['price_dolar'] = $_SESSION['buy']['price_dolar'];
+            $data['btc'] = $_SESSION['buy']['btc'];
+            $data['img'] = $_SESSION['buy']['img'];
+            $data['currency'] = $_SESSION['buy']['currency'];
+            $data['phone'] = $_SESSION['buy']['phone'];
+            $data['wallet'] = $_SESSION['buy']['wallet'];
+            $data['email'] = $_SESSION['buy']['email'];
+            $data['radio'] = $_SESSION['buy']['radio'];
+            
+            $data['name'] = $_SESSION['buy']['name'];
+            $data['last_name'] = $_SESSION['buy']['last_name'];
+            $data['day'] = $_SESSION['buy']['day'];
+            $data['month'] = $_SESSION['buy']['month'];
+            $data['year'] = $_SESSION['buy']['year'];
+            $data['address'] = $_SESSION['buy']['address'];
+            $data['postal'] = $_SESSION['buy']['postal'];
+            $data['poblacion'] = $_SESSION['buy']['poblacion'];
+            $data['provincia'] = $_SESSION['buy']['provincia'];
+            $obj_country = $_SESSION['buy']['country'];
+            
+            $subtotal = $obj_dolar * 0.02;
+            $data['subtotal'] = $subtotal;
+            $total = $obj_dolar + $subtotal;
+            $data['total'] = $total;
+            
+            //GET DATA OF COUNTRY
+            $params = array(
+                            "select" =>"nombre",
+                            "where" => "id = $obj_country and id_idioma = 7"              
+                          );            
+            //GET DATA COMMISSIONS
+            $country = $this->obj_paises->get_search_row($params);
+            $country = $country->nombre;
+            $data['country'] = $country;
+            
+            
             $data["tax"] = $tax;
             $data["total_card"] = $amount;
             $data["total_db"] = $total_db;
             $data["message"] = $message;
-            $this->load->view('creadit_card_details',$data);
+            $this->load->view('credit_card_details',$data);
         }
     }
     public function message($total_db,$btc,$currency_name,$email,$password){
@@ -133,7 +171,7 @@ class Charge_payment extends CI_Controller {
                               <ul dir='auto' style='list-style-type:disc;margin:10px 0 15px 30px;padding-left:15px' type='disc'>
                               <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Moneda: <em>$currency_name </em></li>
                                 <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Cantidad: <em>$btc</em></li>
-                                <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Total: <em>$total_db</em></li>
+                                <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Total: <em>$$total_db</em></li>
                                 <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Método de Pago: <em>Tarjeta de Crédito / Debido</em></li>
                               </ul>
                               <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><em>Datos de entrada a plataforma:</em></p>
