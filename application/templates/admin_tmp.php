@@ -36,6 +36,9 @@
         <script type="text/javascript" src="static/cms/js/browserplus-min.js"></script>
         <script type="text/javascript" src="static/cms/plugins/plupload/js/plupload.full.js"></script>
         <script type="text/javascript" src="static/cms/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
+        <!--CKEDITOR-->
+        <script src="//cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
+        <!--END CKEDITOR-->
         <script src="static/cms/js/core/jquery.validate.min.js"></script>
         <script src="static/cms/js/core/bootstrap-alert.js"></script>
         <script src="static/cms/js/demo.js"></script>
@@ -99,6 +102,23 @@
                                         </ul>
                                         </div>
                                     </div>
+                            </div>
+                        <div class="accordion-group">
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#texto">
+                                    Textos Dinámicos
+                                    </a>
+                                </div>
+                                <div id="texto" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <ul class="nav nav-list">
+                                            <li><a href="<?php echo site_url()."dashboard/legal";?>"><i class="icon-large icon-th"></i>Aviso Legal</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/privacy";?>"><i class="icon-large icon-th"></i>Política de Privacidad</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/general";?>"><i class="icon-large icon-th"></i>Condiciones Generales</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/cookies";?>"><i class="icon-large icon-th"></i>Política de Cookies</a></li>
+                                        </ul>                                     
+                                    </div>
+                                </div>
                             </div>
                         <div class="accordion-group">
                                 <div class="accordion-heading">

@@ -127,6 +127,12 @@ $route['dashboard/monedas/load/([0-9]+)'] = "d_criptocurrency/load/$1";
 $route['dashboard/monedas/validate'] = "d_criptocurrency/validate";
 $route['dashboard/monedas/delete'] = "d_criptocurrency/delete";
 
+$route['dashboard/legal'] = "d_legal"; 
+$route['dashboard/legal/save_content'] = "d_legal/save_content"; 
+$route['dashboard/privacy'] = "d_privacy"; 
+$route['dashboard/general'] = "d_general"; 
+$route['dashboard/cookies'] = "d_lcookies"; 
+
 $route['dashboard/informativos'] = "d_informative"; 
 $route['dashboard/informativos/load'] = "d_informative/load";
 $route['dashboard/informativos/load/([0-9]+)'] = "d_informative/load/$1";
