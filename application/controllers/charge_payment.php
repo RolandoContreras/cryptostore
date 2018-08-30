@@ -14,24 +14,25 @@ class Charge_payment extends CI_Controller {
         //GET SESSION
         $this->get_session();
         //DECLARO VAR MESSAGE
+        
+        var_dump($_POST);
+        die();
+        
+        $token = 'tok_1D4snpH5RFAfCeXLVxXb9cJb';
+        $type = 'card';
+        $email = 'software.contreras@gmail.com';
+        
+        var_dump($email);
+        die();
+        
+        //procees cards
+        $message = $this->stripegateway->checkout($token,$type,$email,$amount);
+        
         $data["message"] = "";
         //GET DATA POST
         $obj_total = $this->input->post("total");
         $tax = $this->input->post("tax");
         $obj_total_card = format_number_2decimal($obj_total);
-        
-        //QUITAR PUNTO
-        $obj_total_new = str_replace(".", "", $obj_total_card);
-        if(isset($_POST['btnsubmit'])){
-            $data = array(
-                 'number' => $this->input->post("card_number"),
-                 'exp_month' => $this->input->post("cc_month"),
-                 'exp_year' => $this->input->post("cc_year"),
-                 'amount' => $obj_total_new,
-            );
-        //GET MESSAGES RESPOSE   
-        $message = $this->stripegateway->checkout($data);
-        }
         
         if($message == "succeeded"){
             //GET DATA $_SESSION FOR CUSTOMER

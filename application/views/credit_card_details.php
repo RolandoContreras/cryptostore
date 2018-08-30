@@ -79,7 +79,7 @@
                     </div>
                 </div>
 			<div class="row panel-bitcoinDinero">
-                            <form action="<?php echo site_url().'buy/bank/enter_credit_card';?>" method="post">
+                            <!--<form action="<?php echo site_url().'buy/bank/enter_credit_card';?>" method="post">-->
                             <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
@@ -243,53 +243,29 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row row-centered">
-                                <div class="col-sm-2"></div>
-                                <div class="col-sm-8">
-                                    <div class="blockacepta2">
-                                        <div class="checkbox display-inline-block">
-                                            <div class="floatleft">
-                                                <label>
-                                                    <input id="card-recharge-privacity" name="card-recharge-privacity" data-val="true" data-val-required="'Voucher Privacity' no debe estar vacío." value="true" type="checkbox" required="">
-                                                    <input name="card-recharge-privacity" value="false" type="hidden">
-                                                    Acepto las <a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank">condiciones generales de la contratación</a> y la 
-                                                        <a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank">política de privacidad</a>.
-                                                </label>
-                                            </div>
-                                            <div class="floatleft">
-                                                <label>
-                                                    <input id="confirm-wallet-property" name="confirm-wallet-property" data-val="true" data-val-required="'Confirm Wallet property' no debe estar vacío." value="true" type="checkbox" required="">
-                                                    <input name="confirm-wallet-property" value="false" type="hidden">
-                                                    Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero.
-                                                </label>
-                                            </div>
-                                            <div class="floatleft">
-                                                <label>
-                                                    <input id="confirm-devolutionservice-cost" name="confirm-devolutionservice-cost" data-val="true" data-val-required="'Confirm Devolution cost' no debe estar vacío." value="true" type="checkbox" required="">
-                                                    <input name="confirm-devolutionservice-cost" value="false" type="hidden">
-                                                    Acepto la verificación de mi identidad y un coste de <a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link">devolución  mínimo de 10€ debido a gastos de gestión.</a>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <span class="field-validation-valid" data-valmsg-for="card-recharge-privacity" data-valmsg-replace="true"></span>
-                                        <span class="field-validation-valid" data-valmsg-for="confirm-wallet-property" data-valmsg-replace="true"></span>
-                                        <span class="field-validation-valid" data-valmsg-for="confirm-devolutionservice-cost" data-valmsg-replace="true"></span>
-                                    </div>
-                                </div>
-                                <div class="col-sm-2"></div>
-                            </div>
                             <div class="row margin-top-50">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
                                     <a href="<?php echo site_url().'buy/bank';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder"></a>
                                 </div>
-                                <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <input class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
-                                </div>
+                                <?php $path = site_url().'static/page_front/images/easyx200.jpg';
+                                        $img = "<img src='$path'/>"
+                                ?>
+                                <form action="<?php echo site_url().'charge_payment';?>" method="POST">
+                                    <script
+                                      src="https://checkout.stripe.com/checkout.js" class="stripe-button submit_btn_comprar_2"
+                                      data-key="pk_test_o0c1SIapQ0qxBEPnpdbESNtl"
+                                      data-amount="<?php echo format_number_2decimal($total);?>"
+                                      data-name="Easycripto"
+                                      data-description="Ingrese sus datos de tarjeta"
+                                      data-image="https://easycripto.com/static/page_front/images/easyxstripe.jpg"
+                                      data-locale="auto"
+                                      data-zip-code="true">
+                                    </script>
+                                  </form>
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                             </div>
                     </div>
-                </form>        
             </div>
         </header>
         <!--END CRYPTOCURRENCY-->

@@ -1049,3 +1049,35 @@ label {
     width: 487px;
     display: none;
 }
+.stripe-button-el {
+    height: 54px;
+    color: #fff !important;
+    text-align: center;
+    background: #99760a !important;
+    background-color: #99760a !important; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}
+.stripe-button-el span {
+    min-height: 51px !important;
+    line-height: 44px !important;
+    height: 54px;
+    color: #fff !important;
+    text-align: center;
+    padding: 1px 94px !important;
+    /*border: solid 2px #99760a;*/
+    background: #99760a !important;
+    background-color: #99760a !important; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+}

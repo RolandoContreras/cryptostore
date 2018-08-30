@@ -78,6 +78,22 @@
                         </div>
                     </div>
                 </div>
+                
+                
+                <form action="<?php echo site_url().'charge_payment';?>" method="POST">
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_test_o0c1SIapQ0qxBEPnpdbESNtl"
+                      data-amount="999"
+                      data-name="Stripe.com"
+                      data-description="Example charge"
+                      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                      data-locale="auto"
+                      data-zip-code="true">
+                    </script>
+                  </form>
+                
+                
                 <div class="row panel-bitcoinDinero">
                           <div class="modal__featured">
                             <a href="<?php echo site_url().'bank/details_credit_card';?>">
@@ -176,7 +192,7 @@
 <script>
         // Create a Stripe client.
         // Create a Public Key.
-            var stripe = Stripe('pk_live_d9865WCSsZ5cjUgmdjO4cpla');
+            var stripe = Stripe('pk_test_SCNGJ2qonbYs5a5sX5Nj0ksm');
             // Create an instance of Elements.
             var elements = stripe.elements();
             // Custom styling can be passed to options when creating an Element.

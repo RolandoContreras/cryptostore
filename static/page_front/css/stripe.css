@@ -215,3 +215,18 @@ overflow-y: auto;
     -ms-flex: 3;
         flex: 3;
     padding: 40px 30px; }
+  .stripe-button-el{
+    height: 54px;
+    color: #fff !important;
+    width: 100%;
+    text-align: center;
+    border: solid 2px #99760a;
+    background: #99760a !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #452b78;
+    cursor: pointer !important;
+  }

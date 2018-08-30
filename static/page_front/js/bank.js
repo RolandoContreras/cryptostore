@@ -79,91 +79,102 @@ function validate_credit_card(){
     //GET COMBO VALUE
     var combo = document.getElementById("country");
     var country = combo.options[combo.selectedIndex].value;
+    //VALIDATE CHECK
+    var checkbox = document.getElementById('privacity');
+    var privacity = checkbox.checked;
+    var checkbox_2 = document.getElementById('property');
+    var property = checkbox_2.checked;
+    var checkbox_3 = document.getElementById('cost');
+    var cost = checkbox_3.checked;
     
-    if(name == ""){
-        document.getElementById("message_name").style.display = "block";
-        $("#name").focus();
-    }else if(last_name == ""){
-        document.getElementById("message_last_name").style.display = "block";
-        $("#last_name").focus();
-    }else if(day == ""){
-        document.getElementById("message_day").style.display = "block";
-        $("#day").focus();
-    }else if(month == ""){
-        document.getElementById("message_month").style.display = "block";
-        $("#month").focus();
-    }else if(year == ""){
-        document.getElementById("message_year").style.display = "block";
-        $("#year").focus();
-    }else if(address == ""){
-        document.getElementById("message_address").style.display = "block";
-        $("#address").focus();
-    }else if(postal == ""){
-        document.getElementById("message_postal").style.display = "block";
-        $("#postal").focus();
-    }else if(poblacion == ""){
-        document.getElementById("message_poblacion").style.display = "block";
-        $("#poblacion").focus();
-    }else if(provincia == ""){
-        document.getElementById("message_provincia").style.display = "block";
-        $("#provincia").focus();
-    }else{
-        //VALIDATE DAY
-        var length_day = day.length;
-        var length_month = month.length;
-        var length_year = year.length;
-        if(length_day != 2){
+    if(privacity || property || cost){
+        if(name == ""){
+            document.getElementById("message_name").style.display = "block";
+            $("#name").focus();
+        }else if(last_name == ""){
+            document.getElementById("message_last_name").style.display = "block";
+            $("#last_name").focus();
+        }else if(day == ""){
             document.getElementById("message_day").style.display = "block";
+            $("#day").focus();
+        }else if(month == ""){
+            document.getElementById("message_month").style.display = "block";
             $("#month").focus();
+        }else if(year == ""){
+            document.getElementById("message_year").style.display = "block";
+            $("#year").focus();
+        }else if(address == ""){
+            document.getElementById("message_address").style.display = "block";
+            $("#address").focus();
+        }else if(postal == ""){
+            document.getElementById("message_postal").style.display = "block";
+            $("#postal").focus();
+        }else if(poblacion == ""){
+            document.getElementById("message_poblacion").style.display = "block";
+            $("#poblacion").focus();
+        }else if(provincia == ""){
+            document.getElementById("message_provincia").style.display = "block";
+            $("#provincia").focus();
         }else{
-            if(length_month != 2){
-                document.getElementById("message_month").style.display = "block";
+            //VALIDATE DAY
+            var length_day = day.length;
+            var length_month = month.length;
+            var length_year = year.length;
+            if(length_day != 2){
+                document.getElementById("message_day").style.display = "block";
                 $("#month").focus();
             }else{
-                if(length_year != 4){
-                    document.getElementById("message_year").style.display = "block";
-                    $("#year").focus();
+                if(length_month != 2){
+                    document.getElementById("message_month").style.display = "block";
+                    $("#month").focus();
                 }else{
-                    //  get data pass
-                    var btc =  document.getElementById("btc").value;
-                    var price_dolar =  document.getElementById("price_dolar").value;
-                    var img =  document.getElementById("img").value;
-                    var currency =  document.getElementById("currency").value;
-                    var phone = document.getElementById("phone").value;
-                    var wallet = document.getElementById("wallet").value;
-                    var email = document.getElementById("email").value;
-                    var radio = document.getElementById("radio").value;
-                     $.ajax({
-                            type: "post",
-                            url: site+"buy/bank/view_credit_card",
-                            dataType: "json",
-                            data: {btc : btc,
-                                   price_dolar : price_dolar,
-                                   img : img,
-                                   currency : currency,
-                                   phone : phone,
-                                   wallet : wallet,
-                                   email : email,
-                                   radio : radio,
-                                   name : name,
-                                   last_name : last_name,
-                                   day : day,
-                                   month : month,
-                                   year : year,
-                                   address : address,
-                                   postal : postal,
-                                   poblacion : poblacion,
-                                   provincia : provincia,
-                                   country : country
-                        },
-                            success:function(data){          
-                            location.href = site + "bank/details_credit_card";
-                            }         
-                    });
+                    if(length_year != 4){
+                        document.getElementById("message_year").style.display = "block";
+                        $("#year").focus();
+                    }else{
+                        //  get data pass
+                        var btc =  document.getElementById("btc").value;
+                        var price_dolar =  document.getElementById("price_dolar").value;
+                        var img =  document.getElementById("img").value;
+                        var currency =  document.getElementById("currency").value;
+                        var phone = document.getElementById("phone").value;
+                        var wallet = document.getElementById("wallet").value;
+                        var email = document.getElementById("email").value;
+                        var radio = document.getElementById("radio").value;
+                         $.ajax({
+                                type: "post",
+                                url: site+"buy/bank/view_credit_card",
+                                dataType: "json",
+                                data: {btc : btc,
+                                       price_dolar : price_dolar,
+                                       img : img,
+                                       currency : currency,
+                                       phone : phone,
+                                       wallet : wallet,
+                                       email : email,
+                                       radio : radio,
+                                       name : name,
+                                       last_name : last_name,
+                                       day : day,
+                                       month : month,
+                                       year : year,
+                                       address : address,
+                                       postal : postal,
+                                       poblacion : poblacion,
+                                       provincia : provincia,
+                                       country : country
+                            },
+                                success:function(data){          
+                                location.href = site + "bank/details_credit_card";
+                                }         
+                        });
+                    }
                 }
             }
+
         }
-        
+    }else{
+        document.getElementById("message_check").style.display = "block";
     }
 }
 //FADE BANK

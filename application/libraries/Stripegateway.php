@@ -1,40 +1,23 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Stripegateway
- *
- * @author Mytical
- */
 include ("vendor/autoload.php");
-
 class Stripegateway {
     public function __construct(){
         $stripe = array(
-                 "secret_key" => "sk_live_oGnZptjCc5RG7qt3uWh4yKgN",
-                 "public_key" => "pk_live_d9865WCSsZ5cjUgmdjO4cpla"
+                 "secret_key" => "sk_test_twsziyeku7u7DcZGNCtCeDjs",
+                 "public_key" => "pk_test_o0c1SIapQ0qxBEPnpdbESNtl"
                 );
                 \Stripe\Stripe::setApiKey($stripe["secret_key"]);
     }
     
-    public function checkout($data){
+    public function checkout($token,$type,$email,$amount){
         $message = ""; 
         try{
-            $mycard = array(
-                "number" => $data['number'],
-                "exp_month" => $data['exp_month'],
-                "exp_year" => $data['exp_year']
-                );
-        
             $charge = \Stripe\Charge::create(array(
-                'card' =>$mycard, 
-                'amount' =>$data['amount'],
-                'currency' =>'usd' 
+                'amount' =>10000, 
+                'currency' =>'usd', 
+                'description' =>'Compra de Criptomoneda', 
+                'source' => $token,
+                
             )); 
             $message = $charge->status;
             

@@ -247,6 +247,38 @@
                         <input type="hidden" name="radio" id="radio" value="<?php echo $radio;?>"/>
                     </div>
                 </div>
+                            <div class="row row-centered">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-8">
+                                    <div class="blockacepta2">
+                                        <div class="checkbox display-inline-block">
+                                            <div class="floatleft">
+                                                <label>
+                                                    <input name="privacity" id="privacity" type="checkbox" value="1" >
+                                                    Acepto las <a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank">condiciones generales de la contratación</a> y la 
+                                                        <a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank">política de privacidad</a>.
+                                                </label>
+                                            </div>
+                                            <div class="floatleft">
+                                                <label>
+                                                    <input id="property" name="property" type="checkbox" value="2">
+                                                    Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero.
+                                                </label>
+                                            </div>
+                                            <div class="floatleft">
+                                                <label>
+                                                    <input id="cost" name="cost" type="checkbox" value="3">
+                                                    Acepto la verificación de mi identidad y un coste de <a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link">devolución  mínimo de 10€ debido a gastos de gestión.</a> 
+                                                </label>
+                                                <span id="message_check" class="field-validation-error" style="display:none;">Debe seleccionar todos las opciones</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="col-sm-2"></div>
+                            </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
                             <a href="<?php echo site_url().'bank';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
