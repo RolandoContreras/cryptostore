@@ -131,7 +131,7 @@ $route['dashboard/legal'] = "d_legal";
 $route['dashboard/legal/save_content'] = "d_legal/save_content"; 
 $route['dashboard/privacy'] = "d_privacy"; 
 $route['dashboard/general'] = "d_general"; 
-$route['dashboard/cookies'] = "d_lcookies"; 
+$route['dashboard/cookies'] = "d_cookies"; 
 
 $route['dashboard/informativos'] = "d_informative"; 
 $route['dashboard/informativos/load'] = "d_informative/load";

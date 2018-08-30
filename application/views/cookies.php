@@ -43,167 +43,13 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="icon_box_title">
-                            <h1 class="notice_title margin-top100">POLÍTICA DE PRIVACIDAD</h1>
+                            <h1 class="notice_title margin-top100"><?php echo $obj_dinamic->title;?></h1>
                         </div>
                     </div>
                 </div>
                 <section class="notice">
-                  <div class="row">
-            <div class="panel panel-info">
-                <div class="row margintop15 borderbottom">
-
-                    <div class="col-md-4 ">
-                        <h3>
-                            POLÍTICA DE COOKIES
-                        </h3>
-                        <p>
-                             Antes de que empieces a navegar por la Web nos gustaría informarte que utilizamos cookies con diferentes finalidades en la Web
-                            <a class="enlacesNaranja" href="http://www.easycripto.com/" title="easycripto" target="_blank"> www.easycripto.com</a>,
-                            de tal forma que puedas decidir si quieres que las mismas se instalen en tu equipo o no. 
-                        </p>
-                        <p>
-                            En caso de continuar navegando en  <a class="enlacesNaranja" href="http://www.easycripto.com/" title="easycripto" target="_blank"> www.easycripto.com</a>,
-                            SERFORTEC deducirá que aceptas la instalación de las cookies, otorgándonos el consentimiento para poder instalarlas en tu equipo.
-                        </p>
-                    </div>
-
-                    <div class="col-md-8  ">
-                        <h3>
-                            QUE SON LAS COOKIES
-                        </h3>
-                         <p>
-                            Las cookies son pequeños archivos de información que se envían y almacenan en el equipo desde el que se accede a la Web <a class="enlacesNaranja" href="http://www.easycripto.com/" title="easycripto" target="_blank"> www.easycripto.com</a>   (PC u ordenador personal, teléfono móvil, tableta o televisión conectada) facilitando el uso de la misma, para ofrecer un mejor servicio.
-                        </p>
-                        <p>
-                            La Web <a class="enlacesNaranja" href="http://www.easycripto.com/" title="easycripto" target="_blank"> www.easycripto.com</a>  utiliza tanto cookies propias como de terceros que nos ayudan a mejorar la calidad permitiéndonos comparar, recordar, controlar y entender como navegan nuestros usuarios a través de la Web, identificando que es lo encuentran útil y lo que no y poder así, mejorar el proceso de navegación.
-                        </p>
-                        <p>
-                            Las cookies que utiliza la Web no dañan tu equipo. Únicamente, sirven para mejorar los servicios ofrecidos. Algunas son estrictamente necesarias para que la página funcione bien (técnicas y de personalización) y otras sirven para mejorar el rendimiento y experiencia como usuario (análisis, publicitarias y de publicidad comportamental).
-                        </p>
-                        <p>
-                            La Web utiliza tanto cookies de sesión, temporales, como cookies permanentes. Las cookies de sesión almacenan datos mientras el usuario accede a la Web, caducan al cerrar el navegador; mientras que las cookies permanentes almacenan los datos en el terminal para que sean accedidos y utilizados en más de una sesión, suelen caducar cuando transcurre un periodo de tiempo que puede oscilar entre los dos meses y los dos años.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="row margintop15 borderbottom">
-                    <div class="col-md-4 ">
-                        <h3>
-                            DESACTIVACIÓN DE COOKIES.
-                        </h3>
-                        <p>
-          Tienes la opción de permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador instalado en su equipo. Al desactivar cookies, algunos de los servicios disponibles podrían dejar de estar operativos. La forma de deshabilitar las cookies es diferente para cada navegador, pero normalmente puede hacerse desde el menú Herramientas u Opciones. También puede consultarse el menú de Ayuda del navegador dónde puedes encontrar instrucciones. El usuario podrá -en cualquier momento- elegir qué cookies quiere que funcionen en este sitio web mediante:
-      </p>
-                       
-                    </div>
-                    <div class="col-md-4 text-center ">
-                        <h3>
-                            Navegadores Ordenador
-                        </h3>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="chrome"></div>
-                                <a class="enlacesAzul" style="display: block;" href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank">
-                                    Google Chrome
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="firefox"></div>
-                                <a class="enlacesAzul" style="display: block;" href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank">
-                                    Firefox
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="explorer"></div>
-                                <a class="enlacesAzul" style="display: block;" href="http://windows.microsoft.com/es-es/windows7/how-to-manage-cookies-in-internet-explorer-9" target="_blank">
-                                    Explorer
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="safari"></div>
-                                <a class="enlacesAzul" style="display: block;" href="https://support.apple.com/es-es/HT201265" target="_blank">
-                                    Safari
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="opera"></div>
-                                <a class="enlacesAzul" style="display: block;" href="http://help.opera.com/Windows/11.50/es-ES/cookies.html" target="_blank">
-                                    Opera
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-center ">
-                        <div class="col-md-12 text-center">
-                            <h3>
-                                Navegadores Smartphone
-                            </h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="android"></div>
-                                <a class="enlacesAzul" style="display: block;" href="https://support.google.com/chrome/answer/2392971?hl=es" target="_blank">
-                                    Android
-                                </a>
-                            </div>
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="ios"></div>
-                                <a class="enlacesAzul" style="display: block;" href="https://support.apple.com/es-es/HT201265" target="_blank">
-                                    ios
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-6 text-center marginbottom15">
-                                <div class="winphone"></div>
-                                <a class="enlacesAzul" style="display: block;" href="http://www.windowsphone.com/es-es/how-to/wp7/web/changing-privacy-and-other-browser-settings" target="_blank">
-                                    Windowsphone
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row margintop15 borderbottom">
-                    <div class="col-md-12   marginbottom15">
-                        <h3>
-                            TIPOS DE COOKIES
-                        </h3>
-                        <p>
-                            Según la finalidad para la que se traten los datos obtenidos a través de las cookies, la Web puede utilizar:
-                        </p>
-                        <p>
-                            <strong>Cookies técnicas:</strong> son aquéllas que permiten al usuario la navegación a través de una página web, plataforma o aplicación y la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido.
-                        </p>
-
-                        <p>
-                            <strong>Cookies de personalización:</strong> son aquéllas que permiten al usuario acceder al servicio con algunas características de carácter general predefinidas en función de una serie de criterios en el terminal del usuario como por ejemplo serian el idioma, el tipo de navegador.
-                        </p>
-
-                        <p>
-                            <strong> Cookies de análisis:</strong> son aquéllas que permiten el seguimiento y análisis del comportamiento de los usuarios de los sitios Web a los que están vinculadas. La información recogida mediante este tipo de cookies se utiliza en la medición de la actividad de los sitios Web, aplicación o plataforma y para la elaboración de perfiles de navegación de los usuarios.
-                        </p>
-
-                        <p>
-                            <strong>
-                                Cookies publicitarias:
-                            </strong> son aquéllas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios.
-                            Cookies de publicidad comportamental: estas cookies almacenan información del comportamiento de los usuarios obtenida a través de la observación continuada de sus hábitos de navegación, lo que permite desarrollar un perfil específico para mostrar publicidad en función del mismo.
-
-                        </p>
-                        <p>
-                            <strong>Cookies de redes sociales externas:</strong> que se utilizan para que los visitantes puedan interactuar con el contenido de diferentes plataformas sociales (facebook, youtube, twitter, linkedIn, etc..) y que se generen únicamente para los usuarios de dichas redes sociales. Las condiciones de utilización de estas cookies y la información recopilada se regula por la política de privacidad de la plataforma social correspondiente.
-                        </p>
-                        <p>
-                            Actualmente en la WEB se utilizan los siguientes tipos de cookies:
-                        </p>
-                        
-                    </div>
+                    <?php echo $obj_dinamic->content;?>
+                    <div class="row margintop15 borderbottom">
                     <div style="padding-top: 1em;" class="col-md-12">
                         <table class="table table-striped" style="border:1px solid #e5e5e5  ">
                             <thead>
@@ -406,20 +252,12 @@
                             </tr>
                         </tbody></table>
                     </div>
-                </div>
-                <div class="row margintop15 ">
-                   <p>
-            Los sistemas de opt-out específicos indicados en la tabla anterior respecto de la cookie de que se trate (estos sistemas pueden conllevar que se instale en su equipo una cookie "de rechazo" para que funcione su elección de desactivación); u otras herramientas de terceros, disponibles on line, que permiten a los usuarios detectar las cookies en cada sitio web que visita y gestionar su desactivación.
-        </p>
-                    <p>
-          SERFORTEC no se hace responsable del contenido y veracidad de las políticas de privacidad de los terceros incluidas en esta política de cookies.<br>
-          Cualquier duda o cuestión que tenga sobre esta política de cookies, puede contactar con SERFORTEC en <a class="enlacesNaranja" href="mailto:lopd@easycripto.com"> contacto</a>.
+                        Los sistemas de opt-out específicos indicados en la tabla anterior respecto de la cookie de que se trate (estos sistemas pueden conllevar que se instale en su equipo una cookie "de rechazo" para que funcione su elección de desactivación); u otras herramientas de terceros, disponibles on line, que permiten a los usuarios detectar las cookies en cada sitio web que visita y gestionar su desactivación.
 
-      </p>
-                    
+SERFORTEC no se hace responsable del contenido y veracidad de las políticas de privacidad de los terceros incluidas en esta política de cookies.
+Cualquier duda o cuestión que tenga sobre esta política de cookies, puede contactar con SERFORTEC en contacto.
                 </div>
-            </div>
-        </div>
+                    
                 </section>
             </div>
         </header>
