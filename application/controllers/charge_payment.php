@@ -14,25 +14,16 @@ class Charge_payment extends CI_Controller {
         //GET SESSION
         $this->get_session();
         //DECLARO VAR MESSAGE
-        
-        var_dump($_POST);
-        die();
-        
-        $token = 'tok_1D4snpH5RFAfCeXLVxXb9cJb';
+        $token =  $this->input->post("stripeToken");
         $type = 'card';
-        $email = 'software.contreras@gmail.com';
-        
-        var_dump($email);
-        die();
+        $email =  $this->input->post("stripeEmail");        
+        $amount =  $this->input->post("total_card");        
+        $tax =  $this->input->post("tax");   
+        $total_db =  $this->input->post("total_db");   
         
         //procees cards
         $message = $this->stripegateway->checkout($token,$type,$email,$amount);
-        
         $data["message"] = "";
-        //GET DATA POST
-        $obj_total = $this->input->post("total");
-        $tax = $this->input->post("tax");
-        $obj_total_card = format_number_2decimal($obj_total);
         
         if($message == "succeeded"){
             //GET DATA $_SESSION FOR CUSTOMER
@@ -99,7 +90,7 @@ class Charge_payment extends CI_Controller {
                     'email' => $email,
                     'phone' => $phone,
                     'price' => $price,
-                    'amount' => format_number_2decimal($obj_total),
+                    'amount' => $total_db,
                     'tax' => format_number_2decimal($tax),
                     'amount_btc' => $btc,
                     'active' => 1,
@@ -110,18 +101,19 @@ class Charge_payment extends CI_Controller {
             $this->obj_sell->insert($data);
             
             //CREATE EMAIL
-            $this->message($obj_total_card,$btc,$currency_name,$email,$password);
+            $this->message($total_db,$btc,$currency_name,$email,$password);
             //UNSET $_SESSION
             $this->logout();
             $this->load->view('confirm_credit_card');
         }else{
             $data["tax"] = $tax;
-            $data["total"] = $obj_total;
+            $data["total_card"] = $amount;
+            $data["total_db"] = $total_db;
             $data["message"] = $message;
-            $this->load->view('view_credit_card',$data);
+            $this->load->view('creadit_card_details',$data);
         }
     }
-    public function message($obj_total_card,$btc,$currency_name,$email,$password){          
+    public function message($total_db,$btc,$currency_name,$email,$password){
        $mensaje = wordwrap("<html>
             <div style='margin-top:25px'>
             <table width='100%' cellspacing='0' cellpadding='0' border='0'>
@@ -141,7 +133,7 @@ class Charge_payment extends CI_Controller {
                               <ul dir='auto' style='list-style-type:disc;margin:10px 0 15px 30px;padding-left:15px' type='disc'>
                               <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Moneda: <em>$currency_name </em></li>
                                 <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Cantidad: <em>$btc</em></li>
-                                <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Total: <em>$obj_total_card</em></li>
+                                <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Total: <em>$total_db</em></li>
                                 <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Método de Pago: <em>Tarjeta de Crédito / Debido</em></li>
                               </ul>
                               <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><em>Datos de entrada a plataforma:</em></p>

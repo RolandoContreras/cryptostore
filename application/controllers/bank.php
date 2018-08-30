@@ -195,6 +195,10 @@ class Bank extends CI_Controller {
             $total = $obj_dolar + $subtotal;
             $data['total'] = $total;
             
+            $total_card = format_number_2decimal($total);
+            $data['total_card'] = format_number_stripe($total_card);
+            $data['total_db'] = $total_card;
+            
             //SEND DATA
             $this->load->view('credit_card_details', $data);
     }
@@ -336,6 +340,7 @@ class Bank extends CI_Controller {
             redirect(site_url().'buy');
         }
     }
+    
     public function logout(){        
         $this->session->unset_userdata('buy');
 	$this->session->destroy();

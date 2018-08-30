@@ -39,6 +39,7 @@ function format_number_moneda_soles($number){
     $number = number_format($number, $decimals);
     return "S/.".$number;
 }
+
 function format_number_dolar($number){
     $decimals ="2";
     $number = number_format($number, $decimals);
@@ -54,13 +55,30 @@ function format_number_miles($number){
     $number = number_format($number, 0, '.', ',');
     return $number;
 }
+
 function format_number_2decimal($number){
     $number = number_format($number, 2, '.', ',');
     return $number;
 }
+
+function format_stripe_to_2decimal($number){
+    $count_string = strlen($number);
+    $position = $count_string - 2;
+    $rest = str_pad($number,$position,'.',STR_PAD_LEFT); 
+    var_dump($rest);
+    die();
+    
+}
+
 function format_number_6decimal($number){
     $number = number_format($number, 6, '.', ',');
     return $number;
+}
+
+function format_number_stripe($number){
+    $search  = array(',', '.');
+    $replace = array('', '');    
+    return str_replace($search, $replace, $number);
 }
 
 function formato_fecha($fecha){    

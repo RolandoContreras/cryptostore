@@ -235,10 +235,10 @@
                         </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <a href="<?php echo site_url().'buy';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder" /></a>
+                            <a href="<?php echo site_url().'buy';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder"/></a>
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <input onclick="validate();" class="submit_btn_comprar_2 trans_300" value="Comprar">
+                            <input onclick="validate();" class="submit_btn_comprar_2" value="Comprar">
                         </div>
                         <div class="col-sm-2"></div>
                     </div>

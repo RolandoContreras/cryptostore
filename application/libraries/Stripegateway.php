@@ -13,7 +13,7 @@ class Stripegateway {
         $message = ""; 
         try{
             $charge = \Stripe\Charge::create(array(
-                'amount' =>10000, 
+                'amount' =>$amount, 
                 'currency' =>'usd', 
                 'description' =>'Compra de Criptomoneda', 
                 'source' => $token,
