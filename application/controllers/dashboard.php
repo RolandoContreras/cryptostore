@@ -26,7 +26,6 @@ class Dashboard extends CI_Controller {
             if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))  
                 header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");  
         }  
-//        if($this->input->is_ajax_request()){    
             $this->form_validation->set_rules('email','email',"required|trim|valid_email|callback_validar_user");
             $this->form_validation->set_rules('password','password','required|trim');              
     	    $this->form_validation->set_message('required','Campo requerido %s');    	    
@@ -48,22 +47,29 @@ class Dashboard extends CI_Controller {
             }         
             echo json_encode($data);  
             exit();           
-//        }
     }
     
     public function validar_user($email){
-        
+        //get data password
         $password = $this->input->post('password');  
-        $obj_user = $this->obj_user->verificar_email($email,$password);       
+        //count if isset
+        $params = array("select" =>"users.user_id,
+                                    users.first_name,
+                                    users.last_name,
+                                    users.email,
+                                    users.active",
+                             "where" => "users.email = '$email' and users.password = '$password' and users.active = 1");
+        $obj_user_login = $this->obj_user->total_records($params);
         
-        if (count($obj_user)>0){
-            
-            if ($obj_user->status_value == 1){                            
+        if ($obj_user_login > 0){
+            //get data
+            $obj_user = $this->obj_user->get_search_row($params);
+            if ($obj_user->active == 1){                            
                 $data_user_session['user_id'] = $obj_user->user_id;
                 $data_user_session['name'] = $obj_user->first_name.' '.$obj_user->last_name;
                 $data_user_session['email'] = $obj_user->email;
                 $data_user_session['logged_usercms'] = "TRUE";
-                $data_user_session['status'] = $obj_user->status_value;
+                $data_user_session['status'] = $obj_user->active;
                 $_SESSION['usercms'] = $data_user_session;                
                 return true;    
             }else{
