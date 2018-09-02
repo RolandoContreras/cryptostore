@@ -54,7 +54,7 @@
                                         <div class="with500 margin-top-50">
                                             <div class="input-group">
                                                 <span class="input-group-addon" style="font-size: 14px !important;color: #F7921A;">
-                                                        <i class="fa fa-usd fa-2x"></i>
+                                                        <i class="fa fa-eur fa-2x"></i>
                                                     </span>
                                                     <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%; border-bottom-right-radius: .25rem;border-top-right-radius: .25rem;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="<?php echo $number_price?>" type="text">
                                                     <input type="hidden" name="currency" id="currency" value="<?php echo $currency;?>"/> 
@@ -103,10 +103,7 @@
                                                 <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="Comprar">
                                             </div>
                                         </div>
-                                        
                                         </form>
-                                        
-                                        
                                         <span id="compra">COMPRA CRIPTOMONEDAS DE MANERA SEGURA</span>
                                         <div class="align-items-center justify-content-center">
                                             <div class="double_arrow nav_links rotare270" data-scroll-to=".icon_boxes">
@@ -163,7 +160,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/btc-logo.png';?>" alt="bitcoin" width="100">
                                 <h5 class="currency_text">BITCOIN</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo "$".$btc?></h4>                                   
+                                    <h4><?php echo "".$btc?>&nbsp;<i class="fa fa-eur"></i></h4>                                   
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -181,7 +178,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/cash-logo.png';?>" alt="bitcoin" width="105">
                                 <h5 class="currency_text">BITCOIN CASH</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo "$".$bch?></h4>
+                                    <h4><?php echo $bch?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -199,7 +196,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/eth-logo.png';?>" alt="bitcoin" width="90">
                                 <h5 class="currency_text">ETHEREUM</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo "$".$eth?></h4>
+                                    <h4><?php echo $eth?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -217,7 +214,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/dash-logo.png';?>" alt="bitcoin" width="100">
                                 <h5 class="currency_text">DASH</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo "$".$dash?></h4>
+                                    <h4><?php echo $dash?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>

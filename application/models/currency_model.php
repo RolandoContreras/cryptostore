@@ -18,6 +18,8 @@ BITSHARE S.A.C
 class currency_model_atributos{	
     var $currency_id='';
     var $name='';
+    var $slug='';
+    var $percent='';
     var $img='';
     var $active='';
     var $status_value='';
@@ -35,6 +37,8 @@ class Currency_Model extends CI_Model{
 	$this->table_id = 'currency_id';
         $this->currency_id='';
         $this->name='';
+        $this->slug='';
+        $this->percent='';
         $this->img='';
         $this->active='';
 	$this->status_value='';
