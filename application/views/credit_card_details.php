@@ -209,7 +209,7 @@
                                                     <span class="fa fa-eur fa-2x" style="color: #F7921A !important;"></span>
                                                 </div>
                                                 <div class="floatright">
-                                                    <h4><span id="crypto-amount"><?php echo format_number_2decimal($price_dolar);?> $</span></h4>
+                                                    <h4><span id="crypto-amount"><?php echo format_number_2decimal($price_dolar);?>  <i class="fa fa-eur"></i></span></h4>
                                                     <input type="hidden" name="price_dolar" id="price_dolar" value="<?php echo format_number_2decimal($price_dolar);?>"/>
                                                 </div>
                                             </div>
@@ -218,7 +218,7 @@
                                                 <div class="textoresumenRecarja">
                                                     <span class="fa fa-check fa-2x"></span>&nbsp;&nbsp;+ Pago sel. (2%)</div>
                                                 <div class="floatright">
-                                                    <h4><span id="crypto-amount"><?php echo format_number_2decimal($subtotal);?> $</span> </h4>
+                                                    <h4><span id="crypto-amount"><?php echo format_number_2decimal($subtotal);?> <i class="fa fa-eur"></i></span> </h4>
                                                     <input type="hidden" name="tax" id="tax" value="<?php echo $subtotal;?>"/>
                                                 </div>
                                             </div>
@@ -229,7 +229,7 @@
                                                 </div>
                                                 <div class="floatright">
                                                     <h3>
-                                                        <span id="total"><?php echo format_number_2decimal($total);?> $</span>
+                                                        <span id="total"><?php echo format_number_2decimal($total);?> <i class="fa fa-eur"></i></span>
                                                         <input type="hidden" name="total" id="total" value="<?php echo $total;?>"/>    
                                                     </h3>
                                                 </div>
@@ -265,12 +265,13 @@
                                     <input type="hidden" name="total_db" value="<?php echo $total_db;?>"/>
                                     <script
                                       src="https://checkout.stripe.com/checkout.js" class="stripe-button submit_btn_comprar_2"
-                                      data-key="pk_live_hkJ3sunnrXSMThENiXfBUlZ5"
+                                      data-key="pk_test_hkJ3sunnrXSMThENiXfBUlZ5"
                                       data-amount="<?php echo $total_card;?>"
                                       data-name="Easycripto"
                                       data-description="Ingrese los datos de su tarjeta"
                                       data-image="https://easycripto.com/static/page_front/images/easyxstripe.jpg"
                                       data-locale="auto"
+                                      data-currency="eur"
                                       data-zip-code="false">
                                     </script>
                                   </form>
