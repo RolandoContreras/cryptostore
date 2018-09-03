@@ -52,7 +52,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/btc-logo.png';?>" alt="bitcoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Bitcoin</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$btc_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($btc_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $btc_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -69,7 +69,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/dash-logo.png';?>" alt="bitcoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Dash</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$dash_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($dash_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $dash_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -85,7 +85,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/eth-logo.png';?>" alt="bitcoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Ethereum</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$eth_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($eth_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $eth_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -101,7 +101,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/lite-logo.png';?>" alt="bitcoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">LiteCoin</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$ltc_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($ltc_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $ltc_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -117,7 +117,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/cash-logo.png';?>" alt="Bitcoin Cash" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Bitcoin Cash</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$bch_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($bch_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $bch_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -133,7 +133,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/cardano-logo.png';?>" alt="CardanoCoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Cardano</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$car_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($car_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $car_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -149,7 +149,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/monero-logo.png';?>" alt="MoneroCoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Monero</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$mnr_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($mnr_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $mnr_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -165,7 +165,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/ripple-logo.png';?>" alt="RippleCoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Ripple</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$rrp_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($rrp_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $rrp_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -180,7 +180,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/verge-logo.png';?>" alt="VergeCoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Verge</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$verge_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($verge_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $verge_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -195,7 +195,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/zcash-logo.png';?>" alt="ZCash" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">ZCash</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$zch_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($zch_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $zch_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -210,7 +210,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/tron-logo.png';?>" alt="Tron" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Tron</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$tron_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($tron_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $tron_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -226,7 +226,7 @@
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;">
                             <img src="<?php echo site_url().'static/page_front/images/monedas/omisego-logo.png';?>" alt="OmiseGo" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">OmiseGo</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$omg_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($omg_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $omg_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -241,7 +241,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/sia-logo.png';?>" alt="SiaCoin" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">Siacoin</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$sia_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($sia_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $sia_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">
@@ -256,7 +256,7 @@
                     <div class="col-lg-2 col-sm-3  hidden-xs"></div>  
                     <div class="col-xs-6 col-md-1 wow bounceInLeft animated animated" style="visibility: visible;"><img src="<?php echo site_url().'static/page_front/images/monedas/nht-logo.png';?>" alt="NXT" width="40"/></div>
                     <div class="col-xs-6 col-md-2"><span class="currency_text_all">NXT</span></div>
-                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo "$".$nxt_price;?></span></div>
+                    <div class="col-xs-6 col-md-2"><span class="prince_all"><?php echo format_number_6decimal($nxt_price);?>&nbsp;<i class="fa fa-eur"></i></span></div>
                     <div class="col-xs-6 col-md-1"><?php echo $nxt_color;?></div>
                     <div class="col-xs-6 col-md-2">
                         <div class="single-price-plan text-center">

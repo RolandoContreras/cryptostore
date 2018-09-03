@@ -215,7 +215,7 @@
                             <div class="form-group has-feedback">
                                         <div class="input-group bitcoinDineroDatos">
                                             <span class="input-group-addon">
-                                                <span id="btcwallet-faq" class="fa fa-dollar-sign fa-2x"></span>
+                                                <span id="btcwallet-faq" class="fa fa-eur fa-2x"></span>
                                             </span>
                                             <input disabled="disabled" type="text" class="form-control padding-right-27"  value="<?php echo isset($_SESSION['buy'])? format_number_2decimal($_SESSION['buy']['price_dolar']):format_number_2decimal($price_dolar);?>">
                                             <input  type="hidden" id="price_dolar" name="price_dolar" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['price_dolar']:$price_dolar;?>">

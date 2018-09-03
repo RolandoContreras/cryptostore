@@ -206,7 +206,7 @@
                                             </div>
                                             <div class="contentSeparator">
                                                 <div class="textoresumenRecarja">
-                                                    <span class="fa fa-dollar-sign fa-2x"></span>
+                                                    <span class="fa fa-eur fa-2x" style="color: #F7921A !important;"></span>
                                                 </div>
                                                 <div class="floatright">
                                                     <h4><span id="crypto-amount"><?php echo format_number_2decimal($price_dolar);?> $</span></h4>
