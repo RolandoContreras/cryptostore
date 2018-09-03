@@ -16,7 +16,7 @@ class D_faq extends CI_Controller{
                                     title,
                                     content,
                                     active,",
-                         "where" => "faq = 1 and active = 1 and status_value = 1",
+                         "where" => "faq = 1 and status_value = 1",
             );
             //GET DATA COMMENTS
             $obj_faq= $this->obj_dinamic->search($params);
