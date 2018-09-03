@@ -160,7 +160,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/btc-logo.png';?>" alt="bitcoin" width="100">
                                 <h5 class="currency_text">BITCOIN</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo "".$btc?>&nbsp;<i class="fa fa-eur"></i></h4>                                   
+                                    <h4><?php echo format_number_6decimal($btc);?>&nbsp;<i class="fa fa-eur"></i></h4>                                   
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -178,7 +178,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/cash-logo.png';?>" alt="bitcoin" width="105">
                                 <h5 class="currency_text">BITCOIN CASH</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo $bch?>&nbsp;<i class="fa fa-eur"></i></h4>
+                                    <h4><?php echo format_number_6decimal($bch);?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -196,7 +196,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/eth-logo.png';?>" alt="bitcoin" width="90">
                                 <h5 class="currency_text">ETHEREUM</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo $eth?>&nbsp;<i class="fa fa-eur"></i></h4>
+                                    <h4><?php echo format_number_6decimal($eth);?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>
@@ -214,7 +214,7 @@
                                 <img src="<?php echo site_url().'static/page_front/images/monedas/dash-logo.png';?>" alt="bitcoin" width="100">
                                 <h5 class="currency_text">DASH</h5>
                                 <div class="ca-price d-flex justify-content-center">
-                                    <h4><?php echo $dash?>&nbsp;<i class="fa fa-eur"></i></h4>
+                                    <h4><?php echo format_number_6decimal($dash);?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
                                 <h6 style="color: #BCC0CA;">por moneda</h6>
                             </div>

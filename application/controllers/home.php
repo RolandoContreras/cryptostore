@@ -44,8 +44,8 @@ class Home extends CI_Controller {
                     $data['btc_price'] = $obj_btc;
                     break;
                 case $value->slug == "dash":
-                    $obj_eth = $this->dash_price_percent($dash, $value->percent);
-                    $data['dash_price'] = $obj_eth;
+                    $obj_dash = $this->dash_price_percent($dash, $value->percent);
+                    $data['dash_price'] = $obj_dash;
                     break;
                 case $value->slug == "ethereum":
                     $obj_eth = $this->eth_price_percent($eth, $value->percent);

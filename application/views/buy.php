@@ -97,7 +97,7 @@
                                             <div class="calculador">
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
-                                                        <i class="fa fa-usd fa-2x"></i>
+                                                        <i class="fa fa-eur fa-2x"></i>
                                                     </span>
                                                     <input class="form-control erroneous-input" onkeyup="validate_usd(this.value);" style="height: 44px; width: 50%;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="<?php echo $number_price?>" type="text">
                                                     <input type="hidden" name="currency" id="currency" value="<?php echo $currency;?>"/> 
