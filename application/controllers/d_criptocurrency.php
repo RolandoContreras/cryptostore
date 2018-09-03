@@ -13,6 +13,7 @@ class D_criptocurrency extends CI_Controller{
                         "select" =>"currency_id,
                                     name,
                                     slug,
+                                    percent,
                                     img,
                                     active
                                     ",
@@ -40,6 +41,7 @@ class D_criptocurrency extends CI_Controller{
         $data = array(
                 'name' => $this->input->post('name'),
                 'slug' => $this->input->post('slug'),
+                'percent' => $this->input->post('percent'),
                 'active' => $this->input->post('active'),
                 'status_value' => 1,
                 'updated_at' => date("Y-m-d H:i:s"),

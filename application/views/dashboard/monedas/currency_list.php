@@ -23,6 +23,7 @@
                                 <th>CODIGO</th>
                                 <th>NOMBRE</th>
                                 <th>API</th>
+                                <th>PORCENTAJE</th>
                                 <th>IMAGEN</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
@@ -34,6 +35,7 @@
                                 <td align="center"><b><?php echo $value->currency_id;?></b></td>
                                 <td class="label-success" align="center" style="color:#fff"><b><?php echo $value->name;?></b></td>
                                 <td align="center"><?php echo $value->slug;?></td>
+                                <td style="color:#fff;" class="label-warning" align="center"><b><?php echo $value->percent."%";?></b></td>
                                 <td align="center"><img src="<?php echo site_url()."static/page_front/images/monedas/$value->img";?>" alt="<?php echo $value->name;?>" width="35"/></td>
                                 <td align="center">
                                     <?php if ($value->active == 1) {

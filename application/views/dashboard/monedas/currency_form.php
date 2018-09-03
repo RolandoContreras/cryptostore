@@ -23,6 +23,9 @@
               <strong>Nombre Api:</strong><br>
               <input type="text" id="slug" name="slug" value="<?php echo isset($obj_currency->slug)?$obj_currency->slug:"";?>" class="input-xlarge-fluid" placeholder="Slug">
               <br><br>
+              <strong>Porcentaje:</strong><br>
+              <input type="text" id="percent" name="percent" value="<?php echo isset($obj_currency->percent)?$obj_currency->percent:"";?>" class="input-xlarge-fluid" placeholder="Procentaje">
+              <br><br>
                   <strong>Estado:</strong>
                       <select name="active" id="active">
                                   <option value="1" <?php if($obj_currency->active == 1){ echo "selected";}?>>Activo</option>
