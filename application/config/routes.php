@@ -132,6 +132,12 @@ $route['dashboard/legal/save_content'] = "d_legal/save_content";
 $route['dashboard/privacy'] = "d_privacy"; 
 $route['dashboard/general'] = "d_general"; 
 $route['dashboard/cookies'] = "d_cookies"; 
+//FAQ
+$route['dashboard/faq'] = "d_faq"; 
+$route['dashboard/faq/load'] = "d_faq/load";
+$route['dashboard/faq/load/([0-9]+)'] = "d_faq/load/$1";
+$route['dashboard/faq/validate'] = "d_faq/validate";
+$route['dashboard/faq/delete'] = "d_faq/delete"; 
 
 $route['dashboard/informativos'] = "d_informative"; 
 $route['dashboard/informativos/load'] = "d_informative/load";

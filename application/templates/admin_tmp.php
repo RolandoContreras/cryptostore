@@ -116,6 +116,7 @@
                                             <li><a href="<?php echo site_url()."dashboard/privacy";?>"><i class="icon-large icon-th"></i>Política de Privacidad</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/general";?>"><i class="icon-large icon-th"></i>Condiciones Generales</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/cookies";?>"><i class="icon-large icon-th"></i>Política de Cookies</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/faq";?>"><i class="icon-large icon-th"></i>Faq</a></li>
                                         </ul>                                     
                                     </div>
                                 </div>

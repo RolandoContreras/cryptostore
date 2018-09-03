@@ -20,6 +20,7 @@ class dinamic_model_atributos{
     var $subject='';
     var $title='';
     var $content='';
+    var $faq='';
     var $active='';
     var $status_value='';
     var $created_at='';
@@ -38,6 +39,7 @@ class Dinamic_model extends CI_Model{
         $this->date='';
         $this->title='';
         $this->content='';
+        $this->faq='';
         $this->active='';
 	$this->status_value='';
         $this->created_at='';
