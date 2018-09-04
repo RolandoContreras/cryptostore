@@ -23,11 +23,11 @@
             <div class="menu menu_mm text-right">
                 <div class="menu_close"><i class="fa fa-times-circle trans_200"></i></div>
                    <ul>
-                        <li class="active"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
-                        <li><a href="#features" >Características</a></li>
-                        <li><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                        <li><a href="<?php echo site_url().'login';?>">Login</a></li>
+                        <li class="active"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.inicio');?></a></li>
+                        <li><a href="#features" ><?=lang('idioma.caracteristicas');?></a></li>
+                        <li><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.comprar');?></a></li>
+                        <li><a href="#contact"><?=lang('idioma.contacto');?></a></li>
+                        <li><a href="<?php echo site_url().'login';?>"><?=lang('idioma.login');?></a></li>
                         <li><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
                         <li>
                             <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
@@ -46,7 +46,8 @@
 				<div class="hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
 					<span></span>
                                         <span></span>
-					<span>CRIPTOMONEDAS</span>
+					<span><?=lang('idioma.bienvenido')?></span>
+                                        <!--<span>CRIPTOMONEDAS</span>-->
 					<span>seguro, facil y rápido</span>
                                         
                                         

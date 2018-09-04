@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 
     public function index()
 	{
-            //GET DATA CURRENCY EUR
+        //GET DATA CURRENCY EUR
         $btc = $this->btc_price();
         $data['btc'] = $btc;
         
@@ -321,5 +321,4 @@ class Home extends CI_Controller {
             
             }
     }
-    
 }

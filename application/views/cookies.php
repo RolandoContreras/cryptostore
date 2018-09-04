@@ -145,7 +145,7 @@
                                 </td>
                                 <td style="border:1px solid #e5e5e5">
                                     <p>
-          La Web utiliza Google Analytics, un servicio analítico de  Web prestado por Google, Inc., una compañía de Delaware cuya oficina principal  está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043,  Estados Unidos ("Google"). La información que genera la cookie acerca  de su uso de la Web (incluyendo su dirección IP) será directamente transmitida  y archivada por Google en los servidores de Estados Unidos. Google usará esta  información por cuenta de PRESSBROKERS con el propósito de seguir la pista de  su uso de la Web, recopilando informes de actividad y prestando otros servicios  relacionados con la actividad y el uso de Internet. Google no asociará su  dirección IP con ningún otro dato del que disponga Google.
+          La Web utiliza Google Analytics, un servicio analítico de  Web prestado por Google, Inc., una compañía de Delaware cuya oficina principal  está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043,  Estados Unidos ("Google"). La información que genera la cookie acerca  de su uso de la Web (incluyendo su dirección IP) será directamente transmitida  y archivada por Google en los servidores de Estados Unidos. Google usará esta  información por cuenta de SERFORTEC con el propósito de seguir la pista de  su uso de la Web, recopilando informes de actividad y prestando otros servicios  relacionados con la actividad y el uso de Internet. Google no asociará su  dirección IP con ningún otro dato del que disponga Google.
       </p>
                                     
                                 </td>
