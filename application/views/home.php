@@ -28,7 +28,7 @@
                         <li><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.comprar');?></a></li>
                         <li><a href="#contact"><?=lang('idioma.contacto');?></a></li>
                         <li><a href="<?php echo site_url().'login';?>"><?=lang('idioma.login');?></a></li>
-                        <li><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
+                        <li><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
                         <li>
                             <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
                             <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
@@ -46,11 +46,8 @@
 				<div class="hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
 					<span></span>
                                         <span></span>
-					<span><?=lang('idioma.bienvenido')?></span>
-                                        <!--<span>CRIPTOMONEDAS</span>-->
-					<span>seguro, facil y rápido</span>
-                                        
-                                        
+					<span><?=lang('idioma.home_criptmonedas')?></span>
+                                        <span><?=lang('idioma.home_seguro_facil')?></span>
                                         <form action="<?php echo site_url().'buy/bank';?>" method="post">
                                         <div class="with500 margin-top-50">
                                             <div class="input-group">
@@ -98,14 +95,13 @@
                                                             </span>
                                                        </div>                      
                                             <?php } ?>
-                                            
                                         </div>
                                             <div class="text-center">
-                                                <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="Comprar">
+                                                <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="<?=lang('idioma.boton_comprar');?>">
                                             </div>
                                         </div>
                                         </form>
-                                        <span id="compra">COMPRA CRIPTOMONEDAS DE MANERA SEGURA</span>
+                                        <span id="compra"><?=lang('idioma.home_compra_criptomonedas');?></span>
                                         <div class="align-items-center justify-content-center">
                                             <div class="double_arrow nav_links rotare270" data-scroll-to=".icon_boxes">
                                                 <i class="fa fa-chevron-left trans_200"></i>
@@ -114,10 +110,6 @@
                                         </div>
 				</div>
 		</div>
-
-                                
-                
-                
 		<div class="hero_side_text_container">
                     <div class="hero_side_text">
                         <div class="col-lg-2">
@@ -130,13 +122,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    
 		</div>
-                
-                
-                
 	</div>
         <!--CRIPTOCURRENCY-->
         <div class="icon_boxes">
@@ -146,7 +132,7 @@
                     <div class="col-12">
                         <!-- Heading Text  -->
                         <div class="section-heading text-center" id="coins">
-                            <h1 class="title-currency">COMPRAR MONEDAS</h1>
+                            <h1 class="title-currency"><?=lang('idioma.home_comprar_monedas');?></h1>
                             <div class="line-shape"></div>
                         </div>
                     </div>
@@ -163,11 +149,11 @@
                                 <div class="ca-price d-flex justify-content-center">
                                     <h4><?php echo format_number_6decimal($btc);?>&nbsp;<i class="fa fa-eur"></i></h4>                                   
                                 </div>
-                                <h6 style="color: #BCC0CA;">por moneda</h6>
+                                <h6 style="color: #BCC0CA;"><?=lang('idioma.por_moneda');?></h6>
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy/bitcoin';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/bitcoin';?>"><?=lang('idioma.boton_comprar');?></a>
                             </div>
                         </div>
                     </div>
@@ -181,11 +167,11 @@
                                 <div class="ca-price d-flex justify-content-center">
                                     <h4><?php echo format_number_6decimal($bch);?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
-                                <h6 style="color: #BCC0CA;">por moneda</h6>
+                                <h6 style="color: #BCC0CA;"><?=lang('idioma.por_moneda');?></h6>
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy/bitcoincash';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/bitcoincash';?>"><?=lang('idioma.boton_comprar');?></a>
                             </div>
                         </div>
                     </div>
@@ -199,11 +185,11 @@
                                 <div class="ca-price d-flex justify-content-center">
                                     <h4><?php echo format_number_6decimal($eth);?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
-                                <h6 style="color: #BCC0CA;">por moneda</h6>
+                                <h6 style="color: #BCC0CA;"><?=lang('idioma.por_moneda');?></h6>
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy/ethereum';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/ethereum';?>"><?=lang('idioma.boton_comprar');?></a>
                             </div>
                         </div>
                     </div> 
@@ -217,11 +203,11 @@
                                 <div class="ca-price d-flex justify-content-center">
                                     <h4><?php echo format_number_6decimal($dash);?>&nbsp;<i class="fa fa-eur"></i></h4>
                                 </div>
-                                <h6 style="color: #BCC0CA;">por moneda</h6>
+                                <h6 style="color: #BCC0CA;"><?=lang('idioma.por_moneda');?></h6>
                             </div>
                             <!-- Plan Button  -->
                             <div class="plan-button">
-                                <a href="<?php echo site_url().'buy/dash';?>">COMPRAR</a>
+                                <a href="<?php echo site_url().'buy/dash';?>"><?=lang('idioma.boton_comprar');?></a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +222,7 @@
                         <!-- Package Price  -->
                         <div class="single-price-plan text-center">
                             <div class="plan-button">
-                                <a class="criptomonedas" href="<?php echo site_url().'allcurrency';?>">VER TODAS LAS MONEDAS</a>
+                                <a class="criptomonedas" href="<?php echo site_url().'allcurrency';?>"><?=lang('idioma.home_ver_todas_monedas');?></a>
                             </div>
                         </div>
                     </div>
@@ -250,33 +236,31 @@
                 <div class="row">
                     <div class="col-lg-12">
                             <div class="icon_box_title">
-                                <h1 class="future-adversing">FORMA PARTE DEL MUNDO DE LAS CRIPTOMONEDAS</h1>
+                                <h1 class="future-adversing"><?=lang('idioma.home_forma_parte');?></h1>
                             </div>
                     </div>
-
                     <div class="col-lg-6 icon_box_col">
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
-                                    <h2 class="atificial-text">RÁPIDO Y SENCILLO</h2>
+                                    <h2 class="atificial-text"><?=lang('idioma.home_rapido_sencillo');?></h2>
                                     <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/rapido.png';?>" alt="rápido" width="400"/> </p>
                             </div>
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
-                                    <h2 class="atificial-text">AMPLIA COBERTURA DE SERVICIOS</h2>
+                                    <h2 class="atificial-text"><?=lang('idioma.home_cobertura_servicio');?></h2>
                                     <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/cobertura.png';?>" alt="cobertura" width="400"/> </p>
                             </div>
-                            
                     </div>
                     <div class="col-lg-6 icon_box_col">
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
-                                    <h2 class="atificial-text">SEGURIDAD Y CONFIANZA</h2>
+                                    <h2 class="atificial-text"><?=lang('idioma.home_seguridad_confianza');?></h2>
                                     <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/seguridad_btc.png';?>" alt="seguridad" width="400"/> </p>
                             </div>
                             
                             <!-- Icon Box Item -->
                             <div class="icon_box_item" style="text-align:center">
-                                    <h2 class="atificial-text">SIN INTERMEDIARIOS</h2>
+                                    <h2 class="atificial-text"><?=lang('idioma.home_intermediario');?></h2>
                                     <p><img class="img_home" src="<?php echo site_url().'static/page_front/images/intermediarios.png';?>" alt="intermediarios" width="400"/> </p>
                             </div>
                     </div>
@@ -287,12 +271,11 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="section_title">
-						<h1>¿POR QUÉ ELEGIR EASYCRIPTO?</h1>
+						<h1><?=lang('idioma.home_porque_easycripto');?></h1>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<div class="h_slider_container services_slider_container">
 			<div class="service_slider_outer">
 				<!-- Services Slider -->
@@ -305,9 +288,9 @@
 									<div class="service_item_icon">
                                                                             <i class="fa fa-ticket icon" aria-hidden="true"></i>
 									</div>
-									<h2>Soporte Personalizado</h2>
+									<h2><?=lang('idioma.home_soporte_personalizado');?></h2>
 								</div>
-								<p>Atención personalizada para la compra de criptomonedas.</p>
+								<p><?=lang('idioma.home_atencion_personalizada');?></p>
 							</div>
 						</div>
 					</div>
@@ -319,9 +302,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-certificate icon"></i>
 									</div>
-									<h2>Servicios Exclusivos</h2>
+									<h2><?=lang('idioma.home_servicios_exclusivos');?></h2>
 								</div>
-								<p>Destinado a grandes inversionistas con una atención preferente.</p>
+								<p><?=lang('idioma.home_destinado_inversionistas');?></p>
 							</div>
 						</div>
 					</div>
@@ -333,9 +316,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-shield icon"></i> 
 									</div>
-									<h2>Plataforma Segura</h2>
+									<h2><?=lang('idioma.home_plataforma_segura');?></h2>
 								</div>
-								<p>Plataforma 100% segura durante todo el proceso de compras de criptomonedas.</p>
+								<p><?=lang('idioma.home_plataforma_100');?></p>
 							</div>
 						</div>
 					</div>
@@ -347,9 +330,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-area-chart icon"></i>
 									</div>
-									<h2>Innovaciones</h2>
+									<h2><?=lang('idioma.home_innovaciones');?></h2>
 								</div>
-								<p>Conectado y adaptado a cualquier dispositivo para simplificar y agilizar los procesos de pago y gestión de la información.</p>
+								<p><?=lang('idioma.home_conectado_adaptado');?></p>
 							</div>
 						</div>
 					</div>
@@ -361,9 +344,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-fighter-jet icon" aria-hidden="true"></i>
 									</div>
-									<h2>Rapidez</h2>
+									<h2><?=lang('idioma.home_rapidez');?></h2>
 								</div>
-								<p>Obtenga sus criptomonedas de la forma más rápida y eficiente.</p>
+								<p><?=lang('idioma.home_obtenga_monedas');?></p>
 							</div>
 						</div>
 					</div>
@@ -375,9 +358,9 @@
 									<div class="service_item_icon">
                                                                                 <i class="fa fa-users icon"></i>
 									</div>
-									<h2>Equipo</h2>
+									<h2><?=lang('idioma.home_equipo');?></h2>
 								</div>
-								<p>Profesionales del mundo de las criptomonedas analizan en todo momento el mercado para ofrecer la mejor atención.</p>
+								<p><?=lang('idioma.home_profesionales_mundo');?></p>
 							</div>
 						</div>
 					</div>
@@ -396,14 +379,13 @@
 			<div class="row">
 				<div class="col-lg-5 order-lg-1 order-2">
 					<div class="cta_content">
-						<h1>Servicio exclusivo para grandes inversores</h1>
-						<p>Servicio exclusivo enfocado a clientes que quieran adquirir Criptomonedas por un valor igual o superior a 50.000€. Easycripto le brindará una atención preferente y personalizada para la gestión de sus activos.</p>
+						<h1><?=lang('idioma.home_servicio_exclusivo');?></h1>
+						<p><?=lang('idioma.home_exclusivo_clientes');?></p>
                                                  <div class="button icon_box_button trans_200 with250" style="border: solid 2px #FFF !important;">
-                                                     <a href="<?php echo site_url().'contact/invest';?>" style="color:#FFF !important;"class="trans_200 ">CONTACTE CON NOSOTROS</a>
+                                                     <a href="<?php echo site_url().'contact/invest';?>" style="color:#FFF !important;"class="trans_200 "><?=lang('idioma.contacte_nosotros');?></a>
                                                 </div>
 					</div>
 				</div>
-
 				<div class="col-lg-6 offset-lg-1 order-lg-2 order-1">
 					<div class="cta_image d-flex flex-column justify-content-end">
                                             <img src="<?php echo site_url().'static/page_front/images/vip.png';?>" alt="clientes exclusivos">
@@ -418,8 +400,8 @@
             <div class="row contact_row">
                 <div class="col text-center">
                     <div class="section_title">
-                        <h1>CONTACTO</h1>
-                        <p class="under_header_p">Mantente en contacto con nosotros llenando el formulario de contacto <br>Realiza todas las preguntas que tengas y responderemos a la brevedad.</p>
+                        <h1><?=lang('idioma.contacto');?></h1>
+                        <p class="under_header_p"><?=lang('idioma.home_mantener_contacto');?></p>
                     </div>
                 </div>
                 <div class="col-lg-12">
