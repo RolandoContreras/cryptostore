@@ -23,7 +23,7 @@
 |
 */
 
-$config['base_url'] = 'http://localhost/cryptostore/';
+$config['base_url'] = 'http://localhost/cryptostore';
 //$config['base_url'] = 'http://easycripto.com/';
 //$config['base_url'] = 'https://www.easycripto.com/';
 
