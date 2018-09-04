@@ -8,12 +8,10 @@
                     <div class="logo footer_logo">
 			<img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" alt="logo" width="130">
                     </div>
-                    <p>Para tener la mejor casa de Cambio de Criptomonedas es necesario tener un equipo serio, profesional, contar con una seguridad impecable, transacciones sólidas y confiables. Para todo ello, EASYCRIPTO.</p>
+                    <p><?=lang('idioma.mejor_casa');?></p>
 			<!-- Copyright -->
 			<div class="footer_cr">
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                        All rights reserved  Easycripto© <br/>
-                        <script>document.write(new Date().getFullYear());</script> All rights reserved
+                        <script>document.write(new Date().getFullYear());</script> <?=lang('idioma.derechos_reservado');?> © 
                         </div>
 		</div>
             </div>
@@ -22,12 +20,12 @@
                 <div class="footer_col">
                     <div class="footer_col_title">Easycripto</div>
                     <ul>
-                        <li class="circle"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
-                        <li class="circle"><a href="#features" >Características</a></li>
-                        <li class="circle"><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
-                        <li class="circle"><a href="#contact">Contacto</a></li>
-                        <li class="circle"><a href="<?php echo site_url().'login';?>">Login</a></li>
-                        <li class="circle"><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
+                        <li class="circle"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
+                        <li class="circle"><a href="#features"><?=lang('idioma.nav_caracteristicas');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.nav_comprar');?></a></li>
+                        <li class="circle"><a href="#contact"><?=lang('idioma.nav_contacto');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
                     </ul>
                 </div>
                 <div class="footer_col">
@@ -38,7 +36,7 @@
             </div>
 	    <div class="col-lg-2">
                 <div class="footer_col">
-                    <div class="footer_col_title">Social</div>
+                    <div class="footer_col_title"><?=lang('idioma.social');?></div>
                     <ul>
                         <ul>
                             <li><a href="javascript:void(0);"><i class="fa fa-facebook-f fa-2x"></i></a></li>
@@ -51,12 +49,12 @@
             <!-- Footer Community -->
             <div class="col-lg-3">
                 <div class="footer_col">
-                    <div class="footer_col_title">Legal</div>
+                    <div class="footer_col_title"><?=lang('idioma.legal');?></div>
                     <ul>
-                        <li class="circle"><a href="<?php echo site_url().'notice/legal';?>">Aviso Legal</a></li>
-                        <li class="circle"><a href="<?php echo site_url().'notice/privacy';?>">Política de Privacidad</a></li>
-                        <li class="circle"><a href="<?php echo site_url().'notice/general';?>">Condiciones Generales</a></li>
-                        <li class="circle"><a href="<?php echo site_url().'notice/cookies';?>">Política de Cookies</a></li>
+                        <li class="circle"><a href="<?php echo site_url().'notice/legal';?>"><?=lang('idioma.aviso_legal');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'notice/privacy';?>"><?=lang('idioma.aviso_privacidad');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'notice/general';?>"><?=lang('idioma.aviso_generales');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'notice/cookies';?>"><?=lang('idioma.aviso_cookies');?></a></li>
                     </ul>
                 </div>
             </div>

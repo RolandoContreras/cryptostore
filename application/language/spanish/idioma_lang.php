@@ -1,7 +1,7 @@
 <?php
  //ESPAÑOL GLOBAL
  //TITULOS
- $lang['idioma.contacto'] = "CONTACTO";
+$lang['idioma.contacto'] = "CONTACTO";
 //NAV
 $lang['idioma.nav_inicio'] = "Inicio";
 $lang['idioma.nav_caracteristicas'] = "Características";
@@ -13,11 +13,32 @@ $lang['idioma.nav_login'] = "Login";
 $lang['idioma.boton_comprar'] = "COMPRAR";
 $lang['idioma.por_moneda'] = "por moneda";
 $lang['idioma.contacte_nosotros'] = "CONTACTE CON NOSOTROS";
+//MENSAJES FORMULARIO
+$lang['idioma.enviar_formulario'] = "Enviar formulario";
+$lang['idioma.enviado_correctamente'] = "Enviado Correctamente.";
+//MENSAJES FOOTER
+$lang['idioma.mejor_casa'] = "Para tener la mejor casa de Cambio de Criptomonedas es necesario tener un equipo serio, profesional, contar con una seguridad impecable, transacciones sólidas y confiables. Para todo ello, EASYCRIPTO.";
+$lang['idioma.derechos_reservado'] = "Todos los derechos reservados";
+$lang['idioma.social'] = "Social";
+$lang['idioma.legal'] = "Legal";
+$lang['idioma.aviso_legal'] = "Aviso Legal";
+$lang['idioma.aviso_privacidad'] = "Política de Privacidad";
+$lang['idioma.aviso_generales'] = "Condiciones Generales";
+$lang['idioma.aviso_cookies'] = "Política de Cookies";
+//TEXTOS HOME
+$lang['idioma.indicar_nombre'] = "Indícanos tu nombre";
+$lang['idioma.nombre_requerido'] = "El Nombre es requerido";
+$lang['idioma.indicar_email'] = "Indícanos tu email";
+$lang['idioma.email_requerido'] = "El Email es requerido";
+$lang['idioma.indicar_asunto'] = "Indicanos el Asunto";
+$lang['idioma.asunto_requerido'] = "El Asunto es requerido";
+$lang['idioma.indicar_comentario'] = "Indícanos tu Comentarios";
+$lang['idioma.comentario_requerido'] = "El Comentario es requerido";
+
 //MENSAJES
 $lang['idioma.boton_comprar'] = "COMPRAR";
 $lang['idioma.por_moneda'] = "por moneda";
 $lang['idioma.contacte_nosotros'] = "CONTACTE CON NOSOTROS";
-
 
 //HOME
 $lang['idioma.home_criptmonedas'] = "Criptomonedas";
@@ -47,16 +68,6 @@ $lang['idioma.home_profesionales_mundo'] = "Profesionales del mundo de las cript
 $lang['idioma.home_servicio_exclusivo'] = "Servicio exclusivo para grandes inversores";
 $lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo enfocado a clientes que quieran adquirir Criptomonedas por un valor igual o superior a 50.000€. Easycripto le brindará una atención preferente y personalizada para la gestión de sus activos.";
 $lang['idioma.home_mantener_contacto'] = "Mantente en contacto con nosotros llenando el formulario de contacto <br>Realiza todas las preguntas que tengas y responderemos a la brevedad.";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
-$lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo para grandes inversores";
 
 
 

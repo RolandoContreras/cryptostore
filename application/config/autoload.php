@@ -64,8 +64,7 @@ $autoload['libraries'] = array('form_validation','tmp_backoffice','tmp_mastercms
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url','form','string','basico');
-
+$autoload['helper'] = array('url','form','string','basico','language');
 
 
 /*
@@ -97,7 +96,7 @@ $autoload['config'] = array();
 |
 */
 
-$autoload['language'] = array();
+$autoload['language'] = array('idioma');
 
 
 /*
