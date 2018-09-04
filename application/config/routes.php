@@ -41,11 +41,16 @@
 $route['default_controller'] = "home";
 $route['404_override'] = 'errors/error_404';
 
-$route['^en/(.+)$'] = "$1";
-$route['^es/(.+)$'] = "$1"; 
 
-$route['^en$'] = $route['default_controller'];
-$route['^es$'] = $route['default_controller'];
+$route['(\w{2})/(.*)'] = '$2';
+$route['(\w{2})'] = $route['default_controller'];
+
+
+//$route['^en/(.+)$'] = "$1";
+//$route['^es/(.+)$'] = "$1"; 
+//
+//$route['^en$'] = $route['default_controller'];
+//$route['^es$'] = $route['default_controller'];
 
 $route['home'] = 'home';
 $route['home/send_messages'] = 'home/send_messages';

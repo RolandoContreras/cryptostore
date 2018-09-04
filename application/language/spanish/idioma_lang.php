@@ -70,7 +70,15 @@ $lang['idioma.home_exclusivo_clientes'] = "Servicio exclusivo enfocado a cliente
 $lang['idioma.home_mantener_contacto'] = "Mantente en contacto con nosotros llenando el formulario de contacto <br>Realiza todas las preguntas que tengas y responderemos a la brevedad.";
 
 
-
+//TEXTOS LOGIN
+$lang['idioma.login_indicar_nombre'] = "Indícanos tu nombre";
+$lang['idioma.nombre_requerido'] = "El Nombre es requerido";
+$lang['idioma.indicar_email'] = "Indícanos tu email";
+$lang['idioma.email_requerido'] = "El Email es requerido";
+$lang['idioma.indicar_asunto'] = "Indicanos el Asunto";
+$lang['idioma.asunto_requerido'] = "El Asunto es requerido";
+$lang['idioma.indicar_comentario'] = "Indícanos tu Comentarios";
+$lang['idioma.comentario_requerido'] = "El Comentario es requerido";
 
 
 

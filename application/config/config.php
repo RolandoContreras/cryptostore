@@ -23,7 +23,7 @@
 |
 */
 
-$config['base_url'] = 'http://localhost/cryptostore';
+$config['base_url'] = 'http://localhost/cryptostore/';
 //$config['base_url'] = 'http://easycripto.com/';
 //$config['base_url'] = 'https://www.easycripto.com/';
 
@@ -81,8 +81,15 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'spanish';
+$config['language'] = "spanish";
+/* default language abbreviation */
+$config['language_abbr'] = "es";
 
+/* set available language abbreviations */
+$config['lang_uri_abbr'] = array("es" => "spanish", "en" => "english");
+
+/* hide the language segment (use cookie) */
+$config['lang_ignore'] = TRUE;
 /*
 |--------------------------------------------------------------------------
 | Default Character Set
