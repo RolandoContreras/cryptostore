@@ -212,7 +212,7 @@
                                                 <label>
                                                     <input id="card-recharge-privacity" name="card-recharge-privacity" data-val="true" data-val-required="'Voucher Privacity' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="card-recharge-privacity" value="false" type="hidden">
-                                                        <?=lang('idioma.buy_acepto_condiciones');?>&nbsp;<a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank"><?=lang('idioma.buy_ver');?></a>
+                                                        <?=lang('idioma.buy_acepto_condiciones');?>&nbsp;<a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank"><?=lang('idioma.buy_ver');?></a>
                                                 </label>
                                             </div>
                                             <div class="floatleft">

@@ -16,6 +16,7 @@ $lang['idioma.boton_comprar'] = "BUYING";
 $lang['idioma.boton_retroceder'] = "BACK";
 $lang['idioma.por_moneda'] = "by currency";
 $lang['idioma.contacte_nosotros'] = "CONTACT WITH US";
+$lang['idioma.finalizar'] = "FINISH";
 //MENSAJES FORMULARIO
 $lang['idioma.enviar_formulario'] = "Send Form";
 $lang['idioma.enviado_correctamente'] = "Successfully submitted";
@@ -43,6 +44,7 @@ $lang['idioma.indicar_wallet'] = "Tell us your wallet";
 $lang['idioma.wallet_valida'] = "Please enter valid wallet";
 $lang['idioma.indicar_telefono'] = "Tell us your phone";
 $lang['idioma.telefono_valido'] = "Please enter valid phone";
+$lang['idioma.indicar_empresa'] = "Tell us your company";
 //HOME
 $lang['idioma.home_criptmonedas'] = "Cryptocurrencies";
 $lang['idioma.home_seguro_facil'] = "safe, easy and fast";
@@ -129,8 +131,19 @@ $lang['idioma.buy_acepto_condiciones'] = "I accept the general conditions of the
 $lang['idioma.buy_acepto_verificacion'] = "I accept the check of my identity and a minimal cost of return of 10 € due to expenses of management.";
 $lang['idioma.buy_afirmo'] = "I affirm that the wallet of bitcoins, that I use in this operation, is of my property and not of a third party.";
 
+$lang['idioma.verificar_datos'] = "Checking Information";
+$lang['idioma.importante'] = "Important:";
+$lang['idioma.verificacion_datos'] = "Check of the information of the Order.";
+$lang['idioma.poder_continuar'] = "To be able to continue with the process of purchase, you must check your e-mail. It follows the instructions that will come to you, to check your information and To check your information and we will end with your purchase.";
 
-
+//CONTACT INVEST
+$lang['idioma.contact_nombre'] = "Name";
+$lang['idioma.contact_email'] = "Email";
+$lang['idioma.contact_telefono'] = "Phone";
+$lang['idioma.contact_empresa'] = "Company";
+$lang['idioma.contact_comentarios'] = "Comments";
+$lang['idioma.acepto_privacidad'] = "I accept the privacy policy";
+$lang['idioma.privacidad_requerida'] = "Privacy Policy required";
 
 
 

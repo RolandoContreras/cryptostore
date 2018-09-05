@@ -16,6 +16,7 @@ $lang['idioma.boton_comprar'] = "COMPRAR";
 $lang['idioma.boton_retroceder'] = "RETROCEDER";
 $lang['idioma.por_moneda'] = "por moneda";
 $lang['idioma.contacte_nosotros'] = "CONTACTE CON NOSOTROS";
+$lang['idioma.finalizar'] = "FINALIZAR";
 //MENSAJES FORMULARIO
 $lang['idioma.enviar_formulario'] = "Enviar formulario";
 $lang['idioma.enviado_correctamente'] = "Enviado Correctamente.";
@@ -42,6 +43,8 @@ $lang['idioma.indicar_wallet'] = "Indícanos tu Billetera";
 $lang['idioma.wallet_valida'] = "Ingrese billetera valida";
 $lang['idioma.indicar_telefono'] = "Indícanos tu Teléfono";
 $lang['idioma.telefono_valido'] = "Ingrese teléfono valido";
+$lang['idioma.indicar_empresa'] = "Indícanos tu Empresa";
+$lang['idioma.comentario_requerido'] = "El Comentario es requerido";
 //MENSAJES
 $lang['idioma.boton_comprar'] = "COMPRAR";
 $lang['idioma.por_moneda'] = "por moneda";
@@ -130,8 +133,22 @@ $lang['idioma.buy_valor_aproximado'] = "*Valor apróx. de BTC. El valor final de
 $lang['idioma.buy_ver'] = "ver";
 $lang['idioma.buy_acepto_condiciones'] = "Acepto las condiciones generales de la contratación y la política de privacidad";
 $lang['idioma.buy_acepto_verificacion'] = "Acepto la verificación de mi identidad y un coste de devolución mínimo de 10€ debido a gastos de gestión.";
-$lang['idioma.buy_afirmo'] = " Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero. ";
+$lang['idioma.buy_afirmo'] = "Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero. ";
 
+$lang['idioma.verificar_datos'] = "Verificando Datos";
+$lang['idioma.importante'] = "Importante:";
+$lang['idioma.verificacion_datos'] = "Verificación de los datos de la Orden.";
+$lang['idioma.poder_continuar'] = "Para poder continuar con el proceso de compra, debes verificar tu email. Sigue las instrucciones que te llegarán, verificar tus datos y terminaremos con tu compra.";
+
+//CONTACT INVEST
+$lang['idioma.contact_nombre'] = "Nombre";
+$lang['idioma.contact_email'] = "Email";
+$lang['idioma.contact_telefono'] = "Teléfono";
+$lang['idioma.contact_empresa'] = "Empresa";
+$lang['idioma.contact_comentarios'] = "Comentarios";
+$lang['idioma.acepto_privacidad'] = "Acepto la política de privacidad.";
+$lang['idioma.privacidad_requerida'] = "Política de Privacidad requerida";
+ 
 
 
 
