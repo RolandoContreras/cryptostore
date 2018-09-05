@@ -30,7 +30,7 @@
                             $active_faq = "";
 
                             $url = explode("/",uri_string());
-                            $nav = $url[0];
+                            $nav = $url[1];
                             switch ($nav) {
                                 case 'home':
                                     $active_home = "active";
@@ -68,7 +68,7 @@
             <div class="row contact_row">
                 <div class="col text-center">
                     <div class="section_title">
-                        <h1>LOGIN</h1>
+                        <h1><?=lang('idioma.login');?></h1>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -80,29 +80,29 @@
                                 <div class="row">
                                     <div class="col-xs-6 col-md-6">
                                         <div class="wow bounceInLeft animated animated padding-responsive" style="visibility: visible;">
-                                            <input onkeyup="fade_email(this.value);" class="form-control form-control-2" id="email" name="email" placeholder="ingresa tu email" type="text">
-                                            <span id="message_email" class="field-validation-error" style="display:none;">Ingrese email valido</span>
+                                            <input onkeyup="fade_email(this.value);" class="form-control form-control-2" id="email" name="email" placeholder="<?=lang('idioma.login_indicar_email');?>" type="text">
+                                            <span id="message_email" class="field-validation-error" style="display:none;"><?=lang('idioma.login_ingrese_email_valido');?></span>
                                         </div>
                                     </div>
                                     <div class="col-xs-6 col-md-6">
                                         <div class="wow bounceInLeft animated animated" style="visibility: visible;">
-                                            <input onkeyup="fade_password(this.value);"  class="form-control form-control-2" id="password" name="password" placeholder="Indicanos tu contraseña" type="password">
-                                        <span id="message_password" class="field-validation-error" style="display:none;">Ingrese contraseña valida</span>
+                                            <input onkeyup="fade_password(this.value);"  class="form-control form-control-2" id="password" name="password" placeholder="<?=lang('idioma.login_indicar_contraseña');?>" type="password">
+                                        <span id="message_password" class="field-validation-error" style="display:none;"><?=lang('idioma.login_ingrese_contrasena_valida');?></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="row margin-top-20">
                                         <div class="col-xs-6 col-md-6">
-                                            <input onclick="login();" style="cursor: pointer" class="submit_btn_comprar trans_300" value="Enviar formulario"/>
-                                             <p><a href="<?php echo site_url().'forgot';?>">¿Olvidó su contraseña?</a></p>
+                                            <input onclick="login();" style="cursor: pointer" class="submit_btn_comprar trans_300" value="<?=lang('idioma.login_iniciar_sesion');?>"/>
+                                             <p><a href="<?php echo site_url().'forgot';?>"><?=lang('idioma.login_olvido_contrasena');?></a></p>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                             <br/>
-                            <div id="messages" class="alert alert-success" style="text-align: center; display: none;">Bienvenido</div>
-                            <div id="no_messages" class="alert alert-danger" style="text-align: center; display: none;">Datos Invalidos</div>
+                            <div id="messages" class="alert alert-success" style="text-align: center; display: none;"><?=lang('idioma.login_bienvenido');?></div>
+                            <div id="no_messages" class="alert alert-danger" style="text-align: center; display: none;"><?=lang('idioma.login_datos_invalidos');?></div>
                         </div>
                     </div>
                 </div>

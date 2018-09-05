@@ -70,7 +70,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center margin-bottom-30">
                         <div class="icon_box_title">
-                            <h1 class="title-currency margin-top100">Comprar criptomonedas nunca fue tan fácil! </h1>
+                            <h1 class="title-currency margin-top100"><?=lang('idioma.buy_comprar_monedas');?></h1>
                         </div>
                     </div>
                 </div>
@@ -87,10 +87,10 @@
                                     <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
                                         <div class="col-lg-12">
                                             <h4 class="question_currency">
-                                                ¿Cuánto quieres comprar?
+                                                <?=lang('idioma.buy_cuanto_comprar');?>
                                             </h4>
                                             <p class="p_currency">
-                                                Introduce la cantidad en dólares que deseas comprar en criptomonedas.
+                                                <?=lang('idioma.buy_introduce_cantidad');?>
                                             </p>
                                         </div>
                                         <div class="col-lg-12">
@@ -123,8 +123,8 @@
                                     <div class="col-lg-12 col-sm-12 height-15"></div>    
                                     <div id="bloqueGris-original" class="col-lg-12 bloqueGris">
                                         <div class="col-lg-12">
-                                            <h4 class="question_currency">¿Qué criptomoneda quieres?</h4>
-                                            <p class="p_currency">Selecciona tu criptomoneda a comprar.</p>
+                                            <h4 class="question_currency"><?=lang('idioma.buy_que_moneda_quieres');?></h4>
+                                            <p class="p_currency"><?=lang('idioma.buy_selecciona_moneda');?></p>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="calculador">
@@ -160,12 +160,12 @@
                                     </div>
                                     <div class="col-lg-12 col-sm-12 height-15"></div>    
                                         <div class="text-center">
-                                            <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="Comprar">
+                                            <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="<?=lang('idioma.boton_comprar');?>">
                                                 
                                         </div>
                                         <div class="margin-top-15">
                                             <a class="texto-enlace" href="<?php echo site_url().'faq';?>" target="_blank">
-                                                    ¿Todavía sin monedero?
+                                                    <?=lang('idioma.buy_sin_monedero');?>
                                                 </a>
                                         </div>
                                 </div>

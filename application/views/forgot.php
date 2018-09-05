@@ -54,15 +54,15 @@
                             }        
                             ?>
                            <ul>
-                                <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
-                                <li><a href="<?php echo site_url().'home/#features'?>" >Características</a></li>
-                                <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
-                                <li><a href="<?php echo site_url().'home/#contact';?>">Contacto</a></li>
-                                <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>">Login</a></li>
-                                <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
+                                <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
+                                <li><a href="<?php echo site_url().'home/#features'?>"><?=lang('idioma.nav_caracteristicas');?></a></li>
+                                <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.nav_comprar');?></a></li>
+                                <li><a href="<?php echo site_url().'home/#contact';?>"><?=lang('idioma.nav_contacto');?></a></li>
+                                <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
+                                <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
                                 <li>
-                                    <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
-                                    <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+                                    <a href="<?php echo site_url().'home/#features'?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="es" width="40"/></a>
+                                    <a href="<?php echo site_url().'home/#features'?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="en" width="40"/></a>
                                 </li>
                             </ul>
 		</div>
@@ -76,9 +76,8 @@
                                             <div class="row contact_row">
                                                 <div class="col text-center">
                                                     <div class="section_title">
-                                                        <h1>RECUPERAR CONTRASEÑA</h1>
-                                                        <p>Por favor introduzca el E-mail registrado para enviar un mensaje de recuperación.</p>
-                                                        
+                                                        <h1><?=lang('idioma.forgot');?></h1>
+                                                        <p><?=lang('idioma.introduzca_email');?></p>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">
@@ -90,14 +89,14 @@
                                                                     <div class="row">
                                                                         <div class="col-xs-12 col-md-12">
                                                                             <div class="wow bounceInLeft animated animated">
-                                                                                <input class="form-control form-control-2" id="reply_form_email" placeholder="Ingrese su email" type="text">
+                                                                                <input class="form-control form-control-2" id="reply_form_email" placeholder="<?=lang('idioma.login_indicar_email');?>" type="text">
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 <div class="row margintop20">
                                                                     <div class="col-xs-6 col-md-6">
                                                                             <div class="wow bounceInLeft animated animated">
-                                                                                  <button id="reply_form_submit" type="submit" class="submit_btn_comprar trans_300" value="Submit">RECUPERAR CONTRASEÑA</button>
+                                                                                  <button id="reply_form_submit" type="submit" class="submit_btn_comprar trans_300" value="Submit"><?=lang('idioma.recuperar_contrasena');?></button>
                                                                             </div>
                                                                         </div>
                                                                 </div>

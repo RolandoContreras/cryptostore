@@ -2,6 +2,8 @@
  //INGLES GLOBAL
  //TITULOS
 $lang['idioma.contacto'] = "CONTACT";
+$lang['idioma.login'] = "LOGIN";
+$lang['idioma.forgot'] = "RECOVER PASSWORD";
 //NAV
 $lang['idioma.nav_inicio'] = "Home";
 $lang['idioma.nav_caracteristicas'] = "Features";
@@ -34,7 +36,6 @@ $lang['idioma.indicar_asunto'] = "Tell us your Subject";
 $lang['idioma.asunto_requerido'] = "Subject is required";
 $lang['idioma.indicar_comentario'] = "Tell us your comment";
 $lang['idioma.comentario_requerido'] = "Comment is required";
-
 //HOME
 $lang['idioma.home_criptmonedas'] = "Cryptocurrencies";
 $lang['idioma.home_seguro_facil'] = "safe, easy and fast";
@@ -42,7 +43,6 @@ $lang['idioma.home_compra_criptomonedas'] = "BUY CRIPTOCURRENCY SAFELY ";
 $lang['idioma.home_comprar_monedas'] = "BUY COINS";
 $lang['idioma.home_ver_todas_monedas'] = "SEE ALL COINS";
 $lang['idioma.home_forma_parte'] = "BECOME A PART OF THE CRIPTOCURRENCY'S WORLD";
-
 $lang['idioma.home_rapido_sencillo'] = "QUICK AND EASY";
 $lang['idioma.home_cobertura_servicio'] = "WIDE COVERAGE OF SERVICES";
 $lang['idioma.home_seguridad_confianza'] = "SECURITY AND TRUST";
@@ -63,6 +63,27 @@ $lang['idioma.home_profesionales_mundo'] = "Professionals from the cryptocurrenc
 $lang['idioma.home_servicio_exclusivo'] = "Exclusive service for big investors";
 $lang['idioma.home_exclusivo_clientes'] = "Exclusive service focused on customers who want to buy cryptocurrencies for a value equal to or greater than € 50,000.Easycripto will provide you with a preferential care for the management of their investment";
 $lang['idioma.home_mantener_contacto'] = "Keep in touch with us by filling out the form contact <br/>To all questions you have we will respond promptly.";
+//TEXTOS LOGIN
+$lang['idioma.login_indicar_email'] = "Tell us your email";
+$lang['idioma.login_indicar_contraseña'] = "Tell us your password";
+$lang['idioma.login_iniciar_sesion'] = "Login";
+$lang['idioma.login_ingrese_email_valido'] = "Please enter valid emai";
+$lang['idioma.login_ingrese_contrasena_valida'] = "Please enter valid password";
+$lang['idioma.login_olvido_contrasena'] = "Forgot password?";
+$lang['idioma.login_bienvenido'] = "welcome";
+$lang['idioma.login_datos_invalidos'] = "Invalid data";
+//TEXTOS FORGOT
+$lang['idioma.introduzca_email'] = "Please enter the registered E-mail to send a message of recovery.";
+$lang['idioma.recuperar_contrasena'] = "RECOVER PASSWORD";
+//TEXTOS FAQ
+$lang['idioma.preguntas_frecuentes'] = "FREQUENTLY ASKED QUESTIONS";
+//TEXTOS COMPRAR
+$lang['idioma.buy_comprar_monedas'] = "Buy cryptocurrencies has never been so easy!";
+$lang['idioma.buy_cuanto_comprar'] = "How much would you like to buy?";
+$lang['idioma.buy_introduce_cantidad'] = "Enter the amount in dollars you want to buy in cryptocurrencies.";
+$lang['idioma.buy_que_moneda_quieres'] = "Which cryptocurrency want?";
+$lang['idioma.buy_selecciona_moneda'] = "Select your cryptocurrency to buy.";
+$lang['idioma.buy_sin_monedero'] = "Don't have wallet?";
 
 
 

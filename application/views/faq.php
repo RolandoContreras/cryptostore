@@ -70,7 +70,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="icon_box_title">
-                            <h1 class="title-currency margin-top100">PREGUNTAS FRECUENTES</h1>
+                            <h1 class="title-currency margin-top100"><?=lang('idioma.preguntas_frecuentes');?></h1>
                         </div>
                     </div>
                 </div>
