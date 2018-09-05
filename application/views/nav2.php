@@ -39,7 +39,7 @@
 <nav class="main_nav justify-self-end text-left">
     <ul>
         <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
-        <li class="<?php echo $active_home;?>"><a href="#features"><?=lang('idioma.nav_caracteristicas');?></a></li>
+        <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home';?>#features"><?=lang('idioma.nav_caracteristicas');?></a></li>
         <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.nav_comprar');?></a></li>
         <li class="<?php echo $active_contact;?>"><a href="<?php echo site_url().'home';?>#contact"><?=lang('idioma.nav_contacto');?></a></li>
         <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>

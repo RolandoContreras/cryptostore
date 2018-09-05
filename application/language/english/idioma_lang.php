@@ -7,12 +7,12 @@ $lang['idioma.forgot'] = "RECOVER PASSWORD";
 //NAV
 $lang['idioma.nav_inicio'] = "Home";
 $lang['idioma.nav_caracteristicas'] = "Features";
-$lang['idioma.nav_comprar'] = "¡Buy!";
+$lang['idioma.nav_comprar'] = "¡Buying!";
 $lang['idioma.nav_contacto'] = "Contact";
 $lang['idioma.nav_faq'] = "FAQ";
 $lang['idioma.nav_login'] = "Login";
 //BOTONES
-$lang['idioma.boton_comprar'] = "BUY";
+$lang['idioma.boton_comprar'] = "BUYING";
 $lang['idioma.por_moneda'] = "by currency";
 $lang['idioma.contacte_nosotros'] = "CONTACT WITH US";
 //MENSAJES FORMULARIO
@@ -84,6 +84,12 @@ $lang['idioma.buy_introduce_cantidad'] = "Enter the amount in dollars you want t
 $lang['idioma.buy_que_moneda_quieres'] = "Which cryptocurrency want?";
 $lang['idioma.buy_selecciona_moneda'] = "Select your cryptocurrency to buy.";
 $lang['idioma.buy_sin_monedero'] = "Don't have wallet?";
+
+
+
+
+
+
 
 
 

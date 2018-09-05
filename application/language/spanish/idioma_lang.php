@@ -89,6 +89,23 @@ $lang['idioma.buy_que_moneda_quieres'] = "¿Qué criptomoneda quieres?";
 $lang['idioma.buy_selecciona_moneda'] = "Selecciona tu criptomoneda a comprar.";
 $lang['idioma.buy_sin_monedero'] = "¿Todavía sin monedero?";
 
+$lang['idioma.buy_porque_esy'] = "Porqué Easycripto";
+$lang['idioma.buy_pago_seguro'] = "Pago Seguro";
+$lang['idioma.buy_soporte_personalizado'] = "Soporte Personalizado";
+$lang['idioma.buy_precios_competitivos'] = "Los precios más competitivos";
+$lang['idioma.buy_sin_registro'] = "Sin necesidad de registro";
+$lang['idioma.buy_tiempo_record'] = "Tus Bitcoins en tiempo record";
+$lang['idioma.buy_bitcoin_garantizados'] = "Tus Bitcoins garantizados";
+$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
+
+$lang['idioma.buy_datos_clientes'] = "Datos de cliente";
+$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
+$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
+$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
+$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
+$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
+
+
 
 
 
