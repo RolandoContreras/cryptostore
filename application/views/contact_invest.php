@@ -12,17 +12,8 @@
                     <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" alt="logo" width="130">
 		</div>
 		<!-- Navigation -->
-                <?php $this->load->view("nav2");?>
-		<!-- Hamburger -->
-		<div class="hamburger_container bez_1">
-                    <i class="fa fa-bars trans_200"></i>
-		</div>
-	</header>
-	<!-- Menu -->
-	<div class="menu_container">
-		<div class="menu menu_mm text-right">
-			<div class="menu_close"><i class="fa fa-times-circle trans_200"></i></div>
-                        <?php 
+                <nav class="main_nav justify-self-end text-left">
+                    <?php 
                             //INIT VAR
                             $active_home = "";
                             $active_buy = "";
@@ -31,7 +22,7 @@
                             $active_contact = "";
 
                             $url = explode("/",uri_string());
-                            $nav = $url[0];
+                            $nav = $url[1];
                             switch ($nav) {
                                 case 'home':
                                     $active_home = "active";
@@ -53,6 +44,29 @@
                                     break;
                             }        
                             ?>
+                    <ul>
+                        <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
+                        <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home';?>#features"><?=lang('idioma.nav_caracteristicas');?></a></li>
+                        <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.nav_comprar');?></a></li>
+                        <li class="<?php echo $active_contact;?>"><a href="<?php echo site_url().'home';?>#contact"><?=lang('idioma.nav_contacto');?></a></li>
+                        <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
+                        <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
+                        <li>
+                            <a href='<?php echo site_url()."es/contact/invest";?>' style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
+                            <a href="<?php echo site_url()."en/contact/invest";?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+                        </li>
+                    </ul>
+                </nav>
+		<!-- Hamburger -->
+		<div class="hamburger_container bez_1">
+                    <i class="fa fa-bars trans_200"></i>
+		</div>
+	</header>
+	<!-- Menu -->
+	<div class="menu_container">
+		<div class="menu menu_mm text-right">
+			<div class="menu_close"><i class="fa fa-times-circle trans_200"></i></div>
+                        
                            <ul>
                                 <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
                                 <li><a href="<?php echo site_url().'home/#features'?>"><?=lang('idioma.nav_caracteristicas');?></a></li>
