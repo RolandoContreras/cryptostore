@@ -279,7 +279,7 @@
                                     <input type="hidden" name="total_db" value="<?php echo $total_db;?>"/>
                                     <script
                                       src="https://checkout.stripe.com/checkout.js" class="stripe-button submit_btn_comprar_2"
-                                      data-key="pk_live_hkJ3sunnrXSMThENiXfBUlZ5"
+                                      data-key="pk_test_o0c1SIapQ0qxBEPnpdbESNtl"
                                       data-amount="<?php echo $total_card;?>"
                                       data-name="Easycripto"
                                       data-description="<?=lang('idioma.buy_ingreso_datos_tarjeta');?>"

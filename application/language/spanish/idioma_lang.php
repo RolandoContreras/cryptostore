@@ -169,6 +169,10 @@ $lang['idioma.importante'] = "Importante:";
 $lang['idioma.verificacion_datos'] = "Verificación de los datos de la Orden.";
 $lang['idioma.poder_continuar'] = "Para poder continuar con el proceso de compra, debes verificar tu email. Sigue las instrucciones que te llegarán, verificar tus datos y terminaremos con tu compra.";
 
+$lang['idioma.confirmacion_pago'] = "Confirmación del Pago.";
+$lang['idioma.gracias_confianza'] = "Gracias por su confianza, acabamos de enviar un mensaje a su correo electrónico con los detalles de su compra. También le hemos creado una cuenta en la plataforma EASYCRIPTO para que obtenga más beneficios.";
+
+
 
 //CONTACT INVEST
 $lang['idioma.contact_nombre'] = "Nombre";

@@ -3,8 +3,8 @@ include ("vendor/autoload.php");
 class Stripegateway {
     public function __construct(){
         $stripe = array(
-                 "secret_key" => "sk_test_Xn74AuMSxbTpxeToVdYIz166",
-                 "public_key" => "pk_test_hkJ3sunnrXSMThENiXfBUlZ5"
+                 "secret_key" => "sk_test_twsziyeku7u7DcZGNCtCeDjs",
+                 "public_key" => "pk_test_o0c1SIapQ0qxBEPnpdbESNtl"
                 );
                 \Stripe\Stripe::setApiKey($stripe["secret_key"]);
     }
