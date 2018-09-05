@@ -160,7 +160,9 @@
                                     </div>
                                     <div class="col-lg-12 col-sm-12 height-15"></div>    
                                         <div class="text-center">
-                                            <input id="submit" type="submit" class="submit_btn_comprar trans_300" value="<?=lang('idioma.boton_comprar');?>">
+                                            
+                                            <button class="submit_btn_comprar trans_300" id="submit" type="submit"><?=lang('idioma.boton_comprar');?></button>
+                                            <!--<input id="submit" type="submit" class="submit_btn_comprar trans_300" value="<?=lang('idioma.boton_comprar');?>">-->
                                                 
                                         </div>
                                         <div class="margin-top-15">

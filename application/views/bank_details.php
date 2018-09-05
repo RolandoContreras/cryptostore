@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <!--START HEAD-->
 <?php $this->load->view("head");?>
@@ -78,11 +78,11 @@
                         </div>
                     </div>
                 </div>
-			<div class="row panel-bitcoinDinero">
+			<div class="row">
                             <form action="<?php echo site_url().'buy/bank/confirm_bank';?>" method="post">
                             <div class="col-lg-12">
                             <div class="row">
-                                <div class="col-sm-4 panel-bitcoinDinero-col">
+                                <div class="col-sm-4">
                                     <p>
                                         <span class="textogris"><?=lang('idioma.buy_datos_personales');?></span>
                                     </p>
@@ -247,6 +247,7 @@
                     </div>
                 </form>        
             </div>
+                </div>
         </header>
         <!--END CRYPTOCURRENCY-->
 	<!-- Footer -->

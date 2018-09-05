@@ -235,13 +235,14 @@
                         </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <a href="<?php echo site_url().'buy';?>"><input class="submit_btn_comprar_back trans_300" value="<?=lang('idioma.boton_retroceder');?>"/></a>
+                            <a href="<?php echo site_url().'buy';?>"><button class="submit_btn_comprar_back trans_300"><?=lang('idioma.boton_retroceder');?></button></a>
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <input onclick="validate();" class="submit_btn_comprar_2" value="<?=lang('idioma.boton_comprar');?>">
+                            <button onclick="validate();" class="submit_btn_comprar_2"><?=lang('idioma.boton_comprar');?></button>
                         </div>
                         <div class="col-sm-2"></div>
                     </div>
+                </div>
         </header>
         <!--END CRYPTOCURRENCY-->
 	<!-- Footer -->
