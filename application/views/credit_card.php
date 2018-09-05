@@ -31,7 +31,14 @@
                             $active_contact = "";
 
                             $url = explode("/",uri_string());
-                            $nav = $url[0];
+                            $nav = $url[1];
+                            
+                            if (isset($url[2])){
+                                $nav_2 = "/".$url[2];
+                            }else{
+                                $nav_2 = "";
+                            }
+                            
                             switch ($nav) {
                                 case 'home':
                                     $active_home = "active";
@@ -54,15 +61,15 @@
                             }        
                             ?>
                            <ul>
-                                <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
-                                <li><a href="<?php echo site_url().'home/#features'?>" >Características</a></li>
-                                <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
-                                <li class="<?php echo $active_contact;?>"><a href="<?php echo site_url().'home/#contact';?>">Contacto</a></li>
-                                <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>">Login</a></li>
-                                <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
+                                <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
+                                <li><a href="<?php echo site_url().'home/#features'?>"><?=lang('idioma.nav_caracteristicas');?></a></li>
+                                <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.nav_comprar');?></a></li>
+                                <li class="<?php echo $active_contact;?>"><a href="<?php echo site_url().'home/#contact';?>"><?=lang('idioma.nav_contacto');?></a></li>
+                                <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
+                                <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
                                 <li>
-                                    <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
-                                    <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+                                    <a href='<?php echo site_url()."es/$nav$nav_2";?>' style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
+                                    <a href="<?php echo site_url()."en/$nav$nav_2";?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
                                 </li>
                             </ul>
 		</div>
@@ -74,19 +81,19 @@
                 <div class="row">
                     <div class="col-lg-12 text-center margin-bottom-30">
                         <div class="icon_box_title">
-                            <h1 class="title-currency-contact margin-top100">Rellena el formulario, estaremos encantados de ayudarte.</h1>
+                            <h1 class="title-currency-contact margin-top100"><?=lang('idioma.buy_rellena_formulario');?></h1>
                         </div>
                     </div>
                 </div>
 			<div class="row">
                             <div class="col-md-4 hidden-xs panel-bitcoinDinero-col">
-                                <p><span class="textogris">Porqué Easycripto</span></p>
+                                <p><span class="textogris"><?=lang('idioma.buy_porque_esy');?></span></p>
                                 <div class="panelporqueComprar">
                                     <div class="porqueComprar">
                                         <span class="icon-PagoSeguro">
                                             <i id="safe" class="fa fa-shield fa-2x"></i>
                                         </span>
-                                        <span class="textoGrisInputs">Pago seguro</span>
+                                        <span class="textoGrisInputs"><?=lang('idioma.buy_pago_seguro');?></span>
                                     </div>
                                 </div>
                                 <div class="panelporqueComprar">
@@ -94,7 +101,7 @@
                                         <span class="icon-Soporte">
                                             <i id="support" class="fa fa-ticket fa-2x"></i>
                                         </span>
-                                        <span class="textoGrisInputs">Soporte Personalizado</span>
+                                        <span class="textoGrisInputs"><?=lang('idioma.buy_soporte_personalizado');?></span>
                                     </div>
                                 </div>
                                 <div class="panelporqueComprar">
@@ -102,7 +109,7 @@
                                         <span class="icon-Competitivos">
                                             <i id="support" class="fa fa-trophy fa-2x"></i>
                                         </span>
-                                        <span class="textoGrisInputs">Los precios más competitivos</span>
+                                        <span class="textoGrisInputs"><?=lang('idioma.buy_precios_competitivos');?></span>
                                     </div>
                                 </div>
                                 <div class="panelporqueComprar">
@@ -110,7 +117,7 @@
                                         <span class="icon-PagoSeguro">
                                             <i id="price" class="fa fa-check-circle fa-2x"></i>
                                         </span>
-                                        <span class="textoGrisInputs">Sin necesidad de registro</span>
+                                        <span class="textoGrisInputs"><?=lang('idioma.buy_sin_registro');?></span>
                                     </div>
                                 </div>
                                 <div class="panelporqueComprar">
@@ -118,7 +125,7 @@
                                         <span class="icon-Soporte">
                                             <i id="record" class="fa fa-space-shuttle fa-2x"></i>
                                         </span>
-                                        <span class="textoGrisInputs">Tus Bitcoins en tiempo record</span>
+                                        <span class="textoGrisInputs"><?=lang('idioma.buy_tiempo_record');?></span>
                                     </div>
                                 </div>
                                 <div class="panelporqueComprar">
@@ -126,7 +133,7 @@
                                         <span class="icon-Competitivos">
                                             <i id="price" class="fa fa-certificate fa-2x"></i>
                                         </span>
-                                        <span class="textoGrisInputs">Tus Bitcoins garantizados</span>
+                                        <span class="textoGrisInputs"><?=lang('idioma.buy_bitcoin_garantizados');?></span>
                                     </div>
                                 </div>
                                 <div class="panelporqueComprar">
@@ -134,14 +141,14 @@
                                         <span class="icon-Competitivos">
                                             <i id="safe" class="fa fa-user fa-2x"></i>
                                         </span>
-                                        <span class="textoGrisInputs">Muy fáciles de comprar</span>
+                                        <span class="textoGrisInputs"><?=lang('idioma.buy_faciles_comprar');?></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-4 panel-tarjeta-col">
                     <p>
                         <span class="textogris">
-                            Datos del pago.
+                            <?=lang('idioma.buy_datos_clientes');?>
                         </span>
                     </p>
                     <div class="form-group has-feedback">
@@ -149,23 +156,23 @@
                             <span class="input-group-addon">
                                 <span id="nombre-faq" class="fa fa-question-circle"></span>
                             </span>
-                            <input type="text" class="form-control" onkeyup="fade_name(this.value);"  id="name" name="name" placeholder="Ingresa tus Nombres">
+                            <input type="text" class="form-control" onkeyup="fade_name(this.value);"  id="name" name="name" placeholder="<?=lang('idioma.indicar_nombre');?>">
                         </div>
-                        <span id="message_name" class="field-validation-error" style="display:none;">Ingrese sus Nombres</span>
+                        <span id="message_name" class="field-validation-error" style="display:none;"><?=lang('idioma.nombre_requerido');?></span>
                     </div>
                     <div class="form-group has-feedback">
                         <div class="input-group tarjetaDineroDatos">
                             <span class="input-group-addon">
                                 <span class="fa fa-question-circle" id="apellido-faq"></span>
                             </span>
-                            <input type="text" class="form-control" onkeyup="fade_last_name(this.value);" id="last_name" name="last_name" placeholder="Ingresa tus Apellidos">
+                            <input type="text" class="form-control" onkeyup="fade_last_name(this.value);" id="last_name" name="last_name" placeholder="<?=lang('idioma.indicar_apellido');?>">
                         </div>
-                        <span id="message_last_name" class="field-validation-error" style="display:none;">Ingrese sus Apellidos</span>
+                        <span id="message_last_name" class="field-validation-error" style="display:none;"><?=lang('idioma.apellido_requerido');?></span>
                     </div>
                     <div class="margin-top-43">
                         <p>
                             <span class="textogris">
-                                Fecha de nacimiento.
+                                <?=lang('idioma.fecha_nacimiento');?>
                             </span>
                         </p>
                     <div class="form-group has-feedback">
@@ -173,61 +180,61 @@
                             <span class="input-group-addon">
                                 <span id="nombre-faq" class="fa fa-question-circle"></span>
                             </span>
-                            <input class="form-control" onkeyup="fade_day(this.value);" id="day" name="day" placeholder="dd" type="text">
+                            <input class="form-control" onkeyup="fade_day(this.value);" id="day" name="day" placeholder="DD" type="text">
                         </div>
-                       <span id="message_day" class="field-validation-error" style="display:none; width: 50% !important;" >Ingrese Día valido</span> 
+                       <span id="message_day" class="field-validation-error" style="display:none; width: 50% !important;"><?=lang('idioma.dia_valido');?></span> 
                     </div>
                     <div class="form-group has-feedback">
                         <div class="input-group tarjetaDineroDatos" style="width: 50% !important;">
                             <span class="input-group-addon">
                                 <span id="nombre-faq" class="fa fa-question-circle"></span>
                             </span>
-                            <input type="text" class="form-control" onkeyup="fade_month(this.value);" id="month" name="month" placeholder="mm">
+                            <input type="text" class="form-control" onkeyup="fade_month(this.value);" id="month" name="month" placeholder="MM">
                         </div>
-                        <span id="message_month" class="field-validation-error" style="display:none; width: 50% !important;">Ingrese Mes valido</span> 
+                        <span id="message_month" class="field-validation-error" style="display:none; width: 50% !important;"><?=lang('idioma.mes_valido');?></span> 
                     </div>
                     <div class="form-group has-feedback">
                         <div class="input-group tarjetaDineroDatos" style="width: 50% !important;">
                             <span class="input-group-addon">
                                 <span id="nombre-faq" class="fa fa-question-circle"></span>
                             </span>
-                            <input type="text" class="form-control" onkeyup="fade_year(this.value);" id="year" name="year" placeholder="aaaa">
+                            <input type="text" class="form-control" onkeyup="fade_year(this.value);" id="year" name="year" placeholder="<?=lang('idioma.ano');?>">
                         </div>
-                        <span id="message_year" class="field-validation-error" style="display:none; width: 50% !important;">Ingrese Año valido</span> 
+                        <span id="message_year" class="field-validation-error" style="display:none; width: 50% !important;"><?=lang('idioma.ano_valido');?></span> 
                     </div>
                     </div>
                     </div>
                     <div class="col-sm-4 panel-tarjeta-col">
                     <p>
                         <span class="textogris">
-                            Datos del pago.
+                            <?=lang('idioma.buy_datos_clientes');?>
                         </span>
                     </p>
                     <div class="form-group has-feedback">
                         <div class="input-group tarjetaDineroDatos width-total">
                             <div class="input-group tarjetaDineroDatos width-total">
-                                <input type="text" class="form-control border-radius-4" onkeyup="fade_address(this.value);" id="address" name="address" placeholder="Ingrese Domicilio">
+                                <input type="text" class="form-control border-radius-4" onkeyup="fade_address(this.value);" id="address" name="address" placeholder="<?=lang('idioma.indicar_domicilio');?>">
                             </div>
                         </div>
-                        <span id="message_address" class="field-validation-error" style="display:none;">Ingrese Domicilio</span> 
+                        <span id="message_address" class="field-validation-error" style="display:none;"><?=lang('idioma.domicilio_requerido');?></span> 
                     </div>
                     <div class="form-group has-feedback">
                         <div class="input-group tarjetaDineroDatos width-total">
-                            <input type="text" class="form-control border-radius-4" onkeyup="fade_postal(this.value);" id="postal" name="postal" placeholder="Ingrese Código postal" >
+                            <input type="text" class="form-control border-radius-4" onkeyup="fade_postal(this.value);" id="postal" name="postal" placeholder="<?=lang('idioma.indicar_codigo_postal');?>" >
                         </div>
-                        <span id="message_postal" class="field-validation-error" style="display:none;">Ingrese Código Postal</span> 
+                        <span id="message_postal" class="field-validation-error" style="display:none;"><?=lang('idioma.codigo_postal_requerido');?></span> 
                     </div>
                     <div class="form-group has-feedback">
                         <div class="input-group tarjetaDineroDatos width-total">
-                            <input type="text" class="form-control border-radius-4" onkeyup="fade_poblacion(this.value);" id="poblacion" name="poblacion" placeholder="Ingrese Población" >
+                            <input type="text" class="form-control border-radius-4" onkeyup="fade_poblacion(this.value);" id="poblacion" name="poblacion" placeholder="<?=lang('idioma.indicar_poblacion');?>">
                         </div>
-                        <span id="message_poblacion" class="field-validation-error" style="display:none;">Ingrese Código Postal</span> 
+                        <span id="message_poblacion" class="field-validation-error" style="display:none;"><?=lang('idioma.poblacion_requerido');?></span> 
                     </div>
                     <div class="form-group has-feedback">
                         <div class="input-group tarjetaDineroDatos width-total">
-                            <input type="text" class="form-control border-radius-4" id="provincia" name="provincia" placeholder="Ingrese Provincia" >
+                            <input type="text" class="form-control border-radius-4" id="provincia" name="provincia" placeholder="<?=lang('idioma.indicar_provincia');?>">
                         </div>
-                        <span id="message_provincia" class="field-validation-error" style="display:none;">Ingrese Provincia</span> 
+                        <span id="message_provincia" class="field-validation-error" style="display:none;"><?=lang('idioma.provincia_requerido');?></span> 
                     </div>
                     <div class="form-group has-feedback">
                         <div class="form-group">
@@ -250,27 +257,26 @@
                             <div class="row row-centered">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-8">
-                                    <div class="blockacepta2">
+                                    <div class="margin-top-50">
                                         <div class="checkbox display-inline-block">
                                             <div class="floatleft">
                                                 <label>
                                                     <input name="privacity" id="privacity" type="checkbox" value="1" >
-                                                    Acepto las <a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank">condiciones generales de la contratación</a> y la 
-                                                        <a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank">política de privacidad</a>.
+                                                    <?=lang('idioma.buy_acepto_condiciones');?>&nbsp;<a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank"><?=lang('idioma.buy_ver');?></a>
                                                 </label>
                                             </div>
                                             <div class="floatleft">
                                                 <label>
                                                     <input id="property" name="property" type="checkbox" value="2">
-                                                    Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero.
+                                                    <?=lang('idioma.buy_afirmo');?>
                                                 </label>
                                             </div>
                                             <div class="floatleft">
                                                 <label>
                                                     <input id="cost" name="cost" type="checkbox" value="3">
-                                                    Acepto la verificación de mi identidad y un coste de <a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link">devolución  mínimo de 10€ debido a gastos de gestión.</a> 
+                                                    <?=lang('idioma.buy_acepto_verificacion');?>&nbsp;<a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link"><?=lang('idioma.buy_ver');?></a>
                                                 </label>
-                                                <span id="message_check" class="field-validation-error" style="display:none;">Debe seleccionar todos las opciones</span>
+                                                <span id="message_check" class="field-validation-error" style="display:none;"><?=lang('idioma.buy_debe_seleccionar');?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -281,10 +287,10 @@
                             </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <a href="<?php echo site_url().'bank';?>"><button class="submit_btn_comprar_back trans_300" value="Retrocede" type="submit">Retroceder</button></a>
+                            <a href="<?php echo site_url().'bank';?>"><button class="submit_btn_comprar_back trans_300" type="submit"><?=lang('idioma.boton_retroceder');?></button></a>
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <input onclick="validate_credit_card();" class="submit_btn_comprar_2 trans_300" value="Comprar">
+                            <input onclick="validate_credit_card();" class="submit_btn_comprar_2 trans_300" value="<?=lang('idioma.boton_comprar');?>">
                         </div>
                         <div class="col-sm-2"></div>
                     </div>

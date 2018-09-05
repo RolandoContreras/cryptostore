@@ -32,6 +32,23 @@ $lang['idioma.aviso_cookies'] = "Cookie Policy";
 //TEXTOS FORMULARIO
 $lang['idioma.indicar_nombre'] = "Tell us your name";
 $lang['idioma.nombre_requerido'] = "Name is required";
+$lang['idioma.fecha_nacimiento'] = "Date of Birth";
+$lang['idioma.indicar_apellido'] = "Tell us your last name";
+$lang['idioma.apellido_requerido'] = "Last name is required";
+$lang['idioma.dia_valido'] = "Please enter valid day";
+$lang['idioma.mes_valido'] = "Please enter valid month";
+$lang['idioma.ano'] = "YYYY";
+$lang['idioma.ano_valido'] = "Please enter valid year";
+
+$lang['idioma.indicar_domicilio'] = "Tell us your address";
+$lang['idioma.domicilio_requerido'] = "Address is required";
+$lang['idioma.indicar_codigo_postal'] = "Tell us your ZIP code";
+$lang['idioma.codigo_postal_requerido'] = "ZIP code is required";
+$lang['idioma.indicar_poblacion'] = "Tell us your city";
+$lang['idioma.poblacion_requerido'] = "City is required";
+$lang['idioma.indicar_provincia'] = "Tell us your province";
+$lang['idioma.provincia_requerido'] = "Province is required";
+
 $lang['idioma.indicar_email'] = "Tell us your email";
 $lang['idioma.email_requerido'] = "Email is required";
 $lang['idioma.email_valido'] = "Please enter valid email";
@@ -130,6 +147,7 @@ $lang['idioma.buy_ver'] = "see";
 $lang['idioma.buy_acepto_condiciones'] = "I accept the general conditions of the contracting and the politics of privacy";
 $lang['idioma.buy_acepto_verificacion'] = "I accept the check of my identity and a minimal cost of return of 10 € due to expenses of management.";
 $lang['idioma.buy_afirmo'] = "I affirm that the wallet of bitcoins, that I use in this operation, is of my property and not of a third party.";
+$lang['idioma.buy_debe_seleccionar'] = "You must select all the options";
 
 $lang['idioma.verificar_datos'] = "Checking Information";
 $lang['idioma.importante'] = "Important:";

@@ -9,11 +9,20 @@
     $url = explode("/",uri_string());
     $nav = $url[1];
     
+    if (isset($url[2])){
+        $nav_2 = "/".$url[2];
+    }else{
+        $nav_2 = "";
+    }
+    
     switch ($nav) {
         case 'home':
             $active_home = "active";
             break;
         case 'buy':
+            $active_buy = "active";
+            break;
+        case 'bank':
             $active_buy = "active";
             break;
         case 'allcurrency':
@@ -45,8 +54,8 @@
         <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
         <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
         <li>
-            <a href='<?php echo site_url()."es/$nav";?>' style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
-            <a href="<?php echo site_url()."en/$nav";?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+            <a href='<?php echo site_url()."es/$nav$nav_2";?>' style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
+            <a href="<?php echo site_url()."en/$nav$nav_2";?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
         </li>
     </ul>
 </nav>

@@ -32,6 +32,32 @@ $lang['idioma.aviso_cookies'] = "Política de Cookies";
 //TEXTOS FORMULARIO
 $lang['idioma.indicar_nombre'] = "Indícanos tu nombre";
 $lang['idioma.nombre_requerido'] = "El Nombre es requerido";
+
+$lang['idioma.fecha_nacimiento'] = "Fecha de Nacimiento";
+
+$lang['idioma.indicar_apellido'] = "Indícanos tu apellido";
+$lang['idioma.apellido_requerido'] = "El Apellido es requerido";
+
+$lang['idioma.dia_valido'] = "Ingrese día valido";
+$lang['idioma.mes_valido'] = "Ingrese mes valido";
+
+
+$lang['idioma.ano'] = "AAAA";
+$lang['idioma.ano_valido'] = "Ingrese año valido";
+
+$lang['idioma.indicar_domicilio'] = "Indícanos tu domicilio";
+$lang['idioma.domicilio_requerido'] = "El Domicilio es requerido";
+
+$lang['idioma.indicar_codigo_postal'] = "Indícanos tu código postal";
+$lang['idioma.codigo_postal_requerido'] = "El Código postal es requerido";
+
+$lang['idioma.indicar_poblacion'] = "Indícanos tu población";
+$lang['idioma.poblacion_requerido'] = "La población es requerida";
+
+
+$lang['idioma.indicar_provincia'] = "Indícanos tu provincia";
+$lang['idioma.provincia_requerido'] = "La provincia es requerido";
+
 $lang['idioma.indicar_email'] = "Indícanos tu email";
 $lang['idioma.email_requerido'] = "El Email es requerido";
 $lang['idioma.email_valido'] = "Ingrese email valido";
@@ -134,6 +160,7 @@ $lang['idioma.buy_ver'] = "ver";
 $lang['idioma.buy_acepto_condiciones'] = "Acepto las condiciones generales de la contratación y la política de privacidad";
 $lang['idioma.buy_acepto_verificacion'] = "Acepto la verificación de mi identidad y un coste de devolución mínimo de 10€ debido a gastos de gestión.";
 $lang['idioma.buy_afirmo'] = "Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero. ";
+$lang['idioma.buy_debe_seleccionar'] = "Debe seleccionar todos las opciones";
 
 $lang['idioma.verificar_datos'] = "Verificando Datos";
 $lang['idioma.importante'] = "Importante:";
