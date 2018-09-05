@@ -13,6 +13,7 @@ $lang['idioma.nav_faq'] = "FAQ";
 $lang['idioma.nav_login'] = "Inicio de Sesión";
 //BOTONES
 $lang['idioma.boton_comprar'] = "COMPRAR";
+$lang['idioma.boton_retroceder'] = "RETROCEDER";
 $lang['idioma.por_moneda'] = "por moneda";
 $lang['idioma.contacte_nosotros'] = "CONTACTE CON NOSOTROS";
 //MENSAJES FORMULARIO
@@ -27,15 +28,20 @@ $lang['idioma.aviso_legal'] = "Aviso Legal";
 $lang['idioma.aviso_privacidad'] = "Política de Privacidad";
 $lang['idioma.aviso_generales'] = "Condiciones Generales";
 $lang['idioma.aviso_cookies'] = "Política de Cookies";
-//TEXTOS HOME
+//TEXTOS FORMULARIO
 $lang['idioma.indicar_nombre'] = "Indícanos tu nombre";
 $lang['idioma.nombre_requerido'] = "El Nombre es requerido";
 $lang['idioma.indicar_email'] = "Indícanos tu email";
 $lang['idioma.email_requerido'] = "El Email es requerido";
+$lang['idioma.email_valido'] = "Ingrese email valido";
 $lang['idioma.indicar_asunto'] = "Indicanos el Asunto";
 $lang['idioma.asunto_requerido'] = "El Asunto es requerido";
 $lang['idioma.indicar_comentario'] = "Indícanos tu Comentarios";
 $lang['idioma.comentario_requerido'] = "El Comentario es requerido";
+$lang['idioma.indicar_wallet'] = "Indícanos tu Billetera";
+$lang['idioma.wallet_valida'] = "Ingrese billetera valida";
+$lang['idioma.indicar_telefono'] = "Indícanos tu Teléfono";
+$lang['idioma.telefono_valido'] = "Ingrese teléfono valido";
 //MENSAJES
 $lang['idioma.boton_comprar'] = "COMPRAR";
 $lang['idioma.por_moneda'] = "por moneda";
@@ -89,7 +95,8 @@ $lang['idioma.buy_que_moneda_quieres'] = "¿Qué criptomoneda quieres?";
 $lang['idioma.buy_selecciona_moneda'] = "Selecciona tu criptomoneda a comprar.";
 $lang['idioma.buy_sin_monedero'] = "¿Todavía sin monedero?";
 
-$lang['idioma.buy_porque_esy'] = "Porqué Easycripto";
+$lang['idioma.buy_rellena_formulario'] = "Rellena el formulario, estaremos encantados de ayudarte.";
+$lang['idioma.buy_porque_esy'] = "¿Porqué Easycripto?";
 $lang['idioma.buy_pago_seguro'] = "Pago Seguro";
 $lang['idioma.buy_soporte_personalizado'] = "Soporte Personalizado";
 $lang['idioma.buy_precios_competitivos'] = "Los precios más competitivos";
@@ -99,11 +106,36 @@ $lang['idioma.buy_bitcoin_garantizados'] = "Tus Bitcoins garantizados";
 $lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
 
 $lang['idioma.buy_datos_clientes'] = "Datos de cliente";
-$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
-$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
-$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
-$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
-$lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
+$lang['idioma.buy_metodo_pago'] = "Métodos de pago";
+$lang['idioma.buy_tarjeta'] = "Tarjeta de débito / crédito +2%";
+$lang['idioma.buy_importe_compra'] = "Importe de la compra";
+
+$lang['idioma.buy_revisa_datos'] = "Por favor, revisa los datos y confírmanos que son correctos.";
+$lang['idioma.buy_datos_personales'] = "Datos Personales";
+$lang['idioma.buy_telefono'] = "Teléfono";
+$lang['idioma.buy_monedero_importante'] = "¡El monedero es el dato más importante!";
+$lang['idioma.buy_monedero_recibir'] = "Monedero en donde recibir la criptomoneda ";
+$lang['idioma.buy_email'] = "Email";
+$lang['idioma.buy_atencion'] = "¡Atención! Asegúrese de introducir un wallet de Bitcoin válido. Si indica un monedero de otra criptomoneda los fondos podrían resultar inaccesibles. ";
+$lang['idioma.buy_datos_pago'] = "Datos del Pago";
+$lang['idioma.buy_transferencia_bancaria'] = "Transferencia Bancaria";
+$lang['idioma.buy_tiempo_entrega'] = "Tiempo estimado de entrega";
+$lang['idioma.buy_tiempo_30_60'] = "Entre 30/60 min*";
+$lang['idioma.buy_resumen_pedido'] = "Resumen del Pedido";
+$lang['idioma.buy_tu_pedido'] = "Tu Pedido";
+$lang['idioma.buy_pay_sel'] = "+ Pago sel.( %)";
+$lang['idioma.buy_importe_total'] = "Importe Total";
+
+$lang['idioma.buy_valor_aproximado'] = "*Valor apróx. de BTC. El valor final depende de la tasa de cambio en el momento de realizar el envio a tu wallet.";
+$lang['idioma.buy_ver'] = "ver";
+$lang['idioma.buy_acepto_condiciones'] = "Acepto las condiciones generales de la contratación y la política de privacidad";
+$lang['idioma.buy_acepto_verificacion'] = "Acepto la verificación de mi identidad y un coste de devolución mínimo de 10€ debido a gastos de gestión.";
+$lang['idioma.buy_afirmo'] = " Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero. ";
+
+
+
+
+
 
 
 

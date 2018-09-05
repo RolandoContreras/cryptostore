@@ -13,6 +13,7 @@ $lang['idioma.nav_faq'] = "FAQ";
 $lang['idioma.nav_login'] = "Login";
 //BOTONES
 $lang['idioma.boton_comprar'] = "BUYING";
+$lang['idioma.boton_retroceder'] = "BACK";
 $lang['idioma.por_moneda'] = "by currency";
 $lang['idioma.contacte_nosotros'] = "CONTACT WITH US";
 //MENSAJES FORMULARIO
@@ -27,15 +28,21 @@ $lang['idioma.aviso_legal'] = "Legal Notice";
 $lang['idioma.aviso_privacidad'] = "Privacy Policy";
 $lang['idioma.aviso_generales'] = "General Terms and Conditions";
 $lang['idioma.aviso_cookies'] = "Cookie Policy";
-//TEXTOS HOME
+//TEXTOS FORMULARIO
 $lang['idioma.indicar_nombre'] = "Tell us your name";
 $lang['idioma.nombre_requerido'] = "Name is required";
 $lang['idioma.indicar_email'] = "Tell us your email";
 $lang['idioma.email_requerido'] = "Email is required";
+$lang['idioma.email_valido'] = "Please enter valid email";
 $lang['idioma.indicar_asunto'] = "Tell us your Subject";
 $lang['idioma.asunto_requerido'] = "Subject is required";
 $lang['idioma.indicar_comentario'] = "Tell us your comment";
 $lang['idioma.comentario_requerido'] = "Comment is required";
+
+$lang['idioma.indicar_wallet'] = "Tell us your wallet";
+$lang['idioma.wallet_valida'] = "Please enter valid wallet";
+$lang['idioma.indicar_telefono'] = "Tell us your phone";
+$lang['idioma.telefono_valido'] = "Please enter valid phone";
 //HOME
 $lang['idioma.home_criptmonedas'] = "Cryptocurrencies";
 $lang['idioma.home_seguro_facil'] = "safe, easy and fast";
@@ -84,6 +91,53 @@ $lang['idioma.buy_introduce_cantidad'] = "Enter the amount in dollars you want t
 $lang['idioma.buy_que_moneda_quieres'] = "Which cryptocurrency want?";
 $lang['idioma.buy_selecciona_moneda'] = "Select your cryptocurrency to buy.";
 $lang['idioma.buy_sin_monedero'] = "Don't have wallet?";
+
+$lang['idioma.buy_rellena_formulario'] = "Fill out the form, we will be glad to help you.";
+$lang['idioma.buy_porque_esy'] = "Why Easycripto?";
+$lang['idioma.buy_pago_seguro'] = "Secure payment";
+$lang['idioma.buy_soporte_personalizado'] = "Customized support";
+$lang['idioma.buy_precios_competitivos'] = "The most competitive prices";
+$lang['idioma.buy_sin_registro'] = "Without registration";
+$lang['idioma.buy_tiempo_record'] = "Your Bitcoins in record time";
+$lang['idioma.buy_bitcoin_garantizados'] = "Your guaranteed Bitcoins";
+$lang['idioma.buy_faciles_comprar'] = "Easy-to-buy";
+
+$lang['idioma.buy_datos_clientes'] = "Client Data";
+$lang['idioma.buy_metodo_pago'] = "Payment methods";
+$lang['idioma.buy_tarjeta'] = "Credit / Debit card +2%";
+$lang['idioma.buy_importe_compra'] = "Purchase amount";
+
+$lang['idioma.buy_revisa_datos'] = "Please check the data and confirm that they are correct.";
+$lang['idioma.buy_datos_personales'] = "Personal data";
+$lang['idioma.buy_telefono'] = "Phone";
+$lang['idioma.buy_monedero_importante'] = "The wallet is the most important data!";
+$lang['idioma.buy_monedero_recibir'] = "Wallet where to receive the criptomoneda ";
+$lang['idioma.buy_email'] = "Email";
+$lang['idioma.buy_atencion'] = "Attention! Insure itself of introducing a wallet of valid Bitcoin. If it indicates a purse of another criptomoneda the funds might turn out to be inaccessible.";
+$lang['idioma.buy_datos_pago'] = "Information of the Payment";
+$lang['idioma.buy_transferencia_bancaria'] = "Bank Transfer";
+$lang['idioma.buy_tiempo_entrega'] = "Time estimated of delivery";
+$lang['idioma.buy_tiempo_30_60'] = "Between 30/60 min*";
+$lang['idioma.buy_resumen_pedido'] = "Summary of the Order";
+$lang['idioma.buy_tu_pedido'] = "Your Order";
+$lang['idioma.buy_pay_sel'] = "+ Payment sel.( %)";
+$lang['idioma.buy_importe_total'] = "Total Amount";
+
+$lang['idioma.buy_valor_aproximado'] = "*Value apróx. of BTC. The final value depends on the exchange rate in the moment realizing the sending to your wallet.";
+$lang['idioma.buy_ver'] = "see";
+$lang['idioma.buy_acepto_condiciones'] = "I accept the general conditions of the contracting and the politics of privacy";
+$lang['idioma.buy_acepto_verificacion'] = "I accept the check of my identity and a minimal cost of return of 10 € due to expenses of management.";
+$lang['idioma.buy_afirmo'] = "I affirm that the wallet of bitcoins, that I use in this operation, is of my property and not of a third party.";
+
+
+
+
+
+
+
+
+
+
 
 
 

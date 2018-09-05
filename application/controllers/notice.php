@@ -11,7 +11,8 @@ class Notice extends CI_Controller {
     {
         //GET URL
         $url = explode("/",uri_string());
-        $notice_url = $url[1];
+        $notice_url = $url[2];
+        
         switch ($notice_url) {
             case 'legal':
                 $url = "legal";

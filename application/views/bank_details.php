@@ -54,15 +54,15 @@
                             }        
                             ?>
                            <ul>
-                                <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
-                                <li><a href="<?php echo site_url().'home/#features'?>" >Características</a></li>
-                                <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
-                                <li class="<?php echo $active_contact;?>"><a href="<?php echo site_url().'home/#contact';?>">Contacto</a></li>
-                                <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>">Login</a></li>
-                                <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
+                                <li class="<?php echo $active_home;?>"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
+                                <li><a href="<?php echo site_url().'home/#features'?>"><?=lang('idioma.nav_caracteristicas');?></a></li>
+                                <li class="<?php echo $active_buy;?>"><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.nav_comprar');?></a></li>
+                                <li class="<?php echo $active_contact;?>"><a href="<?php echo site_url().'home/#contact';?>"><?=lang('idioma.nav_contacto');?></a></li>
+                                <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
+                                <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
                                 <li>
-                                    <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
-                                    <a style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+                                    <a href='<?php echo site_url()."es/$nav";?>' style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
+                                    <a href="<?php echo site_url()."en/$nav";?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
                                 </li>
                             </ul>
 		</div>
@@ -74,7 +74,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center margin-bottom-30">
                         <div class="icon_box_title">
-                            <h1 class="title-currency-contact margin-top100">Por favor, revisa los datos y confírmanos que son correctos.</h1>
+                            <h1 class="title-currency-contact margin-top100"><?=lang('idioma.buy_revisa_datos');?></h1>
                         </div>
                     </div>
                 </div>
@@ -84,22 +84,22 @@
                             <div class="row">
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
                                     <p>
-                                        <span class="textogris">Datos Personales</span>
+                                        <span class="textogris"><?=lang('idioma.buy_datos_personales');?></span>
                                     </p>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">Teléfono</h3>
+                                            <h3 class="panel-title"><?=lang('idioma.buy_telefono');?></h3>
                                         </div>
                                         <div class="panel-body">
                                             <div class="content"><?php echo $phone;?></div>
                                             <input type="hidden" name="phone" id="phone" value="<?php echo $phone;?>"/>
                                         </div>
                                     </div>
-                                    <p>¡El monedero es el dato más importante!</p>
+                                    <p><?=lang('idioma.buy_monedero_importante');?></p>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h3 class="panel-title">
-                                                Monedero en donde recibir la criptomoneda
+                                                <?=lang('idioma.buy_monedero_recibir');?>
                                             </h3>
                                         </div>
                                         <div class="panel-body">
@@ -109,12 +109,11 @@
                                     </div>
 
                                     <div class="alert alert-warning" role="alert">
-                                    ¡Atención! Aseguresé de introducir un wallet de Bitcoin válido. 
-                                        Si indica un monedero de otra criptomoneda los fondos podrían resultar inaccesibles.
+                                        <?=lang('idioma.buy_atencion');?>
                                     </div>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">Email</h3>
+                                            <h3 class="panel-title"><?=lang('idioma.buy_email');?></h3>
                                         </div>
                                         <div class="panel-body">
                                             <div class="content"><?php echo $email;?></div>
@@ -124,34 +123,34 @@
                                 </div>
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
                                     <p>
-                                        <span class="textogris">Datos del Pago</span>
+                                        <span class="textogris"><?=lang('idioma.buy_datos_pago');?></span>
                                     </p>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <span class="fa fa-dollar-sign fa-1x transferencia"></span>
-                                            <span class="textoGrisInputs">Transferencia Bancaria</span>
+                                            <span class="textoGrisInputs"><?=lang('idioma.buy_transferencia_bancaria');?></span>
                                             <input type="hidden" name="radio" id="radio" value="<?php echo $radio;?>"/>
                                         </div>
                                     </div>
                                     <div class="margintop20">
                                         <p>
-                                            <span class="textogris">Tiempo estimado de entrega</span>
+                                            <span class="textogris"><?=lang('idioma.buy_tiempo_entrega');?></span>
                                         </p>
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
                                                 <span class="fa fa-clock fa-1x transferencia"></span>
-                                                <span class="textoGrisInputs">Entre 30/60 min*</span>
+                                                <span class="textoGrisInputs"><?=lang('idioma.buy_tiempo_30_60');?></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 panel-bitcoinDinero-col">
-                                    <p><span class="textogris">Resumen del Pedido</span></p>
+                                    <p><span class="textogris"><?=lang('idioma.buy_resumen_pedido');?></span></p>
                                     <div class="panel panel-primary">
                                         <div class="panel-body">
                                             <div class="contentSeparatorPrimer">
                                                 <div class="textoresumenRecarja">
-                                                    <h5 id="pedido">Tu Pedido</h5>
+                                                    <h5 id="pedido"><?=lang('idioma.buy_tu_pedido');?></h5>
                                                 </div>
                                                 <div class="content2"><img src="<?php echo site_url().'static/page_front/images/pago_seguro.png';?>" alt="Pago Seguro" width="61" height="28"></div>
                                             </div>
@@ -178,7 +177,7 @@
 
                                             <div class="contentSeparator">
                                                 <div class="textoresumenRecarja">
-                                                    <span class="fa fa-check fa-2x"></span>&nbsp;&nbsp;+ Pago sel.( %)</div>
+                                                    <span class="fa fa-check fa-2x"></span>&nbsp;&nbsp;<?=lang('idioma.buy_pay_sel');?></div>
                                                 <div class="floatright">
                                                     <h4><span id="crypto-amount">0 $</span> </h4>
                                                     <input type="hidden" name="iva" id="iva" value="0"/>
@@ -187,7 +186,7 @@
 
                                             <div class="contentSeparatorResumen">
                                                 <div class="textoresumenRecarja">
-                                                    <h4><span id="importe_total">Importe Total</span></h4>
+                                                    <h4><span id="importe_total"><?=lang('idioma.buy_importe_total');?></span></h4>
                                                 </div>
                                                 <div class="floatright">
                                                     <h3>
@@ -199,7 +198,7 @@
                                     </div>
                                     <p>
                                         <span class="textogris small">
-                                            *Valor apróx. de BTC. El valor final depende de la tasa de cambio en el momento de realizar el envio a tu wallet.
+                                            <?=lang('idioma.buy_valor_aproximado');?>
                                         </span>
                                     </p>
                                 </div>
@@ -207,34 +206,30 @@
                             <div class="row row-centered">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-8">
-                                    <div class="blockacepta2">
+                                    <div class="margin-top-20">
                                         <div class="checkbox display-inline-block">
                                             <div class="floatleft">
                                                 <label>
                                                     <input id="card-recharge-privacity" name="card-recharge-privacity" data-val="true" data-val-required="'Voucher Privacity' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="card-recharge-privacity" value="false" type="hidden">
-                                                    Acepto las <a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank">condiciones generales de la contratación</a> y la 
-                                                        <a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank">política de privacidad</a>.
+                                                        <?=lang('idioma.buy_acepto_condiciones');?>&nbsp;<a class="blue-color-link" href="<?php echo site_url().'notice/general';?>" target="_blank"><?=lang('idioma.buy_ver');?></a>
                                                 </label>
                                             </div>
                                             <div class="floatleft">
                                                 <label>
                                                     <input id="confirm-wallet-property" name="confirm-wallet-property" data-val="true" data-val-required="'Confirm Wallet property' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="confirm-wallet-property" value="false" type="hidden">
-                                                    Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero.
+                                                    <?=lang('idioma.buy_afirmo');?>
                                                 </label>
                                             </div>
                                             <div class="floatleft">
                                                 <label>
                                                     <input id="confirm-devolutionservice-cost" name="confirm-devolutionservice-cost" data-val="true" data-val-required="'Confirm Devolution cost' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="confirm-devolutionservice-cost" value="false" type="hidden">
-                                                    Acepto la verificación de mi identidad y un coste de <a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link">devolución  mínimo de 10€ debido a gastos de gestión.</a>
+                                                    <?=lang('idioma.buy_acepto_verificacion');?>&nbsp;<a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link"><?=lang('idioma.buy_ver');?></a>
                                                 </label>
                                             </div>
                                         </div>
-                                        <span class="field-validation-valid" data-valmsg-for="card-recharge-privacity" data-valmsg-replace="true"></span>
-                                        <span class="field-validation-valid" data-valmsg-for="confirm-wallet-property" data-valmsg-replace="true"></span>
-                                        <span class="field-validation-valid" data-valmsg-for="confirm-devolutionservice-cost" data-valmsg-replace="true"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-2"></div>
