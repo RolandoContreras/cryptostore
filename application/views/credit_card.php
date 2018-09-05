@@ -46,6 +46,9 @@
                                 case 'buy':
                                     $active_buy = "active";
                                     break;
+                                case 'bank':
+                                    $active_buy = "active";
+                                    break;
                                 case 'login':
                                     $active_login = "active";
                                     break;

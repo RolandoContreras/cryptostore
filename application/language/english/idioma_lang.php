@@ -128,12 +128,25 @@ $lang['idioma.buy_importe_compra'] = "Purchase amount";
 
 $lang['idioma.buy_revisa_datos'] = "Please check the data and confirm that they are correct.";
 $lang['idioma.buy_datos_personales'] = "Personal data";
+
+
+$lang['idioma.buy_nombres'] = "Names";
+$lang['idioma.buy_apellidos'] = "Last Names";
+$lang['idioma.buy_fecha_nacimiento'] = "Date of Birth";
+$lang['idioma.buy_domicilio'] = "Address";
+$lang['idioma.buy_codigo_postal'] = "ZIP Code";
+$lang['idioma.buy_poblacion_provincia_pais'] = "City / Province / Country";
+
+
 $lang['idioma.buy_telefono'] = "Phone";
 $lang['idioma.buy_monedero_importante'] = "The wallet is the most important data!";
 $lang['idioma.buy_monedero_recibir'] = "Wallet where to receive the criptomoneda ";
 $lang['idioma.buy_email'] = "Email";
 $lang['idioma.buy_atencion'] = "Attention! Insure itself of introducing a wallet of valid Bitcoin. If it indicates a purse of another criptomoneda the funds might turn out to be inaccessible.";
 $lang['idioma.buy_datos_pago'] = "Information of the Payment";
+
+
+$lang['idioma.buy_tarjeta_credito_debito'] = "Credit / Debit card";
 $lang['idioma.buy_transferencia_bancaria'] = "Bank Transfer";
 $lang['idioma.buy_tiempo_entrega'] = "Time estimated of delivery";
 $lang['idioma.buy_tiempo_30_60'] = "Between 30/60 min*";
@@ -148,6 +161,7 @@ $lang['idioma.buy_acepto_condiciones'] = "I accept the general conditions of the
 $lang['idioma.buy_acepto_verificacion'] = "I accept the check of my identity and a minimal cost of return of 10 € due to expenses of management.";
 $lang['idioma.buy_afirmo'] = "I affirm that the wallet of bitcoins, that I use in this operation, is of my property and not of a third party.";
 $lang['idioma.buy_debe_seleccionar'] = "You must select all the options";
+$lang['idioma.buy_ingreso_datos_tarjeta'] = "Enter your card information";
 
 $lang['idioma.verificar_datos'] = "Checking Information";
 $lang['idioma.importante'] = "Important:";

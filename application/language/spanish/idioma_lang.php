@@ -32,32 +32,21 @@ $lang['idioma.aviso_cookies'] = "Política de Cookies";
 //TEXTOS FORMULARIO
 $lang['idioma.indicar_nombre'] = "Indícanos tu nombre";
 $lang['idioma.nombre_requerido'] = "El Nombre es requerido";
-
 $lang['idioma.fecha_nacimiento'] = "Fecha de Nacimiento";
-
 $lang['idioma.indicar_apellido'] = "Indícanos tu apellido";
 $lang['idioma.apellido_requerido'] = "El Apellido es requerido";
-
 $lang['idioma.dia_valido'] = "Ingrese día valido";
 $lang['idioma.mes_valido'] = "Ingrese mes valido";
-
-
 $lang['idioma.ano'] = "AAAA";
 $lang['idioma.ano_valido'] = "Ingrese año valido";
-
 $lang['idioma.indicar_domicilio'] = "Indícanos tu domicilio";
 $lang['idioma.domicilio_requerido'] = "El Domicilio es requerido";
-
 $lang['idioma.indicar_codigo_postal'] = "Indícanos tu código postal";
 $lang['idioma.codigo_postal_requerido'] = "El Código postal es requerido";
-
 $lang['idioma.indicar_poblacion'] = "Indícanos tu población";
 $lang['idioma.poblacion_requerido'] = "La población es requerida";
-
-
 $lang['idioma.indicar_provincia'] = "Indícanos tu provincia";
 $lang['idioma.provincia_requerido'] = "La provincia es requerido";
-
 $lang['idioma.indicar_email'] = "Indícanos tu email";
 $lang['idioma.email_requerido'] = "El Email es requerido";
 $lang['idioma.email_valido'] = "Ingrese email valido";
@@ -141,18 +130,30 @@ $lang['idioma.buy_importe_compra'] = "Importe de la compra";
 
 $lang['idioma.buy_revisa_datos'] = "Por favor, revisa los datos y confírmanos que son correctos.";
 $lang['idioma.buy_datos_personales'] = "Datos Personales";
+
+$lang['idioma.buy_nombres'] = "Nombres";
+$lang['idioma.buy_apellidos'] = "Apellidos";
+$lang['idioma.buy_fecha_nacimiento'] = "Fecha de Nacimiento";
+$lang['idioma.buy_domicilio'] = "Domicilio";
+$lang['idioma.buy_codigo_postal'] = "Código Postal";
+$lang['idioma.buy_poblacion_provincia_pais'] = "Población / Provincia / País";
+
+
 $lang['idioma.buy_telefono'] = "Teléfono";
 $lang['idioma.buy_monedero_importante'] = "¡El monedero es el dato más importante!";
 $lang['idioma.buy_monedero_recibir'] = "Monedero en donde recibir la criptomoneda ";
 $lang['idioma.buy_email'] = "Email";
 $lang['idioma.buy_atencion'] = "¡Atención! Asegúrese de introducir un wallet de Bitcoin válido. Si indica un monedero de otra criptomoneda los fondos podrían resultar inaccesibles. ";
 $lang['idioma.buy_datos_pago'] = "Datos del Pago";
+
+
+$lang['idioma.buy_tarjeta_credito_debito'] = "Tarjeta de Crédito / Debito";
 $lang['idioma.buy_transferencia_bancaria'] = "Transferencia Bancaria";
 $lang['idioma.buy_tiempo_entrega'] = "Tiempo estimado de entrega";
 $lang['idioma.buy_tiempo_30_60'] = "Entre 30/60 min*";
 $lang['idioma.buy_resumen_pedido'] = "Resumen del Pedido";
 $lang['idioma.buy_tu_pedido'] = "Tu Pedido";
-$lang['idioma.buy_pay_sel'] = "+ Pago sel.( %)";
+$lang['idioma.buy_pay_sel'] = "+ Pago ven.( %)";
 $lang['idioma.buy_importe_total'] = "Importe Total";
 
 $lang['idioma.buy_valor_aproximado'] = "*Valor apróx. de BTC. El valor final depende de la tasa de cambio en el momento de realizar el envio a tu wallet.";
@@ -161,11 +162,13 @@ $lang['idioma.buy_acepto_condiciones'] = "Acepto las condiciones generales de la
 $lang['idioma.buy_acepto_verificacion'] = "Acepto la verificación de mi identidad y un coste de devolución mínimo de 10€ debido a gastos de gestión.";
 $lang['idioma.buy_afirmo'] = "Afirmo que el monedero de bitcoins, que utilizo en esta operación, es de mi propiedad y no de un tercero. ";
 $lang['idioma.buy_debe_seleccionar'] = "Debe seleccionar todos las opciones";
+$lang['idioma.buy_ingreso_datos_tarjeta'] = "Ingrese los datos de su tarjeta";
 
 $lang['idioma.verificar_datos'] = "Verificando Datos";
 $lang['idioma.importante'] = "Importante:";
 $lang['idioma.verificacion_datos'] = "Verificación de los datos de la Orden.";
 $lang['idioma.poder_continuar'] = "Para poder continuar con el proceso de compra, debes verificar tu email. Sigue las instrucciones que te llegarán, verificar tus datos y terminaremos con tu compra.";
+
 
 //CONTACT INVEST
 $lang['idioma.contact_nombre'] = "Nombre";
