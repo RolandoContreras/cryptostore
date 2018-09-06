@@ -15,26 +15,9 @@ function alter_dni(){
     });
 }
 
-
-function alter_btc(){
-        var customer_id = document.getElementById("customer_id").value;
-        var btc = document.getElementById("btc").value;
-
-        $.ajax({
-        type: "post",
-        url: site +"b_data/update_btc_address",
-        dataType: "json",
-        data: {btc: btc,
-               customer_id:customer_id },
-        success:function(data){            
-              if(data.message == "true"){  
-                $("#alert_message_wallet").html('<div class="alert alert-success" style="text-align: center"><i class="fa fa-thumbs-up fa-3x"></i></div>'); 
-            }
-        }            
-    });
-}
 function alter_password(){
         var customer_id = document.getElementById("customer_id").value;
+        var password = document.getElementById("password").value;
         var password_one = document.getElementById("password_one").value;
         var password_two = document.getElementById("password_two").value;
         
@@ -44,13 +27,15 @@ function alter_password(){
                     url: site + "b_data/update_password",
                     dataType: "json",
                     data: {customer_id: customer_id,
-                           password_one: password_one
+                           password: password,
+                           password_one: password_one,
+                           password_two: password_two
                        },
                     success:function(data){            
                             if(data.message == "true"){         
-                            $("#alert_message_password").html('<div class="alert alert-success" style="text-align: center"><i class="fa fa-thumbs-up fa-3x"></i></div>'); 
+                            document.getElementById("password_success").style.display = "block";
                         }else{
-                            $("#alert_message_password").html('<div class="alert alert-danger" style="text-align: center">Las contraseñas no deben estan en blanco</div>'); 
+                            document.getElementById("password_no_success").style.display = "block";
                         }
                     }            
                 });
@@ -75,6 +60,7 @@ function validate_password(password){
                     document.form.password_two.disabled = false;
             }else{
                 document.getElementById("message").style.display = "block";
+                document.getElementById("message_success").style.display = "none";
             }
         }            
     });

@@ -201,25 +201,32 @@ $lang['idioma.b_noticias'] = "Noticias";
 $lang['idioma.b_informacion'] = "Información";
 $lang['idioma.b_email'] = "E-mail";
 $lang['idioma.b_movil'] = "Teléfono Movil :";
-
-
-
 $lang['idioma.b_fecha_namiciento'] = "Fecha de Nacimiento";
+$lang['idioma.b_fecha'] = "Fecha :";
 $lang['idioma.b_codigo_postal'] = "Código Postal";
+$lang['idioma.b_number :'] = "Número :";
 $lang['idioma.b_identificacion'] = "Identificación";
-$lang['idioma.b_fecha'] = " Fecha :";
-$lang['idioma.b_numero'] = "Número :";
 $lang['idioma.b_pasaporte'] = "Pasaporte / Numero de Identidad :";
+$lang['idioma.b_documento_guardado'] = "Documento Guardado";
 $lang['idioma.b_guardar'] = "Guardar";
 $lang['idioma.b_direccion'] = "Dirección";
-$lang['idioma.b_pais'] = "Provincia :";
-$lang['idioma.b_pais'] = "Localidad :";
+$lang['idioma.b_provincia'] = "Provincia :";
+$lang['idioma.b_localidad'] = "Localidad :";
 $lang['idioma.b_pais'] = "Pais :";
 $lang['idioma.b_cambiar_contrasena'] = "Cambiar Contraseña";
 $lang['idioma.b_contrasena_actual'] = "Contraseña Actual";
 $lang['idioma.b_nueva_contrasena'] = "Nueva Contraseña";
 $lang['idioma.b_repita_contrasena'] = "Repita Nueva Contraseña";
-$lang['idioma.b_cambiar_contrasena'] = "Cambiar Contraseña";
+
+$lang['idioma.b_contrasena_cambiada'] = "Contraseña Cambiada";
+$lang['idioma.b_datos_invalidos'] = "Datos Invalidos";
+
+$lang['idioma.b_contrasena_invalida'] = "Contraseña Invalida";
+$lang['idioma.b_contrasena_valida'] = "Contraseña Correcta";
+$lang['idioma.b_introduzca_contrasena'] = "Introduzca su contraseña actual.";
+
+
+
 
      
       

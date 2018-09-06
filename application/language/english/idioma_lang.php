@@ -196,10 +196,33 @@ $lang['idioma.b_precio_bitcoin'] = "BITCOIN PRICE:";
 $lang['idioma.b_mensaje'] = "Message:";
 $lang['idioma.b_informativo'] = "Informative";
 $lang['idioma.b_noticias'] = "News";
-//TABLERO
-$lang['idioma.b_tablero'] = "Dashboard";
-$lang['idioma.b_cliente_activo'] = "Cliente Activo";
+//PERFIL
+$lang['idioma.b_informacion'] = "Information";
+$lang['idioma.b_email'] = "E-mail";
+$lang['idioma.b_movil'] = "Phone :";
+$lang['idioma.b_fecha_namiciento'] = "Date of Birth";
+$lang['idioma.b_fecha'] = "Date :";
+$lang['idioma.b_codigo_postal'] = "ZIP Code";
+$lang['idioma.b_number :'] = "Number :";
+$lang['idioma.b_identificacion'] = "Identification";
+$lang['idioma.b_pasaporte'] = "Pasaporte / Numero de Identidad :";
+$lang['idioma.b_documento_guardado'] = "Saved document";
+$lang['idioma.b_guardar'] = "Save";
+$lang['idioma.b_direccion'] = "Address";
+$lang['idioma.b_provincia'] = "Province :";
+$lang['idioma.b_localidad'] = "City :";
+$lang['idioma.b_pais'] = "Country :";
+$lang['idioma.b_cambiar_contrasena'] = "Change Password";
+$lang['idioma.b_contrasena_actual'] = "Current Password";
+$lang['idioma.b_nueva_contrasena'] = "New Password";
+$lang['idioma.b_repita_contrasena'] = "Repeat New Password";
 
+$lang['idioma.b_contrasena_cambiada'] = "Password Changed";
+$lang['idioma.b_datos_invalidos'] = "Invalid Data";
+
+$lang['idioma.b_contrasena_invalida'] = "Password Invalid";
+$lang['idioma.b_contrasena_valida'] = "Correct Password";
+$lang['idioma.b_intriduzca_contrasena'] = "Enter your current password";
 
 
 

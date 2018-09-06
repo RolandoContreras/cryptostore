@@ -76,10 +76,17 @@ class B_data extends CI_Controller {
 
              if($this->input->is_ajax_request()){   
                 //SELECT ID FROM CUSTOMER
+               $password = $this->input->post('password');
                $password_one = $this->input->post('password_one');
+               $password_two = $this->input->post('password_two');
                $customer_id = $this->input->post('customer_id');
                
-               if($password_one != ""){
+               $param_customer = array(
+                                "select" => "password",
+                                "where" => "customer_id = '$customer_id' and password = '$password'");
+                $customer = count($this->obj_customer->get_search_row($param_customer));
+                if($customer > 0){
+                    if($password_one == $password_two){
                             //UPDATE DATA EN CUSTOMER TABLE
                             $data = array(
                                             'password' => $password_one,
@@ -89,16 +96,13 @@ class B_data extends CI_Controller {
                                         $this->obj_customer->update($customer_id,$data);
 
                                  $data['message'] = "true";
-                                 $data['print'] = "La contraseña de cambio con exito";
-                                 $data['url'] = "misdatos";
-                             echo json_encode($data); 
-                    
-               }else{
-                     $data['message'] = "false";
-                     $data['print'] = "Las contraseñas no deben estan en blanco";
-                     $data['url'] = "misdatos";
-                     echo json_encode($data); 
-               }
+                    }else{
+                          $data['message'] = "false";
+                    }
+                }else{
+                    $data['message'] = "false";
+                }
+               echo json_encode($data); 
             }
         }
         
@@ -111,121 +115,24 @@ class B_data extends CI_Controller {
                if($dni != ""){
                             //UPDATE DATA EN CUSTOMER TABLE
                             $data = array(
-                                            'dni' => $dni,
-                                            'updated_by' => $customer_id,
-                                            'updated_at' => date("Y-m-d H:i:s")
+                                        'dni' => $dni,
+                                        'updated_by' => $customer_id,
+                                        'updated_at' => date("Y-m-d H:i:s")
                                         ); 
-                                        $this->obj_customer->update($customer_id,$data);
-
-                                 $data['message'] = "true";
-                                 $data['print'] = "La contraseña de cambio con exito";
-                                 $data['url'] = "misdatos";
-                             echo json_encode($data); 
-                    
+                            $this->obj_customer->update($customer_id,$data);
+                             $data['message'] = "true";
+                             $data['print'] = "Documento Guardado";
+                             $data['url'] = "misdatos";
+                         echo json_encode($data); 
                }else{
                      $data['message'] = "false";
-                     $data['print'] = "Las contraseñas no deben estan en blanco";
+                     $data['print'] = "El DNI no puede estar en blanco";
                      $data['url'] = "misdatos";
                      echo json_encode($data); 
                }
             }
         }
         
-        public function update_btc_address(){
-            
-         if($this->input->is_ajax_request()){   
-            //SELECT ID FROM CUSTOMER
-           $btc_address = $this->input->post('btc');
-           $customer_id = $this->input->post('customer_id');
-
-           $param = array(
-                        "select" =>"customer.customer_id,
-                                    customer.username,
-                                    customer.first_name,
-                                    customer.last_name,
-                                    customer.email,
-                                    customer.btc_address,
-                                    customer.status_value",
-                        "where" => "customer.customer_id = $customer_id");
-           $obj_customer = $this->obj_customer->get_search_row($param);
-           //GET EMAIL
-           $email = $obj_customer->email;
-           
-           //UPDATE DATA EN CUSTOMER TABLE
-           $data = array(
-                           'btc_address' => $btc_address,
-                           'updated_by' => $customer_id,
-                           'updated_at' => date("Y-m-d H:i:s")
-                       ); 
-                       $this->obj_customer->update($customer_id,$data);
-            
-                       
-                 // El mensaje
-                $mail = "Querido(a), $obj_customer->first_name $obj_customer->last_name la dirección de bitcoin de su cuenta se cambio por: $btc_address";
-                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                $mensaje = wordwrap($mail, 70, "\r\n");         
-                       
-                //insert on messages
-                $data_messages = array(
-                        'customer_id' => $customer_id,
-                        'date' => date("Y-m-d H:i:s"),
-                        'label' => "Soporte",
-                        'subject' => "Cambio de dirección BTC",
-                        'messages' => $mensaje,
-                        'type' => 2,
-                        'type_send' => 0,
-                        'active' => 1,
-                        'created_by' => $customer_id,
-                        'status_value' => 1,
-                        'created_at' => date("Y-m-d H:i:s"),
-                    );
-                    //INSERT MESSAGES    
-                    $this->obj_messages->insert($data_messages);           
-                       
-                       
-               
-                //Titulo
-                $titulo = "3T Club - Cambio de dirección BTC";
-                //cabecera
-                $headers = "MIME-Version: 1.0\r\n"; 
-                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                //dirección del remitente 
-                $headers .= "3T Club: Travel - Training - Trade < noreplay@3t.club >\r\n";
-                //Enviamos el mensaje a tu_dirección_email 
-                $bool = mail("$email",$titulo,$mensaje,$headers);
-//                       
-                $data['message'] = "true";
-            echo json_encode($data); 
-            }
-    }
-    
-        public function update_bank(){
-            
-         if($this->input->is_ajax_request()){ 
-             
-            //SELECT ID FROM CUSTOMER
-           $customer_id = $this->input->post('customer_id');
-           $bank_name = $this->input->post('bank_name');
-           $titular_name = $this->input->post('titular_name');
-           $bank_account = $this->input->post('bank_account');
-           
-           //UPDATE DATA EN CUSTOMER TABLE
-           if($customer_id != ""){
-                     $data = array(
-                           'bank_name' => $bank_name,
-                           'titular_name' => $titular_name,
-                           'bank_account' => $bank_account,
-                           'updated_by' => $customer_id,
-                           'updated_at' => date("Y-m-d H:i:s")
-                       ); 
-                       $this->obj_customer->update($customer_id,$data);
-           }
-                       
-            $data['message'] = "true";
-            echo json_encode($data); 
-            }
-    }
-    
         public function validate_password() {
         //SELECT ID FROM CUSTOMER
         $password = str_to_minuscula(trim($this->input->post('password')));
@@ -238,10 +145,8 @@ class B_data extends CI_Controller {
         
         if ($customer > 0) {
             $data['message'] = "true";
-            $data['print'] = "✔ Verificado";
         } else {
             $data['message'] = "false";
-            $data['print'] = "Contraseña Incorrecta";
         }
         echo json_encode($data);
     }
