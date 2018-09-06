@@ -98,6 +98,8 @@ $lang['idioma.login_ingrese_contrasena_valida'] = "Please enter valid password";
 $lang['idioma.login_olvido_contrasena'] = "Forgot password?";
 $lang['idioma.login_bienvenido'] = "welcome";
 $lang['idioma.login_datos_invalidos'] = "Invalid data";
+$lang['idioma.login_contrasena_enviada'] = "Password sent to the registered email";
+$lang['idioma.login_email_invalido'] = "Email invalid";
 //TEXTOS FORGOT
 $lang['idioma.introduzca_email'] = "Please enter the registered E-mail to send a message of recovery.";
 $lang['idioma.recuperar_contrasena'] = "RECOVER PASSWORD";
