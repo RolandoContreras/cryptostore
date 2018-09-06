@@ -31,12 +31,15 @@
                             $active_contact = "";
 
                             $url = explode("/",uri_string());
-                            $nav = $url[0];
+                            $nav = $url[1];
                             switch ($nav) {
                                 case 'home':
                                     $active_home = "active";
                                     break;
                                 case 'buy':
+                                    $active_buy = "active";
+                                    break;
+                                case 'bank':
                                     $active_buy = "active";
                                     break;
                                 case 'login':

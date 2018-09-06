@@ -256,25 +256,26 @@
                         <input type="hidden" name="email" id="email" value="<?php echo $email;?>"/>
                         <input type="hidden" name="radio" id="radio" value="<?php echo $radio;?>"/>
                     </div>
-                </div>
+               </div>
+                            <div class="container" style="padding-top: 0px">
                             <div class="row row-centered">
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-8">
                                     <div class="margin-top-50">
                                         <div class="checkbox display-inline-block">
-                                            <div class="floatleft">
+                                            <div class="floatleft leter_size margin-top-5">
                                                 <label>
                                                     <input name="privacity" id="privacity" type="checkbox" value="1" >
                                                     <?=lang('idioma.buy_acepto_condiciones');?>&nbsp;<a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank"><?=lang('idioma.buy_ver');?></a>
                                                 </label>
                                             </div>
-                                            <div class="floatleft">
+                                            <div class="floatleft leter_size margin-top-5">
                                                 <label>
                                                     <input id="property" name="property" type="checkbox" value="2">
                                                     <?=lang('idioma.buy_afirmo');?>
                                                 </label>
                                             </div>
-                                            <div class="floatleft">
+                                            <div class="floatleft leter_size margin-top-5">
                                                 <label>
                                                     <input id="cost" name="cost" type="checkbox" value="3">
                                                     <?=lang('idioma.buy_acepto_verificacion');?>&nbsp;<a href="<?php echo site_url().'notice/general';?>" target="_blank" class="blue-color-link"><?=lang('idioma.buy_ver');?></a>
@@ -288,9 +289,12 @@
                                 
                                 <div class="col-sm-2"></div>
                             </div>
+                                </div>
+                     
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <a href="<?php echo site_url().'bank';?>"><button class="submit_btn_comprar_back trans_300" type="submit"><?=lang('idioma.boton_retroceder');?></button></a>
+                            <a href="<?php echo site_url().'buy/bank';?>"><button class="submit_btn_comprar_back trans_300"><?=lang('idioma.boton_retroceder');?></button></a>
+                            <!--<a href="<?php echo site_url().'bank';?>"><button class="submit_btn_comprar_back trans_300" type="submit"><?=lang('idioma.boton_retroceder');?></button></a>-->
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
                             <input onclick="validate_credit_card();" class="submit_btn_comprar_2 trans_300" value="<?=lang('idioma.boton_comprar');?>">

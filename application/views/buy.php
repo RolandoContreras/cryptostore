@@ -28,9 +28,10 @@
                             $active_buy = "";
                             $active_login = "";
                             $active_faq = "";
+                            $active_contact = "";
 
                             $url = explode("/",uri_string());
-                            $nav = $url[0];
+                            $nav = $url[1];
                             switch ($nav) {
                                 case 'home':
                                     $active_home = "active";
@@ -38,6 +39,9 @@
                                 case 'buy':
                                     $active_buy = "active";
                                     break;
+                                case 'contact':
+                                    $active_contact = "active";
+                                break;
                                 case 'login':
                                     $active_login = "active";
                                     break;
@@ -160,10 +164,7 @@
                                     </div>
                                     <div class="col-lg-12 col-sm-12 height-15"></div>    
                                         <div class="text-center">
-                                            
                                             <button class="submit_btn_comprar trans_300" id="submit" type="submit"><?=lang('idioma.boton_comprar');?></button>
-                                            <!--<input id="submit" type="submit" class="submit_btn_comprar trans_300" value="<?=lang('idioma.boton_comprar');?>">-->
-                                                
                                         </div>
                                         <div class="margin-top-15">
                                             <a class="texto-enlace" href="<?php echo site_url().'faq';?>" target="_blank">

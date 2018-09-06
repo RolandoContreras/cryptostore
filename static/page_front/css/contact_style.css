@@ -587,6 +587,7 @@
     padding: 5px 15px;
     margin: 5px 0;
     display: block;
+    text-align: center;
 }
 .error-message {
     color: #db0303;
@@ -1025,11 +1026,10 @@ label {
 }
 .icono-dropdown-cryptocurrency {
     position: relative;
-    right: 30px;
-    top: -36px;
+    right: 14px;
+    top: -38px;
     color: #575757;
     z-index: 9;
-    /*color: #ccc;*/
 }
 .error{
    border-color: red !important;
@@ -1086,5 +1086,10 @@ label {
     text-align: center;
     font-size: 13px;
     padding: 5px;
-    height: 50px;
+}
+.leter_size{
+    font-size: 13px;
+}
+.margin-top-5{
+    margin-top: 10px;
 }

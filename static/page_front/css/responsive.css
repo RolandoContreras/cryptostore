@@ -194,7 +194,7 @@
         font-size: 40px;
     }
     .main_nav ul li {
-        margin-right: 25px;
+        margin-right: 16px;
     }
     .main_nav ul li a {
         font-size: 16px;
@@ -246,7 +246,13 @@
 ************/
 
 @media only screen and (max-width: 991px)
-{
+{   
+        .margin-top100 {
+            margin-top: 50px;
+        }
+        .margin-top-50 {
+            margin-top: 25px;
+        }
 	.main_nav
 	{
 		display: none;
@@ -506,7 +512,7 @@
 	}
 	.services
 	{
-		padding-top: 100px;
+		padding-top: 0px;
 		padding-bottom: 0px;
 	}
 	.services_slider .owl-stage
@@ -815,7 +821,7 @@
             margin-top: -11px !important;
         }
         #price_dolar{
-            height: 43px !important; 
+            height: 44px !important; 
         }
         .submit_btn_comprar {
             height: 50px !important;

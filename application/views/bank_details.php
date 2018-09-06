@@ -31,12 +31,20 @@
                             $active_contact = "";
 
                             $url = explode("/",uri_string());
-                            $nav = $url[0];
+                            $nav = $url[1];
+                            if (isset($url[2])){
+                                $nav_2 = "/".$url[2];
+                            }else{
+                                $nav_2 = "";
+                            }
                             switch ($nav) {
                                 case 'home':
                                     $active_home = "active";
                                     break;
                                 case 'buy':
+                                    $active_buy = "active";
+                                    break;
+                                case 'bank':
                                     $active_buy = "active";
                                     break;
                                 case 'login':
@@ -61,8 +69,8 @@
                                 <li class="<?php echo $active_login;?>"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
                                 <li class="<?php echo $active_faq;?>"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
                                 <li>
-                                    <a href='<?php echo site_url()."es/$nav";?>' style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
-                                    <a href="<?php echo site_url()."en/$nav";?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+                                    <a href='<?php echo site_url()."es/$nav$nav_2";?>' style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/></a>
+                                    <a href="<?php echo site_url()."en/$nav$nav_2";?>" style="display: inline-block"><img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
                                 </li>
                             </ul>
 		</div>
@@ -82,7 +90,7 @@
                             <form action="<?php echo site_url().'buy/bank/confirm_bank';?>" method="post">
                             <div class="col-lg-12">
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-md-4 hidden-xs panel-bitcoinDinero-col">
                                     <p>
                                         <span class="textogris"><?=lang('idioma.buy_datos_personales');?></span>
                                     </p>
@@ -208,21 +216,21 @@
                                 <div class="col-sm-8">
                                     <div class="margin-top-20">
                                         <div class="checkbox display-inline-block">
-                                            <div class="floatleft">
+                                            <div class="floatleft leter_size margin-top-5">
                                                 <label>
                                                     <input id="card-recharge-privacity" name="card-recharge-privacity" data-val="true" data-val-required="'Voucher Privacity' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="card-recharge-privacity" value="false" type="hidden">
                                                         <?=lang('idioma.buy_acepto_condiciones');?>&nbsp;<a class="blue-color-link" href="<?php echo site_url().'notice/privacy';?>" target="_blank"><?=lang('idioma.buy_ver');?></a>
                                                 </label>
                                             </div>
-                                            <div class="floatleft">
+                                            <div class="floatleft leter_size margin-top-5">
                                                 <label>
                                                     <input id="confirm-wallet-property" name="confirm-wallet-property" data-val="true" data-val-required="'Confirm Wallet property' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="confirm-wallet-property" value="false" type="hidden">
                                                     <?=lang('idioma.buy_afirmo');?>
                                                 </label>
                                             </div>
-                                            <div class="floatleft">
+                                            <div class="floatleft leter_size margin-top-5">
                                                 <label>
                                                     <input id="confirm-devolutionservice-cost" name="confirm-devolutionservice-cost" data-val="true" data-val-required="'Confirm Devolution cost' no debe estar vacío." value="true" type="checkbox" required="">
                                                     <input name="confirm-devolutionservice-cost" value="false" type="hidden">
@@ -234,13 +242,13 @@
                                 </div>
                                 <div class="col-sm-2"></div>
                             </div>
-                            <div class="row margin-top-50">
+                            <div class="row">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
-                                <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <a href="<?php echo site_url().'buy/bank';?>"><input class="submit_btn_comprar_back trans_300" value="Retroceder" /></a>
+                                <div class="col-xs-12 col-sm-4 col-centered-nofloat margin-top-50" style="float: left;">
+                                    <a href="<?php echo site_url().'buy/bank';?>"><button class="submit_btn_comprar_back trans_300"><?=lang('idioma.boton_retroceder');?></button></a>
                                 </div>
-                                <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <input class="submit_btn_comprar_2 trans_300" value="Comprar" type="submit">
+                                <div class="col-xs-12 col-sm-4 col-centered-nofloat margin-top-50" style="float: left;">
+                                    <button type="submit" class="submit_btn_comprar_2"><?=lang('idioma.boton_comprar');?></button>
                                 </div>
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                             </div>
