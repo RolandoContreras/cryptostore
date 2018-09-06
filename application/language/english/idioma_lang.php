@@ -194,6 +194,8 @@ $lang['idioma.b_nav_salir'] = "Exit Login";
 //TITULOS
 $lang['idioma.b_tit_tablero'] = "DASHBOARD";
 $lang['idioma.b_tit_perfil'] = "PROFILE";
+$lang['idioma.b_tit_compras'] = "PURCHASES";
+$lang['idioma.b_tit_contacto'] = "CONTACT";
 $lang['idioma.b_precio_bitcoin'] = "BITCOIN PRICE:";
 $lang['idioma.b_mensaje'] = "Message:";
 $lang['idioma.b_informativo'] = "Informative";
@@ -232,6 +234,22 @@ $lang['idioma.b_estado'] = "Status";
 $lang['idioma.b_pendiente'] = "Pendent";
 $lang['idioma.b_cancelado'] = "Canceled";
 $lang['idioma.b_procesado'] = "Processing";
+//SOPORTE
+$lang['idioma.b_consulta'] = "New Message";
+$lang['idioma.b_nuevo_mensaje'] = "Open a new message";
+$lang['idioma.b_subject'] = "Subject";
+$lang['idioma.b_mensaje'] = "Message";
+$lang['idioma.b_cerrar'] = "Close";
+$lang['idioma.b_crear_mensaje'] = "Create message";
+
+$lang['idioma.b_lista'] = "List";
+$lang['idioma.b_numero_mensaje'] = "Message number";
+$lang['idioma.b_soporte_asunto'] = "Subject";
+$lang['idioma.b_soporte_fecha'] = "Date";
+$lang['idioma.b_respuesta'] = "Answer";
+$lang['idioma.b_en_espera'] = "Awaiting";
+$lang['idioma.b_contestado'] = "Answered";
+
 
 
 

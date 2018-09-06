@@ -2,10 +2,10 @@
       <section>
           <div class="section-heading row">
             <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                <h1 class="title text-uppercase">Mensajes</h1>
+                <h1 class="title text-uppercase"><?=lang('idioma.b_tit_contacto');?></h1>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-                <a class="white"><?php echo "Precio del BITCOIN: "?><?php echo $price_btc;?></a>
+                <a class="white"><?=lang('idioma.b_precio_bitcoin');?> <span style='color:#D4AF37'><?php echo format_number_6decimal($price_btc);?> <i class="fa fa-eur"></i></span></a>
             </div>
         </div>
          <!-- Page content-->
@@ -13,11 +13,11 @@
                <div class="col-lg-12">
                      <div class="panel panel-info">
                         <div class="panel-heading">
-                           Mensaje de consulta
+                           <?=lang('idioma.b_consulta');?>
                         </div>
                         <div class="panel-body">
                             <div class="form-inline" >
-                                <button onclick="show();" class="btn btn-success">Abrir un nuevo mensaje <i class="fa fa-plus-circle"></i></button>
+                                <button onclick="show();" class="btn btn-success"><?=lang('idioma.b_nuevo_mensaje');?> <i class="fa fa-plus-circle"></i></button>
                                 </div>
                             </div>
                               <div class="col-md-12">
@@ -26,17 +26,17 @@
                                   <div class="panel teal">
                                     <div class="panel-body">
                                      <form method="post" id="form_support" enctype="multipart/form-data">
-                                                 <label>Asunto:</label>
+                                                 <label><?=lang('idioma.b_subject');?></label>
                                                     <div class="form-group">
-                                                        <input class="form-control" name="title" id="title" placeholder="Asunto" type="text" value="">
+                                                        <input class="form-control" name="title" id="title" placeholder="<?=lang('idioma.b_soporte_asunto');?>" type="text" value="">
                                                     </div>
                                                     <div class="form-group">
-                                                           <textarea class="form-control" name="message" id="message" placeholder="Mensaje" style="height: 200px;width: 100% !important" placeholder="Message body"></textarea>
+                                                           <textarea class="form-control" name="message" id="message" placeholder="<?=lang('idioma.b_mensaje');?>" style="height: 200px;width: 100% !important"></textarea>
                                                    </div>
                                                     <hr>
                                                     <div class="form-group text-right">
-                                                        <button class="btn btn-danger" onclick="hide();">Cerrar</button>
-                                                        <button type="submit" name="upload" id="upload" class="btn btn-primary">Crear Mensaje</button>
+                                                        <button class="btn btn-danger" onclick="hide();"><?=lang('idioma.b_cerrar');?></button>
+                                                        <button type="submit" name="upload" id="upload" class="btn btn-primary"><?=lang('idioma.b_crear_mensaje');?></button>
                                                     </div>
                                                      <div id="message_reponse"></div>
                                             </form>
@@ -46,17 +46,17 @@
                             </div>
                          <br/>
                                 <div class="panel-heading">
-                                    Lista
+                                    <?=lang('idioma.b_lista');?>
                                  </div>
                                 <div role="alert" class="alert alert-success" style="overflow:auto;">
                                     <table id="table" class="display table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                 <th align="center">Número de Mensaje</th>
-                                                 <th align="center">Fecha</th>
-                                                 <th align="center">Asunto</th>
-                                                 <th align="center">Respuesta</th>
-                                                 <th align="center">Estado</th>
+                                                 <th align="center"><?=lang('idioma.b_numero_mensaje');?></th>
+                                                 <th align="center"><?=lang('idioma.b_soporte_fecha');?></th>
+                                                 <th align="center"><?=lang('idioma.b_soporte_asunto');?></th>
+                                                 <th align="center"><?=lang('idioma.b_respuesta');?></th>
+                                                 <th align="center"><?=lang('idioma.b_estado');?></th>
                                             </tr>
                                          </thead>
                                  <tbody>
@@ -69,9 +69,9 @@
                                           <td>
                                                <?php 
                                                if($value->active == 1){ ?>
-                                                   <span class="label label-default">En espera</span>
+                                                   <span class="label label-default"><?=lang('idioma.b_en_espera');?></span>
                                                <?php }else{ ?>
-                                                   <span class="label label-success">Contestado</span>
+                                                   <span class="label label-success"><?=lang('idioma.b_contestado');?></span>
                                                <?php } ?>
                                            </td>
                                        </tr>
