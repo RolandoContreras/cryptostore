@@ -57,10 +57,8 @@
 		<ul id="side-nav" class="main-menu navbar-collapse collapse">
                      <?php 
                             if($_SESSION['customer']['active']==1){
-                                $title_active='Cliente Activo';
                                 $style_active='label-success';
                             }else{
-                                $title_active='Cliente Inactivo';
                                 $style_active='label-danger';
                             }
                             ?>
@@ -70,30 +68,38 @@
                                     $style_misdatos = "";
                                     $style_soporte = "";
                                     $style_sell = "";
-                                    if(isset($url[1])){
-                                        switch ($url[1]) {
-                                            ////////
-                                                    case "profile":
-                                                        $style_misdatos = "a_active";
-                                                        break;
-                                                    case "sell":
-                                                        $style_sell = "a_active";
-                                                        break;
-                                                    case "soporte":
-                                                        $style_soporte = "a_active";
-                                                        break;
-                                                    default:
-                                                         $title = "Inicio";
+                                    
+                                    if(isset($url[2])){
+                                        $nav = "backoffice/$url[2]";
+                                        switch ($url[2]) {
+                                            case "profile":
+                                                $style_misdatos = "a_active";
+                                                break;
+                                            case "sell":
+                                                $style_sell = "a_active";
+                                                break;
+                                            case "soporte":
+                                                $style_soporte = "a_active";
+                                                break;
+                                            default:
+                                                 $title = "Inicio";
                                             }
                                     }else{
                                         $style_inicio = "a_active";
+                                        $nav = "backoffice";
                                     }
                                     ?>  
-                        <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title">Dashboard</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/sell'?>" class="<?php echo $style_sell;?>"><i class="fa fa-shopping-bag fa-lg"></i><span class="title">Compras</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/soporte'?>" class="<?php echo $style_soporte;?>"><i class="fa fa-commenting"></i><span class="title">Contacto</span></a></li>
+                        <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title">
+                            <?php if($_SESSION['customer']['active']==1){ ?>
+                                <?=lang('idioma.b_nav_activo');?>
+                            <?php }else{?>
+                                <?=lang('idioma.b_nav_inactivo');?>
+                            <?php } ?>
+                                </span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title"><?=lang('idioma.b_nav_tablero');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title"><?=lang('idioma.b_nav_perfil');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/sell'?>" class="<?php echo $style_sell;?>"><i class="fa fa-shopping-bag fa-lg"></i><span class="title"><?=lang('idioma.b_nav_compras');?></span></a></li>
+                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/soporte'?>" class="<?php echo $style_soporte;?>"><i class="fa fa-commenting"></i><span class="title"><?=lang('idioma.b_nav_contacto');?></span></a></li>
 		</ul>
 		<!-- /main navigation -->		
   </div>
@@ -112,14 +118,34 @@
                               <!-- User action menu -->
                               <ul class="dropdown-menu">
 
-                                  <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fa fa-user-circle-o" aria-hidden="true"></i>My profile</a></li>
+                                  <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fa fa-user-circle-o" aria-hidden="true"></i><?=lang('idioma.b_nav_mi_perfil');?></a></li>
                                   <li class="divider"></li>
-                                  <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i>Salir</a></li>
+                                  <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i><?=lang('idioma.b_nav_salir');?></a></li>
                               </ul>
                               <!-- /user action menu -->
                             </li>
                           </ul>
 			<!-- /user info -->
+		  </div>
+                    <div class="col-sm-6 col-xs-5">
+			<div class="pull-right">
+				<!-- User alerts -->
+				<ul class="user-info pull-left">
+				  <!-- Messages -->
+				  <li class="notifications dropdown">
+					<a href='<?php echo site_url()."es/$nav";?>'>
+                                            <img src="<?php echo site_url().'static/page_front/images/language/es.png';?>" alt="espanol" width="40"/>
+                                        </a>
+				  </li>
+                                  <li class="notifications dropdown">
+					<a href="<?php echo site_url()."en/$nav";?>">
+                                            <img src="<?php echo site_url().'static/page_front/images/language/en.png';?>" alt="espanol" width="40"/></a>
+                                        </a>
+				  </li>
+				  <!-- /messages -->
+				</ul>
+				<!-- /user alerts -->
+			</div>
 		  </div>
 		</div>
 		<!-- /main header -->
@@ -127,71 +153,69 @@
             <?php echo $body;?> 
       <!--START FOOTER-->
       <div class="row">
-     <footer class="footer bottom_bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <!-- Footer Intro -->
-                        <div class="footer_intro">
-                            <!-- Logo -->
-                            <div class="logo footer_logo">
-                                <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" alt="logo" width="130">
-                            </div>
-                            <p>Para tener la mejor casa de Cambio de Criptomonedas es necesario tener un equipo serio, profesional, contar con una seguridad impecable, transacciones sólidas y confiables. Para todo ello, EASYCRIPTO.</p>
-                                <!-- Copyright -->
-                                <div class="footer_cr">
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                All rights reserved  Easycripto© <br/>
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved
-                                </div>
-                        </div>
+    <footer class="footer bottom_bg">
+    <div class="container">
+	<div class="row">
+            <div class="col-lg-4">
+		<!-- Footer Intro -->
+		<div class="footer_intro">
+                    <!-- Logo -->
+                    <div class="logo footer_logo">
+			<img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" alt="logo" width="130">
                     </div>
-                    <!-- Footer Services -->
-                    <div class="col-lg-3">
-                        <div class="footer_col">
-                            <div class="footer_col_title">Easycripto</div>
-                            <ul>
-                                <li class="circle"><a href="<?php echo site_url().'home'?>">Inicio</a></li>
-                                <li class="circle"><a href="#features" >Características</a></li>
-                                <li class="circle"><a href="<?php echo site_url().'buy';?>">¡Comprar!</a></li>
-                                <li class="circle"><a href="#contact">Contacto</a></li>
-                                <li class="circle"><a href="<?php echo site_url().'login';?>">Login</a></li>
-                                <li class="circle"><a href="<?php echo site_url().'faq';?>">FAQ</a></li>
-                            </ul>
+                    <p><?=lang('idioma.mejor_casa');?></p>
+			<!-- Copyright -->
+			<div class="footer_cr">
+                        <script>document.write(new Date().getFullYear());</script> <?=lang('idioma.derechos_reservado');?> © 
                         </div>
-                        <div class="footer_col">
-                            <ul>
-                                <li><img src="<?php echo site_url().'static/page_front/images/tarjetas-aceptadas.png';?>" alt="tarjetas aceptadas"/></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="footer_col">
-                            <div class="footer_col_title">Social</div>
-                            <ul>
-                                <ul style="margin-left: -38px;">
-                                    <li><a href="javascript:void(0);"><i class="fa fa-facebook-f fa-2x"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="fa fa-twitter fa-2x"></i></a></li>
-                                    <li><a href="javascript:void(0);"><i class="fa fa-youtube fa-2x"></i></a></li>
-                                </ul>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Footer Community -->
-                    <div class="col-lg-3">
-                        <div class="footer_col">
-                            <div class="footer_col_title">Legal</div>
-                            <ul>
-                                <li class="circle"><a href="<?php echo site_url().'notice/legal';?>">Aviso Legal</a></li>
-                                <li class="circle"><a href="<?php echo site_url().'notice/privacy';?>">Política de Privacidad</a></li>
-                                <li class="circle"><a href="<?php echo site_url().'notice/general';?>">Condiciones Generales</a></li>
-                                <li class="circle"><a href="<?php echo site_url().'notice/cookies';?>">Política de Cookies</a></li>
-                            </ul>
-                        </div>
-                    </div>
+		</div>
+            </div>
+            <!-- Footer Services -->
+            <div class="col-lg-3">
+                <div class="footer_col">
+                    <div class="footer_col_title">Easycripto</div>
+                    <ul>
+                        <li class="circle"><a href="<?php echo site_url().'home'?>"><?=lang('idioma.nav_inicio');?></a></li>
+                        <li class="circle"><a href="#features"><?=lang('idioma.nav_caracteristicas');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'buy';?>"><?=lang('idioma.nav_comprar');?></a></li>
+                        <li class="circle"><a href="#contact"><?=lang('idioma.nav_contacto');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'login';?>"><?=lang('idioma.nav_login');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'faq';?>"><?=lang('idioma.nav_faq');?></a></li>
+                    </ul>
+                </div>
+                <div class="footer_col">
+                    <ul>
+                        <li><img src="<?php echo site_url().'static/page_front/images/tarjetas-aceptadas.png';?>" alt="tarjetas aceptadas"/></li>
+                    </ul>
                 </div>
             </div>
-      </footer>	
+	    <div class="col-lg-2">
+                <div class="footer_col">
+                    <div class="footer_col_title"><?=lang('idioma.social');?></div>
+                    <ul>
+                        <ul>
+                            <li><a href="javascript:void(0);"><i class="fa fa-facebook-f fa-2x"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fa fa-twitter fa-2x"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="fa fa-youtube fa-2x"></i></a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <!-- Footer Community -->
+            <div class="col-lg-3">
+                <div class="footer_col">
+                    <div class="footer_col_title"><?=lang('idioma.legal');?></div>
+                    <ul>
+                        <li class="circle"><a href="<?php echo site_url().'notice/legal';?>"><?=lang('idioma.aviso_legal');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'notice/privacy';?>"><?=lang('idioma.aviso_privacidad');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'notice/general';?>"><?=lang('idioma.aviso_generales');?></a></li>
+                        <li class="circle"><a href="<?php echo site_url().'notice/cookies';?>"><?=lang('idioma.aviso_cookies');?></a></li>
+                    </ul>
+                </div>
+            </div>
+	</div>
+    </div>
+</footer>
     </div>      
   <!-- /main container -->
 </div>

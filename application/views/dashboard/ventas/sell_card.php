@@ -28,7 +28,7 @@
                                 <th>MONEDA</th>
                                 <th>PRECIO</th>
                                 <th>COMISIÓN</th>
-                                <th>MONTO</th>
+                                <th>IMPORTE</th>
                                 <th>WALLET BTC</th>
                                 <th>MONTO MONEDA</th>
                                 <th>CLIENTE</th>

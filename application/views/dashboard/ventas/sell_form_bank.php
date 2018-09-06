@@ -46,7 +46,7 @@
               <strong>Fecha:</strong><br>              
               <input type="text" id="date" name="date" value="<?php echo isset($obj_sell->date)?formato_fecha_barras($obj_sell->date):"";?>" class="input-xlarge-fluid">
               <br><br>
-              <strong>Monto $:</strong><br>   
+              <strong>Importe $:</strong><br>   
               <input type="text" id="amount" name="amount" value="<?php echo isset($obj_sell->amount)?$obj_sell->amount:0;?>" class="input-xlarge-fluid">
               <br><br>
               <strong>Email:</strong><br>   

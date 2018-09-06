@@ -52,7 +52,7 @@
               <strong>Comisión $:</strong><br>   
               <input type="text" id="tax" name="tax" value="<?php echo isset($obj_sell->tax)?$obj_sell->tax:0;?>" class="input-xlarge-fluid">
               <br><br>
-              <strong>Monto $:</strong><br>   
+              <strong>Importe $:</strong><br>   
               <input type="text" id="amount" name="amount" value="<?php echo isset($obj_sell->amount)?$obj_sell->amount:0;?>" class="input-xlarge-fluid">
               <br><br>
               <strong>Wallet:</strong><br>   

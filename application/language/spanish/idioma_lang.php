@@ -109,6 +109,7 @@ $lang['idioma.preguntas_frecuentes'] = "PREGUNTAS FRECUENTES";
 $lang['idioma.buy_comprar_monedas'] = "Comprar criptomonedas nunca fue tan fácil!";
 $lang['idioma.buy_cuanto_comprar'] = "¿Cuánto quieres comprar?";
 $lang['idioma.buy_introduce_cantidad'] = "Introduce la cantidad en dólares que deseas comprar en criptomonedas.";
+$lang['idioma.buy_el_importe'] = "El importe introducido no esta dentro del rango permitido. Rango permitido: 100 - 10000000";
 $lang['idioma.buy_que_moneda_quieres'] = "¿Qué criptomoneda quieres?";
 $lang['idioma.buy_selecciona_moneda'] = "Selecciona tu criptomoneda a comprar.";
 $lang['idioma.buy_sin_monedero'] = "¿Todavía sin monedero?";
@@ -171,9 +172,6 @@ $lang['idioma.poder_continuar'] = "Para poder continuar con el proceso de compra
 
 $lang['idioma.confirmacion_pago'] = "Confirmación del Pago.";
 $lang['idioma.gracias_confianza'] = "Gracias por su confianza, acabamos de enviar un mensaje a su correo electrónico con los detalles de su compra. También le hemos creado una cuenta en la plataforma EASYCRIPTO para que obtenga más beneficios.";
-
-
-
 //CONTACT INVEST
 $lang['idioma.contact_nombre'] = "Nombre";
 $lang['idioma.contact_email'] = "Email";
@@ -182,7 +180,55 @@ $lang['idioma.contact_empresa'] = "Empresa";
 $lang['idioma.contact_comentarios'] = "Comentarios";
 $lang['idioma.acepto_privacidad'] = "Acepto la política de privacidad.";
 $lang['idioma.privacidad_requerida'] = "Política de Privacidad requerida";
- 
+//BACKOFFICE
+//NAV
+$lang['idioma.b_nav_tablero'] = "Tablero";
+$lang['idioma.b_nav_perfil'] = "Mi Peril";
+$lang['idioma.b_nav_compras'] = "Compras";
+$lang['idioma.b_nav_contacto'] = "Contacto";
+$lang['idioma.b_nav_activo'] = "Cliente Activo";
+$lang['idioma.b_nav_inactivo'] = "Cliente Inactivo";
+$lang['idioma.b_nav_mi_perfil'] = "My Perfil";
+$lang['idioma.b_nav_salir'] = "Salir";
+//TITULOS
+$lang['idioma.b_tit_tablero'] = "TABLERO";
+$lang['idioma.b_tit_perfil'] = "PERFIL";
+$lang['idioma.b_precio_bitcoin'] = "Precio del BITCOIN:";
+$lang['idioma.b_mensaje'] = "Mensaje:";
+$lang['idioma.b_informativo'] = "Informativo";
+$lang['idioma.b_noticias'] = "Noticias";
+//PERFIL
+$lang['idioma.b_informacion'] = "Información";
+$lang['idioma.b_email'] = "E-mail";
+$lang['idioma.b_movil'] = "Teléfono Movil :";
+
+
+
+$lang['idioma.b_fecha_namiciento'] = "Fecha de Nacimiento";
+$lang['idioma.b_codigo_postal'] = "Código Postal";
+$lang['idioma.b_identificacion'] = "Identificación";
+$lang['idioma.b_fecha'] = " Fecha :";
+$lang['idioma.b_numero'] = "Número :";
+$lang['idioma.b_pasaporte'] = "Pasaporte / Numero de Identidad :";
+$lang['idioma.b_guardar'] = "Guardar";
+$lang['idioma.b_direccion'] = "Dirección";
+$lang['idioma.b_pais'] = "Provincia :";
+$lang['idioma.b_pais'] = "Localidad :";
+$lang['idioma.b_pais'] = "Pais :";
+$lang['idioma.b_cambiar_contrasena'] = "Cambiar Contraseña";
+$lang['idioma.b_contrasena_actual'] = "Contraseña Actual";
+$lang['idioma.b_nueva_contrasena'] = "Nueva Contraseña";
+$lang['idioma.b_repita_contrasena'] = "Repita Nueva Contraseña";
+$lang['idioma.b_cambiar_contrasena'] = "Cambiar Contraseña";
+
+     
+      
+
+
+
+
+
+
 
 
 

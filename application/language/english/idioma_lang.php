@@ -107,6 +107,7 @@ $lang['idioma.preguntas_frecuentes'] = "FREQUENTLY ASKED QUESTIONS";
 $lang['idioma.buy_comprar_monedas'] = "Buy cryptocurrencies has never been so easy!";
 $lang['idioma.buy_cuanto_comprar'] = "How much would you like to buy?";
 $lang['idioma.buy_introduce_cantidad'] = "Enter the amount in dollars you want to buy in cryptocurrencies.";
+$lang['idioma.buy_el_importe'] = "The entered value is not within the allowed range. Allowed range: 100-10000000";
 $lang['idioma.buy_que_moneda_quieres'] = "Which cryptocurrency want?";
 $lang['idioma.buy_selecciona_moneda'] = "Select your cryptocurrency to buy.";
 $lang['idioma.buy_sin_monedero'] = "Don't have wallet?";
@@ -170,7 +171,6 @@ $lang['idioma.poder_continuar'] = "To be able to continue with the process of pu
 
 $lang['idioma.confirmacion_pago'] = "Payment Confirmation";
 $lang['idioma.gracias_confianza'] = "Thank you for your trust, we just sent a message to your email with the details of your purchase. We have also created an account on the EASYCRIPTO platform to get more benefits.";
-
 //CONTACT INVEST
 $lang['idioma.contact_nombre'] = "Name";
 $lang['idioma.contact_email'] = "Email";
@@ -179,6 +179,26 @@ $lang['idioma.contact_empresa'] = "Company";
 $lang['idioma.contact_comentarios'] = "Comments";
 $lang['idioma.acepto_privacidad'] = "I accept the privacy policy";
 $lang['idioma.privacidad_requerida'] = "Privacy Policy required";
+//BACKOFFICE
+//NAV
+$lang['idioma.b_nav_tablero'] = "Dashboard";
+$lang['idioma.b_nav_perfil'] = "Mi Profile";
+$lang['idioma.b_nav_compras'] = "My Purchases";
+$lang['idioma.b_nav_contacto'] = "Contact";
+$lang['idioma.b_nav_activo'] = "Active Customer";
+$lang['idioma.b_nav_inactivo'] = "Inactive Customer";
+$lang['idioma.b_nav_mi_perfil'] = "My Profile";
+$lang['idioma.b_nav_salir'] = "Exit Login";
+//TITULOS
+$lang['idioma.b_tit_tablero'] = "DASHBOARD";
+$lang['idioma.b_tit_perfil'] = "PROFILE";
+$lang['idioma.b_precio_bitcoin'] = "BITCOIN PRICE:";
+$lang['idioma.b_mensaje'] = "Message:";
+$lang['idioma.b_informativo'] = "Informative";
+$lang['idioma.b_noticias'] = "News";
+//TABLERO
+$lang['idioma.b_tablero'] = "Dashboard";
+$lang['idioma.b_cliente_activo'] = "Cliente Activo";
 
 
 

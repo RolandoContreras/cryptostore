@@ -2,10 +2,10 @@
 <section>
     <div class="section-heading row">
         <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-            <h1 class="title text-uppercase">Tablero</h1>
+            <h1 class="title text-uppercase"><?=lang('idioma.b_tit_tablero');?></h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a class="white">Precio del BITCOIN: <span style='color:#D4AF37'><?php echo "$".format_number_6decimal($price_btc);?></span></a>
+            <a class="white"><?=lang('idioma.b_precio_bitcoin');?> <span style='color:#D4AF37'><?php echo "$".format_number_6decimal($price_btc);?></span></a>
         </div>
     </div> 
     <!-- Page content-->
@@ -19,11 +19,11 @@
                                 <div class="col-md-12">
                                     <div class="panel panel-warning" style="color: #fff !important;background-color: #946c28 !important;">
                                             <header class="panel-heading">
-                                                <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse_message"><i class="collapse-caret fa  fa-angle-up"></i> Informativo</a>
+                                                <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse_message"><i class="collapse-caret fa  fa-angle-up"></i><?=lang('idioma.b_informativo');?></a>
                                             </header>
                                             <div id="collapse_message" class="panel-collapse collapse in center">
                                                 <div class="panel-heading clearfix"> 
-                                                    <div class="panel-title">Mensaje: <b><?php echo $value->title;?></b></div> 
+                                                    <div class="panel-title"><?=lang('idioma.b_mensaje');?>&nbsp;<b><?php echo $value->title;?></b></div> 
                                                 </div> 
                                                 <!-- panel body --> 
                                                 <div class="panel-body"> 
@@ -43,7 +43,7 @@
                             <div class="panel-group" id="accordion">
                                 <div class="panel panel-warning" style="color: #fff !important;background-color: #946c28 !important;">
                                     <header class="panel-heading">
-                                        <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse61"><i class="collapse-caret fa  fa-angle-up"></i> Noticias</a>
+                                        <a data-toggle="collapse" data-parent="#accordion" id="collapseOne" href="#collapse61"><i class="collapse-caret fa  fa-angle-up"></i><?=lang('idioma.b_noticias');?></a>
                                     </header>
                                     <div id="collapse61" class="panel-collapse collapse in center">
                                         <div class="panel-body">
@@ -74,7 +74,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_btc);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_bch);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_eth);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_dash);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_litecoin);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_cardano);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_monero);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_ripple);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_verge);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_zcash);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +239,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_tron);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +255,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_omisego);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +276,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_siacoin);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -292,7 +292,7 @@
                                     <div class="ca-price d-flex justify-content-center">
                                         <h4><?php echo "$".format_number_6decimal($obj_nxt);?></h4>                                   
                                     </div>
-                                    <h6>por moneda</h6>
+                                    <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +303,7 @@
              <div class="col-lg-12">
                 <div class="section-heading row">
                     <div class=" col-lg-9 col-md-8 col-sm-7 col-xs-12">
-                        <h1 class="title text-uppercase">COMPRA</h1>
+                        <h1 class="title text-uppercase"><?=lang('idioma.nav_comprar');?></h1>
                     </div>
                 </div> 
             </div>    
@@ -314,10 +314,10 @@
                         <div id="bloqueGris-original" class="col-lg-12 bloqueGris_1">
                                         <div class="col-lg-12">
                                             <h4 class="question_currency">
-                                                ¿Cuánto quieres comprar?
+                                                <?=lang('idioma.buy_cuanto_comprar');?>
                                             </h4>
                                             <p class="p_currency">
-                                                Introduce la cantidad en dólares que deseas comprar en criptomonedas.
+                                                <?=lang('idioma.buy_introduce_cantidad');?>
                                             </p>
                                         </div>
                                         <div class="col-lg-12">
@@ -343,7 +343,7 @@
                                                     <input name="siacoin_price" id="siacoin_price" value="<?php echo $obj_siacoin_10;?>" type="hidden"> 
                                                     <input name="nxt_price" id="nxt_price" value="<?php echo $obj_nxt_10;?>" type="hidden"> 
                                                 </div>
-                                                <span id="message" style="font-size:11px; display: none;" class="field-validation-error"> El importe introducido no esta dentro del rango permitido. Rango permitido: 10 - 10000000</span>
+                                                <span id="message" style="font-size:11px; display: none;" class="field-validation-error"><?=lang('idioma.buy_el_importe');?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -351,8 +351,8 @@
                     <div class="col-sm-6 margin-top-10 bloke_change">
                         <div id="bloqueGris-original" class="col-lg-12 bloqueGris_2">
                             <div class="col-lg-12">
-                                <h4 class="question_currency">¿Qué criptomoneda quieres?</h4>
-                                <p class="p_currency">Selecciona tu criptomoneda a comprar.</p>
+                                <h4 class="question_currency"><?=lang('idioma.buy_que_moneda_quieres');?></h4>
+                                <p class="p_currency"><?=lang('idioma.buy_selecciona_moneda');?></p>
                             </div>
                             <div class="col-lg-12">
                                 <div class="calculador">
@@ -387,7 +387,7 @@
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-sm-6 margin-top-10">
-                        <input class="submit_btn_comprar" value="Comprar" type="submit">
+                        <button class="submit_btn_comprar" id="submit" type="submit"><?=lang('idioma.boton_comprar');?></button>
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@
                                 <th>CODE</th>
                                 <th>FECHA</th>
                                 <th>MONEDA</th>
-                                <th>MONTO</th>
+                                <th>IMPORTE</th>
                                 <th>WALLET BTC</th>
                                 <th>MONTO MONEDA</th>
                                 <th>EMAIL</th>
