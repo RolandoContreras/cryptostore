@@ -41,7 +41,7 @@ function validate_usd(value){
         data: {value: value,price: cripto_price,img: img},
         success:function(data){  
            $("#amount_cripto").val(data.amount_btc).html(data.amount_btc);
-           if(value < 10){
+           if(value < 100){
             document.getElementById("message_home").style.display = "block";
             document.getElementById("submit").disabled = true;
            }else{
@@ -122,7 +122,7 @@ function change_cripto(cripto, img){
         success:function(data){  
            $("#amount_cripto").val(data.amount_btc).html(data.amount_btc);
            $("#img_currency").html(data.img);
-           if(price_dolar < 10){
+           if(price_dolar < 100){
             document.getElementById("message").style.display = "block";
             document.getElementById("submit").disabled = true;
            }else{
