@@ -57,7 +57,10 @@ class B_data extends CI_Controller {
 
          $obj_customer = $this->obj_customer->get_search_row($params);  
          //GET PRICE BTC
-         $price_btc = $this->btc_price();
+         
+         //GET PRICE CURRENCY
+         $btc = $this->btc_price();
+         
          //SEND DATA TO VIEW  
          $this->tmp_backoffice->set("price_btc",$btc);
          $this->tmp_backoffice->set("obj_customer",$obj_customer);
@@ -65,10 +68,10 @@ class B_data extends CI_Controller {
 	}
         
         public function btc_price(){
-             $url =  "https://api.coinmarketcap.com/v1/ticker/bitcoin";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
         }
         

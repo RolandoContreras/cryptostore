@@ -5,7 +5,7 @@
             <h1 class="title text-uppercase"><?=lang('idioma.b_tit_tablero');?></h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a class="white"><?=lang('idioma.b_precio_bitcoin');?> <span style='color:#D4AF37'><?php echo "$".format_number_6decimal($price_btc);?></span></a>
+            <a class="white"><?=lang('idioma.b_precio_bitcoin');?> <span style='color:#D4AF37'><?php echo format_number_6decimal($price_btc);?> <i class="fa fa-eur"></i></span></a>
         </div>
     </div> 
     <!-- Page content-->
@@ -72,7 +72,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/btc-logo.png';?>" alt="bitcoin" width="100">
                                     <h5 class="currency_text">BITCOIN</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_btc);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_btc);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -88,7 +88,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/cash-logo.png';?>" alt="bitcoin" width="100">
                                     <h5 class="currency_text">BITCOIN CASH</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_bch);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_bch);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -104,7 +104,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/eth-logo.png';?>" alt="bitcoin" width="85">
                                     <h5 class="currency_text">ETHEREUM</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_eth);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_eth);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -120,7 +120,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/dash-logo.png';?>" alt="bitcoin" width="100">
                                     <h5 class="currency_text">DASH</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_dash);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_dash);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -136,7 +136,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/lite-logo.png';?>" alt="bitcoin" width="100">
                                     <h5 class="currency_text">LITECOIN</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_litecoin);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_litecoin);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -152,7 +152,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/cardano-logo.png';?>" alt="bitcoin" width="100">
                                     <h5 class="currency_text">CARDANO</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_cardano);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_cardano);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -173,7 +173,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/monero-logo.png';?>" alt="monero" width="100">
                                     <h5 class="currency_text">MONERO</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_monero);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_monero);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -189,7 +189,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/ripple-logo.png';?>" alt="ripple" width="100">
                                     <h5 class="currency_text">RIPPLE</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_ripple);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_ripple);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -205,7 +205,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/verge-logo.png';?>" alt="verge" width="100">
                                     <h5 class="currency_text">VERGE</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_verge);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_verge);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -221,7 +221,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/zcash-logo.png';?>" alt="ZCash" width="100">
                                     <h5 class="currency_text">ZCASH</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_zcash);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_zcash);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -237,7 +237,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/tron-logo.png';?>" alt="Tron " width="85">
                                     <h5 class="currency_text">TRON</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_tron);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_tron);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -253,7 +253,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/omisego-logo.png';?>" alt="OmiseGo" width="100">
                                     <h5 class="currency_text">OMISEGO</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_omisego);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_omisego);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -274,7 +274,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/sia-logo.png';?>" alt="Siacoin" width="100">
                                     <h5 class="currency_text">SIACOIN</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_siacoin);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_siacoin);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -290,7 +290,7 @@
                                     <img src="<?php echo site_url().'static/page_front/images/monedas/nht-logo.png';?>" alt="NXT" width="85">
                                     <h5 class="currency_text">NXT</h5>
                                     <div class="ca-price d-flex justify-content-center">
-                                        <h4><?php echo "$".format_number_6decimal($obj_nxt);?></h4>                                   
+                                        <h4><?php echo format_number_6decimal($obj_nxt);?> <i class="fa fa-eur"></i></h4>                                   
                                     </div>
                                     <h6><?=lang('idioma.por_moneda');?></h6>
                                 </div>
@@ -324,7 +324,7 @@
                                             <div class="calculador">
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
-                                                        <i class="fa fa-usd fa-2x"></i>
+                                                        <i class="fa fa-eur"></i>
                                                     </span>
                                                     <input class="form-control" onkeyup="validate_usd(this.value);" style="height: 44px;" data-val="true" id="price_dolar" name="price_dolar" placeholder="100" value="100" type="text">
                                                     <input name="currency" id="currency" value="bitcoin" type="hidden"> 

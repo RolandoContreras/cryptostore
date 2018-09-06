@@ -27,6 +27,7 @@ class B_home extends CI_Controller {
                         "select" =>"currency_id,
                                     name,
                                     img,
+                                    percent,
                                     active",
                         "where" => "status_value = 1",
                         );
@@ -162,114 +163,114 @@ class B_home extends CI_Controller {
     }
     
     public function btc_price(){
-             $url =  "https://api.coinmarketcap.com/v1/ticker/bitcoin";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function eth_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/ethereum";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1027/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function bch_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/bitcoin-cash";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1831/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }     
     
     public function dash_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/dash/";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/131/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
-    
+
     public function ripple_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/ripple";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/52/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function litecoin_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/litecoin";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/2/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function cardano_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/cardano";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/2010/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function tron_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/tron";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1958/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function monero_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/monero";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/328/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function omisego_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/omisego";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1808/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function zcash_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/zcash";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1437/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function siacoin_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/siacoin";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/1042/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function verge_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/verge";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/693/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     
     public function nxt_price(){
-             $url = "https://api.coinmarketcap.com/v1/ticker/nxt";
+             $url =  "https://api.coinmarketcap.com/v2/ticker/66/?convert=EUR";
              $fgc = file_get_contents($url);
              $json = json_decode($fgc, true);
-             $price = $json[0]['price_usd'];
+             $price = $json['data']['quotes']['EUR']['price'];
              return $price;
     }
     

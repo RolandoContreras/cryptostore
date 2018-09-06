@@ -33,15 +33,15 @@ class b_sell extends CI_Controller {
         //GET PRICE BTC
         $price_btc = $this->btc_price();
          
-         $url = explode("/", uri_string());
-            
+        $url = explode("/", uri_string());
         $params = array(
                 "select" =>"customer.first_name,
                             customer.last_name,
                             currency.name as currency,
+                            currency.img,
                             sell.amount,
                             sell.date,
-                            sell.amount,
+                            sell.amount_btc,
                             sell.date,
                             sell.active",
                     "join" => array('sell, customer.customer_id = sell.customer_id',
@@ -59,29 +59,12 @@ class b_sell extends CI_Controller {
     }
     
     public function btc_price(){
-             $url = "https://www.bitstamp.net/api/ticker";
-             $fgc = file_get_contents($url);
-             $json = json_decode($fgc, true);
-             $price_btc = $json['last'];
-             $open = $json['open'];
-             
-             if($open > $price_btc){
-                 //PRICE WENT UP
-                 $color = "red";
-                 $changes = $price_btc - $open;
-                 $percent = $changes / $open;
-                 $percent = $percent * 100;
-                 $percent_change = number_format($percent, 2); 
-             }else{
-                 //PRICE WENT DOWN
-                 $color = "green";
-                 $changes = $open - $price_btc;
-                 $percent = $changes / $open;
-                 $percent = $percent * 100;
-                 $percent_change = number_format($percent, 2);   
-             }
-             return "<span style='color:#D4AF37'>"."$".$price_btc."</span>&nbsp;&nbsp;<span style='color:".$color.";font-size: 14px;font-weight: bold;'>$percent_change</span>";
-    }
+         $url =  "https://api.coinmarketcap.com/v2/ticker/1/?convert=EUR";
+         $fgc = file_get_contents($url);
+         $json = json_decode($fgc, true);
+         $price = $json['data']['quotes']['EUR']['price'];
+         return $price;
+    }    
     
     public function get_messages_informative(){
             $params = array(

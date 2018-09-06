@@ -218,15 +218,20 @@ $lang['idioma.b_cambiar_contrasena'] = "Change Password";
 $lang['idioma.b_contrasena_actual'] = "Current Password";
 $lang['idioma.b_nueva_contrasena'] = "New Password";
 $lang['idioma.b_repita_contrasena'] = "Repeat New Password";
-
 $lang['idioma.b_contrasena_cambiada'] = "Password Changed";
 $lang['idioma.b_datos_invalidos'] = "Invalid Data";
-
 $lang['idioma.b_contrasena_invalida'] = "Password Invalid";
 $lang['idioma.b_contrasena_valida'] = "Correct Password";
 $lang['idioma.b_intriduzca_contrasena'] = "Enter your current password";
-
-
+//COMPRAS
+$lang['idioma.b_compras'] = "Purchases";
+$lang['idioma.b_importe'] = "Total Amount";
+$lang['idioma.b_moneda'] = "Currency";
+$lang['idioma.b_cantidad'] = "Total Currency";
+$lang['idioma.b_estado'] = "Status";
+$lang['idioma.b_pendiente'] = "Pendent";
+$lang['idioma.b_cancelado'] = "Canceled";
+$lang['idioma.b_procesado'] = "Processing";
 
 
 

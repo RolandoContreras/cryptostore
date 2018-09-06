@@ -4,7 +4,7 @@
             <h1 class="title text-uppercase"><?=lang('idioma.b_tit_perfil');?>Perfil</h1>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right count-down-box">
-            <a class="white"><?=lang('idioma.b_precio_bitcoin');?><span style='color:#D4AF37'><?php echo "$".format_number_6decimal($price_btc);?></span></a>
+            <a class="white"><?=lang('idioma.b_precio_bitcoin');?> <span style='color:#D4AF37'><?php echo format_number_6decimal($price_btc);?> <i class="fa fa-eur"></i></span></a>
         </div>
     </div> 
 <div id="principal" class="tabcontent" style="display:block !important">

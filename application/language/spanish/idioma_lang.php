@@ -196,6 +196,7 @@ $lang['idioma.b_nav_salir'] = "Salir";
 //TITULOS
 $lang['idioma.b_tit_tablero'] = "TABLERO";
 $lang['idioma.b_tit_perfil'] = "PERFIL";
+$lang['idioma.b_tit_compras'] = "COMPRAS";
 $lang['idioma.b_precio_bitcoin'] = "Precio del BITCOIN:";
 $lang['idioma.b_mensaje'] = "Mensaje:";
 $lang['idioma.b_informativo'] = "Informativo";
@@ -227,6 +228,20 @@ $lang['idioma.b_datos_invalidos'] = "Datos Invalidos";
 $lang['idioma.b_contrasena_invalida'] = "Contraseña Invalida";
 $lang['idioma.b_contrasena_valida'] = "Contraseña Correcta";
 $lang['idioma.b_introduzca_contrasena'] = "Introduzca su contraseña actual.";
+//COMPRAS
+$lang['idioma.b_compras'] = "Compras";
+$lang['idioma.b_importe'] = "Importe";
+$lang['idioma.b_moneda'] = "Moneda";
+$lang['idioma.b_cantidad'] = "Cantidad";
+$lang['idioma.b_estado'] = "Estado";
+$lang['idioma.b_pendiente'] = "Pendiente";
+$lang['idioma.b_cancelado'] = "Cancelado";
+$lang['idioma.b_procesado'] = "Procesado";
+
+
+
+
+
 
 
 
