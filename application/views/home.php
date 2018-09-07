@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <!--START HEAD-->
 <?php $this->load->view("head");?>
 <!--END HEAD-->
@@ -89,7 +89,7 @@
                                             <?php foreach ($obj_currency as $value) { ?>
                                             <div class="selecformaspago-desplegable" onclick="change_cripto('<?php echo $value->currency_id;?>','<?php echo $value->img;?>');">
                                                             <span>
-                                                                <img class="img_cripto" src='<?php echo site_url()."static/page_front/images/monedas/$value->img";?>' width="20"/>
+                                                                <img class="img_cripto" src='<?php echo site_url()."static/page_front/images/monedas/$value->img";?>' alt="<?php echo $value->name;?>" width="20"/>
                                                             </span>
                                                             <span class="textoGrisInputsDropdown" style="font-size: 14px;color:#000 !important">
                                                                 <?php echo $value->name;?>
@@ -127,7 +127,7 @@
 	</div>
         <!--CRIPTOCURRENCY-->
         <div class="icon_boxes">
-        <section class="pricing-plane-area section_padding_100_70 clearfix padding_top_50" class="icon_boxes">    
+        <section class="pricing-plane-area section_padding_100_70 clearfix padding_top_50 icon_boxes">    
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -383,7 +383,7 @@
 						<h1><?=lang('idioma.home_servicio_exclusivo');?></h1>
 						<p><?=lang('idioma.home_exclusivo_clientes');?></p>
                                                  <div class="button icon_box_button trans_200 with250" style="border: solid 2px #FFF !important;">
-                                                     <a href="<?php echo site_url().'contact/invest';?>" style="color:#FFF !important;"class="trans_200 "><?=lang('idioma.contacte_nosotros');?></a>
+                                                     <a href="<?php echo site_url().'contact/invest';?>" style="color:#FFF !important;" class="trans_200 "><?=lang('idioma.contacte_nosotros');?></a>
                                                 </div>
 					</div>
 				</div>

@@ -5,7 +5,6 @@
 <meta name="description" content="En easycripto puedes comprar Bitcoin de forma fácil, rápida y segura. ¡Sin necesidad de registro!">
 <meta name="keywords" content="easycripto,bitcoin,comprar bitcoins,compra bitcoins,criptomonedas,adquirir bitcoins,vende bitcoin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 <meta property="og:url"  content="http://easycripto.com/" /> 
 <meta property="og:type" content="website" /> 
 <meta property="og:title" content="EasyCripto | Compra Bitcoin" />

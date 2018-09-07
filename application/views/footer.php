@@ -37,13 +37,11 @@
 	    <div class="col-lg-2">
                 <div class="footer_col">
                     <div class="footer_col_title"><?=lang('idioma.social');?></div>
-                    <ul>
                         <ul>
                             <li><a href="javascript:void(0);"><i class="fa fa-facebook-f fa-2x"></i></a></li>
                             <li><a href="javascript:void(0);"><i class="fa fa-twitter fa-2x"></i></a></li>
                             <li><a href="javascript:void(0);"><i class="fa fa-youtube fa-2x"></i></a></li>
                         </ul>
-                    </ul>
                 </div>
             </div>
             <!-- Footer Community -->
