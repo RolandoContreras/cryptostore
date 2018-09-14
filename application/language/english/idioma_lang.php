@@ -127,7 +127,8 @@ $lang['idioma.buy_faciles_comprar'] = "Easy-to-buy";
 $lang['idioma.buy_datos_clientes'] = "Client Data";
 $lang['idioma.buy_metodo_pago'] = "Payment methods";
 $lang['idioma.buy_tarjeta'] = "Credit / Debit card +2%";
-$lang['idioma.buy_importe_compra'] = "Purchase amount";
+$lang['idioma.buy_tranferencia'] = "Bank Transfer";
+$lang['idioma.buy_importe_compra'] = "Purchase Amount";
 
 $lang['idioma.buy_revisa_datos'] = "Please check the data and confirm that they are correct.";
 $lang['idioma.buy_datos_personales'] = "Personal data";

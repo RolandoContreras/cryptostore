@@ -130,6 +130,7 @@ $lang['idioma.buy_faciles_comprar'] = "Muy fáciles de comprar";
 $lang['idioma.buy_datos_clientes'] = "Datos de cliente";
 $lang['idioma.buy_metodo_pago'] = "Métodos de pago";
 $lang['idioma.buy_tarjeta'] = "Tarjeta de débito / crédito +2%";
+$lang['idioma.buy_tranferencia'] = "Transferencia Bancaria";
 $lang['idioma.buy_importe_compra'] = "Importe de la compra";
 
 $lang['idioma.buy_revisa_datos'] = "Por favor, revisa los datos y confírmanos que son correctos.";

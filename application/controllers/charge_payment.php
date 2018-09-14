@@ -204,11 +204,57 @@ class Charge_payment extends CI_Controller {
                     </span>
                 </div>'
                 .</html>", 70, "\n", true);
-                    $titulo = "[Easycripto] : Detalle de Compra";
+                    $titulo = "Pago con Tarjeta - [Easycripto] : Detalle de Compra";
                     $headers = "MIME-Version: 1.0\r\n"; 
                     $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                    $headers .= "From: Easycripto <soporte@easycripto.com>\r\n";
+                    $headers .= "From: Easycripto <ventas@easycripto.com>\r\n";
                     $bool = mail("$email",$titulo,$mensaje,$headers);
+                    
+                    
+                    //MENSAJE DE CONFIRMACION ADMIN
+                    $mensaje = wordwrap("<html>
+                        <div style='margin-top:25px'>
+                        <table width='100%' cellspacing='0' cellpadding='0' border='0'>
+                        <tbody>
+                        <tr>
+                        <td style='padding:15px 0;border-top:1px dotted #c5c5c5' width='100%'>
+                            <table style='table-layout:fixed' width='100%' cellspacing='0' cellpadding='0' border='0'>
+                                <tbody>
+                                <tr>
+                                    <td style='padding:0;margin:0' width='100%' valign='top'>
+                                        <p style='font-family:Lucida Grande','Lucida Sans Unicode','Lucida Sans',Verdana,Tahoma,sans-serif;font-size:15px;line-height:18px;margin-bottom:0;margin-top:0;padding:0;color:#1b1d1e'>
+                                        <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><b>Administrador </strong></b>(EasyCripto)</p>
+                                        <div class='m_-8753525431338155893zd-comment' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'>
+                                          <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'>
+                                          Se acaba de hacer una compra a través de tarjeta de crédito / debito</p>
+                                          <p dir='auto' style='color:#2b2e2f;font-family:Verdana,sans-serif;font-size:14px;line-height:22px;margin:15px 0'><em>Detalles del pedido:</em></p>
+                                          <ul dir='auto' style='list-style-type:disc;margin:10px 0 15px 30px;padding-left:15px' type='disc'>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>N° Pedido: <em>$code_random</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Moneda: <em>$currency_name</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Cantidad: <em>$obj_btc</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Importe Total: <em>$$obj_price_dolar </em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Email: <em>$obj_email</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Telefono: <em>$obj_phone</em></li>
+                                            <li style='Verdana,sans-serif;font-size:14px;line-height:22px;margin:10px 0' type='disc'>Método de Pago: <em>Transferencia Bancaria</em></li>
+                                          </ul>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>'
+                  .</html>", 70, "\n", true);
+                    $titulo = "Nuevo Pedido - Transferencia Bancaria";
+                    $headers = "MIME-Version: 1.0\r\n"; 
+                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                    $headers .= "From: $obj_email\r\n";
+                    $bool = mail("ventas@easycripto.com",$titulo,$mensaje,$headers);
+                    
+                    
     }
     
     public function get_session(){          

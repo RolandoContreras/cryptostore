@@ -208,7 +208,7 @@
                                             <span class="input-group-addon" style="padding-top: 13px;">
                                                 <span id="telephone-faq" class="fa fa-university fa-lg"></span>
                                             </span>
-                                            <input  type="text" class="form-control" disabled="disabled" placeholder="<?=lang('idioma.buy_importe_compra');?>"/>
+                                            <input  type="text" class="form-control" disabled="disabled" placeholder="<?=lang('idioma.buy_tranferencia');?>"/>
                                         </div>
                                     </div>
                                 </div>
