@@ -237,7 +237,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                             <div class="icon_box_title">
-                                <h1 class="future-adversing"><?=lang('idioma.home_forma_parte');?></h1>
+                                <h2 class="future-adversing"><?=lang('idioma.home_forma_parte');?></h2>
                             </div>
                     </div>
                     <div class="col-lg-6 icon_box_col">

@@ -32,7 +32,6 @@ class D_Users extends CI_Controller{
         
         //GET CUSTOMER_ID
         $user_id = $this->input->post("user_id");
-        
         if($user_id != ""){
             //PARAM DATA
             $data = array(
@@ -42,6 +41,7 @@ class D_Users extends CI_Controller{
                'email' => $this->input->post('email'),
                'phone' => $this->input->post('phone'),
                'active' => $this->input->post('active'),
+               'privilage' => $this->input->post('privilage'),
                'status_value' => 1,
                'updated_at' => date("Y-m-d H:i:s"),
                'updated_by' => $_SESSION['usercms']['user_id']
@@ -57,6 +57,7 @@ class D_Users extends CI_Controller{
                'email' => $this->input->post('email'),
                'phone' => $this->input->post('phone'),
                'active' => $this->input->post('active'),
+               'privilage' => $this->input->post('privilage'),
                'status_value' => 1,
                'created_at' => date("Y-m-d H:i:s"),
                'created_by' => $_SESSION['usercms']['user_id'],

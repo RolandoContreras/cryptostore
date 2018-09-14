@@ -27,6 +27,7 @@
                                 <th>ID</th>
                                 <th>FECHA DE CREACIÓN</th>
                                 <th>NOMBRE</th>
+                                <th>PRIVILEGIO</th>
                                 <th>E-MAIL</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
@@ -37,6 +38,16 @@
                                 <td align="center"><b><?php echo $value->user_id;?></b></td>
                                 <td align="center"><?php echo formato_fecha($value->created_at);?></td>
                                 <td align="center" style="color:#fff;" class="label-success"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center">
+                                     <?php if ($value->privilage == 1) {
+                                        $valor = "Basico";
+                                        $stilo = "label label-warning";
+                                    }else{
+                                        $valor = "Total";
+                                        $stilo = "label label-success";
+                                    } ?>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                </td>
                                 <td align="center"><?php echo $value->email;?></td>
                                 
                                 <td align="center">

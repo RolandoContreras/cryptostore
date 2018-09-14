@@ -20,19 +20,38 @@
                 </div>
                 <!--GET CUSTOMER ID-->
               <input type="hidden" name="user_id" id="user_id" value="<?php echo isset($obj_users)?$obj_users->user_id:"";?>">
-              <input type="password" id="password" name="password" value="<?php echo isset($obj_users->password)?$obj_users->password:"";?>" class="input-xlarge-fluid" placeholder="Contraseña">
-              <br><br>
-              <input type="text" id="first_name" name="first_name" value="<?php echo isset($obj_users->first_name)?$obj_users->first_name:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
-              <br><br>
-              <input type="text" id="last_name" name="last_name" value="<?php echo isset($obj_users->last_name)?$obj_users->last_name:"";?>" class="input-xlarge-fluid" placeholder="Apellidos">
-              <br><br>
+              <strong>Usuario:</strong><br> 
               <input type="text" id="email" name="email" value="<?php echo isset($obj_users->email)?$obj_users->email:"";?>" class="input-xlarge-fluid" placeholder="Correo Electrónico">
               <br><br>
+              <strong>Contraseña:</strong><br> 
+              <input type="password" id="password" name="password" value="<?php echo isset($obj_users->password)?$obj_users->password:"";?>" class="input-xlarge-fluid" placeholder="Contraseña">
+              <br><br>
+              <strong>Nombres:</strong><br> 
+              <input type="text" id="first_name" name="first_name" value="<?php echo isset($obj_users->first_name)?$obj_users->first_name:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
+              <br><br>
+              <strong>Apellidos:</strong><br> 
+              <input type="text" id="last_name" name="last_name" value="<?php echo isset($obj_users->last_name)?$obj_users->last_name:"";?>" class="input-xlarge-fluid" placeholder="Apellidos">
+              <br><br>
+              <strong>Teléfono:</strong><br> 
               <input type="text" id="phone" name="phone" value="<?php echo isset($obj_users->phone)?$obj_users->phone:"";?>" class="input-xlarge-fluid" placeholder="Telefono">
+              <br><br>
+                <div class="well nomargin" style="width: 200px;">
+                    <div class="inner">
+                        <strong>Privilegio:</strong>
+                        <select name="privilage" id="privilage">
+                                    <option value="1" <?php if(isset($obj_customer)){
+                                        if($obj_users->privilage == 1){ echo "selected";}
+                                    }else{echo "";} ?>>Básico</option>
+                                    <option value="2" <?php if(isset($obj_customer)){
+                                        if($obj_users->privilage == 2){ echo "selected";}
+                                    }else{echo "";} ?>>Total</option>
+                        </select>
+                    </div>
+                </div>
               <br><br>
                     <div class="well nomargin" style="width: 200px;">
                         <div class="inner">
-                            <strong>Estado para el sistema:</strong>
+                            <strong>Estado:</strong>
                             <select name="active" id="active">
                                         <option value="0" <?php if(isset($obj_customer)){
                                             if($obj_users->active == 0){ echo "selected";}

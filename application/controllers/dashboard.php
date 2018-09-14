@@ -57,6 +57,7 @@ class Dashboard extends CI_Controller {
                                     users.first_name,
                                     users.last_name,
                                     users.email,
+                                    users.privilage,
                                     users.active",
                              "where" => "users.email = '$email' and users.password = '$password' and users.active = 1");
         $obj_user_login = $this->obj_user->total_records($params);
@@ -68,6 +69,7 @@ class Dashboard extends CI_Controller {
                 $data_user_session['user_id'] = $obj_user->user_id;
                 $data_user_session['name'] = $obj_user->first_name.' '.$obj_user->last_name;
                 $data_user_session['email'] = $obj_user->email;
+                $data_user_session['privilage'] = $obj_user->privilage;
                 $data_user_session['logged_usercms'] = "TRUE";
                 $data_user_session['status'] = $obj_user->active;
                 $_SESSION['usercms'] = $data_user_session;                
