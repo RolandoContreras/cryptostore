@@ -112,6 +112,7 @@ $lang['idioma.buy_introduce_cantidad'] = "Enter the amount in dollars you want t
 $lang['idioma.buy_el_importe'] = "The entered value is not within the allowed range. Allowed range: 100-10000000";
 $lang['idioma.buy_que_moneda_quieres'] = "Which cryptocurrency want?";
 $lang['idioma.buy_selecciona_moneda'] = "Select your cryptocurrency to buy.";
+$lang['idioma.buy_compra_verificada'] = "*The purchase will be verified by the team of Easycripto to ensure the service.";
 $lang['idioma.buy_sin_monedero'] = "Don't have wallet?";
 
 $lang['idioma.buy_rellena_formulario'] = "Fill out the form, we will be glad to help you.";

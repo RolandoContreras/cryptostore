@@ -115,7 +115,9 @@ $lang['idioma.buy_introduce_cantidad'] = "Introduce la cantidad en dólares que 
 $lang['idioma.buy_el_importe'] = "El importe introducido no esta dentro del rango permitido. Rango permitido: 100 - 10000000";
 $lang['idioma.buy_que_moneda_quieres'] = "¿Qué criptomoneda quieres?";
 $lang['idioma.buy_selecciona_moneda'] = "Selecciona tu criptomoneda a comprar.";
+$lang['idioma.buy_compra_verificada'] = "*La compra será verificada por el equipo de Easycripto para garantizar el servicio.";
 $lang['idioma.buy_sin_monedero'] = "¿Todavía sin monedero?";
+
 
 $lang['idioma.buy_rellena_formulario'] = "Rellena el formulario, estaremos encantados de ayudarte.";
 $lang['idioma.buy_porque_esy'] = "¿Porqué Easycripto?";

@@ -129,6 +129,7 @@
                                         <div class="col-lg-12">
                                             <h4 class="question_currency"><?=lang('idioma.buy_que_moneda_quieres');?></h4>
                                             <p class="p_currency"><?=lang('idioma.buy_selecciona_moneda');?></p>
+                                            
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="calculador">
@@ -144,9 +145,11 @@
                                                     </span>
                                                     <input id="amount_cripto" readonly="readonly" name="amount_cripto" class="form-control erroneous-input" style="height: 44px; width: 50%;"  placeholder="0" value="<?php echo $btc_price_10;?>" type="text">
                                                 </div>
+                                                
                                                 <span style="cursor:pointer" onclick="show_currency();" id="span-dropdown-arrow_up" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-down"></span>
                                                 <span style="cursor:pointer;display:none" onclick="hide_currency();" id="span-dropdown-arrow_down" class="fa fa-2x icono-dropdown-cryptocurrency floatright fa-caret-up"></span>
                                             </div>
+                                            
                                         </div>
                                         <div id="crypto-container" class="box-dropdown-cryptocurrency deplegable-criptomonedas" style="width: 381px; display: none;">
                                             <?php foreach ($obj_currency as $value) { ?>
@@ -162,7 +165,12 @@
                                             
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-sm-12 height-15"></div>    
+                                    <div class="col-lg-12 col-sm-12 height-15"></div>  
+                                    <p>
+                                        <span class="textogris small">
+                                            <?=lang('idioma.buy_compra_verificada');?>
+                                        </span>
+                                    </p>
                                         <div class="text-center">
                                             <button class="submit_btn_comprar trans_300" id="submit" type="submit"><?=lang('idioma.boton_comprar');?></button>
                                         </div>
