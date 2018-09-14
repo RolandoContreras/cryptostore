@@ -24,15 +24,15 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><a><i class="fa fa-usd" aria-hidden="true"></i> Monto Total Ventas</a></td>
+                                            <td><a><i class="fa fa-usd" aria-hidden="true"></i> Importe Total Ventas</a></td>
                                             <td><b><?php echo "$".format_number_2decimal($total_amount);?></b></td>
                                         </tr>
                                         <tr>
-                                            <td><a><i class="fa fa-btc"></i> Monto Total Ventas en <?php echo $year;?></a></td>
+                                            <td><a><i class="fa fa-btc"></i> Importe Total Ventas en <?php echo $year;?></a></td>
                                             <td><b><?php echo "$".format_number_2decimal($total_amount_year);?></b></td>
                                         </tr>
                                         <tr>
-                                            <td><a><i class="fa fa-btc"></i> Monto Total Ventas <?php echo $month;?></a></td>
+                                            <td><a><i class="fa fa-btc"></i> Importe Total Ventas <?php echo $month;?></a></td>
                                             <td><b><?php echo "$".format_number_2decimal($obj_total_sell_amount_month);?></b></td>
                                         </tr>
                                         <tr>

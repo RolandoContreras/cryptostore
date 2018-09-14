@@ -28,7 +28,7 @@
                                 <th>FECHA DE CREACIÓN</th>
                                 <th>NOMBRE</th>
                                 <th>PRIVILEGIO</th>
-                                <th>E-MAIL</th>
+                                <th>USUARIO</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
                             </tr>
