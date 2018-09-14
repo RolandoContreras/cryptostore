@@ -270,7 +270,7 @@
                             <div class="row">
                                 <div class="col-sm-2 col-centered-nofloat" style="float: left;"></div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
-                                    <a href="<?php echo site_url().'buy/bank';?>"><input class="submit_btn_comprar_back trans_300" value="<?=lang('idioma.boton_retroceder');?>"></a>
+                                    <a href="<?php echo site_url().'bank/details_bank';?>"><button class="submit_btn_comprar_back trans_300"><?=lang('idioma.boton_retroceder');?></button></a>
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-centered-nofloat" style="float: left;">
                                     <form action="<?php echo site_url().'charge_payment';?>" method="POST">
@@ -279,7 +279,7 @@
                                     <input type="hidden" name="total_db" value="<?php echo $total_db;?>"/>
                                     <script
                                       src="https://checkout.stripe.com/checkout.js" class="stripe-button submit_btn_comprar_2"
-                                      data-key="pk_test_o0c1SIapQ0qxBEPnpdbESNtl"
+                                      data-key="pk_live_hkJ3sunnrXSMThENiXfBUlZ5"
                                       data-amount="<?php echo $total_card;?>"
                                       data-name="Easycripto"
                                       data-description="<?=lang('idioma.buy_ingreso_datos_tarjeta');?>"

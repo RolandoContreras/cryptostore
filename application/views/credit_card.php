@@ -183,7 +183,7 @@
                             <span class="input-group-addon">
                                 <span id="nombre-faq" class="fa fa-question-circle"></span>
                             </span>
-                            <input class="form-control" onkeyup="fade_day(this.value);" id="day" name="day" placeholder="DD" type="text">
+                            <input class="form-control" onkeyup="fade_day(this.value);" id="day" name="day" placeholder="DD" type="text" minlength="2" maxlength="2">
                         </div>
                        <span id="message_day" class="field-validation-error" style="display:none; width: 50% !important;"><?=lang('idioma.dia_valido');?></span> 
                     </div>
@@ -192,7 +192,7 @@
                             <span class="input-group-addon">
                                 <span id="nombre-faq" class="fa fa-question-circle"></span>
                             </span>
-                            <input type="text" class="form-control" onkeyup="fade_month(this.value);" id="month" name="month" placeholder="MM">
+                            <input type="text" class="form-control" onkeyup="fade_month(this.value);" id="month" name="month" placeholder="MM" minlength="2" maxlength="2">
                         </div>
                         <span id="message_month" class="field-validation-error" style="display:none; width: 50% !important;"><?=lang('idioma.mes_valido');?></span> 
                     </div>
@@ -201,7 +201,7 @@
                             <span class="input-group-addon">
                                 <span id="nombre-faq" class="fa fa-question-circle"></span>
                             </span>
-                            <input type="text" class="form-control" onkeyup="fade_year(this.value);" id="year" name="year" placeholder="<?=lang('idioma.ano');?>">
+                            <input type="text" class="form-control" onkeyup="fade_year(this.value);" id="year" name="year" placeholder="<?=lang('idioma.ano');?>" minlength="4" maxlength="4">
                         </div>
                         <span id="message_year" class="field-validation-error" style="display:none; width: 50% !important;"><?=lang('idioma.ano_valido');?></span> 
                     </div>
@@ -294,10 +294,9 @@
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
                             <a href="<?php echo site_url().'buy/bank';?>"><button class="submit_btn_comprar_back trans_300"><?=lang('idioma.boton_retroceder');?></button></a>
-                            <!--<a href="<?php echo site_url().'bank';?>"><button class="submit_btn_comprar_back trans_300" type="submit"><?=lang('idioma.boton_retroceder');?></button></a>-->
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <input onclick="validate_credit_card();" class="submit_btn_comprar_2 trans_300" value="<?=lang('idioma.boton_comprar');?>">
+                            <button onclick="validate_credit_card();" class="submit_btn_comprar_2"><?=lang('idioma.boton_comprar');?></button>
                         </div>
                         <div class="col-sm-2"></div>
                     </div>
