@@ -9,59 +9,64 @@ function validate(){
     var email = document.getElementById("email").value;
     var radio = $('input[name=radio]:checked').val();
     
-    if(wallet == ""){
-        document.getElementById("message_wallet").style.display = "block";
-        $("#wallet").focus();
-    }else if(phone == ""){
-        document.getElementById("message_phone").style.display = "block";
-        $("#phone").focus();
-    }else if(email == ""){
-        document.getElementById("message_email").style.display = "block";
-        $("#email").focus();
-    }else{
-        var email_2 = validar_email(email);
-        if(email_2 == true){
-            if(currency == "cardano"){
-                wallet_2 = true;
-            }else if(currency == "monero"){
-                wallet_2 = true;
-            }else if(currency == "bitcoincash"){
-                wallet_2 = true;
-            }else if(currency == "tron"){
-                wallet_2 = true;
-            }else if(currency == "omisego"){
-                wallet_2 = true;
-            }else if(currency == "siacoin"){
-                wallet_2 = true;
-            }else if(currency == "nxt"){
-                wallet_2 = true;
-            }else{
-                var wallet_2 = WAValidator.validate(wallet, currency);
-            }
-                if(wallet_2){
-                    $.ajax({
-                            type: "post",
-                            url: site+"buy/bank/view_bank",
-                            dataType: "json",
-                            data: {btc : btc,
-                                   price_dolar : price_dolar,
-                                   currency : currency,
-                                   img : img,
-                                   phone : phone,
-                                   wallet : wallet,
-                                   email : email,
-                                   radio : radio},
-                            success:function(data){          
-                            location.href = site + "bank/details_bank";
-                            }         
-                          });
-                }else{
-                    document.getElementById("message_wallet").style.display = "block";
-                }
-            
-        }else{
+    var response = grecaptcha.getResponse();
+    if(response.length == 0){
+        document.getElementById("message_capcha").style.display = "block";
+    } else {
+        if(wallet == ""){
+            document.getElementById("message_wallet").style.display = "block";
+            $("#wallet").focus();
+        }else if(phone == ""){
+            document.getElementById("message_phone").style.display = "block";
+            $("#phone").focus();
+        }else if(email == ""){
             document.getElementById("message_email").style.display = "block";
             $("#email").focus();
+        }else{
+            var email_2 = validar_email(email);
+            if(email_2 == true){
+                if(currency == "cardano"){
+                    wallet_2 = true;
+                }else if(currency == "monero"){
+                    wallet_2 = true;
+                }else if(currency == "bitcoincash"){
+                    wallet_2 = true;
+                }else if(currency == "tron"){
+                    wallet_2 = true;
+                }else if(currency == "omisego"){
+                    wallet_2 = true;
+                }else if(currency == "siacoin"){
+                    wallet_2 = true;
+                }else if(currency == "nxt"){
+                    wallet_2 = true;
+                }else{
+                    var wallet_2 = WAValidator.validate(wallet, currency);
+                }
+                    if(wallet_2){
+                        $.ajax({
+                                type: "post",
+                                url: site+"buy/bank/view_bank",
+                                dataType: "json",
+                                data: {btc : btc,
+                                       price_dolar : price_dolar,
+                                       currency : currency,
+                                       img : img,
+                                       phone : phone,
+                                       wallet : wallet,
+                                       email : email,
+                                       radio : radio},
+                                success:function(data){          
+                                location.href = site + "bank/details_bank";
+                                }         
+                              });
+                    }else{
+                        document.getElementById("message_wallet").style.display = "block";
+                    }
+
+            }else{
+                document.getElementById("message_email").style.display = "block";
+                $("#email").focus();
+            }
         }
     }
 }

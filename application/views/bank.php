@@ -81,6 +81,7 @@
                         </div>
                     </div>
                 </div>
+                <form method="post" action="javascript:void(0);" onsubmit="validate();" enctype="multipart/form-data">
 			<div class="row">
                             <div class="col-md-4 hidden-xs panel-bitcoinDinero-col">
                                 <p><span class="textogris"><?=lang('idioma.buy_porque_esy');?></span></p>
@@ -235,16 +236,23 @@
                                             <input  type="hidden" id="btc" name="btc" value="<?php echo isset($_SESSION['buy'])? $_SESSION['buy']['btc']:$btc;?>">
                                         </div>
                                     </div>
+                             <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6LdaVHAUAAAAAMF_YlocobAIEftI1olTSkdxOW3H">
+                                </div>
+                                <span id="message_capcha" class="field-validation-error" style="display:none;">Captcha no verificado</span>
+                            </div>
                         </div>
+                           
                         <div class="col-sm-2"></div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
                             <a href="<?php echo site_url().'buy';?>"><button class="submit_btn_comprar_back trans_300"><?=lang('idioma.boton_retroceder');?></button></a>
                         </div>
                         <div class="col-sm-4 panel-bitcoinDinero-col margin-top-50">
-                            <button onclick="validate();" class="submit_btn_comprar_2"><?=lang('idioma.boton_comprar');?></button>
+                            <button type="submit" class="submit_btn_comprar_2"><?=lang('idioma.boton_comprar');?></button>
                         </div>
                         <div class="col-sm-2"></div>
                     </div>
+                    </form>
                 </div>
         </header>
         <!--END CRYPTOCURRENCY-->
@@ -252,6 +260,7 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="<?php echo site_url().'static/page_front/js/bank.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>

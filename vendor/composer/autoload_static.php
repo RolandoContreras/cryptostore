@@ -11,12 +11,20 @@ class ComposerStaticInitf8f6e43d49eafb520d68f2ac6d355ba3
         array (
             'Stripe\\' => 7,
         ),
+        'R' => 
+        array (
+            'ReCaptcha\\' => 10,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Stripe\\' => 
         array (
             0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
         ),
     );
 

@@ -5,44 +5,48 @@ function send_messages(){
     var company = document.getElementById("company").value;
     var comments = document.getElementById("comments").value;
     var term = document.getElementById("term").checked;
-    
-    if(name == ""){
-        document.getElementById("message_name").style.display = "block";
-        $("#name").focus();
-    }else if(email == ""){
-        document.getElementById("message_email").style.display = "block";
-        $("#email").focus();
-    }else if(phone == ""){
-        document.getElementById("message_phone").style.display = "block";
-        $("#phone").focus();
-    }else if(comments == ""){
-        document.getElementById("message_comments").style.display = "block";
-        $("#comments").focus();
-    }else if(term == ""){
-        document.getElementById("message_term").style.display = "block";
-        $("#term").focus();
-    }else{
-        var email_2 = validar_email(email);
-        if(email_2 == true){
-                $.ajax({
-               type: "post",
-               url: site+"contact/invest/send_messages",
-               dataType: "json",
-               data: {name : name,
-                      email : email,
-                      phone : phone,
-                      company : company,
-                      comments : comments},
-               success:function(data){          
-               document.getElementById("messages").style.display = "block";
-               
-               
-               }         
-             });
-        }else{
+    //GET CAPTCHA DATA
+    var response = grecaptcha.getResponse();
+    if(response.length == 0){
+        document.getElementById("message_capcha").style.display = "block";
+    } else {
+        if(name == ""){
+            document.getElementById("message_name").style.display = "block";
+            $("#name").focus();
+        }else if(email == ""){
             document.getElementById("message_email").style.display = "block";
             $("#email").focus();
-        }
+        }else if(phone == ""){
+            document.getElementById("message_phone").style.display = "block";
+            $("#phone").focus();
+        }else if(comments == ""){
+            document.getElementById("message_comments").style.display = "block";
+            $("#comments").focus();
+        }else if(term == ""){
+            document.getElementById("message_term").style.display = "block";
+            $("#term").focus();
+        }else{
+            var email_2 = validar_email(email);
+            if(email_2 == true){
+                    $.ajax({
+                   type: "post",
+                   url: site+"contact/invest/send_messages",
+                   dataType: "json",
+                   data: {name : name,
+                          email : email,
+                          phone : phone,
+                          company : company,
+                          comments : comments},
+                   success:function(data){          
+                   document.getElementById("messages").style.display = "block";
+                   }         
+                 });
+            }else{
+                document.getElementById("message_email").style.display = "block";
+                $("#email").focus();
+            }
+        }    
+        
     }
 }
 function validar_email( email ){

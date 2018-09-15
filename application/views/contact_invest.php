@@ -127,7 +127,7 @@
 
                     </div>
                             <div class="col-md-8 panel-bitcoinDinero-col">
-                                <form method="post" action="">                        
+                                <form method="post" action="javascript:void(0);" onsubmit="send_messages();" enctype="multipart/form-data">                        
                                     <div class="form-group">
                                         <label for="exampleInputPassword1" class="active"><?=lang('idioma.contact_nombre');?></label>
                                         <input class="form-control" onkeyup="fade_name(this.value);" id="name" name="name" placeholder="<?=lang('idioma.indicar_nombre');?>" type="text">
@@ -152,6 +152,12 @@
                                         <textarea class="form-control" onkeyup="fade_comments(this.value);" cols="20" data-val="true" id="comments" name="comments" rows="3"></textarea>
                                         <span id="message_comments" class="field-validation-error" style="display:none;"><?=lang('idioma.comentario_requerido');?></span>
                                     </div>
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-sitekey="6LdaVHAUAAAAAMF_YlocobAIEftI1olTSkdxOW3H">
+                                        </div>
+                                        <span id="message_capcha" class="field-validation-error" style="display:none;">Captcha no verificado</span>
+                                        
+                                    </div>
                                     <div class="blockacepta">
                                         <div class="checkbox">
                                             <label>
@@ -161,7 +167,7 @@
                                             <span id="message_term" class="field-validation-error" style="display:none;"><?=lang('idioma.privacidad_requerida');?></span>
                                         </div>
                                     </div>
-                                <input onclick="send_messages();"  style="cursor: pointer" class="reply_submit_btn trans_300" value="<?=lang('idioma.enviar_formulario');?>"/>
+                                    <button type="submit" class="reply_submit_btn trans_300"><?=lang('idioma.enviar_formulario');?></button>
                                 </form>
                                 <br/>
                                 <div id="messages" class="alert alert-success" style="text-align: center; display: none;"><?=lang('idioma.enviado_correctamente');?></div>
@@ -174,6 +180,7 @@
 	<?php $this->load->view("footer");?>
         <!--END FOOTER-->
     </div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="<?php echo site_url().'static/page_front/js/contact_invest.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/jquery-3.2.1.min.js';?>"></script>
 <script src="<?php echo site_url().'static/page_front/js/popper.js';?>"></script>
