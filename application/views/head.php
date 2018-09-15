@@ -11,7 +11,9 @@
 <meta property="og:description" content="En Easycripto puedes comprar Bitcoin de forma fácil, rápida y segura. ¡Sin necesidad de registro!" /> 
 <meta property="og:image" content="<?php echo site_url().'static/page_front/images/easyx200.jpg'?>" />
 <!--STAR FAVICON-->
-<!--<link rel="apple-touch-icon" sizes="57x57" href="<?php echo site_url().'static/page_front/images/favicon/apple-icon-57x57.png';?>">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo site_url().'static/page_front/images/favicon/apple-icon-57x57.png';?>">
+
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo site_url().'static/page_front/images/favicon/apple-icon-57x57.png';?>">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo site_url().'static/page_front/images/favicon/apple-icon-60x60.png';?>">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php echo site_url().'static/page_front/images/favicon/apple-icon-72x72.png';?>">
 <link rel="apple-touch-icon" sizes="76x76" href="<?php echo site_url().'static/page_front/images/favicon/apple-icon-76x76.png';?>">
@@ -26,11 +28,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="<?php echo site_url().'static/page_front/images/favicon/favicon-16x16.png';?>">
 <link rel="manifest" href="<?php echo site_url().'static/page_front/images/favicon/manifest.json';?>">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="<?php echo site_url().'static/page_front/images/favicon/ms-icon-144x144.png';?>">-->
-
-<!--<meta name="theme-color" content="#ffffff">-->
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.ico';?>" />
-<link rel="icon" type="image/png" sizes="16x16" href="<?php // echo site_url().'static/page_front/images/favicon/favicon-16x16.png';?>">
+<meta name="msapplication-TileImage" content="<?php echo site_url().'static/page_front/images/favicon/ms-icon-144x144.png';?>">
+<meta name="theme-color" content="#000">
 
 
 
