@@ -20,7 +20,7 @@ function change_state(comment_id){
 }
 
 function change_state_no(comment_id){
-     bootbox.dialog("Confirma que desea no publicar el Comentario?", [        
+     bootbox.dialog("Confirma que desea marcar como no leído el Comentario?", [        
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",

@@ -51,7 +51,7 @@
               <input type="text" id="username" name="username" value="<?php echo isset($obj_customer->email)?$obj_customer->email:"";?>" class="input-xlarge-fluid" placeholder="Username">
               <br><br>
               <strong>Contraseña:</strong><br>              
-              <input type="text" id="password" name="password" value="<?php echo isset($obj_customer->password)?$obj_customer->password:"";?>" class="input-xlarge-fluid" placeholder="Contraseña">
+              <input type="password" id="password" name="password" value="<?php echo isset($obj_customer->password)?$obj_customer->password:"";?>" class="input-xlarge-fluid" placeholder="Contraseña">
               <br><br>
               <strong>Nombres:</strong><br>   
               <input type="text" id="first_name" name="first_name" value="<?php echo isset($obj_customer->first_name)?$obj_customer->first_name:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
@@ -74,9 +74,6 @@
               <strong>Dirección:</strong><br>
               <textarea name="address" id="address" placeholder="Dirección ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->address)?$obj_customer->address:"";?></textarea>
               <script type="text/javascript">CKEDITOR.replace("adress")</script> 
-              <br><br>
-              <strong>Dirección de BTC:</strong><br>
-              <input type="text" id="btc_address" name="btc_address" class="input-xlarge-fluid" placeholder="Direccion de BitCoin" value="<?php echo isset($obj_customer->btc_address)?$obj_customer->btc_address:"";?>">
               <br><br>
               <strong>Provincia:</strong><br>
               <input type="text" id="provincia" name="provincia" class="input-small-fluid" placeholder="Provincia" value="<?php echo isset($obj_customer->provincia)?$obj_customer->provincia:"";?>">
