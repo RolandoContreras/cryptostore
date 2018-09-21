@@ -11,7 +11,7 @@ function add_news(){
 	location.href = site+url;
 }
 function delete_news(news_id){
-    bootbox.dialog("Confirma que desea elimiar la moticia", [        
+    bootbox.dialog("Confirma que desea eliminar la noticia", [        
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",

@@ -18,7 +18,7 @@
               <input type="text" id="title" name="title" value="<?php echo isset($obj_news->title)?$obj_news->title:"";?>" class="input-xlarge-fluid" placeholder="Título">
               <br><br>
               <strong>Fecha:</strong><br>   
-              <input type="text" id="date" name="date" value="<?php echo isset($obj_news->date)?formato_fecha_barras($obj_news->date):"";?>" class="input-xlarge-fluid" placeholder="dd/mm/yy">
+              <input type="text" id="date" name="date" value="<?php echo isset($obj_news->date)?formato_fecha_barras($obj_news->date):"";?>" class="input-xlarge-fluid" placeholder="dd/mm/yyyy">
               <br><br>
               <?php 
               if(isset($obj_news->news_id)){ ?>

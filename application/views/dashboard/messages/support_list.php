@@ -11,7 +11,7 @@
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
                                     <div class="container" style="width: auto;">
-                                            <a class="brand">RANGOS</a>
+                                            <a class="brand">SOPORTE</a>
                                     </div>
                             </div>
                     </div>

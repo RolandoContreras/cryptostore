@@ -1,7 +1,7 @@
 function save_content(dinamic_id){
     var editorText = CKEDITOR.instances.content.getData();
     var title =  document.getElementById("title").value;
-    bootbox.dialog("Confirma que guardar el contenido", [        
+    bootbox.dialog("Confirma que desea guardar el contenido", [        
         { "label" : "Cancelar"},
         {
             "label" : "Confirmar",
